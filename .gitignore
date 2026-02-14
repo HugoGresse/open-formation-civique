@@ -33,9 +33,5 @@ fiches/dist/
 fiches/.astro/
 
 # Generated content (regenerated from JSON on build)
-fiches/src/content/docs/principes-et-valeurs/
-fiches/src/content/docs/systeme-institutionnel/
-fiches/src/content/docs/droits-et-devoirs/
-fiches/src/content/docs/histoire-geographie-culture/
-fiches/src/content/docs/vivre-en-france/
-fiches/src/content/docs/index.mdx
+# Note: The entire docs directory is generated, so we exclude it all
+fiches/src/content/docs/

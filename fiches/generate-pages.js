@@ -36,6 +36,7 @@ const thematicDirMap = {
 
 // Create content directory structure
 const contentDir = join(__dirname, 'src/content/docs');
+mkdirSync(contentDir, { recursive: true });
 
 // Generate index page
 const indexContent = `---
