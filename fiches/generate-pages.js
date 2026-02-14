@@ -48,7 +48,7 @@ hero:
   tagline: Fiches thématiques pour comprendre les principes et valeurs de la République française
   actions:
     - text: Découvrir les fiches
-      link: /principes-et-valeurs/
+      link: principes-et-valeurs/
       icon: right-arrow
       variant: primary
 ---

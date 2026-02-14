@@ -6,6 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	site: 'https://hugogresse.github.io',
 	base: '/open-formation-civique',
+	trailingSlash: 'always',
 	integrations: [
 		starlight({
 			title: 'Formation Civique',
