@@ -27,3 +27,15 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Astro/Starlight build output
+fiches/dist/
+fiches/.astro/
+
+# Generated content (regenerated from JSON on build)
+fiches/src/content/docs/principes-et-valeurs/
+fiches/src/content/docs/systeme-institutionnel/
+fiches/src/content/docs/droits-et-devoirs/
+fiches/src/content/docs/histoire-geographie-culture/
+fiches/src/content/docs/vivre-en-france/
+fiches/src/content/docs/index.mdx

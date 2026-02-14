@@ -1,152 +1,138 @@
-# Formation Civique Crawler
+# Open Formation Civique
 
-A Crawlee-based web crawler to extract content from the French civic formation website (formation-civique.interieur.gouv.fr).
+Crawler et site web de fiches thématiques pour la formation civique française, basé sur les contenus de [formation-civique.interieur.gouv.fr](https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/).
 
-## Features
+## 📁 Structure du projet
 
-- ✅ **3-Level Deep Crawling**:
-  - **Level 1**: Main page with 5 thematic categories
-  - **Level 2**: Each thematic page with multiple fiches (sub-topics)
-  - **Level 3**: Each fiche page with actual educational content
-- ✅ Extracts complete educational content (paragraphs, lists, sections)
-- ✅ Respectful crawling with rate limiting (2 concurrent requests max)
-- ✅ Structured data output in JSON format
-- ✅ Built with Crawlee 3.16+ (2026 modern web scraping framework)
-- ✅ Automatic retry on failures
-- ✅ Data consolidation and search examples included
+```
+.
+├── crawler/                    # Crawler pour extraire les données
+│   ├── formation-civique-data.json
+│   └── ...
+└── fiches/                     # Site web Starlight
+    ├── src/content/docs/
+    ├── generate-pages.js
+    └── ...
+```
 
-## Installation
+## 🚀 Démarrage rapide
+
+### Crawler
+
+Le crawler extrait toutes les fiches depuis le site officiel et les sauvegarde en JSON.
 
 ```bash
+cd crawler
 npm install
+npm run start
 ```
 
-## Usage
+### Site web
 
-Run the crawler:
+Le site web Starlight est généré automatiquement à partir des données JSON.
 
 ```bash
-npm start
+cd fiches
+npm install
+npm run generate  # Génère les pages depuis le JSON
+npm run dev       # Lance le serveur de développement
 ```
 
-Process and consolidate the scraped data:
+Le site sera accessible sur `http://localhost:4321`
+
+## 🌐 Déploiement sur GitHub Pages
+
+Le site est configuré pour être déployé automatiquement sur GitHub Pages via GitHub Actions.
+
+### Configuration requise
+
+1. **Créer un repository GitHub** (si ce n'est pas déjà fait) :
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/VOTRE-USERNAME/VOTRE-REPO.git
+   git push -u origin main
+   ```
+
+2. **Activer GitHub Pages** :
+   - Allez dans Settings > Pages de votre repository
+   - Sous "Source", sélectionnez "GitHub Actions"
+
+3. **Vérifier la configuration** :
+   - Dans [fiches/astro.config.mjs](fiches/astro.config.mjs), vérifiez que :
+     - `site` correspond à `https://VOTRE-USERNAME.github.io`
+     - `base` correspond à `/VOTRE-REPO-NAME`
+   - Si vous utilisez un domaine personnalisé, ajustez `site` en conséquence
+
+### Déploiement automatique
+
+Une fois configuré, chaque push sur la branche `main` déclenchera automatiquement :
+1. L'installation des dépendances
+2. La génération des pages depuis le JSON
+3. Le build du site Astro
+4. Le déploiement sur GitHub Pages
+
+Le site sera accessible à : `https://VOTRE-USERNAME.github.io/VOTRE-REPO-NAME/`
+
+### Déploiement manuel
+
+Vous pouvez aussi déclencher un déploiement manuellement :
+- Allez dans l'onglet "Actions" de votre repository
+- Sélectionnez le workflow "Deploy to GitHub Pages"
+- Cliquez sur "Run workflow"
+
+## 📊 Données
+
+- **Source** : formation-civique.interieur.gouv.fr
+- **Format** : JSON structuré avec 5 thématiques principales
+- **Dernière mise à jour** : Voir `crawledAt` dans [crawler/formation-civique-data.json](crawler/formation-civique-data.json)
+
+### Les 5 thématiques
+
+1. **Principes et valeurs de la République** - Devise, symboles et laïcité
+2. **Système institutionnel et politique** - Démocratie, séparation des pouvoirs, institutions
+3. **Droits et devoirs** - Droits fondamentaux et obligations
+4. **Histoire, géographie et culture** - Histoire de France, géographie, culture
+5. **Vivre dans la société française** - Démarches administratives, santé, emploi, parentalité
+
+## 🛠️ Technologies
+
+### Crawler
+- [Crawlee](https://crawlee.dev/) - Framework de web scraping
+- [Cheerio](https://cheerio.js.org/) - Parser HTML
+- [Turndown](https://github.com/mixmark-io/turndown) - Conversion HTML → Markdown
+
+### Site web
+- [Astro](https://astro.build) - Framework web moderne
+- [Starlight](https://starlight.astro.build) - Thème de documentation
+- [Sharp](https://sharp.pixelplumbing.com) - Optimisation d'images
+
+## 📝 Mise à jour des données
+
+Pour mettre à jour le contenu du site avec les dernières données :
 
 ```bash
-npm run process
+# 1. Crawler les nouvelles données
+cd crawler
+npm run start
+
+# 2. Régénérer les pages du site
+cd ../fiches
+npm run generate
+
+# 3. Vérifier en local
+npm run dev
+
+# 4. Commit et push (déclenche le déploiement automatique)
+git add .
+git commit -m "Update content"
+git push
 ```
 
-This will create a single `formation-civique-data.json` file with all the scraped content.
+## 📄 License
 
-Clean previous crawl data:
+Les contenus sont issus du site officiel formation-civique.interieur.gouv.fr et restent la propriété du Ministère de l'Intérieur français.
 
-```bash
-npm run clean
-```
-
-## Output
-
-The crawler saves data to `./storage/datasets/default/`:
-- Each page is saved as a separate JSON file
-- **Level 1**: Main page with 5 thematic categories
-- **Level 2**: Thematic pages with fiche links
-- **Level 3**: Fiche content pages with actual educational material
-
-### Data Structure
-
-**Level 1 - Main Page:**
-```json
-{
-  "url": "https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/",
-  "type": "main_page",
-  "level": 1,
-  "title": "Fiches par thématiques — Formation civique",
-  "thematics": [
-    {
-      "title": "Principes et valeurs de la République",
-      "description": "...",
-      "url": "https://..."
-    }
-  ],
-  "scrapedAt": "2026-02-14T..."
-}
-```
-
-**Level 2 - Thematic Page:**
-```json
-{
-  "url": "https://...",
-  "type": "thematic_page",
-  "level": 2,
-  "title": "Page title",
-  "thematicTitle": "Principes et valeurs de la République",
-  "breadcrumb": ["Accueil", "Fiches par thématique", "..."],
-  "fiches": [
-    {
-      "title": "La laïcité",
-      "description": "...",
-      "url": "https://..."
-    }
-  ],
-  "scrapedAt": "2026-02-14T..."
-}
-```
-
-**Level 3 - Fiche Content:**
-```json
-{
-  "url": "https://...",
-  "type": "fiche_content",
-  "level": 3,
-  "title": "Page title",
-  "thematicTitle": "Principes et valeurs de la République",
-  "ficheTitle": "La laïcité",
-  "breadcrumb": ["Accueil", "Fiches par thématique", "...", "La laïcité"],
-  "sections": [
-    {
-      "title": "Section title",
-      "paragraphs": ["Paragraph 1...", "Paragraph 2..."]
-    }
-  ],
-  "lists": [
-    ["List item 1", "List item 2", "..."]
-  ],
-  "scrapedAt": "2026-02-14T..."
-}
-```
-
-## Configuration
-
-Edit `crawler.js` to customize:
-- `maxRequestsPerCrawl`: Maximum number of pages to crawl (default: 1000 for complete crawl)
-- `maxConcurrency`: Number of parallel requests (default: 2 for respectful crawling)
-- `maxRequestRetries`: Retry attempts for failed requests (default: 3)
-
-The crawler will automatically:
-- Crawl all 5 thematic categories
-- Crawl all fiches within each thematic
-- Extract all content from each fiche page
-
-Typical crawl size: ~50-100+ pages across all 3 levels
-
-## Legal & Ethics
-
-- This crawler respects robots.txt
-- Rate-limited to be respectful to government servers
-- For educational and research purposes
-- Always check the website's terms of service before scraping
-
-## Troubleshooting
-
-**Issue: No data extracted**
-- The website structure may have changed
-- Check the CSS selectors in the crawler
-- Try using PlaywrightCrawler instead of CheerioCrawler
-
-**Issue: 403 Forbidden**
-- The server may be blocking requests
-- Increase delays between requests
-- Add user-agent headers
-
-## License
-
-MIT
+Ce projet est un outil open source de présentation et de consultation de ces contenus publics.

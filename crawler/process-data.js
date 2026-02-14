@@ -77,8 +77,7 @@ async function processData() {
                 ficheTitle: page.ficheTitle,
                 url: page.url,
                 breadcrumb: page.breadcrumb,
-                sections: page.sections,
-                lists: page.lists,
+                markdown: page.markdown,
             })),
             contentPages: contentPages.map(page => ({
                 title: page.title,
@@ -87,8 +86,7 @@ async function processData() {
                 subPageTitle: page.subPageTitle,
                 url: page.url,
                 breadcrumb: page.breadcrumb,
-                sections: page.sections,
-                lists: page.lists,
+                markdown: page.markdown,
             })),
         };
 
