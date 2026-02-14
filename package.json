@@ -1,0 +1,24 @@
+{
+  "name": "formation-civique-crawler",
+  "version": "1.0.0",
+  "description": "Crawler for formation-civique.interieur.gouv.fr to extract thematic fiches",
+  "type": "module",
+  "main": "crawler.js",
+  "scripts": {
+    "start": "node crawler.js",
+    "process": "node process-data.js",
+    "example": "node example-usage.js",
+    "clean": "rm -rf storage"
+  },
+  "keywords": [
+    "crawlee",
+    "web-scraping",
+    "formation-civique"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "crawlee": "^3.16.0",
+    "turndown": "^7.2.0"
+  }
+}

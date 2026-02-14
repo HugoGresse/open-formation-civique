@@ -1,0 +1,29 @@
+# Crawlee storage
+storage/
+
+# Node modules
+node_modules/
+
+# Screenshots (if enabled)
+screenshots/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
