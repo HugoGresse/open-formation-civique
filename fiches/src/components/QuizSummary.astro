@@ -1,0 +1,135 @@
+---
+import QuizCard from './QuizCard.astro';
+
+import principesData from '../data/quizzes/principes-et-valeurs.json';
+import systemeData from '../data/quizzes/systeme-institutionnel.json';
+import droitsData from '../data/quizzes/droits-et-devoirs.json';
+import histoireData from '../data/quizzes/histoire-geographie-culture.json';
+import vivreData from '../data/quizzes/vivre-en-france.json';
+
+const quizzes = [
+  { data: principesData, href: '/quiz/principes-et-valeurs/' },
+  { data: systemeData, href: '/quiz/systeme-institutionnel/' },
+  { data: droitsData, href: '/quiz/droits-et-devoirs/' },
+  { data: histoireData, href: '/quiz/histoire-geographie-culture/' },
+  { data: vivreData, href: '/quiz/vivre-en-france/' },
+];
+---
+
+<div class="quiz-summary">
+  <div class="quiz-summary-header">
+    <div class="quiz-summary-progress">
+      <span class="quiz-summary-progress-text" id="summary-progress-text">Progression : chargement...</span>
+      <div class="quiz-summary-progress-bar">
+        <div class="quiz-summary-progress-fill" id="summary-progress-fill"></div>
+      </div>
+    </div>
+    <button class="quiz-summary-reset" id="summary-reset" type="button">Réinitialiser</button>
+  </div>
+
+  <div class="quiz-card-list">
+    {quizzes.map(({ data, href }) => (
+      <QuizCard
+        quizId={data.id}
+        title={data.title}
+        description={data.description}
+        questionCount={data.questions.length}
+        href={href}
+      />
+    ))}
+  </div>
+</div>
+
+<script>
+  import { getAllQuizResults, resetAllQuizzes } from '../utils/quizStorage';
+
+  function updateProgress() {
+    const results = getAllQuizResults();
+    const completed = results.length;
+    const total = 5;
+    const progressText = document.getElementById('summary-progress-text');
+    const progressFill = document.getElementById('summary-progress-fill');
+
+    if (progressText) {
+      progressText.textContent = `Progression : ${completed} / ${total} quiz terminé${completed > 1 ? 's' : ''}`;
+    }
+    if (progressFill) {
+      progressFill.style.width = `${(completed / total) * 100}%`;
+    }
+  }
+
+  const resetBtn = document.getElementById('summary-reset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Voulez-vous vraiment réinitialiser tous vos résultats de quiz ?')) {
+        resetAllQuizzes();
+        window.location.reload();
+      }
+    });
+  }
+
+  updateProgress();
+</script>
+
+<style>
+  .quiz-summary {
+    max-width: 700px;
+  }
+
+  .quiz-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .quiz-summary-progress {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .quiz-summary-progress-text {
+    font-size: 0.9rem;
+    color: var(--sl-color-gray-3);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .quiz-summary-progress-bar {
+    height: 8px;
+    background: var(--sl-color-gray-6);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .quiz-summary-progress-fill {
+    height: 100%;
+    background: var(--sl-color-accent);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+
+  .quiz-summary-reset {
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--sl-color-gray-5);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--sl-color-text);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  .quiz-summary-reset:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+  }
+
+  .quiz-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+</style>

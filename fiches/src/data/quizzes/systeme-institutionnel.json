@@ -1,0 +1,127 @@
+{
+  "id": "systeme-institutionnel",
+  "title": "Système institutionnel et politique",
+  "description": "Testez vos connaissances sur l'État de droit, la démocratie, les institutions françaises et européennes.",
+  "questions": [
+    {
+      "id": "si-q1",
+      "question": "Quels sont les trois pouvoirs séparés dans un État de droit ?",
+      "options": [
+        "Militaire, religieux, civil",
+        "Législatif, exécutif, judiciaire",
+        "Présidentiel, parlementaire, municipal",
+        "National, régional, local"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les trois pouvoirs sont le pouvoir législatif (Parlement), le pouvoir exécutif (Gouvernement) et le pouvoir judiciaire (tribunaux). Ils ne doivent pas être concentrés dans les mêmes mains."
+    },
+    {
+      "id": "si-q2",
+      "question": "À partir de quel âge un citoyen français peut-il voter ?",
+      "options": [
+        "16 ans",
+        "18 ans",
+        "20 ans",
+        "21 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le droit de vote est accordé à tous les citoyens français âgés de 18 ans et plus. C'est le suffrage universel."
+    },
+    {
+      "id": "si-q3",
+      "question": "Comment s'appelle le texte juridique suprême de la France ?",
+      "options": [
+        "Le Code civil",
+        "La Déclaration des droits de l'homme et du citoyen",
+        "La Constitution",
+        "Le traité de Maastricht"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La Constitution (de 1958 pour la Ve République) est la loi suprême. La Déclaration des droits de l'homme de 1789 en fait partie via le préambule."
+    },
+    {
+      "id": "si-q4",
+      "question": "Quel traité a créé l'Union européenne ?",
+      "options": [
+        "Le traité de Rome (1957)",
+        "Le traité de Maastricht (1992)",
+        "Le traité de Lisbonne (2007)",
+        "Le traité de Versailles (1919)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le traité de Maastricht, signé en 1992, a créé l'Union européenne. Le traité de Rome (1957) avait fondé la Communauté économique européenne (CEE)."
+    },
+    {
+      "id": "si-q5",
+      "question": "Qui représente l'État dans chaque département français ?",
+      "options": [
+        "Le maire",
+        "Le député",
+        "Le préfet",
+        "Le sénateur"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le préfet est le représentant de l'État dans chaque département. Cette fonction a été créée en 1800 sous Napoléon."
+    },
+    {
+      "id": "si-q6",
+      "question": "Quelle institution a été créée en 1951 comme première étape de la construction européenne ?",
+      "options": [
+        "L'Union européenne",
+        "La Communauté économique européenne (CEE)",
+        "La Communauté européenne du charbon et de l'acier (CECA)",
+        "Le Parlement européen"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La CECA (Communauté européenne du charbon et de l'acier), créée en 1951, est la première étape de la construction européenne."
+    },
+    {
+      "id": "si-q7",
+      "question": "Qui peut proposer une loi en France ?",
+      "options": [
+        "Uniquement le Président de la République",
+        "Uniquement les députés",
+        "Le Gouvernement et les membres du Parlement",
+        "Les citoyens directement"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les lois peuvent être proposées par le Gouvernement (projets de loi) ou par les membres du Parlement, c'est-à-dire les députés et sénateurs (propositions de loi)."
+    },
+    {
+      "id": "si-q8",
+      "question": "Tous les combien ont lieu les élections européennes ?",
+      "options": [
+        "Tous les 3 ans",
+        "Tous les 4 ans",
+        "Tous les 5 ans",
+        "Tous les 7 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les élections européennes ont lieu tous les 5 ans. Les citoyens élisent les députés qui siègent au Parlement européen."
+    },
+    {
+      "id": "si-q9",
+      "question": "Quel pays a quitté l'Union européenne en 2020 ?",
+      "options": [
+        "La Suisse",
+        "La Norvège",
+        "Le Royaume-Uni",
+        "L'Islande"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le Royaume-Uni a quitté l'Union européenne en 2020. Cet événement est connu sous le nom de « Brexit »."
+    },
+    {
+      "id": "si-q10",
+      "question": "Quels sont les trois niveaux de collectivités territoriales en France ?",
+      "options": [
+        "Cantons, arrondissements, quartiers",
+        "Régions, départements, communes",
+        "Provinces, districts, villages",
+        "États, comtés, villes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France est organisée en trois niveaux de collectivités territoriales : les régions, les départements et les communes, dans le cadre de la décentralisation."
+    }
+  ]
+}

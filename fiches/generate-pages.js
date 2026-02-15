@@ -53,6 +53,10 @@ hero:
       link: principes-et-valeurs/
       icon: right-arrow
       variant: primary
+    - text: Tester vos connaissances
+      link: /quiz/
+      icon: pencil
+      variant: secondary
     - text: Télécharger en PDF
       link: /formation-civique.pdf
       icon: document

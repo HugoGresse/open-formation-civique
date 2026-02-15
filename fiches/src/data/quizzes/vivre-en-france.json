@@ -1,0 +1,127 @@
+{
+  "id": "vivre-en-france",
+  "title": "Vivre dans la société française",
+  "description": "Testez vos connaissances sur les démarches administratives, la santé, l'emploi et la parentalité en France.",
+  "questions": [
+    {
+      "id": "vf-q1",
+      "question": "Quel numéro appeler en cas d'urgence médicale en France ?",
+      "options": [
+        "17",
+        "15",
+        "18",
+        "114"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 15 est le numéro du SAMU (Service d'aide médicale urgente). Le 17 est la police, le 18 les pompiers, et le 112 est le numéro d'urgence européen."
+    },
+    {
+      "id": "vf-q2",
+      "question": "Quel est le numéro d'urgence européen, valable dans toute l'Union européenne ?",
+      "options": [
+        "911",
+        "999",
+        "112",
+        "115"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le 112 est le numéro d'urgence européen. Il est accessible gratuitement dans tous les pays de l'Union européenne."
+    },
+    {
+      "id": "vf-q3",
+      "question": "Qu'est-ce que la PUMa ?",
+      "options": [
+        "Un permis de travail",
+        "La Protection Universelle Maladie (couverture santé)",
+        "Un programme d'aide au logement",
+        "Un titre de séjour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La PUMa (Protection Universelle Maladie) garantit à toute personne résidant en France de manière stable une prise en charge de ses frais de santé."
+    },
+    {
+      "id": "vf-q4",
+      "question": "Qu'est-ce qu'un médecin traitant ?",
+      "options": [
+        "Un médecin spécialiste",
+        "Un médecin généraliste choisi par le patient pour coordonner ses soins",
+        "Un médecin urgentiste",
+        "Un médecin scolaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le médecin traitant est un médecin généraliste choisi par le patient. Il coordonne le parcours de soins et oriente vers des spécialistes si nécessaire."
+    },
+    {
+      "id": "vf-q5",
+      "question": "Comment s'appelle l'organisme qui aide les demandeurs d'emploi en France ?",
+      "options": [
+        "La CAF",
+        "France Travail",
+        "La CPAM",
+        "L'OFII"
+      ],
+      "correctAnswer": 1,
+      "explanation": "France Travail (anciennement Pôle Emploi) est l'organisme public qui accompagne les demandeurs d'emploi dans leur recherche d'emploi et leurs démarches."
+    },
+    {
+      "id": "vf-q6",
+      "question": "L'école publique en France est :",
+      "options": [
+        "Gratuite et religieuse",
+        "Payante et laïque",
+        "Gratuite, laïque et obligatoire",
+        "Gratuite mais facultative"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'école publique en France est gratuite, laïque (sans enseignement religieux) et obligatoire. L'instruction est obligatoire à partir de 3 ans."
+    },
+    {
+      "id": "vf-q7",
+      "question": "Dans quel délai doit-on déclarer une naissance en France ?",
+      "options": [
+        "24 heures",
+        "3 jours",
+        "5 jours",
+        "30 jours"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La déclaration de naissance doit être faite dans les 5 jours suivant l'accouchement à la mairie du lieu de naissance."
+    },
+    {
+      "id": "vf-q8",
+      "question": "Qu'est-ce que la VAE ?",
+      "options": [
+        "Une aide financière pour les étudiants",
+        "La Validation des Acquis de l'Expérience, permettant d'obtenir un diplôme par l'expérience",
+        "Un visa pour les travailleurs étrangers",
+        "Une assurance voyage"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La VAE (Validation des Acquis de l'Expérience) permet d'obtenir un diplôme ou une certification en faisant reconnaître son expérience professionnelle."
+    },
+    {
+      "id": "vf-q9",
+      "question": "Qu'est-ce que l'autorité parentale en France ?",
+      "options": [
+        "Le droit exclusif du père sur les enfants",
+        "Un ensemble de droits et devoirs exercés par les deux parents dans l'intérêt de l'enfant",
+        "Le droit de l'État sur l'éducation des enfants",
+        "Un pouvoir réservé au parent qui a la garde"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'autorité parentale est un ensemble de droits et de devoirs exercés conjointement par les deux parents, dans l'intérêt de l'enfant."
+    },
+    {
+      "id": "vf-q10",
+      "question": "Quelle est la différence entre un CDI et un CDD ?",
+      "options": [
+        "Le CDI est à temps plein, le CDD à temps partiel",
+        "Le CDI est un contrat à durée indéterminée, le CDD à durée déterminée",
+        "Le CDI est pour le secteur public, le CDD pour le privé",
+        "Il n'y a pas de différence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le CDI (Contrat à Durée Indéterminée) n'a pas de date de fin, tandis que le CDD (Contrat à Durée Déterminée) a une durée limitée dans le temps."
+    }
+  ]
+}

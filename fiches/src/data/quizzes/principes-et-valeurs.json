@@ -1,0 +1,139 @@
+{
+  "id": "principes-et-valeurs",
+  "title": "Principes et valeurs de la République",
+  "description": "Testez vos connaissances sur la devise, les symboles, la laïcité et la langue française.",
+  "questions": [
+    {
+      "id": "pv-q1",
+      "question": "Quelle est la devise de la République française ?",
+      "options": [
+        "Liberté, Égalité, Fraternité",
+        "Unité, Force, Progrès",
+        "Paix, Travail, Patrie",
+        "Liberté, Justice, Solidarité"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La devise « Liberté, Égalité, Fraternité » est officielle depuis 1848. Elle apparaît sur les bâtiments publics, les pièces de monnaie et les timbres."
+    },
+    {
+      "id": "pv-q2",
+      "question": "De quelles couleurs est composé le drapeau français, de gauche à droite ?",
+      "options": [
+        "Rouge, blanc, bleu",
+        "Bleu, blanc, rouge",
+        "Blanc, bleu, rouge",
+        "Bleu, rouge, blanc"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le drapeau tricolore est composé de trois bandes verticales : bleu, blanc et rouge. Il est devenu officiel en 1794."
+    },
+    {
+      "id": "pv-q3",
+      "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été adoptée ?",
+      "options": [
+        "1789",
+        "1882",
+        "1905",
+        "1958"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi de séparation des Églises et de l'État a été adoptée le 9 décembre 1905. Elle est le fondement de la laïcité en France."
+    },
+    {
+      "id": "pv-q4",
+      "question": "Comment s'appelle l'hymne national français ?",
+      "options": [
+        "Le Chant du Départ",
+        "La Marseillaise",
+        "L'Internationale",
+        "La Parisienne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Marseillaise, composée en 1792, est devenue l'hymne national officiel en 1879."
+    },
+    {
+      "id": "pv-q5",
+      "question": "Que représente Marianne ?",
+      "options": [
+        "Une reine de France",
+        "La figure allégorique de la République française",
+        "La patronne de Paris",
+        "Une héroïne de la Résistance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marianne est la figure allégorique de la République française. Elle porte le bonnet phrygien, symbole de liberté."
+    },
+    {
+      "id": "pv-q6",
+      "question": "Quel événement la fête nationale du 14 juillet commémore-t-elle ?",
+      "options": [
+        "La fin de la Première Guerre mondiale",
+        "La prise de la Bastille (1789) et la Fête de la Fédération (1790)",
+        "La proclamation de la République",
+        "L'adoption de la Constitution"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 14 juillet commémore à la fois la prise de la Bastille en 1789 et la Fête de la Fédération du 14 juillet 1790."
+    },
+    {
+      "id": "pv-q7",
+      "question": "Depuis quand le français est-il inscrit dans la Constitution comme langue officielle de la République ?",
+      "options": [
+        "1539",
+        "1789",
+        "1958",
+        "1992"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le français est inscrit comme seule langue officielle de la République dans la Constitution depuis 1992."
+    },
+    {
+      "id": "pv-q8",
+      "question": "Que prévoit la loi de 2004 concernant la laïcité à l'école publique ?",
+      "options": [
+        "L'interdiction de toute pratique religieuse",
+        "L'interdiction du port de signes religieux ostensibles dans les écoles publiques",
+        "L'obligation d'étudier toutes les religions",
+        "La suppression des cours d'histoire des religions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi de 2004 interdit le port de signes religieux ostensibles (visibles) dans les écoles publiques françaises."
+    },
+    {
+      "id": "pv-q9",
+      "question": "Le blasphème est-il interdit en France ?",
+      "options": [
+        "Oui, il est puni par la loi",
+        "Oui, mais seulement dans les lieux publics",
+        "Non, le blasphème n'est pas interdit en France",
+        "Non, sauf envers les religions reconnues par l'État"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le blasphème n'est pas interdit en France. La liberté d'expression inclut le droit de critiquer les religions."
+    },
+    {
+      "id": "pv-q10",
+      "question": "Qu'est-ce que le contrat d'engagement républicain ?",
+      "options": [
+        "Un contrat de travail dans la fonction publique",
+        "Un engagement signé par les étrangers lors de la demande de titre de séjour",
+        "Un serment prêté par les élus de la République",
+        "Un document distribué aux enfants à l'école"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le contrat d'engagement républicain doit être signé par tout étranger demandant un titre de séjour. Il engage à respecter les principes républicains."
+    },
+    {
+      "id": "pv-q11",
+      "question": "Les agents du service public peuvent-ils exprimer leurs croyances religieuses dans l'exercice de leurs fonctions ?",
+      "options": [
+        "Oui, la liberté d'expression s'applique",
+        "Non, ils doivent respecter un devoir de neutralité",
+        "Oui, tant que cela ne gêne pas les usagers",
+        "Cela dépend du type de service public"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les agents du service public sont soumis à un strict devoir de neutralité et ne peuvent pas manifester leurs croyances religieuses dans l'exercice de leurs fonctions."
+    }
+  ]
+}

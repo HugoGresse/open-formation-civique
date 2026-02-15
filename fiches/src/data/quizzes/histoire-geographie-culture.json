@@ -1,0 +1,127 @@
+{
+  "id": "histoire-geographie-culture",
+  "title": "Histoire, géographie et culture",
+  "description": "Testez vos connaissances sur l'histoire de France, ses régimes politiques, sa géographie et sa culture.",
+  "questions": [
+    {
+      "id": "hgc-q1",
+      "question": "En quelle année la Révolution française a-t-elle commencé ?",
+      "options": [
+        "1776",
+        "1789",
+        "1792",
+        "1804"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Révolution française a commencé en 1789, marquée notamment par la prise de la Bastille le 14 juillet et la Déclaration des droits de l'homme et du citoyen."
+    },
+    {
+      "id": "hgc-q2",
+      "question": "Qu'est-ce que le Code civil, créé en 1804 ?",
+      "options": [
+        "Un code de conduite militaire",
+        "Un ensemble de lois garantissant l'égalité devant la loi",
+        "La première Constitution française",
+        "Un traité de paix européen"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Code civil, créé sous Napoléon en 1804, est un ensemble de lois qui garantit l'égalité des citoyens devant la loi et organise la vie civile (famille, propriété, contrats)."
+    },
+    {
+      "id": "hgc-q3",
+      "question": "Qui a aboli l'esclavage dans les colonies françaises en 1848 ?",
+      "options": [
+        "Napoléon Bonaparte",
+        "Victor Hugo",
+        "Victor Schœlcher",
+        "Louis-Philippe"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Victor Schœlcher est à l'origine du décret d'abolition de l'esclavage du 27 avril 1848, sous la Deuxième République."
+    },
+    {
+      "id": "hgc-q4",
+      "question": "Sous quel régime la France vit-elle actuellement ?",
+      "options": [
+        "La Quatrième République",
+        "La Cinquième République",
+        "La Monarchie constitutionnelle",
+        "La Sixième République"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France vit sous la Cinquième République depuis 1958. Sa Constitution organise le fonctionnement actuel des institutions."
+    },
+    {
+      "id": "hgc-q5",
+      "question": "Combien de régions métropolitaines la France compte-t-elle ?",
+      "options": [
+        "10",
+        "13",
+        "18",
+        "22"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France métropolitaine compte 13 régions depuis la réforme territoriale. Il faut y ajouter les territoires d'outre-mer."
+    },
+    {
+      "id": "hgc-q6",
+      "question": "Quel roi incarne la monarchie absolue en France ?",
+      "options": [
+        "Charlemagne",
+        "Henri IV",
+        "Louis XIV",
+        "Louis XVI"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Louis XIV, le « Roi-Soleil », incarne la monarchie absolue en France. Il a régné de 1643 à 1715 et a fait construire le château de Versailles."
+    },
+    {
+      "id": "hgc-q7",
+      "question": "Quand le suffrage universel masculin a-t-il été établi en France ?",
+      "options": [
+        "1789",
+        "1848",
+        "1905",
+        "1944"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le suffrage universel masculin a été établi en 1848, sous la Deuxième République. Les femmes n'ont obtenu le droit de vote qu'en 1944."
+    },
+    {
+      "id": "hgc-q8",
+      "question": "Quel événement s'est produit en France entre 1940 et 1944 ?",
+      "options": [
+        "La Commune de Paris",
+        "La Première Guerre mondiale",
+        "Le régime de Vichy et la France libre",
+        "La création de l'Union européenne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Entre 1940 et 1944, la France était divisée entre le régime de Vichy (collaborant avec l'Allemagne nazie) et la France libre (résistance menée depuis l'étranger)."
+    },
+    {
+      "id": "hgc-q9",
+      "question": "En quelle année la Première République française a-t-elle été proclamée ?",
+      "options": [
+        "1789",
+        "1792",
+        "1804",
+        "1848"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Première République a été proclamée le 22 septembre 1792, après l'abolition de la monarchie."
+    },
+    {
+      "id": "hgc-q10",
+      "question": "La France est-elle la première destination touristique mondiale ?",
+      "options": [
+        "Non, c'est l'Espagne",
+        "Non, c'est les États-Unis",
+        "Oui, la France est la première destination touristique au monde",
+        "Oui, mais seulement en Europe"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France est la première destination touristique mondiale, attirant des millions de visiteurs chaque année grâce à son patrimoine culturel, historique et gastronomique."
+    }
+  ]
+}
