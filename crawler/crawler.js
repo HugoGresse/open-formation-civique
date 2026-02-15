@@ -357,7 +357,7 @@ const crawler = new CheerioCrawler({
             const references = extractPourAllerPlusLoin($);
 
             // Extract ALL containers starting from the 4th .fr-container in #content
-            const containers = $('#content .fr-container');
+            const containers = $('#content > .fr-container');
             let combinedHtml = '';
 
             if (containers.length >= 4) {
