@@ -119,10 +119,6 @@ sidebar:
 ---
 
 ${ficheLinks}
-
----
-
-${PDF_LINK}
 `;
 
   writeFileSync(join(thematicPath, 'index.md'), sectionIndexContent);

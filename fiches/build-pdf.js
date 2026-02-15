@@ -1,4 +1,6 @@
 import { spawn } from 'child_process';
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 const PORT = 4322;
 const BASE = '/';
@@ -41,7 +43,22 @@ function startPreviewServer() {
   });
 }
 
+function buildPrecedingPage() {
+  const template = readFileSync(join(import.meta.dirname, 'preceding-page.html'), 'utf-8');
+  const date = new Intl.DateTimeFormat('fr-FR', {
+    dateStyle: 'full',
+    timeStyle: 'short',
+  }).format(new Date());
+  const output = template.replace('{{DATE}}', date);
+  const outPath = join(import.meta.dirname, 'dist', 'preceding-page.html');
+  writeFileSync(outPath, output, 'utf-8');
+  return outPath;
+}
+
 function generatePdf() {
+  const precedingHtmlPath = buildPrecedingPage();
+  console.log(`Preceding page generated at ${precedingHtmlPath}`);
+
   return new Promise((resolve, reject) => {
     const args = [
       'starlight-to-pdf',
@@ -50,7 +67,9 @@ function generatePdf() {
       '-f', PDF_FILENAME,
       '--pdf-outline',
       '--print-bg',
+      '--format=A4',
       '--contents-links=internal',
+      `--preceding-html=${precedingHtmlPath}`,
       '-e', `${BASE}/formation-civique.pdf`,
     ];
 
