@@ -43,6 +43,12 @@ export default defineConfig({
 					label: 'Vivre dans la société française',
 					autogenerate: { directory: 'vivre-en-france' },
 				},
+				{
+					label: 'Télécharger en PDF',
+					link: '/formation-civique.pdf',
+					badge: { text: 'PDF', variant: 'tip' },
+					attrs: { download: true },
+				},
 			],
 		}),
 	],

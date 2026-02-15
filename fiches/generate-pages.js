@@ -34,6 +34,8 @@ const thematicDirMap = {
   'Vivre dans la société française': 'vivre-en-france',
 };
 
+const PDF_LINK = `[Télécharger toutes les fiches en PDF](/open-formation-civique/formation-civique.pdf)`;
+
 // Create content directory structure
 const contentDir = join(__dirname, 'src/content/docs');
 mkdirSync(contentDir, { recursive: true });
@@ -51,6 +53,12 @@ hero:
       link: principes-et-valeurs/
       icon: right-arrow
       variant: primary
+    - text: Télécharger en PDF
+      link: /open-formation-civique/formation-civique.pdf
+      icon: document
+      variant: minimal
+      attrs:
+        download: true
 ---
 
 ## Les 5 thématiques
@@ -111,6 +119,10 @@ sidebar:
 ---
 
 ${ficheLinks}
+
+---
+
+${PDF_LINK}
 `;
 
   writeFileSync(join(thematicPath, 'index.md'), sectionIndexContent);
@@ -135,6 +147,10 @@ description: ${yamlValue(description)}
 ---
 
 ${combinedMarkdown}
+
+---
+
+${PDF_LINK}
 `;
 
     writeFileSync(join(thematicPath, `${ficheSlug}.md`), content);
