@@ -1,7 +1,7 @@
 import { spawn } from 'child_process';
 
 const PORT = 4322;
-const BASE = '/open-formation-civique';
+const BASE = '/';
 const PDF_FILENAME = 'formation-civique';
 
 function startPreviewServer() {
