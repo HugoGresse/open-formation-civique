@@ -31,6 +31,9 @@ jobs:
         run: npm ci
         working-directory: ./fiches
 
+      - name: Install Chromium
+        run: sudo apt-get update && sudo apt-get install -y chromium-browser
+
       - name: Generate pages from JSON data
         run: npm run generate
         working-directory: ./fiches
@@ -38,6 +41,8 @@ jobs:
       - name: Build Astro site
         run: npm run build
         working-directory: ./fiches
+        env:
+          CHROMIUM_PATH: /usr/bin/chromium-browser
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

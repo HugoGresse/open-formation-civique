@@ -54,6 +54,13 @@ function generatePdf() {
       '-e', `${BASE}/formation-civique.pdf`,
     ];
 
+    // In CI environments (like GitHub Actions), use system Chromium if available
+    // This avoids sandbox issues with Puppeteer's bundled Chromium
+    if (process.env.CI && process.env.CHROMIUM_PATH) {
+      args.push('--browser-executable', process.env.CHROMIUM_PATH);
+      console.log(`Using system Chromium: ${process.env.CHROMIUM_PATH}`);
+    }
+
     console.log(`Running: npx ${args.join(' ')}`);
 
     const proc = spawn('npx', args, {
