@@ -34,7 +34,7 @@ const thematicDirMap = {
   'Vivre dans la société française': 'vivre-en-france',
 };
 
-const PDF_LINK = `[Télécharger toutes les fiches en PDF](/open-formation-civique/formation-civique.pdf)`;
+const PDF_LINK = `[Télécharger toutes les fiches en PDF](/formation-civique.pdf)`;
 
 // Create content directory structure
 const contentDir = join(__dirname, 'src/content/docs');
@@ -54,7 +54,7 @@ hero:
       icon: right-arrow
       variant: primary
     - text: Télécharger en PDF
-      link: /open-formation-civique/formation-civique.pdf
+      link: /formation-civique.pdf
       icon: document
       variant: minimal
       attrs:

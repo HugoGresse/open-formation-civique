@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hugogresse.github.io',
-	base: '/open-formation-civique',
+	site: 'http://open-formation-civique.fr',
+	base: '/',
 	trailingSlash: 'always',
 	integrations: [
 		starlight({
