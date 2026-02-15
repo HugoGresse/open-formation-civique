@@ -58,7 +58,7 @@ hero:
 ${data.mainPage.thematics
   .map(
     (thematic) => `
-### ${thematic.title}
+### [${thematic.title}](${thematicDirMap[thematic.title]}/)
 
 ${thematic.description}
 `
@@ -98,12 +98,33 @@ Object.entries(contentByThematic).forEach(([thematicTitle, fiches]) => {
   const thematicPath = join(contentDir, thematicDir);
   mkdirSync(thematicPath, { recursive: true });
 
+  // Generate section index page
+  const ficheLinks = Object.keys(fiches)
+    .map((ficheTitle) => `- [${ficheTitle}](${slugify(ficheTitle)}/)`)
+    .join('\n');
+
+  const sectionIndexContent = `---
+title: ${yamlValue(thematicTitle)}
+description: ${yamlValue(data.mainPage.thematics.find((t) => t.title === thematicTitle)?.description || thematicTitle)}
+sidebar:
+  label: ${yamlValue(thematicTitle)}
+---
+
+${ficheLinks}
+`;
+
+  writeFileSync(join(thematicPath, 'index.md'), sectionIndexContent);
+  console.log(`✓ Created ${thematicDir}/index.md`);
+
   // Generate pages for each fiche - combine all sub-pages into one
   Object.entries(fiches).forEach(([ficheTitle, pages]) => {
     const ficheSlug = slugify(ficheTitle);
 
-    // Combine all pages into a single markdown content
-    const combinedMarkdown = pages.map(page => page.markdown).join('\n\n---\n\n');
+    // Combine all pages into a single markdown content, bumping headings up one level
+    const combinedMarkdown = pages.map(page => page.markdown).join('\n\n---\n\n')
+      .replace(/^##### /gm, '#### ')
+      .replace(/^#### /gm, '### ')
+      .replace(/^### /gm, '## ');
 
     // Use the first page's description or the fiche title
     const description = pages[0]?.subPageTitle || ficheTitle;
