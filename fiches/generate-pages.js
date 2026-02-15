@@ -98,42 +98,26 @@ Object.entries(contentByThematic).forEach(([thematicTitle, fiches]) => {
   const thematicPath = join(contentDir, thematicDir);
   mkdirSync(thematicPath, { recursive: true });
 
-  // Generate pages for each fiche
+  // Generate pages for each fiche - combine all sub-pages into one
   Object.entries(fiches).forEach(([ficheTitle, pages]) => {
     const ficheSlug = slugify(ficheTitle);
 
-    // If there's only one page, create a single file
-    if (pages.length === 1) {
-      const page = pages[0];
-      const content = `---
+    // Combine all pages into a single markdown content
+    const combinedMarkdown = pages.map(page => page.markdown).join('\n\n---\n\n');
+
+    // Use the first page's description or the fiche title
+    const description = pages[0]?.subPageTitle || ficheTitle;
+
+    const content = `---
 title: ${yamlValue(ficheTitle)}
-description: ${yamlValue(page.subPageTitle || ficheTitle)}
+description: ${yamlValue(description)}
 ---
 
-${page.markdown}
+${combinedMarkdown}
 `;
 
-      writeFileSync(join(thematicPath, `${ficheSlug}.md`), content);
-      console.log(`✓ Created ${thematicDir}/${ficheSlug}.md`);
-    } else {
-      // If there are multiple pages, create a directory with index and subpages
-      const ficheDir = join(thematicPath, ficheSlug);
-      mkdirSync(ficheDir, { recursive: true });
-
-      pages.forEach((page, index) => {
-        const subPageSlug = index === 0 ? 'index' : slugify(page.subPageTitle);
-        const content = `---
-title: ${yamlValue(page.subPageTitle || ficheTitle)}
-description: ${yamlValue(page.subPageTitle || ficheTitle)}
----
-
-${page.markdown}
-`;
-
-        writeFileSync(join(ficheDir, `${subPageSlug}.md`), content);
-        console.log(`✓ Created ${thematicDir}/${ficheSlug}/${subPageSlug}.md`);
-      });
-    }
+    writeFileSync(join(thematicPath, `${ficheSlug}.md`), content);
+    console.log(`✓ Created ${thematicDir}/${ficheSlug}.md (${pages.length} section${pages.length > 1 ? 's' : ''})`);
   });
 });
 

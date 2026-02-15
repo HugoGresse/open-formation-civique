@@ -13,6 +13,110 @@ import TurndownService from 'turndown';
 const BASE_URL = 'https://formation-civique.interieur.gouv.fr';
 const START_URL = `${BASE_URL}/fiches-par-thematiques/`;
 
+/**
+ * Create a configured TurndownService with custom rules for DSFR components
+ */
+function createTurndownService() {
+    const turndownService = new TurndownService({
+        headingStyle: 'atx',
+        codeBlockStyle: 'fenced',
+    });
+
+    // Handle fr-content-media figures: extract image with alt + figcaption
+    turndownService.addRule('frContentMedia', {
+        filter: (node) => {
+            return node.nodeName === 'FIGURE' &&
+                node.getAttribute('class')?.includes('fr-content-media');
+        },
+        replacement: (content, node) => {
+            const img = node.querySelector('img');
+            const figcaption = node.querySelector('.fr-content-media__caption');
+            if (!img) return content;
+
+            const alt = img.getAttribute('alt') || '';
+            const src = img.getAttribute('src') || '';
+            let md = `![${alt}](${src})`;
+            if (figcaption) {
+                md += `\n*${figcaption.textContent.trim()}*`;
+            }
+            return `\n\n${md}\n\n`;
+        },
+    });
+
+    // Handle fr-transcription: extract content from the modal dialog
+    turndownService.addRule('frTranscription', {
+        filter: (node) => {
+            return node.getAttribute('class')?.includes('fr-transcription');
+        },
+        replacement: (content, node) => {
+            const modalContent = node.querySelector('.fr-modal__content');
+            if (!modalContent) return '';
+
+            // Get inner HTML and convert it via a fresh turndown pass
+            const innerTurndown = new TurndownService({
+                headingStyle: 'atx',
+                codeBlockStyle: 'fenced',
+            });
+            // Skip the h2 "Transcription" title inside the modal
+            innerTurndown.addRule('skipTranscriptionTitle', {
+                filter: (n) => n.nodeName === 'H2' && n.getAttribute('class')?.includes('fr-modal__title'),
+                replacement: () => '',
+            });
+            const transcriptionMd = innerTurndown.turndown(modalContent.innerHTML);
+            return `\n\n<details>\n<summary>Transcription</summary>\n\n${transcriptionMd.trim()}\n\n</details>\n\n`;
+        },
+    });
+
+    // Remove "Pour aller plus loin" callout blocks (handled separately)
+    turndownService.addRule('removeCallout', {
+        filter: (node) => {
+            const cls = node.getAttribute('class') || '';
+            if (cls.includes('cmsfr-block-callout')) return true;
+            // Also match the inner fr-callout div (when the outer container is stripped)
+            if (cls.includes('fr-callout')) {
+                const title = node.querySelector('.fr-callout__title');
+                if (title && title.textContent.includes('Pour aller plus loin')) return true;
+            }
+            return false;
+        },
+        replacement: () => '',
+    });
+
+    // Remove sr-only spans (screen reader text like "(Ouvre une nouvelle fenêtre)")
+    turndownService.addRule('removeSrOnly', {
+        filter: (node) => {
+            return node.nodeName === 'SPAN' &&
+                node.getAttribute('class')?.includes('fr-sr-only');
+        },
+        replacement: () => '',
+    });
+
+    return turndownService;
+}
+
+/**
+ * Extract "Pour aller plus loin" links from the page as structured data
+ */
+function extractPourAllerPlusLoin($) {
+    const links = [];
+    $('.cmsfr-block-callout').each((_, callout) => {
+        const $callout = $(callout);
+        const title = $callout.find('.fr-callout__title').text().trim();
+        if (!title.includes('Pour aller plus loin')) return;
+
+        $callout.find('.fr-callout__text a').each((_, a) => {
+            const $a = $(a);
+            const href = $a.attr('href');
+            // Get link text, removing the sr-only span text
+            const text = $a.text().replace(/\(Ouvre une nouvelle fenêtre\)/g, '').trim();
+            if (href && text) {
+                links.push({ text, href });
+            }
+        });
+    });
+    return links;
+}
+
 const crawler = new CheerioCrawler({
     // No limit - crawl all pages across 3 levels
     maxRequestsPerCrawl: 1000,
@@ -211,11 +315,10 @@ const crawler = new CheerioCrawler({
                 // No sub-pages - extract content directly
                 log.info(`📝 No sub-pages found, extracting content...`);
 
-                // Initialize Turndown for HTML to Markdown conversion
-                const turndownService = new TurndownService({
-                    headingStyle: 'atx',
-                    codeBlockStyle: 'fenced',
-                });
+                const turndownService = createTurndownService();
+
+                // Extract "Pour aller plus loin" links before conversion
+                const references = extractPourAllerPlusLoin($);
 
                 // Extract the main content
                 const mainContent = $('main, article, .fr-container').first();
@@ -235,6 +338,7 @@ const crawler = new CheerioCrawler({
                     ficheTitle: request.userData.ficheTitle,
                     breadcrumb,
                     markdown,
+                    references,
                     scrapedAt: new Date().toISOString(),
                 });
             }
@@ -247,11 +351,10 @@ const crawler = new CheerioCrawler({
                 breadcrumb.push($(el).text().trim());
             });
 
-            // Initialize Turndown for HTML to Markdown conversion
-            const turndownService = new TurndownService({
-                headingStyle: 'atx',
-                codeBlockStyle: 'fenced',
-            });
+            const turndownService = createTurndownService();
+
+            // Extract "Pour aller plus loin" links before conversion
+            const references = extractPourAllerPlusLoin($);
 
             // Extract ALL containers starting from the 4th .fr-container in #content
             const containers = $('#content .fr-container');
@@ -282,6 +385,7 @@ const crawler = new CheerioCrawler({
                 subPageTitle: request.userData.subPageTitle,
                 breadcrumb,
                 markdown,
+                references,
                 scrapedAt: new Date().toISOString(),
             });
         }
