@@ -15,6 +15,7 @@ export default defineConfig({
 		starlight({
 			title: 'Formation Civique',
 			description: 'Fiches thématiques pour la formation civique',
+			customCss: ['./src/styles/quiz.css'],
 			defaultLocale: 'root',
 			locales: {
 				root: {

@@ -229,6 +229,7 @@ const quizFiles = ['principes-et-valeurs', 'systeme-institutionnel', 'droits-et-
 const quizIndexContent = `---
 title: "Quiz"
 description: "Testez vos connaissances sur la formation civique"
+tableOfContents: false
 ---
 
 import QuizSummary from '../../../components/QuizSummary.astro';
@@ -252,6 +253,7 @@ quizFiles.forEach((quizId) => {
   const quizPageContent = `---
 title: ${yamlValue(quizFileData.title)}
 description: ${yamlValue(quizFileData.description)}
+tableOfContents: false
 ---
 
 import Quiz from '../../../components/Quiz.astro';
