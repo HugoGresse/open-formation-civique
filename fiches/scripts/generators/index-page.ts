@@ -1,9 +1,39 @@
-import { writeFileSync } from 'fs';
-import { join } from 'path';
-import type { CrawlerData } from './types.js';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import type { CrawlerData, Question } from './types.js';
 import { thematicDirMap } from './utils.js';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function countQuestions(): { thematic: number; csp: number; cr: number } {
+  let thematic = 0;
+  let csp = 0;
+  let cr = 0;
+
+  const quizDataPath = join(__dirname, '../../../crawler/formation-civique-data-with-quizz.json');
+  if (existsSync(quizDataPath)) {
+    const quizData: CrawlerData = JSON.parse(readFileSync(quizDataPath, 'utf-8'));
+    for (const page of quizData.contentPages) {
+      thematic += page.questions?.length || 0;
+    }
+  }
+
+  for (const [key, target] of [['csp', 'csp'], ['cr', 'cr']] as const) {
+    const path = join(__dirname, `../../../crawler/officials-${key}-questions-with-answers.json`);
+    if (!existsSync(path)) continue;
+    const data: Record<string, { questions: Question[] }> = JSON.parse(readFileSync(path, 'utf-8'));
+    const count = Object.values(data).reduce((sum, { questions }) => sum + questions.length, 0);
+    if (target === 'csp') csp = count;
+    else cr = count;
+  }
+
+  return { thematic, csp, cr };
+}
+
 export function generateIndexPage(data: CrawlerData, contentDir: string): void {
+  const counts = countQuestions();
+
   const thematicCards = data.mainPage.thematics
     .map(
       (thematic) =>
@@ -42,9 +72,9 @@ import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
 ## Quiz
 
 <CardGrid>
-  <LinkCard title="Quiz thématiques" description="Quiz générés à partir du contenu des fiches" href="/quiz/" />
-  <LinkCard title="Quiz officiels CSP" description="Questions officielles du Contrat de Séjour Pluriannuel" href="/quiz/csp-principes-et-valeurs/" />
-  <LinkCard title="Quiz officiels CR" description="Questions officielles de la Carte de Résident" href="/quiz/cr-principes-et-valeurs/" />
+  <LinkCard title="Quiz thématiques" description="${counts.thematic} questions générées à partir du contenu des fiches" href="/quiz/" />
+  <LinkCard title="Quiz officiels CSP" description="${counts.csp} questions officielles du Contrat de Séjour Pluriannuel" href="/quiz/csp-principes-et-valeurs/" />
+  <LinkCard title="Quiz officiels CR" description="${counts.cr} questions officielles de la Carte de Résident" href="/quiz/cr-principes-et-valeurs/" />
 </CardGrid>
 
 ## Les 5 thématiques
