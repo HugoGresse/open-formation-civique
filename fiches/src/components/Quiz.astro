@@ -342,7 +342,7 @@ const { quizData } = Astro.props;
     margin: 0 0 1.5rem;
   }
 
-  .quiz-question-text:focus {
+  .quiz-question-text:focus:not(:focus-visible) {
     outline: none;
   }
 
