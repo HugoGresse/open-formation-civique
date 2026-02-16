@@ -1,139 +1,1171 @@
 {
   "id": "principes-et-valeurs",
   "title": "Principes et valeurs de la République",
-  "description": "Testez vos connaissances sur la devise, les symboles, la laïcité et la langue française.",
+  "description": "Testez vos connaissances : Devise et symboles de la République • Laïcité",
   "questions": [
     {
       "id": "pv-q1",
-      "question": "Quelle est la devise de la République française ?",
+      "question": "Quelle est la devise officielle de la République française ?",
       "options": [
         "Liberté, Égalité, Fraternité",
-        "Unité, Force, Progrès",
-        "Paix, Travail, Patrie",
-        "Liberté, Justice, Solidarité"
+        "Liberté, Justice, Paix",
+        "Égalité, Solidarité, Progrès",
+        "Patrie, Honneur, Valeur"
       ],
       "correctAnswer": 0,
-      "explanation": "La devise « Liberté, Égalité, Fraternité » est officielle depuis 1848. Elle apparaît sur les bâtiments publics, les pièces de monnaie et les timbres."
+      "explanation": "La devise de la République française, adoptée officiellement, est « Liberté, Égalité, Fraternité »."
     },
     {
       "id": "pv-q2",
-      "question": "De quelles couleurs est composé le drapeau français, de gauche à droite ?",
+      "question": "En quelle année la devise a-t-elle été adoptée officiellement par la République française ?",
       "options": [
-        "Rouge, blanc, bleu",
-        "Bleu, blanc, rouge",
-        "Blanc, bleu, rouge",
-        "Bleu, rouge, blanc"
+        "1789",
+        "1848",
+        "1870",
+        "1958"
       ],
       "correctAnswer": 1,
-      "explanation": "Le drapeau tricolore est composé de trois bandes verticales : bleu, blanc et rouge. Il est devenu officiel en 1794."
+      "explanation": "Elle a été adoptée officiellement en 1848, sous la Deuxième République."
     },
     {
       "id": "pv-q3",
-      "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été adoptée ?",
+      "question": "Sous quelle République la devise est-elle devenue visible dans les mairies, monuments et écoles ?",
       "options": [
-        "1789",
-        "1882",
-        "1905",
-        "1958"
+        "Première République",
+        "Deuxième République",
+        "Troisième République",
+        "Quatrième République"
       ],
       "correctAnswer": 2,
-      "explanation": "La loi de séparation des Églises et de l'État a été adoptée le 9 décembre 1905. Elle est le fondement de la laïcité en France."
+      "explanation": "C’est sous la Troisième République que la devise s’est largement diffusée sur les bâtiments publics."
     },
     {
       "id": "pv-q4",
-      "question": "Comment s'appelle l'hymne national français ?",
+      "question": "Dans quel texte fondamental la devise est‑elle inscrite aujourd’hui ?",
       "options": [
-        "Le Chant du Départ",
-        "La Marseillaise",
-        "L'Internationale",
-        "La Parisienne"
+        "Déclaration des Droits de l’Homme et du Citoyen",
+        "Code civil",
+        "Constitution de 1958",
+        "Charte de la Ville"
       ],
-      "correctAnswer": 1,
-      "explanation": "La Marseillaise, composée en 1792, est devenue l'hymne national officiel en 1879."
+      "correctAnswer": 2,
+      "explanation": "La devise figure dans la Constitution française de 1958, texte qui régit la Vème République."
     },
     {
       "id": "pv-q5",
-      "question": "Que représente Marianne ?",
+      "question": "Où peut‑on lire la devise « Liberté, Égalité, Fraternité » aujourd’hui ?",
       "options": [
-        "Une reine de France",
-        "La figure allégorique de la République française",
-        "La patronne de Paris",
-        "Une héroïne de la Résistance"
+        "Sur les bâtiments publics (mairies, écoles, tribunaux)",
+        "Sur les billets de banque",
+        "Sur les panneaux publicitaires",
+        "Sur les cartes de visite privées"
       ],
-      "correctAnswer": 1,
-      "explanation": "Marianne est la figure allégorique de la République française. Elle porte le bonnet phrygien, symbole de liberté."
+      "correctAnswer": 0,
+      "explanation": "La devise apparaît sur les bâtiments publics, ainsi que sur certaines pièces de monnaie, timbres et documents officiels."
     },
     {
       "id": "pv-q6",
-      "question": "Quel événement la fête nationale du 14 juillet commémore-t-elle ?",
+      "question": "En France, quelle est la seule limite à la liberté individuelle ?",
       "options": [
-        "La fin de la Première Guerre mondiale",
-        "La prise de la Bastille (1789) et la Fête de la Fédération (1790)",
-        "La proclamation de la République",
-        "L'adoption de la Constitution"
+        "Respecter les lois religieuses",
+        "Ne pas empêcher une autre personne d’en faire autant",
+        "Obéir aux ordres du gouvernement",
+        "Posséder un titre de séjour"
       ],
       "correctAnswer": 1,
-      "explanation": "Le 14 juillet commémore à la fois la prise de la Bastille en 1789 et la Fête de la Fédération du 14 juillet 1790."
+      "explanation": "La liberté de chacun s’arrête lorsqu’elle empêche la liberté d’autrui."
     },
     {
       "id": "pv-q7",
-      "question": "Depuis quand le français est-il inscrit dans la Constitution comme langue officielle de la République ?",
+      "question": "Quel texte garantit la liberté en France ?",
       "options": [
-        "1539",
-        "1789",
-        "1958",
-        "1992"
+        "La Constitution de 1958",
+        "La Déclaration des droits de l'homme et du citoyen de 1789",
+        "Le Code civil",
+        "La Charte européenne des droits fondamentaux"
       ],
-      "correctAnswer": 3,
-      "explanation": "Le français est inscrit comme seule langue officielle de la République dans la Constitution depuis 1992."
+      "correctAnswer": 1,
+      "explanation": "La Déclaration de 1789 consacre la liberté comme valeur fondamentale."
     },
     {
       "id": "pv-q8",
-      "question": "Que prévoit la loi de 2004 concernant la laïcité à l'école publique ?",
+      "question": "Parmi les propositions suivantes, laquelle illustre une « liberté de chaque personne » ?",
       "options": [
-        "L'interdiction de toute pratique religieuse",
-        "L'interdiction du port de signes religieux ostensibles dans les écoles publiques",
-        "L'obligation d'étudier toutes les religions",
-        "La suppression des cours d'histoire des religions"
+        "Adhérer à un syndicat",
+        "Participer à une manifestation",
+        "Choisir le ou la personne avec qui vivre",
+        "Se rassembler dans un lieu public"
       ],
-      "correctAnswer": 1,
-      "explanation": "La loi de 2004 interdit le port de signes religieux ostensibles (visibles) dans les écoles publiques françaises."
+      "correctAnswer": 2,
+      "explanation": "Choisir son partenaire relève des libertés individuelles propres à chaque personne."
     },
     {
       "id": "pv-q9",
-      "question": "Le blasphème est-il interdit en France ?",
+      "question": "Quelle activité relève des « libertés qui concernent plusieurs personnes » ?",
       "options": [
-        "Oui, il est puni par la loi",
-        "Oui, mais seulement dans les lieux publics",
-        "Non, le blasphème n'est pas interdit en France",
-        "Non, sauf envers les religions reconnues par l'État"
+        "Vivre avec la personne de son choix",
+        "Exprimer une opinion",
+        "Se déplacer grâce à son titre de séjour",
+        "Se rassembler dans un lieu public"
       ],
-      "correctAnswer": 2,
-      "explanation": "Le blasphème n'est pas interdit en France. La liberté d'expression inclut le droit de critiquer les religions."
+      "correctAnswer": 3,
+      "explanation": "Le rassemblement public implique plusieurs personnes et garantit la place de chacun dans la société."
     },
     {
       "id": "pv-q10",
-      "question": "Qu'est-ce que le contrat d'engagement républicain ?",
+      "question": "Le principe de liberté s’applique à tous, sans distinction de :",
       "options": [
-        "Un contrat de travail dans la fonction publique",
-        "Un engagement signé par les étrangers lors de la demande de titre de séjour",
-        "Un serment prêté par les élus de la République",
-        "Un document distribué aux enfants à l'école"
+        "Niveau d’études",
+        "Pays d’origine, religion, ancêtres",
+        "Revenu",
+        "Profession"
       ],
       "correctAnswer": 1,
-      "explanation": "Le contrat d'engagement républicain doit être signé par tout étranger demandant un titre de séjour. Il engage à respecter les principes républicains."
+      "explanation": "La liberté est un droit universel, indépendamment de l’origine, de la religion ou des ancêtres."
     },
     {
       "id": "pv-q11",
-      "question": "Les agents du service public peuvent-ils exprimer leurs croyances religieuses dans l'exercice de leurs fonctions ?",
+      "question": "Quelles sont les trois couleurs du drapeau français ?",
       "options": [
-        "Oui, la liberté d'expression s'applique",
-        "Non, ils doivent respecter un devoir de neutralité",
-        "Oui, tant que cela ne gêne pas les usagers",
-        "Cela dépend du type de service public"
+        "Bleu, blanc et rouge",
+        "Vert, blanc et rouge",
+        "Bleu, jaune et rouge",
+        "Noir, blanc et rouge"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le drapeau tricolore est composé de trois bandes verticales bleu, blanc et rouge."
+    },
+    {
+      "id": "pv-q12",
+      "question": "Quelle était la signification du blanc dans le drapeau tricolore à l'origine ?",
+      "options": [
+        "Couleur du roi",
+        "Couleur de la ville de Paris",
+        "Couleur de la marine",
+        "Couleur de la Révolution"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le blanc représentait la monarchie, le roi, et a été ajouté pour symboliser l'union du peuple (bleu‑rouge) et du roi."
+    },
+    {
+      "id": "pv-q13",
+      "question": "En quelle année le drapeau tricolore est-il devenu le drapeau officiel de la France ?",
+      "options": [
+        "1794",
+        "1789",
+        "1790",
+        "1830"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le drapeau bleu‑blanc‑rouge a été adopté officiellement en 1794, pendant la Révolution."
+    },
+    {
+      "id": "pv-q14",
+      "question": "Parmi les lieux suivants, où ne voit‑on généralement pas le drapeau français ?",
+      "options": [
+        "Sur les cartes d'identité",
+        "Dans les stades sportifs",
+        "Sur les panneaux de signalisation routière",
+        "Devant les mairies"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le drapeau n'est pas affiché sur les panneaux de signalisation ; il apparaît sur les documents officiels, les bâtiments publics et lors d'événements."
+    },
+    {
+      "id": "pv-q15",
+      "question": "Que signifie l'outrage au drapeau français ?",
+      "options": [
+        "Le détruire ou l'utiliser de façon dégradante en public",
+        "Le toucher sans autorisation",
+        "Le vendre comme souvenir",
+        "Le remplacer par un drapeau européen"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'outrage au drapeau consiste à le dégrader ou le détruire publiquement, ce qui est interdit par la loi."
+    },
+    {
+      "id": "pv-q16",
+      "question": "Quel est le nom officiel de l'hymne national français ?",
+      "options": [
+        "La Marseillaise",
+        "La Liberté",
+        "Le Chant du Rhin",
+        "L'Anthem Français"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'hymne national de la France s'appelle La Marseillaise."
+    },
+    {
+      "id": "pv-q17",
+      "question": "En quelle année la Marseillaise a-t-elle été déclarée chant national ?",
+      "options": [
+        "1792",
+        "1795",
+        "1798",
+        "1800"
       ],
       "correctAnswer": 1,
-      "explanation": "Les agents du service public sont soumis à un strict devoir de neutralité et ne peuvent pas manifester leurs croyances religieuses dans l'exercice de leurs fonctions."
+      "explanation": "Le 14 juillet 1795, le chant a été officiellement déclaré chant national."
+    },
+    {
+      "id": "pv-q18",
+      "question": "Qui a arrangé la Marseillaise pour orchestre lors de la Révolution de 1830 ?",
+      "options": [
+        "Hector Berlioz",
+        "Claude Debussy",
+        "Camille Saint‑Saëns",
+        "Maurice Ravel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le compositeur Hector Berlioz a créé un arrangement orchestral de la Marseillaise en 1830."
+    },
+    {
+      "id": "pv-q19",
+      "question": "En quelle année la Marseillaise est-elle devenue officiellement l'hymne national de la Troisième République ?",
+      "options": [
+        "1879",
+        "1848",
+        "1914",
+        "1945"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 1879, sous la Troisième République, la Marseillaise a été adoptée comme hymne national."
+    },
+    {
+      "id": "pv-q20",
+      "question": "Parmi les occasions suivantes, laquelle n'est PAS mentionnée comme moment où l'hymne est joué ?",
+      "options": [
+        "Cérémonies officielles de l'État",
+        "Événements sportifs internationaux",
+        "Réunions de famille",
+        "Manifestations exceptionnelles"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les réunions de famille ne figurent pas parmi les occasions officielles listées."
+    },
+    {
+      "id": "pv-q21",
+      "question": "Que représente le symbole Marianne ?",
+      "options": [
+        "La monarchie absolue",
+        "La République",
+        "L'Église",
+        "L'Empire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marianne a été créée pendant la Révolution pour incarner la République française."
+    },
+    {
+      "id": "pv-q22",
+      "question": "Quel élément vestimentaire de Marianne fait référence aux esclaves libérés de l'Antiquité ?",
+      "options": [
+        "La couronne de laurier",
+        "Le bonnet phrygien",
+        "L'épée",
+        "Le collier de perles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le bonnet phrygien symbolise la liberté, rappelant les esclaves affranchis de l'Antiquité."
+    },
+    {
+      "id": "pv-q23",
+      "question": "À partir de quelles décennies les actrices françaises ont-elles souvent incarné Marianne dans la culture populaire ?",
+      "options": [
+        "Années 1920",
+        "Années 1940",
+        "Années 1960",
+        "Années 1990"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Depuis les années 1960, des actrices comme Brigitte Bardot ou Catherine Deneuve ont modernisé l'image de Marianne."
+    },
+    {
+      "id": "pv-q24",
+      "question": "Où le buste de Marianne est-il présent de façon obligatoire ?",
+      "options": [
+        "Dans les écoles",
+        "Dans les mairies",
+        "Dans les hôpitaux",
+        "Dans les gares"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Toutes les mairies françaises affichent le buste de Marianne comme symbole républicain."
+    },
+    {
+      "id": "pv-q25",
+      "question": "Sur quels documents officiels la figure de Marianne apparaît-elle ?",
+      "options": [
+        "Carte d'identité et déclaration d'impôts",
+        "Permis de conduire uniquement",
+        "Billet de train",
+        "Facture d'électricité"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Marianne figure sur la carte d'identité et d'autres documents administratifs comme la déclaration d'impôts."
+    },
+    {
+      "id": "pv-q26",
+      "question": "En quelle année le 14 juillet a-t-il été officiellement désigné comme jour de la fête nationale en France ?",
+      "options": [
+        "1875",
+        "1880",
+        "1885",
+        "1890"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 14 juillet devient le jour de la fête nationale en 1880."
+    },
+    {
+      "id": "pv-q27",
+      "question": "Quel événement majeur s'est produit le 14 juillet 1789 ?",
+      "options": [
+        "La proclamation de la Première République",
+        "La prise de la Bastille",
+        "L'abolition des privilèges féodaux",
+        "Le couronnement de Louis XVI"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 14 juillet 1789 marque la prise de la Bastille, symbole du début de la Révolution française."
+    },
+    {
+      "id": "pv-q28",
+      "question": "Quelle était la première Fête de la Fédération célébrée le 14 juillet 1790 ?",
+      "options": [
+        "Un hommage à Napoléon Bonaparte",
+        "Une célébration de la prise de la Bastille avec la présence du roi Louis XVI",
+        "Le déclenchement de la guerre de la Première Coalition",
+        "L'inauguration du premier drapeau tricolore"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 14 juillet 1790, la première Fête de la Fédération a réuni les provinces et le roi pour célébrer la prise de la Bastille."
+    },
+    {
+      "id": "pv-q29",
+      "question": "Quel type d'événement institutionnel se déroule chaque 14 juillet à Paris ?",
+      "options": [
+        "Un débat parlementaire spécial",
+        "Un défilé militaire sur les Champs‑Élysées en présence du président de la République",
+        "Une cérémonie religieuse à Notre‑Dame",
+        "Une course de bateaux sur la Seine"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 14 juillet est marqué par un défilé militaire sur les Champs‑Élysées, auquel assiste le président."
+    },
+    {
+      "id": "pv-q30",
+      "question": "Outre le défilé militaire, quelle autre forme de célébration caractérise la fête du 14 juillet dans tout le pays ?",
+      "options": [
+        "Des élections locales",
+        "Des feux d’artifice, concerts et bals populaires",
+        "Des compétitions sportives nationales",
+        "Des expositions d'art contemporain"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La journée est aussi une fête populaire avec feux d’artifice, concerts, bals, etc."
+    },
+    {
+      "id": "pv-q31",
+      "question": "Quel était le sens du mot latin « Gallus » utilisé par les Romains pour désigner les Gaulois ?",
+      "options": [
+        "Il signifiait à la fois « Gaulois » et « coq ».",
+        "Il signifiait uniquement « oiseau ».",
+        "Il signifiait uniquement « soldat ».",
+        "Il signifiait « tribu » sans référence animale."
+      ],
+      "correctAnswer": 0,
+      "explanation": "« Gallus » désignait le peuple gaulois et, par jeu de mots, le coq."
+    },
+    {
+      "id": "pv-q32",
+      "question": "À quelle période le coq a-t-il commencé à être perçu comme un symbole de fierté et de courage ?",
+      "options": [
+        "Pendant l’Antiquité romaine.",
+        "Au cours de la Renaissance.",
+        "Durant la Révolution française.",
+        "Au XXᵉ siècle."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte indique que, après une première connotation moqueuse, le coq devient progressivement un symbole de fierté et de courage dès l’Antiquité."
+    },
+    {
+      "id": "pv-q33",
+      "question": "Le coq est‑il reconnu comme symbole officiel de la République française ?",
+      "options": [
+        "Oui, il figure parmi les symboles officiels.",
+        "Non, il n’est pas reconnu officiellement.",
+        "Il l’a été uniquement entre 1790 et 1800.",
+        "Il ne l’est que dans le domaine sportif."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contrairement au drapeau, à Marianne ou à la devise, le coq n’est pas un symbole officiel de la République."
+    },
+    {
+      "id": "pv-q34",
+      "question": "Quelle utilisation du coq relève de la diplomatie économique et culturelle de la France ?",
+      "options": [
+        "Il orne les frontons de certaines mairies.",
+        "Il figure sur les maillots des équipes nationales.",
+        "Il apparaît comme logo de La French Tech.",
+        "Il était gravé sur les monnaies du XIXᵉ siècle."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le coq est utilisé comme logo de La French Tech, illustrant la diplomatie économique et culturelle."
+    },
+    {
+      "id": "pv-q35",
+      "question": "Quel groupe social le coq a‑t-il particulièrement valorisé pendant la Révolution française ?",
+      "options": [
+        "L’aristocratie.",
+        "Les paysans.",
+        "Les militaires.",
+        "Les bourgeois urbains."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte précise que le coq valorise les paysans, travailleurs de la terre, à cette époque."
+    },
+    {
+      "id": "pv-q36",
+      "question": "En quelle année la loi séparant l’État et les Églises a été adoptée en France ?",
+      "options": [
+        "1789",
+        "1801",
+        "1882",
+        "1905"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La loi de 1905 établit la séparation des Églises et de l’État."
+    },
+    {
+      "id": "pv-q37",
+      "question": "Quel texte a introduit pour la première fois le principe de liberté de conscience et de religion, considéré comme le fondement de la laïcité ?",
+      "options": [
+        "Déclaration des droits de l'homme et du citoyen (1789)",
+        "Concordat de 1801",
+        "Loi de 1905",
+        "Code civil de 1804"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Déclaration de 1789 proclame la liberté de conscience, base de la laïcité."
+    },
+    {
+      "id": "pv-q38",
+      "question": "Quel était l’objectif principal du Concordat de 1801 ?",
+      "options": [
+        "Séparer l’Église et l’État",
+        "Organiser les relations entre l’État et l’Église catholique",
+        "Rendre l’école primaire gratuite",
+        "Interdire les signes religieux dans les écoles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Concordat régule les rapports entre le pouvoir civil et l’Église catholique."
+    },
+    {
+      "id": "pv-q39",
+      "question": "Quelle réforme a rendu l’école primaire publique obligatoire, gratuite et indépendante de l’Église catholique ?",
+      "options": [
+        "Loi de 1905",
+        "Loi de 2004",
+        "Loi de 1882",
+        "Loi de 2021"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En 1882, l’école primaire devient obligatoire, gratuite et laïque."
+    },
+    {
+      "id": "pv-q40",
+      "question": "La loi de 2004 interdit dans les établissements publics d’enseignement de porter, avec l’intention d’être vu, :",
+      "options": [
+        "Tout vêtement",
+        "Tout symbole politique",
+        "Un signe ou un vêtement affichant une appartenance religieuse",
+        "De parler de religion"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi de 2004 vise à garantir la neutralité religieuse en interdisant les signes visibles de religion."
+    },
+    {
+      "id": "pv-q41",
+      "question": "Selon l’article 10 de la Déclaration de 1789, on ne doit pas s’inquiéter d’une opinion, même religieuse, à condition que :",
+      "options": [
+        "Elle ne trouble pas l’ordre public",
+        "Elle soit exprimée uniquement en privé",
+        "Elle soit approuvée par le gouvernement",
+        "Elle soit enseignée à l’école"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 10 stipule que les opinions religieuses sont libres tant qu’elles ne perturbent pas l’ordre public."
+    },
+    {
+      "id": "pv-q42",
+      "question": "Quel droit chaque personne possède-t-elle dans l'espace public en France ?",
+      "options": [
+        "Porter des signes religieux (voile, kippa, croix, etc.)",
+        "Interdire les manifestations religieuses aux autres",
+        "Obliger les tiers à suivre sa religion",
+        "Interdire le port du voile en toutes circonstances"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi garantit la liberté de manifester sa religion dans les lieux ouverts à tous."
+    },
+    {
+      "id": "pv-q43",
+      "question": "Qui ne peut pas exprimer sa religion dans le cadre de son travail ?",
+      "options": [
+        "Les usagers des services publics",
+        "Les personnes travaillant dans les services publics",
+        "Les touristes en visite",
+        "Les journalistes indépendants"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les agents publics doivent rester neutres religieusement pendant l'exercice de leurs fonctions."
+    },
+    {
+      "id": "pv-q44",
+      "question": "Dans quelles conditions un usager d’un service public peut‑il exprimer sa religion ?",
+      "options": [
+        "En pratiquant le prosélytisme auprès du personnel",
+        "En respectant les règles de fonctionnement du service",
+        "En perturbant les consignes de sécurité",
+        "En imposant ses convictions aux autres usagers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’expression religieuse est autorisée tant qu’elle ne contrevient pas aux règles du service."
+    },
+    {
+      "id": "pv-q45",
+      "question": "Quand une manifestation religieuse peut‑elle être interdite ou limitée ?",
+      "options": [
+        "Lorsque elle porte atteinte à la laïcité",
+        "En cas de trouble de l'ordre public",
+        "Quand elle se déroule dans un parc municipal",
+        "Si elle implique le port d’un vêtement traditionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La sécurité et la tranquillité publiques justifient la restriction, pas la laïcité elle‑même."
+    },
+    {
+      "id": "pv-q46",
+      "question": "Que prohibe la loi du 11 octobre 2010 sur la dissimulation du visage ?",
+      "options": [
+        "Le port de tout vêtement religieux",
+        "La dissimulation du visage dans l'espace public (cagoule, masque, voile intégral)",
+        "L'accès aux lieux de culte ouverts au public",
+        "Le port de la kippa"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi interdit de cacher le visage dans les lieux publics, sauf dans les lieux de culte."
+    },
+    {
+      "id": "pv-q47",
+      "question": "Que ne peuvent pas faire les personnes qui travaillent dans les services publics concernant leurs convictions ?",
+      "options": [
+        "Exprimer ou montrer leurs convictions religieuses, politiques ou philosophiques pendant l'exercice de leurs fonctions",
+        "Avoir des convictions privées en dehors du travail",
+        "Participer à des activités sportives pendant leurs pauses",
+        "Utiliser les réseaux sociaux à titre personnel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La neutralité impose aux agents de ne pas exprimer ou afficher leurs convictions pendant le service, afin de garantir l’égalité de traitement des usagers."
+    },
+    {
+      "id": "pv-q48",
+      "question": "Dans quels lieux les signes ou emblèmes religieux, politiques ou philosophiques sont-ils interdits ?",
+      "options": [
+        "Dans les bureaux, guichets et espaces communs des services publics",
+        "Dans les maisons privées des agents",
+        "Dans les rues commerçantes",
+        "Dans les salles de sport municipales"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La neutralité s’applique aux bâtiments des services publics : aucun signe religieux, politique ou philosophique ne doit y être affiché."
+    },
+    {
+      "id": "pv-q49",
+      "question": "Les usagers d’un service public peuvent-ils demander une adaptation du service au nom d’une religion ?",
+      "options": [
+        "Oui, si cela ne perturbe pas le fonctionnement du service",
+        "Oui, mais uniquement pour les services de santé",
+        "Non, aucune adaptation ne peut être demandée pour des raisons religieuses",
+        "Oui, à condition d’obtenir l’accord du directeur"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi interdit aux usagers de solliciter une adaptation du service public pour des motifs religieux."
+    },
+    {
+      "id": "pv-q50",
+      "question": "Dans quel cas un usager doit‑il enlever temporairement son voile ?",
+      "options": [
+        "Lors d’une visite à la mairie pour un mariage civil",
+        "Lors de la vérification de son identité pour la remise d’un passeport",
+        "Lors d’une réunion publique sur la laïcité",
+        "Lors d’une consultation médicale obligatoire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le voile peut être retiré ponctuellement uniquement pour vérifier l’identité de l’usager, par exemple lors de la délivrance d’un passeport."
+    },
+    {
+      "id": "pv-q51",
+      "question": "Quel est l’objectif principal de la Charte de la laïcité dans les services publics ?",
+      "options": [
+        "Définir les droits et devoirs pour respecter la laïcité dans les services publics",
+        "Établir le calendrier des jours fériés nationaux",
+        "Fixer les salaires des agents publics",
+        "Promouvoir une religion officielle au sein des services"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Charte rappelle les droits et devoirs des usagers et des agents afin de garantir le respect de la laïcité dans les services publics."
+    },
+    {
+      "id": "pv-q52",
+      "question": "Qu’est‑ce que le prosélytisme religieux ?",
+      "options": [
+        "Chercher à convaincre d’autres personnes d’adopter sa religion",
+        "Imposer une loi civile à la population",
+        "Fournir des soins médicaux gratuits",
+        "Organiser des activités sportives communautaires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le prosélytisme religieux consiste à persuader autrui de choisir ou d’adopter la religion que l’on pratique."
+    },
+    {
+      "id": "pv-q53",
+      "question": "Pourquoi le prosélytisme est‑il autorisé en France ?",
+      "options": [
+        "Parce que la liberté de religion garantit le droit de croire ou de ne pas croire",
+        "Parce que l’État favorise une religion officielle",
+        "Parce que chaque citoyen doit obligatoirement appartenir à une religion",
+        "Parce que le prosélytisme fait partie du programme scolaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Constitution protège la liberté de religion, ce qui autorise le prosélytisme tant qu’il n’y a pas contrainte."
+    },
+    {
+      "id": "pv-q54",
+      "question": "Lequel de ces comportements constitue du harcèlement religieux interdit ?",
+      "options": [
+        "Utiliser la contrainte physique ou psychologique pour forcer une conversion",
+        "Distribuer calmement un livret de présentation d’une foi",
+        "Inviter un ami à assister volontairement à un culte",
+        "Débattre de ses convictions dans un cadre privé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le harcèlement religieux implique la contrainte (physique ou psychologique) et est prohibé par la loi."
+    },
+    {
+      "id": "pv-q55",
+      "question": "Dans quel lieu le prosélytisme religieux est‑il interdit en France ?",
+      "options": [
+        "Dans les écoles publiques",
+        "Dans les parcs publics",
+        "Dans les foyers privés",
+        "Dans les bibliothèques publiques"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour garantir la neutralité de l’État, le prosélytisme est prohibé dans les écoles publiques, ainsi que dans d’autres services publics."
+    },
+    {
+      "id": "pv-q56",
+      "question": "Quelle affirmation est vraie concernant le prosélytisme dans les entreprises privées ?",
+      "options": [
+        "Il est interdit afin de préserver la neutralité du milieu de travail",
+        "Il est encouragé pour renforcer la cohésion d’équipe",
+        "Il n’est autorisé que pour les cadres dirigeants",
+        "Il est permis dès lors que les salariés donnent leur accord écrit"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le prosélytisme est prohibé dans les entreprises privées pour éviter toute pression religieuse et garantir un environnement neutre."
+    },
+    {
+      "id": "pv-q57",
+      "question": "Quel texte garantit la liberté d’expression en France ?",
+      "options": [
+        "La Déclaration des droits de l'homme et du citoyen de 1789",
+        "La Constitution de la Ve République de 1958",
+        "Le Code civil de 1804",
+        "Le Traité de Versailles de 1919"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La liberté d’expression est inscrite dans la Déclaration des droits de l'homme et du citoyen de 1789."
+    },
+    {
+      "id": "pv-q58",
+      "question": "En droit français, le blasphème est :",
+      "options": [
+        "Un délit passible d’une peine d’emprisonnement",
+        "Autorisé et ne peut pas être puni",
+        "Autorisé uniquement dans le cadre privé",
+        "Autorisé uniquement lorsqu’il s’agit d’une satire politique"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le blasphème n’est pas interdit en France ; on ne peut pas être puni pour l’avoir exprimé."
+    },
+    {
+      "id": "pv-q59",
+      "question": "Parmi les propositions suivantes, laquelle n’est **pas** une limitation légale de la liberté d’expression concernant la religion en France ?",
+      "options": [
+        "Les insultes ou propos haineux envers des personnes à cause de leur religion",
+        "La caricature d’un symbole religieux",
+        "L’incitation à commettre des crimes contre une religion",
+        "L’incitation à la discrimination religieuse"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La caricature est libre et ne peut être punie, contrairement aux propos haineux ou incitatifs."
+    },
+    {
+      "id": "pv-q60",
+      "question": "Quel acte est puni par la loi française même s’il relève de la liberté d’expression ?",
+      "options": [
+        "La négation de la Shoah",
+        "La critique d’une doctrine religieuse",
+        "La publication d’une caricature d’un dieu",
+        "L’écriture d’un roman de fantasy inspiré d’une religion"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La négation du génocide des Juifs (Shoah) est un délit puni en France."
+    },
+    {
+      "id": "pv-q61",
+      "question": "La condition « à condition que cela ne trouble pas l’ordre public » s’applique à :",
+      "options": [
+        "La liberté de religion",
+        "La liberté d’expression",
+        "Le droit de vote",
+        "Le droit de porter des armes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cette condition encadre la liberté d’expression, pas les autres droits mentionnés."
+    },
+    {
+      "id": "pv-q62",
+      "question": "Quel principe s’applique aux agents publics concernant le port de signes religieux au travail ?",
+      "options": [
+        "Ils peuvent porter librement tout signe religieux.",
+        "Ils doivent porter un signe religieux officiel de l’État.",
+        "Ils ne doivent porter aucun signe montrant leur religion.",
+        "Ils ne peuvent porter un signe que pendant leurs pauses."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les agents publics ne doivent pas afficher de signes religieux pendant l’exercice de leurs fonctions."
+    },
+    {
+      "id": "pv-q63",
+      "question": "Dans quel cas un employeur du secteur privé peut‑il restreindre la manifestation religieuse d’un salarié ?",
+      "options": [
+        "Lorsque le salarié ne parle pas français.",
+        "Pour des raisons d’hygiène ou de sécurité.",
+        "Quand le salarié a plus de cinq ans d’ancienneté.",
+        "Si le salarié appartient à une religion minoritaire."
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’employeur peut limiter les signes religieux pour des raisons d’hygiène ou de sécurité, afin de garantir le bon fonctionnement de l’entreprise."
+    },
+    {
+      "id": "pv-q64",
+      "question": "Parmi les affirmations suivantes, laquelle n’est PAS une restriction imposée aux agents publics ?",
+      "options": [
+        "Ils ne doivent pas porter de signes religieux visibles.",
+        "Ils ne doivent pas faire de prosélytisme.",
+        "Ils ne doivent pas troubler le fonctionnement du service public.",
+        "Ils ne doivent pas avoir de convictions personnelles."
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les agents publics peuvent avoir des convictions personnelles ; la restriction porte seulement sur leur manifestation dans le cadre professionnel."
+    },
+    {
+      "id": "pv-q65",
+      "question": "Quel est le procédé à suivre pour qu’un salarié du secteur privé s’absente à l’occasion d’une fête religieuse ?",
+      "options": [
+        "Il bénéficie d’un droit automatique sans demander d’autorisation.",
+        "Il doit obtenir l’autorisation de son employeur.",
+        "Il doit obtenir l’accord du comité d’entreprise uniquement.",
+        "Il doit saisir le tribunal du travail avant de s’absenter."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le salarié doit demander l’autorisation de son employeur ; le refus est possible s’il n’est pas discriminatoire."
+    },
+    {
+      "id": "pv-q66",
+      "question": "Quelle différence principale caractérise l’application de la laïcité entre les agents publics et les salariés du secteur privé ?",
+      "options": [
+        "Les agents publics ont une liberté totale d’expression religieuse, les salariés n’en ont aucune.",
+        "Les agents publics ne peuvent pas afficher de signes religieux, tandis que les salariés peuvent le faire tant que cela ne perturbe pas le fonctionnement de l’entreprise.",
+        "Les deux catégories sont totalement interdites de toute manifestation religieuse.",
+        "Seul le secteur privé est soumis aux principes de laïcité."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les agents publics ne peuvent pas porter de signes religieux, alors que les salariés privés le peuvent, sauf si cela gêne le bon fonctionnement de l’entreprise."
+    },
+    {
+      "id": "pv-q67",
+      "question": "En quelle année le français a-t-il remplacé le latin dans les textes administratifs ?",
+      "options": [
+        "1492",
+        "1539",
+        "1789",
+        "1992"
+      ],
+      "correctAnswer": 1,
+      "explanation": "C’est en 1539 que le français a pris la place du latin dans les documents officiels."
+    },
+    {
+      "id": "pv-q68",
+      "question": "Quel article de la Constitution a inscrit le français comme langue de la République en 1992 ?",
+      "options": [
+        "Article 2",
+        "Article 1",
+        "Article 4",
+        "Article 3"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 2 de la Constitution, ajouté en 1992, précise que « la langue de la République est le français »."
+    },
+    {
+      "id": "pv-q69",
+      "question": "Lequel de ces mots n’est pas cité comme exemple d’enrichissement du français par une langue étrangère ?",
+      "options": [
+        "banque",
+        "week‑end",
+        "chiffre",
+        "ordinateur"
+      ],
+      "correctAnswer": 3,
+      "explanation": "« Ordinateur » est un mot formé en français, alors que les trois autres proviennent respectivement de l’italien, de l’anglais et de l’arabe."
+    },
+    {
+      "id": "pv-q70",
+      "question": "Parmi les langues suivantes, laquelle n’est pas mentionnée parmi les langues régionales du texte ?",
+      "options": [
+        "breton",
+        "occitan",
+        "corse",
+        "basque"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte cite le breton, le corse, l’alsacien, le basque et le créole, mais pas l’occitan."
+    },
+    {
+      "id": "pv-q71",
+      "question": "Quelle affirmation est exacte concernant le statut du français en France ?",
+      "options": [
+        "Le français est l’une des plusieurs langues officielles",
+        "Le français est la seule langue officielle",
+        "Le français n’est utilisé que dans l’éducation",
+        "Le français est obligatoire seulement dans les régions où il n’y a pas de langues régionales"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le français est la seule langue officielle en France, utilisée dans l’administration, la justice, l’école et la vie publique."
+    },
+    {
+      "id": "pv-q72",
+      "question": "À quel moment la personne étrangère doit‑elle signer le contrat d’engagement républicain ?",
+      "options": [
+        "Lors de la demande d’un titre de séjour",
+        "Après l’obtention du titre de séjour",
+        "Seulement pour les citoyens français",
+        "Une fois tous les cinq ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le contrat doit être signé obligatoirement au moment de la demande d’un titre de séjour."
+    },
+    {
+      "id": "pv-q73",
+      "question": "Quelle est la conséquence si le titulaire d’un titre de séjour ne respecte pas un principe républicain ?",
+      "options": [
+        "Une amende financière",
+        "Le retrait ou le non‑renouvellement du titre de séjour",
+        "Une expulsion immédiate",
+        "Aucune conséquence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le titre de séjour peut être retiré ou ne pas être renouvelé en cas de non‑respect d’un principe."
+    },
+    {
+      "id": "pv-q74",
+      "question": "Lequel de ces principes n’est **pas** inscrit parmi ceux du contrat d’engagement républicain ?",
+      "options": [
+        "Liberté d’expression",
+        "Dignité de la personne humaine",
+        "Droit de vote",
+        "Laïcité"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le droit de vote n’apparaît pas dans la liste des principes du contrat."
+    },
+    {
+      "id": "pv-q75",
+      "question": "Quelles personnes, en plus des étrangers demandant un titre de séjour, doivent également signer le contrat d’engagement ?",
+      "options": [
+        "Les touristes de passage",
+        "Les personnes bénéficiant d’une protection internationale (réfugiés, apatrides, protection subsidiaire)",
+        "Les étudiants français",
+        "Les fonctionnaires français"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les réfugiés, apatrides et bénéficiaires d’une protection subsidiaire doivent aussi signer le contrat."
+    },
+    {
+      "id": "pv-q76",
+      "question": "Quelle est la devise française mentionnée parmi les principes du contrat d’engagement républicain ?",
+      "options": [
+        "Liberté, Égalité, Fraternité",
+        "Unité, Progrès, Justice",
+        "Travail, Patrie, Famille",
+        "Paix, Travail, Solidarité"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La devise officielle de la République française est « Liberté, Égalité, Fraternité ». "
+    },
+    {
+      "id": "pv-q77",
+      "question": "Où l’égalité est‑elle inscrite dans le texte fondamental de la République française ?",
+      "options": [
+        "Dans le Préambule de la Constitution de 1946",
+        "Dans la Déclaration des Droits de l’Homme et du Citoyen de 1789",
+        "Dans la Constitution de 1958",
+        "Dans le Code du Travail"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’égalité est un principe fondamental inscrit dans la Constitution de 1958."
+    },
+    {
+      "id": "pv-q78",
+      "question": "Quelle affirmation décrit le mieux l’égalité des droits sociaux en France ?",
+      "options": [
+        "Seuls les fonctionnaires ont accès à la santé et à l’éducation",
+        "Tous les citoyens ont le droit d’accéder à l’éducation, à la santé, au logement et à l’emploi",
+        "Les droits sociaux sont réservés aux personnes de plus de 18 ans",
+        "L’égalité sociale signifie que les revenus sont identiques pour tous"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’égalité des droits sociaux garantit l’accès à l’éducation, la santé, le logement et l’emploi pour toutes les personnes."
+    },
+    {
+      "id": "pv-q79",
+      "question": "Quel texte précise que la loi garantit à la femme des droits égaux à ceux de l’homme ?",
+      "options": [
+        "Le Préambule de la Constitution de 1946",
+        "La loi du 4 août 2000 sur la parité",
+        "Le Code civil de 1804",
+        "La Charte européenne des droits fondamentaux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Préambule de la Constitution de 1946 affirme que la loi garantit à la femme des droits égaux à ceux de l’homme."
+    },
+    {
+      "id": "pv-q80",
+      "question": "Quelle mesure a été introduite par la loi de 2000 pour favoriser la parité en politique ?",
+      "options": [
+        "Obligation de présenter un nombre égal d’hommes et de femmes dans les listes de candidats",
+        "Interdiction aux femmes d’occuper des postes de direction dans les collectivités locales",
+        "Création d’un quota de 30 % de femmes dans les conseils d’administration des entreprises publiques",
+        "Instauration d’un salaire minimum différent selon le genre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi de 2000 oblige les partis à présenter autant de femmes que d’hommes dans leurs listes de candidats, sous peine d’amende."
+    },
+    {
+      "id": "pv-q81",
+      "question": "Quelle situation illustre une discrimination indirecte ?",
+      "options": [
+        "Refuser d’embaucher une personne parce qu’elle est d’origine étrangère",
+        "Appliquer une règle d’âge minimum de 25 ans pour un emploi qui exclut en pratique les jeunes diplômés",
+        "Refuser l’accès à un logement à une personne en raison de sa religion",
+        "Refuser de vendre un produit à une personne en raison de son orientation sexuelle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une discrimination indirecte se produit lorsqu’une règle apparemment neutre désavantage réellement certaines personnes, comme une exigence d’âge qui exclut les jeunes diplômés."
+    },
+    {
+      "id": "pv-q82",
+      "question": "Comment définit‑on la fraternité dans le texte ?",
+      "options": [
+        "La solidarité entre les citoyens",
+        "Le respect du droit de vote",
+        "La liberté d’expression",
+        "L’égalité devant la loi"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La fraternité est présentée comme la solidarité entre les citoyens, permettant de vivre ensemble en harmonie."
+    },
+    {
+      "id": "pv-q83",
+      "question": "Dans quel texte la notion de fraternité apparaît‑elle pour la première fois en France ?",
+      "options": [
+        "Déclaration des droits de l'homme et du citoyen de 1789",
+        "Préambule de la Constitution de la Deuxième République de 1848",
+        "Constitution de la Ve République de 1958",
+        "Déclaration universelle des droits de l'homme de 1948"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le concept de fraternité est introduit dans le préambule de la Constitution de 1848, avant d’être intégré aux constitutions de 1946 et 1958."
+    },
+    {
+      "id": "pv-q84",
+      "question": "Lequel de ces exemples illustre la solidarité collective ?",
+      "options": [
+        "Le RSA (revenu de solidarité active)",
+        "L’aide d’un enfant à son grand‑parent",
+        "Le bénévolat dans une soupe populaire",
+        "Le financement des retraites par les salariés actifs"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le RSA est une aide organisée par l’État et financée par les impôts, typique de la solidarité collective."
+    },
+    {
+      "id": "pv-q85",
+      "question": "Quel droit permet à toute personne en France de s’engager librement dans une association ?",
+      "options": [
+        "Liberté d’expression",
+        "Liberté d’association",
+        "Droit de vote",
+        "Droit de grève"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La liberté d’association, inscrite dans la loi de 1901, garantit le droit de créer ou de rejoindre une association."
+    },
+    {
+      "id": "pv-q86",
+      "question": "Parmi les étapes suivantes, laquelle n’est pas obligatoire pour créer une association ?",
+      "options": [
+        "Réunir au moins deux personnes",
+        "Choisir un objectif lucratif",
+        "Rédiger les statuts",
+        "Faire une déclaration à la préfecture"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’objectif d’une association doit être non lucratif ; choisir un objectif lucratif va à l’encontre du principe même de l’association."
+    },
+    {
+      "id": "pv-q87",
+      "question": "Quel terme désigne le travail non rémunéré effectué sur son temps libre pour une association ?",
+      "options": [
+        "Travail salarié",
+        "Bénévolat",
+        "Adhésion à un syndicat",
+        "Participation à une campagne électorale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le bénévolat correspond à une activité non payée réalisée volontairement, souvent au sein d’une association."
+    },
+    {
+      "id": "pv-q88",
+      "question": "Quel est le principe fondamental garanti par la laïcité en France ?",
+      "options": [
+        "La liberté de conscience, c’est‑à‑dire le droit d’avoir ou de ne pas avoir de religion",
+        "L’obligation de suivre la religion majoritaire du pays",
+        "Le financement public de toutes les confessions religieuses",
+        "L’interdiction de toute pratique religieuse dans l’espace public"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La laïcité assure la liberté de conscience, permettant à chacun d’adopter ou de renoncer à une religion."
+    },
+    {
+      "id": "pv-q89",
+      "question": "Selon le texte, que signifie la « liberté de ne pas pratiquer une religion » ?",
+      "options": [
+        "Être contraint à suivre les rites d’une religion imposée par l’État",
+        "Ne pas être obligé de respecter les prescriptions d’une religion",
+        "Devoir assister à des cérémonies religieuses publiques",
+        "Obligation de financer les lieux de culte de sa religion"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La laïcité garantit que personne ne peut être contraint à suivre les principes ou les rites d’une religion."
+    },
+    {
+      "id": "pv-q90",
+      "question": "Quel est le rôle de l’État français vis‑à‑vis des religions, d’après le principe de laïcité ?",
+      "options": [
+        "Reconnaître officiellement la religion catholique comme religion d’État",
+        "Subventionner les activités des cultes religieux",
+        "Rester neutre et ne pas intervenir dans le fonctionnement interne des organisations religieuses",
+        "Faire appliquer les lois religieuses dans le droit civil"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La laïcité impose la neutralité de l’État qui ne reconnaît, ne subventionne ni ne participe aux affaires internes des religions."
+    },
+    {
+      "id": "pv-q91",
+      "question": "Quel article de la Constitution française consacre le principe de laïcité ?",
+      "options": [
+        "Article 2, qui parle de la souveraineté nationale",
+        "Article 1, qui décrit la France comme une République laïque",
+        "Article 5, relatif aux libertés publiques",
+        "Article 12, concernant le droit de vote"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’article 1 de la Constitution de 1958 précise que « La France est une République indivisible, laïque, démocratique et sociale »."
+    },
+    {
+      "id": "pv-q92",
+      "question": "Parmi les affirmations suivantes, laquelle reflète correctement la diversité religieuse en France ?",
+      "options": [
+        "La France ne compte qu’une seule religion officielle reconnue par l’État",
+        "La communauté musulmane française est la plus importante d’Europe",
+        "Seules les religions catholiques sont autorisées à exercer librement",
+        "Les services publics peuvent imposer des prières obligatoires aux agents"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte indique que la communauté musulmane en France est la plus importante d’Europe, illustrant la diversité religieuse du pays."
+    },
+    {
+      "id": "pv-q93",
+      "question": "Quel est l’interdiction principale concernant les signes religieux dans les écoles publiques ?",
+      "options": [
+        "Porter n’importe quel vêtement, même non religieux",
+        "Porter un signe ou un vêtement manifestant ostensiblement une appartenance religieuse",
+        "Discuter de religion entre élèves",
+        "Prier silencieusement dans la cour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le règlement intérieur interdit le port de signes ou tenues ostentatoires révélant une religion."
+    },
+    {
+      "id": "pv-q94",
+      "question": "Parmi les affirmations suivantes, laquelle décrit correctement le rôle des enseignants dans une école publique ?",
+      "options": [
+        "Ils peuvent afficher leurs convictions religieuses en classe",
+        "Ils doivent rester neutres et ne pas manifester leurs convictions politiques ou religieuses",
+        "Ils sont obligés d’enseigner une religion officielle",
+        "Ils peuvent donner des cours de catéchisme pendant les heures de cours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les personnels ont un devoir de stricte neutralité et ne doivent pas exprimer leurs convictions dans l’exercice de leurs fonctions."
+    },
+    {
+      "id": "pv-q95",
+      "question": "Dans les écoles privées sous contrat avec l’État, quelle est la règle concernant les cours de religion ?",
+      "options": [
+        "Ils sont obligatoires pour tous les élèves",
+        "Ils sont interdits comme dans les écoles publiques",
+        "Ils peuvent être proposés mais ne sont pas obligatoires",
+        "Ils ne peuvent être dispensés qu’aux élèves de confession catholique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ces écoles peuvent proposer des cours de religion, mais ils restent facultatifs et ne sont pas imposés."
+    },
+    {
+      "id": "pv-q96",
+      "question": "Un élève peut‑il refuser de participer à un cours de sport prévu au programme pour des raisons religieuses ?",
+      "options": [
+        "Oui, la liberté de conscience le permet",
+        "Non, le programme fixé par l’État doit être suivi par tous les élèves",
+        "Oui, mais seulement si le directeur accepte",
+        "Non, sauf en cas de maladie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le programme scolaire est commun à tous ; il n’est pas possible de refuser un cours pour des motifs religieux."
+    },
+    {
+      "id": "pv-q97",
+      "question": "Selon la charte de la laïcité à l’école, quel principe la laïcité garantit‑elle avant tout ?",
+      "options": [
+        "L’existence d’une religion d’État",
+        "La liberté de conscience, l’égalité et le respect des convictions de chacun",
+        "La préférence pour la majorité religieuse",
+        "Une liberté d’expression illimitée, même contre les valeurs républicaines"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La laïcité assure la liberté de conscience, l’égalité de traitement et le respect des convictions dans le cadre de l’ordre public."
     }
   ]
 }

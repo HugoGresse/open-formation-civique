@@ -1,127 +1,4027 @@
 {
   "id": "histoire-geographie-culture",
   "title": "Histoire, géographie et culture",
-  "description": "Testez vos connaissances sur l'histoire de France, ses régimes politiques, sa géographie et sa culture.",
+  "description": "Testez vos connaissances : Histoire • Géographie • Culture",
   "questions": [
     {
       "id": "hgc-q1",
-      "question": "En quelle année la Révolution française a-t-elle commencé ?",
+      "question": "Quelle dynastie a régné en France entre 751 et 987 ?",
       "options": [
-        "1776",
-        "1789",
-        "1792",
-        "1804"
+        "Mérovingienne",
+        "Capétienne",
+        "Carolingienne",
+        "Bourbon"
       ],
-      "correctAnswer": 1,
-      "explanation": "La Révolution française a commencé en 1789, marquée notamment par la prise de la Bastille le 14 juillet et la Déclaration des droits de l'homme et du citoyen."
+      "correctAnswer": 2,
+      "explanation": "La dynastie carolingienne a gouverné la France de 751 à 987."
     },
     {
       "id": "hgc-q2",
-      "question": "Qu'est-ce que le Code civil, créé en 1804 ?",
+      "question": "Quel texte fondamental a été publié en 1789 pendant la Révolution française ?",
       "options": [
-        "Un code de conduite militaire",
-        "Un ensemble de lois garantissant l'égalité devant la loi",
-        "La première Constitution française",
-        "Un traité de paix européen"
+        "La Constitution de 1791",
+        "La Déclaration des droits de l'homme et du citoyen",
+        "Le Code civil",
+        "Le Traité de Versailles"
       ],
       "correctAnswer": 1,
-      "explanation": "Le Code civil, créé sous Napoléon en 1804, est un ensemble de lois qui garantit l'égalité des citoyens devant la loi et organise la vie civile (famille, propriété, contrats)."
+      "explanation": "La Déclaration des droits de l'homme et du citoyen a été adoptée en 1789."
     },
     {
       "id": "hgc-q3",
-      "question": "Qui a aboli l'esclavage dans les colonies françaises en 1848 ?",
+      "question": "Quel régime politique a succédé à la monarchie constitutionnelle en 1792 ?",
       "options": [
-        "Napoléon Bonaparte",
-        "Victor Hugo",
-        "Victor Schœlcher",
-        "Louis-Philippe"
+        "Le Consulat",
+        "Le 1er Empire",
+        "La Première République",
+        "Le Directoire"
       ],
       "correctAnswer": 2,
-      "explanation": "Victor Schœlcher est à l'origine du décret d'abolition de l'esclavage du 27 avril 1848, sous la Deuxième République."
+      "explanation": "En 1792, la Première République (Ière République) a été instaurée."
     },
     {
       "id": "hgc-q4",
-      "question": "Sous quel régime la France vit-elle actuellement ?",
+      "question": "Quel événement majeur a eu lieu en 1871 sous la IIIème République ?",
       "options": [
-        "La Quatrième République",
-        "La Cinquième République",
-        "La Monarchie constitutionnelle",
-        "La Sixième République"
+        "L'instauration du Code civil",
+        "La Commune de Paris",
+        "Le coup d'État de Napoléon III",
+        "La création de la Sécurité sociale"
       ],
       "correctAnswer": 1,
-      "explanation": "La France vit sous la Cinquième République depuis 1958. Sa Constitution organise le fonctionnement actuel des institutions."
+      "explanation": "En 1871, la Commune de Paris a été une insurrection pendant la IIIème République."
     },
     {
       "id": "hgc-q5",
-      "question": "Combien de régions métropolitaines la France compte-t-elle ?",
+      "question": "Quelle avancée sociale a été introduite pendant la IVème République ?",
       "options": [
-        "10",
-        "13",
-        "18",
-        "22"
+        "Le Code Napoléon",
+        "L'égalité entre les femmes et les hommes dans la Constitution",
+        "Le régime de Vichy",
+        "Le suffrage universel masculin"
       ],
       "correctAnswer": 1,
-      "explanation": "La France métropolitaine compte 13 régions depuis la réforme territoriale. Il faut y ajouter les territoires d'outre-mer."
+      "explanation": "La Constitution de 1946, sous la IVème République, garantit l'égalité entre les femmes et les hommes."
     },
     {
       "id": "hgc-q6",
-      "question": "Quel roi incarne la monarchie absolue en France ?",
+      "question": "Quelle dynastie a été fondée par le roi Clovis ?",
       "options": [
-        "Charlemagne",
-        "Henri IV",
-        "Louis XIV",
-        "Louis XVI"
+        "Mérovingiens",
+        "Carolingiens",
+        "Capétiens",
+        "Valois"
       ],
-      "correctAnswer": 2,
-      "explanation": "Louis XIV, le « Roi-Soleil », incarne la monarchie absolue en France. Il a régné de 1643 à 1715 et a fait construire le château de Versailles."
+      "correctAnswer": 0,
+      "explanation": "Clovis, roi des Francs à la fin du Ve siècle, a établi la dynastie mérovingienne."
     },
     {
       "id": "hgc-q7",
-      "question": "Quand le suffrage universel masculin a-t-il été établi en France ?",
+      "question": "En quelle année Charlemagne a-t-il été couronné empereur ?",
       "options": [
-        "1789",
-        "1848",
-        "1905",
-        "1944"
+        "987",
+        "800",
+        "1337",
+        "1520"
       ],
       "correctAnswer": 1,
-      "explanation": "Le suffrage universel masculin a été établi en 1848, sous la Deuxième République. Les femmes n'ont obtenu le droit de vote qu'en 1944."
+      "explanation": "Charlemagne a reçu le couronnement impérial en l’an 800."
     },
     {
       "id": "hgc-q8",
-      "question": "Quel événement s'est produit en France entre 1940 et 1944 ?",
+      "question": "Quel conflit, débuté en 1337, a favorisé l’émergence d’un sentiment d’unité nationale en France ?",
       "options": [
-        "La Commune de Paris",
-        "La Première Guerre mondiale",
-        "Le régime de Vichy et la France libre",
-        "La création de l'Union européenne"
+        "Guerre des Deux‑Roses",
+        "Guerre de Trente Ans",
+        "Guerre de Cent Ans",
+        "Guerre de Succession d’Espagne"
       ],
       "correctAnswer": 2,
-      "explanation": "Entre 1940 et 1944, la France était divisée entre le régime de Vichy (collaborant avec l'Allemagne nazie) et la France libre (résistance menée depuis l'étranger)."
+      "explanation": "La guerre de Cent Ans (1337‑1453) a renforcé le sentiment d’appartenance à la nation française."
     },
     {
       "id": "hgc-q9",
-      "question": "En quelle année la Première République française a-t-elle été proclamée ?",
+      "question": "Quel roi a fondé la dynastie des Capétiens en 987 ?",
       "options": [
-        "1789",
-        "1792",
-        "1804",
-        "1848"
+        "Charles Martel",
+        "François I",
+        "Louis IX",
+        "Hugues Capet"
       ],
-      "correctAnswer": 1,
-      "explanation": "La Première République a été proclamée le 22 septembre 1792, après l'abolition de la monarchie."
+      "correctAnswer": 3,
+      "explanation": "Hugues Capet, sacré roi en 987, a instauré la longue dynastie capétienne."
     },
     {
       "id": "hgc-q10",
-      "question": "La France est-elle la première destination touristique mondiale ?",
+      "question": "Quel était le principal développement politique de la France au XVIe siècle, pendant la Renaissance ?",
       "options": [
-        "Non, c'est l'Espagne",
-        "Non, c'est les États-Unis",
-        "Oui, la France est la première destination touristique au monde",
-        "Oui, mais seulement en Europe"
+        "Devenir un État centralisé et puissant",
+        "Adoption du système féodal",
+        "Division du royaume en plusieurs principautés",
+        "Retour à la monarchie élective"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Au XVIe siècle, la France s’est transformée en un État centralisé, précurseur de l’Ancien Régime."
+    },
+    {
+      "id": "hgc-q11",
+      "question": "Quelle période couvre l'Ancien Régime en France ?",
+      "options": [
+        "De la fin du XVIᵉ siècle à 1789",
+        "De la Révolution française à 1815",
+        "Du Moyen Âge au XVe siècle",
+        "De la première moitié du XIXᵉ siècle à 1900"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Ancien Régime s'étend de la fin du XVIᵉ siècle jusqu'à la Révolution de 1789."
+    },
+    {
+      "id": "hgc-q12",
+      "question": "Comment qualifier la monarchie de l'Ancien Régime ?",
+      "options": [
+        "Monarchie absolue de droit divin",
+        "Monarchie constitutionnelle",
+        "République parlementaire",
+        "Dictature militaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le pouvoir du roi était considéré comme venant de Dieu (droit divin) et il détenait tous les pouvoirs (absolue)."
+    },
+    {
+      "id": "hgc-q13",
+      "question": "Quel ordre de la société d'Ancien Régime ne bénéficiait d'aucun privilège fiscal ?",
+      "options": [
+        "Le clergé",
+        "La noblesse",
+        "Le tiers état",
+        "Tous les trois ordres"
       ],
       "correctAnswer": 2,
-      "explanation": "La France est la première destination touristique mondiale, attirant des millions de visiteurs chaque année grâce à son patrimoine culturel, historique et gastronomique."
+      "explanation": "Le tiers état, qui représentait 90 % de la population, payait la majorité des impôts, contrairement au clergé et à la noblesse."
+    },
+    {
+      "id": "hgc-q14",
+      "question": "Quel souverain incarne le mieux l'Ancien Régime et porte le surnom de « Roi‑Soleil » ?",
+      "options": [
+        "Louis XIV",
+        "Louis XVI",
+        "Henri IV",
+        "Napoléon Bonaparte"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Louis XIV (1643‑1715) est le roi emblématique de la monarchie absolue, surnommé le Roi‑Soleil."
+    },
+    {
+      "id": "hgc-q15",
+      "question": "Quel héritage de l'Ancien Régime subsiste dans le système français actuel ?",
+      "options": [
+        "La centralisation du pouvoir",
+        "Le droit divin du roi",
+        "L'absence d'impôts pour le tiers état",
+        "Le suffrage universel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La centralisation de l'administration autour d'une autorité forte a été conservée après la Révolution."
+    },
+    {
+      "id": "hgc-q16",
+      "question": "À quelle date la Première République a-t-elle été proclamée ?",
+      "options": [
+        "22 septembre 1792",
+        "14 juillet 1789",
+        "5 mai 1793",
+        "21 janvier 1795"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La proclamation officielle de la République a eu lieu le 22 septembre 1792, après la chute de la monarchie constitutionnelle."
+    },
+    {
+      "id": "hgc-q17",
+      "question": "Quel personnage est le plus associé à la Terreur pendant la Première République ?",
+      "options": [
+        "Maximilien Robespierre",
+        "Georges Danton",
+        "Jean‑Paul Marat",
+        "Louis Antoine de Saint‑Just"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Robespierre dirige le Comité de salut public et organise la Terreur, utilisant la guillotine contre les opposants."
+    },
+    {
+      "id": "hgc-q18",
+      "question": "Quel événement marque la disparition de la Première République ?",
+      "options": [
+        "Proclamation de Napoléon comme empereur",
+        "Exécution de Robespierre",
+        "Coup du 18 Brumaire",
+        "Adoption de la Constitution de l’an III"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 18 mai 1804, Napoléon Bonaparte se fait proclamer empereur, mettant fin à la République."
+    },
+    {
+      "id": "hgc-q19",
+      "question": "Quelle réforme administrative majeure provient de la Première République ?",
+      "options": [
+        "Abolition des provinces",
+        "Création des départements",
+        "Introduction des préfets",
+        "Centralisation de la collecte des impôts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La République crée les départements pour améliorer la gestion et le contrôle du territoire."
+    },
+    {
+      "id": "hgc-q20",
+      "question": "Quel principe concernant la religion a été introduit progressivement pendant la Première République ?",
+      "options": [
+        "Établissement du catholicisme comme religion d'État",
+        "Éducation religieuse obligatoire",
+        "Séparation de l'Église et de l'État menant à la laïcité",
+        "Liberté de porter des symboles religieux dans les fonctions publiques"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La séparation progressive entre l’Église et l’État annonce l’introduction de la laïcité."
+    },
+    {
+      "id": "hgc-q21",
+      "question": "Quelle date marque la proclamation de l'Assemblée nationale qui met fin à la monarchie absolue ?",
+      "options": [
+        "14 juillet 1789",
+        "17 juin 1789",
+        "4 août 1789",
+        "22 septembre 1792"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 17 juin 1789, le tiers état se proclame Assemblée nationale, marquant la rupture avec la monarchie absolue."
+    },
+    {
+      "id": "hgc-q22",
+      "question": "Quel type de régime politique est instauré en France en 1791 ?",
+      "options": [
+        "Monarchie absolue",
+        "Monarchie constitutionnelle",
+        "Directoire",
+        "Première République"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En 1791, la Constitution de 1791 crée une monarchie constitutionnelle où les pouvoirs du roi sont limités."
+    },
+    {
+      "id": "hgc-q23",
+      "question": "Quel personnage a contribué à la rédaction de la Déclaration des droits de l'homme et du citoyen de 1789 ?",
+      "options": [
+        "Maximilien Robespierre",
+        "Georges Danton",
+        "Marquis de La Fayette",
+        "Napoléon Bonaparte"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le marquis de La Fayette a joué un rôle central dans la rédaction de la Déclaration de 1789."
+    },
+    {
+      "id": "hgc-q24",
+      "question": "Qui pouvait exercer le droit de vote lors de la première mise en place du suffrage en 1789 ?",
+      "options": [
+        "Toutes les personnes de plus de 18 ans",
+        "Les hommes de plus de 25 ans payant un impôt",
+        "Les membres du clergé uniquement",
+        "Les nobles de naissance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le droit de vote était réservé aux hommes de plus de 25 ans qui payaient un impôt, excluant les femmes et les pauvres."
+    },
+    {
+      "id": "hgc-q25",
+      "question": "Quel principe introduit pendant la Révolution française figure toujours dans la Constitution française actuelle ?",
+      "options": [
+        "La souveraineté du peuple",
+        "Le droit de porter des armes",
+        "Le mandat à vie du chef d'État",
+        "L'abolition de la peine de mort"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Révolution a instauré la souveraineté populaire, principe central de la Constitution française contemporaine."
+    },
+    {
+      "id": "hgc-q26",
+      "question": "À quelle date le Consulat a-t-il été instauré ?",
+      "options": [
+        "13 décembre 1799",
+        "14 juillet 1789",
+        "18 mai 1804",
+        "1 janvier 1800"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Consulat est né le 13 décembre 1799, après le coup d’État du 18 Brumaire."
+    },
+    {
+      "id": "hgc-q27",
+      "question": "Qui était nommé Premier Consul lors du Consulat ?",
+      "options": [
+        "Napoléon Bonaparte",
+        "Maximilien Robespierre",
+        "Louis XVIII",
+        "Charles de Gaulle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Napoléon Bonaparte a été nommé Premier Consul, concentrant l’essentiel du pouvoir exécutif."
+    },
+    {
+      "id": "hgc-q28",
+      "question": "Quelle fonction administrative a été créée en 1800 pour diriger chaque département ?",
+      "options": [
+        "Préfecture (préfet)",
+        "Mairie (maire)",
+        "Gouvernement (gouverneur)",
+        "Sous-préfecture (sous-préfet)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 1800, le poste de préfet est institué ; il représente le gouvernement dans chaque département."
+    },
+    {
+      "id": "hgc-q29",
+      "question": "Sous le Consulat, quel pouvoir était le plus fort ?",
+      "options": [
+        "Le pouvoir exécutif",
+        "Le pouvoir législatif",
+        "Le pouvoir judiciaire",
+        "Le pouvoir municipal"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Consulat affaiblit le législatif et renforce l’exécutif, qui devient dominant."
+    },
+    {
+      "id": "hgc-q30",
+      "question": "Quand le Consulat a-t-il pris fin pour laisser place au Premier Empire ?",
+      "options": [
+        "18 mai 1804",
+        "13 décembre 1799",
+        "14 juillet 1792",
+        "22 septembre 1815"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Consulat se termine le 18 mai 1804, date où Napoléon se proclame empereur."
+    },
+    {
+      "id": "hgc-q31",
+      "question": "À quelle date le 1er Empire débute-t-il officiellement ?",
+      "options": [
+        "18 mai 1804",
+        "14 juillet 1789",
+        "2 décembre 1804",
+        "7 juillet 1815"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 1er Empire commence le 18 mai 1804, jour où Napoléon est proclamé empereur."
+    },
+    {
+      "id": "hgc-q32",
+      "question": "Quel texte législatif garantit l’égalité devant la loi sous le 1er Empire ?",
+      "options": [
+        "Le Code civil de 1804",
+        "La Déclaration des droits de l’homme",
+        "Le Code Napoléon de 1799",
+        "La Constitution de 1791"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Code civil de 1804, souvent appelé Code Napoléon, fixe les règles communes et assure l’égalité juridique."
+    },
+    {
+      "id": "hgc-q33",
+      "question": "Quelle institution éducative a été créée pendant le 1er Empire ?",
+      "options": [
+        "Le lycée",
+        "L’université",
+        "L’école primaire",
+        "Le collège"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Napoléon institue le lycée, qui devient la porte d’entrée du baccalauréat et du système éducatif moderne."
+    },
+    {
+      "id": "hgc-q34",
+      "question": "Quelle mesure concernant l’esclavage a été prise sous le régime napoléonien ?",
+      "options": [
+        "Rétablissement de l’esclavage en 1802",
+        "Abolition définitive en 1804",
+        "Interdiction de la traite en 1805",
+        "Maintien de l’abolition de 1794"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 1802, Napoléon rétablit l’esclavage dans les colonies, bien que la traite des noirs soit abolie en 1815."
+    },
+    {
+      "id": "hgc-q35",
+      "question": "Quelle bataille marque la défaite finale de Napoléon et la fin du 1er Empire ?",
+      "options": [
+        "Waterloo",
+        "Austerlitz",
+        "Leipzig",
+        "Trafalgar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La bataille de Waterloo (1815) scelle la défaite de Napoléon et entraîne son abdication définitive."
+    },
+    {
+      "id": "hgc-q36",
+      "question": "Quelle date marque le début de la Restauration après la chute de Napoléon Ier ?",
+      "options": [
+        "7 juillet 1815",
+        "2 août 1830",
+        "9 août 1830",
+        "24 février 1848"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Restauration commence le 7 juillet 1815, jour où la monarchie revient sous Louis XVIII."
+    },
+    {
+      "id": "hgc-q37",
+      "question": "Quelle était la caractéristique principale de la Monarchie de Juillet sous Louis‑Philippe ?",
+      "options": [
+        "Un pouvoir absolu du roi",
+        "Une monarchie plus libérale favorisant la bourgeoisie",
+        "Le retour à l'absolutisme",
+        "Une démocratie directe"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Louis‑Philippe instaure une monarchie plus libérale, mais le pouvoir repose surtout sur la bourgeoisie."
+    },
+    {
+      "id": "hgc-q38",
+      "question": "Quel texte garantissait la liberté de la presse et un parlement élu pendant la Restauration ?",
+      "options": [
+        "Déclaration des droits de l'homme",
+        "Charte constitutionnelle de 1814",
+        "Code civil",
+        "Constitution de 1795"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Charte constitutionnelle de 1814 maintient les libertés comme la presse et prévoit un parlement élu."
+    },
+    {
+      "id": "hgc-q39",
+      "question": "Sous la Monarchie de Juillet, qui composait le pouvoir législatif ?",
+      "options": [
+        "Le roi seul",
+        "La Chambre des pairs et la Chambre des députés",
+        "Un Sénat unique",
+        "Le Conseil des ministres"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le pouvoir législatif était partagé entre la Chambre des pairs (nommée) et la Chambre des députés (élue)."
+    },
+    {
+      "id": "hgc-q40",
+      "question": "Quel critère déterminait le droit de vote pendant la Restauration et la Monarchie de Juillet ?",
+      "options": [
+        "Âge minimum de 18 ans",
+        "Niveau d'instruction",
+        "Richesse ou capacité fiscale",
+        "Service militaire"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le suffrage était censitaire : seul les hommes les plus riches ou ceux remplissant une capacité fiscale pouvaient voter."
+    },
+    {
+      "id": "hgc-q41",
+      "question": "À quelle date la IIᵉ République a-t-elle été proclamée ?",
+      "options": [
+        "24 février 1848",
+        "2 décembre 1851",
+        "14 juillet 1789",
+        "21 janvier 1793"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La IIᵉ République est proclamée le 24 février 1848, après l’abdication de Louis‑Philippe."
+    },
+    {
+      "id": "hgc-q42",
+      "question": "Qui a été élu président de la République en 1848 ?",
+      "options": [
+        "Louis‑Napoléon Bonaparte",
+        "Adolphe Thiers",
+        "François Guizot",
+        "Léon Gambetta"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Louis‑Napoléon Bonaparte, neveu de Napoléon I, remporte l’élection présidentielle de 1848."
+    },
+    {
+      "id": "hgc-q43",
+      "question": "Quel était l’objectif principal des Ateliers nationaux créés en 1848 ?",
+      "options": [
+        "Fournir du travail aux chômeurs parisiens",
+        "Construire des fortifications autour de Paris",
+        "Collecter les impôts nationaux",
+        "Organiser des rassemblements politiques"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les Ateliers nationaux visaient à offrir un emploi aux ouvriers sans travail, notamment à Paris."
+    },
+    {
+      "id": "hgc-q44",
+      "question": "Quel droit a été élargi à tous les hommes de 21 ans ou plus pendant la IIᵉ République ?",
+      "options": [
+        "Droit de vote des femmes",
+        "Droit de porter des armes",
+        "Suffrage universel masculin",
+        "Droit de créer des syndicats"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le suffrage censitaire est remplacé par le suffrage universel masculin, ouvrant le droit de vote à tous les hommes de 21 ans et plus."
+    },
+    {
+      "id": "hgc-q45",
+      "question": "Quel texte a aboli l’esclavage dans les colonies françaises et qui en était l’auteur ?",
+      "options": [
+        "Le décret du 27 avril 1848, rédigé par Victor Schœlcher, a aboli l’esclavage dans les colonies françaises.",
+        "Le décret du 14 juillet 1794, rédigé par Maximilien Robespierre, a aboli l’esclavage.",
+        "Le décret du 4 août 1794, signé par Louis XVI, a aboli l’esclavage.",
+        "Le décret du 1er janvier 1852, proposé par Napoléon III, a aboli l’esclavage."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Victor Schœlcher a rédigé le décret du 27 avril 1848 qui met fin à l’esclavage dans les colonies françaises."
+    },
+    {
+      "id": "hgc-q46",
+      "question": "Quel événement a mis fin à la IIᵉ République ?",
+      "options": [
+        "Coup d’État du 2 décembre 1851",
+        "Révolution de 1848",
+        "Guerre franco‑prussienne de 1870",
+        "Adoption de la Constitution de 1875"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 2 décembre 1851, Louis‑Napoléon Bonaparte organise un coup d’État qui dissout la IIᵉ République."
+    },
+    {
+      "id": "hgc-q47",
+      "question": "Quelle date marque la proclamation de Napoléon III comme empereur des Français ?",
+      "options": [
+        "2 décembre 1852",
+        "14 juillet 1850",
+        "4 septembre 1870",
+        "1 janvier 1851"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Napoléon III est proclamé empereur le 2 décembre 1852, après le coup d’État de 1851."
+    },
+    {
+      "id": "hgc-q48",
+      "question": "Comment le régime du Second Empire évolue-t-il au cours des années 1860 ?",
+      "options": [
+        "Il devient plus libéral, renforçant les libertés et le Parlement",
+        "Il se radicalise et supprime le suffrage masculin",
+        "Il instaure une monarchie constitutionnelle sans empereur",
+        "Il adopte un système communiste avec collectivisation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans les années 1860, le Second Empire se libéralise, accordant davantage de libertés et renforçant le pouvoir parlementaire."
+    },
+    {
+      "id": "hgc-q49",
+      "question": "Quel événement met fin au Second Empire le 4 septembre 1870 ?",
+      "options": [
+        "La défaite de la France contre la Prusse",
+        "L’assassinat de Napoléon III",
+        "Un soulèvement populaire à Paris",
+        "La signature du traité de Versailles"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Second Empire s’effondre après la défaite militaire de la France face à la Prusse en 1870."
+    },
+    {
+      "id": "hgc-q50",
+      "question": "Quel droit des travailleurs est partiellement reconnu en 1864 sous le Second Empire ?",
+      "options": [
+        "Le droit de grève",
+        "Le droit à la retraite",
+        "Le droit à la semaine de 35 heures",
+        "Le droit à la syndicalisation libre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 1864, le droit de grève est autorisé de façon partielle, marquant une avancée sociale limitée."
+    },
+    {
+      "id": "hgc-q51",
+      "question": "Quelle caractéristique du suffrage est maintenue pendant le Second Empire ?",
+      "options": [
+        "Le suffrage universel masculin",
+        "Le suffrage féminin",
+        "Le suffrage censitaire",
+        "Le suffrage indirect par les grands électeurs"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le régime conserve le suffrage universel masculin, même si les élections restent contrôlées."
+    },
+    {
+      "id": "hgc-q52",
+      "question": "Qui a fondé la Ve République ?",
+      "options": [
+        "Charles de Gaulle",
+        "Georges Pompidou",
+        "Valéry Giscard d'Estaing",
+        "Jacques Chirac"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Charles de Gaulle a instauré la Ve République en 1958."
+    },
+    {
+      "id": "hgc-q53",
+      "question": "Quel président a instauré l’élection du président au suffrage universel direct ?",
+      "options": [
+        "Georges Pompidou",
+        "Charles de Gaulle",
+        "François Mitterrand",
+        "Nicolas Sarkozy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sous de Gaulle, le président est élu au suffrage universel direct dès 1962."
+    },
+    {
+      "id": "hgc-q54",
+      "question": "Sous quel mandat la majorité a-t-elle été abaissée à 18 ans ?",
+      "options": [
+        "Jacques Chirac",
+        "Valéry Giscard d'Estaing",
+        "Emmanuel Macron",
+        "François Hollande"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Valéry Giscard d'Estaing a réduit l’âge de la majorité à 18 ans en 1974."
+    },
+    {
+      "id": "hgc-q55",
+      "question": "Quel président a aboli la peine de mort en France ?",
+      "options": [
+        "François Mitterrand",
+        "Jacques Chirac",
+        "Nicolas Sarkozy",
+        "Emmanuel Macron"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'abolition de la peine de mort a été votée sous la présidence de François Mitterrand en 1981."
+    },
+    {
+      "id": "hgc-q56",
+      "question": "Quel président a instauré le quinquennat présidentiel ?",
+      "options": [
+        "Nicolas Sarkozy",
+        "Jacques Chirac",
+        "François Hollande",
+        "Emmanuel Macron"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Jacques Chirac a fait passer le mandat présidentiel de 7 à 5 ans en 2000, appliqué en 2002."
+    },
+    {
+      "id": "hgc-q57",
+      "question": "Sous quel président le mariage pour tous a-t-il été légalisé ?",
+      "options": [
+        "Emmanuel Macron",
+        "François Hollande",
+        "Nicolas Sarkozy",
+        "Jacques Chirac"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi ouvrant le mariage à tous a été adoptée en 2013 sous la présidence de François Hollande."
+    },
+    {
+      "id": "hgc-q58",
+      "question": "Quelle est la définition juridique de la peine de mort ?",
+      "options": [
+        "Exécution d’une personne reconnue coupable d’un crime après un procès",
+        "Peine d’emprisonnement à perpétuité",
+        "Amende financière très élevée",
+        "Travail d’intérêt général obligatoire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La peine de mort consiste à exécuter une personne condamnée pour un crime, généralement à l’issue d’un procès."
+    },
+    {
+      "id": "hgc-q59",
+      "question": "En quelle année la peine de mort a-t-elle été totalement abolie en France ?",
+      "options": [
+        "1848",
+        "1981",
+        "1995",
+        "2002"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi du 9 octobre 1981 a mis fin à la peine capitale dans toute la France."
+    },
+    {
+      "id": "hgc-q60",
+      "question": "Quel ministre de la Justice a porté le projet d’abolition totale de la peine de mort en 1981 ?",
+      "options": [
+        "Robert Badinter",
+        "Jacques Chirac",
+        "Michel Rocard",
+        "Alain Juppé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Robert Badinter, alors ministre de la Justice sous François Mitterrand, a défendu l’abolition de la peine de mort."
+    },
+    {
+      "id": "hgc-q61",
+      "question": "Quelle loi a d’abord aboli la peine de mort pour les crimes politiques ?",
+      "options": [
+        "La loi du 9 octobre 1981",
+        "La loi de 1848 sous la IIᵉ République",
+        "La loi constitutionnelle du 23 février 2017",
+        "La loi de 1905 sur la séparation des Églises et de l’État"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En 1848, sous la IIᵉ République, la peine de mort pour les crimes politiques a été supprimée."
+    },
+    {
+      "id": "hgc-q62",
+      "question": "Dans quel article de la Constitution de la Vᵉ République l’abolition de la peine de mort est‑elle inscrite ?",
+      "options": [
+        "Article 66‑1",
+        "Article 1",
+        "Article 49‑3",
+        "Article 34"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 66‑1, introduit par la loi constitutionnelle du 23 février 2017, stipule que nul ne peut être condamné à la peine de mort."
+    },
+    {
+      "id": "hgc-q63",
+      "question": "Qui peut recourir à l'IVG selon la législation française actuelle ?",
+      "options": [
+        "Toutes les femmes, quel que soit leur âge, à condition d'être accompagnées d'une personne majeure de leur choix si elles sont mineures",
+        "Uniquement les femmes majeures, les mineures doivent obtenir l'autorisation de leurs parents",
+        "Seules les femmes résidant en métropole, les femmes d'outre‑mer sont exclues",
+        "Toutes les personnes, hommes et femmes, peuvent demander une IVG"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi autorise toute femme, sans condition d’âge, à recourir à l’IVG ; les mineures doivent simplement être accompagnées d’une personne majeure de leur choix."
+    },
+    {
+      "id": "hgc-q64",
+      "question": "Quelle loi a dépénalisé l’avortement en France le 17 janvier 1975 ?",
+      "options": [
+        "La loi Veil",
+        "La loi De Gaulle",
+        "La loi Pompidou",
+        "La loi Mitterrand"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C’est la loi dite « Veil », présentée le 17 janvier 1975, qui a dépénalisé l’avortement."
+    },
+    {
+      "id": "hgc-q65",
+      "question": "Qui était le ministre à l’origine de la loi « Veil » qui a dépénalisé l’avortement ?",
+      "options": [
+        "Simone Veil",
+        "François Mitterrand",
+        "Jacques Chirac",
+        "Édith Cresson"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Simone Veil, alors ministre de la Santé, a présenté et soutenu la loi qui a dépénalisé l’avortement."
+    },
+    {
+      "id": "hgc-q66",
+      "question": "Quel type de prise en charge l’État français assure-t-il pour l’IVG ?",
+      "options": [
+        "Un accompagnement psychologique et une prise en charge à 100 % par la Sécurité sociale",
+        "Un simple remboursement de 30 % des frais médicaux",
+        "Une prise en charge uniquement pour les femmes de plus de 25 ans",
+        "Aucun soutien financier, la patiente doit payer intégralement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’État assure un suivi psychologique et finance l’IVG à 100 % via la Sécurité sociale."
+    },
+    {
+      "id": "hgc-q67",
+      "question": "À quelle date le droit à l’IVG a-t-il été inscrit dans la Constitution française ?",
+      "options": [
+        "Le 4 mars 2024",
+        "Le 17 janvier 1975",
+        "Le 14 juillet 1989",
+        "Le 1er mai 1995"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Parlement a inscrit le droit à l’IVG dans la Constitution le 4 mars 2024."
+    },
+    {
+      "id": "hgc-q68",
+      "question": "Quel pays est le premier au monde à inscrire l’IVG dans sa Constitution ?",
+      "options": [
+        "La France",
+        "L’Allemagne",
+        "Le Canada",
+        "L’Espagne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est le premier pays à inscrire le droit à l’IVG dans sa Constitution."
+    },
+    {
+      "id": "hgc-q69",
+      "question": "Avant 2013, quel dispositif juridique les couples de même sexe pouvaient-ils conclure en France ?",
+      "options": [
+        "Le PACS (Pacte Civil de Solidarité)",
+        "Le mariage",
+        "L'adoption conjointe",
+        "Le contrat de concubinage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le PACS était le seul cadre légal permettant aux couples de même sexe d'organiser leur vie commune avant 2013."
+    },
+    {
+      "id": "hgc-q70",
+      "question": "Parmi les pays suivants, lequel n'avait pas encore légalisé le mariage homosexuel avant le débat en France en 2013 ?",
+      "options": [
+        "Pays-Bas",
+        "Belgique",
+        "Espagne",
+        "Allemagne"
+      ],
+      "correctAnswer": 3,
+      "explanation": "L'Allemagne n'a légalisé le mariage pour tous qu'en 2017, alors que les trois autres pays l'avaient déjà fait."
+    },
+    {
+      "id": "hgc-q71",
+      "question": "Quelle ministre a porté la loi du 17 mai 2013 ouvrant le mariage et l'adoption aux couples homosexuels ?",
+      "options": [
+        "Christiane Taubira",
+        "Najat Vallaud-Belkacem",
+        "Ségolène Royal",
+        "Élisabeth Borne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Christiane Taubira, alors ministre de la Justice, était la principale porte-parole du texte de 2013."
+    },
+    {
+      "id": "hgc-q72",
+      "question": "Quel événement historique a eu lieu le 29 mai 2013 en France ?",
+      "options": [
+        "Le premier mariage homosexuel célébré à Montpellier",
+        "L'adoption par un couple gay à Paris",
+        "Le vote du Sénat sur la loi",
+        "Une manifestation à Lyon contre la loi"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 29 mai 2013, le premier mariage entre personnes de même sexe a été célébré à la mairie de Montpellier."
+    },
+    {
+      "id": "hgc-q73",
+      "question": "Quelle avancée juridique la loi du 17 mai 2013 a-t-elle introduite ?",
+      "options": [
+        "Ouverture du mariage et de l'adoption aux couples de même sexe",
+        "Suppression du PACS",
+        "Instaurer le mariage civil obligatoire pour tous",
+        "Création d'un nouveau statut de concubinage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi a permis aux couples homosexuels de se marier et d'adopter, marquant une avancée majeure en matière d'égalité des droits."
+    },
+    {
+      "id": "hgc-q74",
+      "question": "Quel était le nom du système d’alliance qui regroupait la France, le Royaume‑Uni et la Russie avant 1914 ?",
+      "options": [
+        "Triple Entente",
+        "Triple Alliance",
+        "Puissances centrales",
+        "Entente cordiale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Triple Entente était l’alliance franco‑britannique‑russe opposée à la Triple Alliance."
+    },
+    {
+      "id": "hgc-q75",
+      "question": "Quel événement du 28 juin 1914 a déclenché le conflit mondial ?",
+      "options": [
+        "Assassinat de l’archiduc François‑Ferdinand",
+        "Signature du traité de Versailles",
+        "Invasion de la Belgique",
+        "Naufrage du Lusitania"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’assassinat de l’héritier austro‑hongrois à Sarajevo a mis le feu aux alliances et a déclenché la guerre."
+    },
+    {
+      "id": "hgc-q76",
+      "question": "Quelle phase décrit la période d’août à novembre 1914 ?",
+      "options": [
+        "Guerre de mouvement",
+        "Guerre de tranchées",
+        "Guerre de guérilla",
+        "Guerre aérienne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Durant ces mois, les armées se déplacent rapidement ; la bataille de la Marne arrête l’avancée allemande."
+    },
+    {
+      "id": "hgc-q77",
+      "question": "En quelle année les États‑Unis entrent-ils officiellement en guerre aux côtés de la Triple Entente ?",
+      "options": [
+        "1914",
+        "1918",
+        "1917",
+        "1920"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les États‑Unis déclarent la guerre à l’Allemagne en avril 1917, renforçant la Triple Entente."
+    },
+    {
+      "id": "hgc-q78",
+      "question": "Quel événement majeur a eu lieu en Russie en octobre 1917 ?",
+      "options": [
+        "Les bolcheviks prennent le pouvoir",
+        "Abdication du tsar Nicolas II",
+        "Signature du traité de Brest‑Litovsk",
+        "La Russie rejoint la Triple Alliance"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La deuxième révolution russe conduit les bolcheviks au pouvoir et conduit à la création de l’URSS."
+    },
+    {
+      "id": "hgc-q79",
+      "question": "À quelle date l’Armistice mettant fin aux combats est-il signé ?",
+      "options": [
+        "11 novembre 1918",
+        "28 juin 1919",
+        "1 septembre 1914",
+        "6 avril 1917"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Armistice du 11 novembre 1918 met fin aux hostilités, précédant le traité de Versailles."
+    },
+    {
+      "id": "hgc-q80",
+      "question": "Comment qualifie‑t‑on la Première Guerre mondiale du point de vue de son étendue géographique ?",
+      "options": [
+        "locale",
+        "interne",
+        "mondiale",
+        "continentale"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le conflit est qualifié de mondiale car il implique des États de tous les continents."
+    },
+    {
+      "id": "hgc-q81",
+      "question": "Quelle affirmation décrit correctement le coût humain de la Première Guerre mondiale ?",
+      "options": [
+        "Plus de 10 millions de morts, dont 9 millions de soldats",
+        "Environ 5 millions de morts, dont 2 millions de soldats",
+        "Moins de 1 million de morts",
+        "Aucun soldat n’a été tué"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le conflit a fait plus de 10 millions de morts, dont 9 millions de militaires."
+    },
+    {
+      "id": "hgc-q82",
+      "question": "Parmi les conséquences économiques suivantes, laquelle est exacte ?",
+      "options": [
+        "Une prospérité économique généralisée",
+        "De nombreuses dettes et la dévastation du Nord‑Est de la France",
+        "Une réduction des dettes publiques",
+        "Une augmentation des exportations agricoles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La guerre a entraîné d’importantes dettes et la dévastation du Nord‑Est français."
+    },
+    {
+      "id": "hgc-q83",
+      "question": "Quel était le principal impact du traité de Versailles sur l’Allemagne ?",
+      "options": [
+        "Alliance militaire avec la France",
+        "Annexion du territoire français",
+        "Aucun changement territorial",
+        "Responsabilité du conflit, perte de territoires et réparations lourdes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le traité rend l’Allemagne responsable, lui retire des territoires et impose de lourdes réparations."
+    },
+    {
+      "id": "hgc-q84",
+      "question": "Quelle organisation a été créée par le traité de Versailles pour favoriser la paix mondiale ?",
+      "options": [
+        "Société des Nations",
+        "Union européenne",
+        "OTAN",
+        "Organisation mondiale du commerce"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité a fondé la Société des Nations, précurseur des institutions internationales de maintien de la paix."
+    },
+    {
+      "id": "hgc-q85",
+      "question": "Pourquoi l'Allemagne jugeait‑elle le Traité de Versailles humiliant ?",
+      "options": [
+        "Il imposait des réparations lourdes et la perte de territoires",
+        "Il garantissait l'indépendance de l'Allemagne",
+        "Il favorisait l'Allemagne économiquement",
+        "Il était signé par l'Allemagne elle‑même"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité imposait d'importantes réparations, la perte d'Alsace‑Lorraine et d'autres territoires, ce que l'Allemagne considérait comme une humiliation."
+    },
+    {
+      "id": "hgc-q86",
+      "question": "Quel événement économique mondial a fragilisé les démocraties dans les années 30 ?",
+      "options": [
+        "La crise pétrolière de 1973",
+        "Le krach boursier de 1929",
+        "La crise de la dette souveraine de 2010",
+        "La crise du charbon de 1912"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le krach de 1929 a déclenché la Grande Dépression, affaiblissant les économies et les régimes démocratiques."
+    },
+    {
+      "id": "hgc-q87",
+      "question": "Quelle date marque le début de la Seconde Guerre mondiale avec l'invasion de la Pologne ?",
+      "options": [
+        "1er septembre 1939",
+        "22 juin 1940",
+        "6 juin 1944",
+        "7 décembre 1941"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Allemagne envahit la Pologne le 1er septembre 1939, déclenchant le conflit."
+    },
+    {
+      "id": "hgc-q88",
+      "question": "Quel événement est considéré comme le tournant de la guerre sur le front de l'Est ?",
+      "options": [
+        "La bataille de Normandie",
+        "La bataille de Stalingrad",
+        "L'attaque de Pearl Harbor",
+        "Le débarquement en Provence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La victoire soviétique à Stalingrad (février 1943) marque le premier grand revers de l'Allemagne sur le front de l'Est."
+    },
+    {
+      "id": "hgc-q89",
+      "question": "Quel jour les Alliés ont‑ils débarqué en Normandie ?",
+      "options": [
+        "15 août 1944",
+        "6 juin 1944",
+        "8 mai 1945",
+        "2 septembre 1945"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le débarquement en Normandie, connu sous le nom de D‑Day, a eu lieu le 6 juin 1944."
+    },
+    {
+      "id": "hgc-q90",
+      "question": "Quel fut le dernier acte militaire qui a conduit à la capitulation du Japon ?",
+      "options": [
+        "Le débarquement en Provence",
+        "Les bombardements atomiques d'Hiroshima et Nagasaki",
+        "La bataille de Stalingrad",
+        "L'armistice de 1940"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les bombardements atomiques du 6 et 9 août 1945 ont contraint le Japon à capituler."
+    },
+    {
+      "id": "hgc-q91",
+      "question": "Quelle date correspond à la capitulation de l'Allemagne nazie ?",
+      "options": [
+        "2 septembre 1945",
+        "8 mai 1945",
+        "22 juin 1940",
+        "7 décembre 1941"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'Allemagne signe sa capitulation le 8 mai 1945, jour de la victoire en Europe."
+    },
+    {
+      "id": "hgc-q92",
+      "question": "Comment qualifie‑t‑on la Seconde Guerre mondiale en raison de la volonté d’anéantir l’ennemi ?",
+      "options": [
+        "Une guerre d’anéantissement",
+        "Une guerre de libération",
+        "Une guerre de défense territoriale",
+        "Une guerre de décolonisation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le conflit est qualifié de guerre d’anéantissement car chaque camp cherche à détruire totalement l’autre (armée, économie, population)."
+    },
+    {
+      "id": "hgc-q93",
+      "question": "Parmi les affirmations suivantes, laquelle décrit correctement l’aspect idéologique de la Seconde Guerre mondiale ?",
+      "options": [
+        "L’Allemagne nazie voulait conquérir son « espace vital » et anéantir les Juifs d’Europe.",
+        "Les Alliés cherchaient à imposer le communisme dans le monde entier.",
+        "Le Japon visait à instaurer une démocratie libérale en Asie.",
+        "L’URSS souhaitait établir un empire colonial en Afrique."
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Allemagne nazie poursuivait une idéologie d’expansion territoriale et de génocide, notamment contre les Juifs."
+    },
+    {
+      "id": "hgc-q94",
+      "question": "Quel est le bilan humain approximatif de la Seconde Guerre mondiale ?",
+      "options": [
+        "Plus de 60 millions de morts (civils et militaires)",
+        "Environ 10 millions de morts",
+        "Moins de 5 millions de morts",
+        "Entre 20 et 30 millions de morts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le conflit a fait plus de 60 millions de victimes, incluant soldats et civils."
+    },
+    {
+      "id": "hgc-q95",
+      "question": "Quelle organisation internationale a été créée en 1945 pour maintenir la paix après la guerre ?",
+      "options": [
+        "L’Organisation des Nations Unies (ONU)",
+        "L’Organisation du Traité de l’Atlantique (OTAN)",
+        "Le Pacte de Varsovie",
+        "La Communauté économique européenne (CEE)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’ONU a été fondée en 1945 afin de prévenir les conflits et de promouvoir la coopération internationale."
+    },
+    {
+      "id": "hgc-q96",
+      "question": "Quel tribunal a jugé les responsables nazis pour leurs crimes de guerre après la Seconde Guerre mondiale ?",
+      "options": [
+        "Le procès de Nuremberg",
+        "Le tribunal de Tokyo",
+        "Le tribunal de La Haye",
+        "Le tribunal de Versailles"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le procès de Nuremberg (1945‑1946) a jugé les principaux dirigeants nazis pour crimes contre l’humanité et crimes de guerre."
+    },
+    {
+      "id": "hgc-q97",
+      "question": "Pourquoi les colonies ont‑elles commencé à réclamer leur indépendance après la Seconde Guerre mondiale ?",
+      "options": [
+        "Les puissances coloniales européennes étaient affaiblies et les promesses faites aux colonies n’étaient pas tenues",
+        "Les colonies disposaient d’une abondance de ressources naturelles qui les rendaient autonomes",
+        "Les colonies ont reçu un soutien militaire massif de la part de la Chine",
+        "Le climat mondial était plus favorable à l’agriculture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La guerre a affaibli la France, la Belgique et le Royaume‑Uni, et les promesses non respectées ont alimenté la frustration des peuples colonisés."
+    },
+    {
+      "id": "hgc-q98",
+      "question": "Quel organisme, créé en 1945, défend le droit des peuples à disposer d’eux‑mêmes ?",
+      "options": [
+        "L’Organisation des Nations Unies (ONU)",
+        "L’Organisation du Traité de l’Atlantique Nord (OTAN)",
+        "L’Organisation Mondiale du Commerce (OMC)",
+        "L’Union Européenne (UE)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’ONU, fondée en 1945, inscrit dans sa Charte le principe du droit à l’autodétermination."
+    },
+    {
+      "id": "hgc-q99",
+      "question": "Par quel mode la plupart des colonies d’Afrique subsaharienne française ont‑elles obtenu leur indépendance en 1960 ?",
+      "options": [
+        "Par la guerre d’Algérie",
+        "Par la négociation, comme l’Afrique subsaharienne française en 1960",
+        "Par la guerre d’Indochine",
+        "Par un référendum organisé par l’ONU"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ces pays ont négocié leur souveraineté avec la France, aboutissant à une décolonisation pacifique."
+    },
+    {
+      "id": "hgc-q100",
+      "question": "Quel conflit a conduit à la division du Vietnam en 1954 ?",
+      "options": [
+        "La guerre d’Algérie",
+        "La guerre d’Indochine",
+        "La guerre de Corée",
+        "La guerre du Vietnam"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La défaite française lors de la guerre d’Indochine (1946‑1954) a entraîné les accords de Genève et la partition du Vietnam."
+    },
+    {
+      "id": "hgc-q101",
+      "question": "En quelle année Madagascar a‑t‑elle obtenu son indépendance ?",
+      "options": [
+        "1962",
+        "1960",
+        "1954",
+        "1946"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Madagascar, comme les autres colonies françaises d’Afrique, est devenue indépendante en 1960."
+    },
+    {
+      "id": "hgc-q102",
+      "question": "Pourquoi l'idée d'une union européenne est née après la Seconde Guerre mondiale ?",
+      "options": [
+        "Pour éviter un nouveau conflit sur le continent",
+        "Pour augmenter la production industrielle des pays membres",
+        "Pour créer une armée commune européenne",
+        "Pour promouvoir exclusivement la culture française"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Union européenne a été conçue après 1945 afin de garantir la paix durable en Europe."
+    },
+    {
+      "id": "hgc-q103",
+      "question": "Quelle était la première communauté créée en 1951 et quel secteur visait‑elle ?",
+      "options": [
+        "La CECA, pour partager le charbon et l’acier",
+        "La CEE, pour développer l’agriculture",
+        "L’UE, pour instaurer une monnaie unique",
+        "Euratom, pour coopérer dans le nucléaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Communauté européenne du charbon et de l’acier (CECA) a réuni six pays autour de ces deux ressources stratégiques."
+    },
+    {
+      "id": "hgc-q104",
+      "question": "Le traité de Rome de 1957 a instauré :",
+      "options": [
+        "La Communauté économique européenne et un marché commun",
+        "L’euro comme monnaie unique",
+        "La citoyenneté européenne",
+        "Une politique étrangère commune"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité de Rome a créé la CEE, posant les bases du marché commun entre les États membres."
+    },
+    {
+      "id": "hgc-q105",
+      "question": "Quel traité a transformé la CEE en Union européenne et a introduit la citoyenneté européenne ?",
+      "options": [
+        "Le traité de Maastricht (1992)",
+        "Le traité de Lisbonne (2007)",
+        "Le traité d’Amsterdam (1997)",
+        "Le traité de Nice (2001)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité de Maastricht a élargi la coopération à la dimension politique et a créé la citoyenneté européenne."
+    },
+    {
+      "id": "hgc-q106",
+      "question": "En quelle année l’euro est devenu la monnaie officielle de plusieurs États membres ?",
+      "options": [
+        "2002",
+        "1999",
+        "2005",
+        "2010"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’euro a été introduit sous forme de billets et pièces en 2002, remplaçant les monnaies nationales."
+    },
+    {
+      "id": "hgc-q107",
+      "question": "Quelle affirmation décrit le processus décisionnel de l’Union européenne ?",
+      "options": [
+        "Les décisions sont prises après l’approbation de tous les États membres, ce qui peut les rendre longues",
+        "Les décisions sont prises uniquement par la Commission européenne",
+        "Les décisions sont votées à la majorité simple du Parlement européen",
+        "Les décisions sont imposées par le Conseil européen sans consultation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Chaque décision nécessite l’accord des États membres, rendant parfois le processus complexe et lent."
+    },
+    {
+      "id": "hgc-q108",
+      "question": "Comment définit‑on l’immigration ?",
+      "options": [
+        "Un voyage touristique de courte durée",
+        "Une installation temporaire pour des études",
+        "Un déplacement vers un pays étranger pour un long séjour ou s’y installer",
+        "Un retour dans son pays d’origine après un séjour à l’étranger"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’immigration désigne le fait d’aller dans un pays étranger pour y rester longtemps ou s’y installer."
+    },
+    {
+      "id": "hgc-q109",
+      "question": "Quel pourcentage approximatif de la population française est immigré ou descendant d’immigré aujourd’hui ?",
+      "options": [
+        "10 %",
+        "Un tiers",
+        "50 %",
+        "75 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Environ un tiers des Français sont immigrés ou enfants/petits‑enfants d’immigrés."
+    },
+    {
+      "id": "hgc-q110",
+      "question": "Quel établissement a été créé en 2007 pour présenter l’histoire de l’immigration en France ?",
+      "options": [
+        "Musée du Louvre",
+        "Musée national de l’Immigration",
+        "Musée d’Orsay",
+        "Centre Pompidou"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Cité nationale de l’histoire de l’immigration, aujourd’hui le Musée national de l’Immigration, a ouvert ses portes en 2007."
+    },
+    {
+      "id": "hgc-q111",
+      "question": "Quels pays ont signé des accords avec la France entre 1950 et 1960 pour faire venir des travailleurs ?",
+      "options": [
+        "Allemagne, Pays‑Bas, Suède, Norvège",
+        "Espagne, Portugal, Maroc, Tunisie",
+        "États‑Unis, Canada, Australie, Nouvelle‑Zélande",
+        "Chine, Japon, Corée du Sud, Inde"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Des accords ont été signés avec l’Espagne, le Portugal, le Maroc et la Tunisie (et l’Algérie) pour l’arrivée de travailleurs."
+    },
+    {
+      "id": "hgc-q112",
+      "question": "En quelle année l’immigration liée au travail a-t-elle été suspendue en France ?",
+      "options": [
+        "1962",
+        "1974",
+        "1980",
+        "1995"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’immigration liée au travail a été suspendue en 1974."
+    },
+    {
+      "id": "hgc-q113",
+      "question": "Quel organisme a été créé en 1945 pour gérer l’immigration en France ?",
+      "options": [
+        "Office National de l’Immigration (ONI)",
+        "Ministère de l’Intérieur",
+        "Agence France‑Presse",
+        "Institut National de la Statistique"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Office National de l’Immigration (ONI) a été créé en 1945 pour organiser les flux migratoires."
+    },
+    {
+      "id": "hgc-q114",
+      "question": "Que désigne le terme « Shoah » ?",
+      "options": [
+        "Le génocide des Juifs organisé par le régime nazi",
+        "Le conflit militaire entre la France et l'Allemagne pendant la Seconde Guerre mondiale",
+        "La persécution des populations roms en Europe",
+        "Le bombardement de villes alliées par les forces aériennes allemandes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Shoah correspond au génocide des Juifs perpétré par l'Allemagne nazie pendant la Seconde Guerre mondiale."
+    },
+    {
+      "id": "hgc-q115",
+      "question": "Parmi les étapes suivantes, laquelle ne fait pas partie de la politique nazie menant à la Shoah selon le texte ?",
+      "options": [
+        "Exclusion des Juifs par les lois de Nuremberg",
+        "Enfermement dans des ghettos",
+        "Création de la Waffen‑SS",
+        "Massacres par fusillade des Einsatzgruppen"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La création de la Waffen‑SS n’est pas mentionnée comme étape du processus d’extermination des Juifs."
+    },
+    {
+      "id": "hgc-q116",
+      "question": "Quel camp n’est pas cité parmi les camps d’extermination dans le texte ?",
+      "options": [
+        "Auschwitz‑Birkenau",
+        "Treblinka",
+        "Dachau",
+        "Sobibor"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Dachau était un camp de concentration, mais il n’est pas listé parmi les camps d’extermination mentionnés."
+    },
+    {
+      "id": "hgc-q117",
+      "question": "Que désigne la « rafle du Vel d’Hiv » en France ?",
+      "options": [
+        "L’arrestation d’environ 13 000 Juifs à Paris les 16‑17 juillet 1942",
+        "La libération de Paris en août 1944",
+        "Le bombardement du vélodrome de Paris en 1941",
+        "La signature de l’armistice franco‑allemande en 1940"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La rafle du Vel d’Hiv a eu lieu les 16‑17 juillet 1942 et a conduit à l’arrestation de près de 13 000 Juifs."
+    },
+    {
+      "id": "hgc-q118",
+      "question": "Quel pourcentage approximatif de la population juive vivant en France a été déporté pendant la Seconde Guerre mondiale ?",
+      "options": [
+        "Environ 23 %",
+        "Environ 50 %",
+        "Environ 10 %",
+        "Environ 75 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sur 330 000 Juifs en France, 76 000 ont été déportés, soit environ 23 %."
+    },
+    {
+      "id": "hgc-q119",
+      "question": "Qui est considéré comme l’organisateur principal de la « solution finale » selon le texte ?",
+      "options": [
+        "Heinrich Himmler",
+        "Reinhard Heydrich",
+        "Philippe Pétain",
+        "Adolf Hitler"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Reinhard Heydrich a organisé la « solution finale », le plan nazi d’extermination des Juifs."
+    },
+    {
+      "id": "hgc-q120",
+      "question": "Quelle date marque l’armistice qui met fin à la Troisième République en 1940 ?",
+      "options": [
+        "22 juin 1940",
+        "18 juin 1940",
+        "8 mai 1945",
+        "6 juin 1944"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’armistice du 22 juin 1940 signe la défaite de la France et la fin de la Troisième République."
+    },
+    {
+      "id": "hgc-q121",
+      "question": "Quelle zone était occupée directement par l’Allemagne après l’armistice de 1940 ?",
+      "options": [
+        "Zone libre",
+        "Zone nord",
+        "Zone sud",
+        "Zone italienne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La zone nord était sous occupation militaire allemande, tandis que la zone sud était dirigée par le régime de Vichy."
+    },
+    {
+      "id": "hgc-q122",
+      "question": "Qui a unifié les différents mouvements de résistance en créant le Conseil National de la Résistance (CNR) en 1943 ?",
+      "options": [
+        "Charles de Gaulle",
+        "Jean Moulin",
+        "Philippe Pétain",
+        "Pierre Laval"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Jean Moulin a réussi à rassembler les réseaux clandestins sous le CNR en 1943."
+    },
+    {
+      "id": "hgc-q123",
+      "question": "Quelle affirmation décrit correctement les Forces Françaises de l’Intérieur (FFI) ?",
+      "options": [
+        "C’était un parti politique",
+        "Ce sont les groupes armés de la Résistance",
+        "Ils collaboraient avec les Allemands",
+        "Ils ont été créés en 1945"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les FFI regroupaient les combattants de la Résistance et ont joué un rôle majeur dans la libération."
+    },
+    {
+      "id": "hgc-q124",
+      "question": "En quel mois et année Paris a-t-elle été libérée ?",
+      "options": [
+        "Août 1944",
+        "Juin 1944",
+        "Mai 1945",
+        "Septembre 1943"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Paris a été libérée en août 1944, suite au débarquement allié et à l’action des résistants."
+    },
+    {
+      "id": "hgc-q125",
+      "question": "Parmi les territoires suivants, lequel n’est pas un Département et Région d’Outre‑Mer (DROM) ?",
+      "options": [
+        "Guadeloupe",
+        "Guyane",
+        "Saint‑Barthélemy",
+        "Réunion"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les DROM sont la Guadeloupe, la Guyane, la Martinique, la Réunion et Mayotte. Saint‑Barthélemy est une Collectivité d’Outre‑Mer (COM)."
+    },
+    {
+      "id": "hgc-q126",
+      "question": "Combien de régions la France compte‑t‑elle au total (métropole + outre‑mer) ?",
+      "options": [
+        "13",
+        "15",
+        "18",
+        "20"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France possède 13 régions en métropole et 5 régions d’outre‑mer, soit 18 régions au total."
+    },
+    {
+      "id": "hgc-q127",
+      "question": "Quelle affirmation est exacte concernant le statut des territoires d’outre‑mer français ?",
+      "options": [
+        "Les DROM appliquent les mêmes lois que la France métropolitaine sans aucune adaptation.",
+        "Les COM bénéficient d’une autonomie administrative plus grande que les DROM.",
+        "Les DROM et les COM font partie intégrante de l’Union européenne.",
+        "Les COM sont des départements d’outre‑mer."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les Collectivités d’Outre‑Mer (COM) disposent d’une autonomie administrative supérieure à celle des DROM, où les lois françaises s’appliquent avec peu d’ajustements."
+    },
+    {
+      "id": "hgc-q128",
+      "question": "Quelle est la superficie totale approximative de la France (métropole + DROM + COM) selon les chiffres fournis ?",
+      "options": [
+        "543 000 km²",
+        "667 000 km²",
+        "720 000 km²",
+        "800 000 km²"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La métropole fait ~543 000 km², les DROM ~120 000 km² et les COM ~4 600 km², ce qui donne environ 667 000 km² au total."
+    },
+    {
+      "id": "hgc-q129",
+      "question": "Lequel de ces départements appartient à la région Île‑de‑France ?",
+      "options": [
+        "75 – Paris",
+        "69 – Rhône",
+        "13 – Bouches‑du‑Rhône",
+        "33 – Gironde"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le département 75, Paris, fait partie de la région Île‑de‑France. Les autres appartiennent respectivement aux régions Auvergne‑Rhône‑Alpes, Provence‑Alpes‑Côte d’Azur et Nouvelle‑Aquitaine."
+    },
+    {
+      "id": "hgc-q130",
+      "question": "Quel pays ne partage pas de frontière terrestre avec la France ?",
+      "options": [
+        "Belgique",
+        "Portugal",
+        "Luxembourg",
+        "Andorre"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France borde la Belgique, le Luxembourg et l’Andorre, mais pas le Portugal."
+    },
+    {
+      "id": "hgc-q131",
+      "question": "Par quel territoire d’outre‑mer la France possède‑t‑elle une frontière terrestre avec le Brésil ?",
+      "options": [
+        "Guadeloupe",
+        "Réunion",
+        "Guyane",
+        "Martinique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La Guyane française partage une frontière terrestre avec le Brésil (et le Suriname)."
+    },
+    {
+      "id": "hgc-q132",
+      "question": "Quelle chaîne de montagnes constitue la frontière naturelle entre la France et l’Espagne ?",
+      "options": [
+        "Alpes",
+        "Vosges",
+        "Pyrénées",
+        "Jura"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les Pyrénées forment la barrière montagneuse qui sépare la France de l’Espagne."
+    },
+    {
+      "id": "hgc-q133",
+      "question": "Quelle mer se situe au nord‑ouest de la France ?",
+      "options": [
+        "Mer Méditerranée",
+        "Mer du Nord",
+        "Océan Indien",
+        "Mer Noire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La mer du Nord borde le nord‑ouest de la France, avec la Manche à proximité."
+    },
+    {
+      "id": "hgc-q134",
+      "question": "Quelle est la longueur des frontières maritimes de la France métropolitaine ?",
+      "options": [
+        "3 000 km",
+        "5 500 km",
+        "8 000 km",
+        "1 200 km"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France métropolitaine possède environ 5 500 km de frontières maritimes."
+    },
+    {
+      "id": "hgc-q135",
+      "question": "Combien de fleuves majeurs traversent la France métropolitaine selon la fiche ?",
+      "options": [
+        "Quatre",
+        "Cinq",
+        "Six",
+        "Sept"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La fiche indique que la France métropolitaine compte cinq fleuves majeurs."
+    },
+    {
+      "id": "hgc-q136",
+      "question": "Quel est le fleuve le plus long de France ?",
+      "options": [
+        "La Seine",
+        "Le Rhône",
+        "La Loire",
+        "Le Rhin"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La Loire mesure 1 020 km, ce qui en fait le plus long fleuve français."
+    },
+    {
+      "id": "hgc-q137",
+      "question": "Parmi les villes suivantes, laquelle n’est pas traversée par la Seine ?",
+      "options": [
+        "Paris",
+        "Rouen",
+        "Le Havre",
+        "Lyon"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Lyon est traversée par le Rhône, pas par la Seine."
+    },
+    {
+      "id": "hgc-q138",
+      "question": "Quel fleuve prend sa source en Espagne avant de traverser la France ?",
+      "options": [
+        "La Garonne",
+        "Le Rhône",
+        "Le Rhin",
+        "La Loire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Garonne naît dans le Val d’Aran en Espagne."
+    },
+    {
+      "id": "hgc-q139",
+      "question": "Quel affluent n’est pas majeur du Rhône ?",
+      "options": [
+        "L’Ain",
+        "La Saône",
+        "Le Gard",
+        "Le Tarn"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le Tarn est un affluent de la Garonne, pas du Rhône."
+    },
+    {
+      "id": "hgc-q140",
+      "question": "Quelle portion du Rhône se trouve en France ?",
+      "options": [
+        "522 km",
+        "650 km",
+        "180 km",
+        "812 km"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sur les 812 km du Rhône, 522 km se situent en territoire français."
+    },
+    {
+      "id": "hgc-q141",
+      "question": "Quelle était la population totale de la France (incluant les DROM) au 1er janvier 2025 ?",
+      "options": [
+        "68,6 millions d’habitants",
+        "66,4 millions d’habitants",
+        "70,2 millions d’habitants",
+        "65,0 millions d’habitants"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le chiffre officiel au 1er janvier 2025 était de 68,6 millions d’habitants, toutes zones confondues."
+    },
+    {
+      "id": "hgc-q142",
+      "question": "Quel est le nombre moyen d’enfants par femme en France en 2024 ?",
+      "options": [
+        "1,62 enfant",
+        "2,00 enfants",
+        "1,80 enfant",
+        "1,45 enfant"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 2024, les femmes françaises ont eu en moyenne 1,62 enfant, en dessous du seuil de renouvellement (2,1)."
+    },
+    {
+      "id": "hgc-q143",
+      "question": "Quelle est l’espérance de vie moyenne des femmes en France en 2024 ?",
+      "options": [
+        "85,6 ans",
+        "80 ans",
+        "82,3 ans",
+        "78,5 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les femmes vivent en moyenne 85,6 ans, ce qui fait de la France l’un des pays les plus longevois."
+    },
+    {
+      "id": "hgc-q144",
+      "question": "Quelle tranche d’âge représente la plus grande part de la population française ?",
+      "options": [
+        "20 à 64 ans (55 %)",
+        "65 ans et plus (22 %)",
+        "Moins de 20 ans (23 %)",
+        "70 ans et plus (30 %)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La majorité de la population (55 %) se situe entre 20 et 64 ans, correspondant à la population active."
+    },
+    {
+      "id": "hgc-q145",
+      "question": "Quel pourcentage de la population française vit en zone urbaine ?",
+      "options": [
+        "Environ 81 %",
+        "Environ 60 %",
+        "Environ 70 %",
+        "Environ 90 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Environ 81 % des Français habitent en ville, reflétant une forte urbanisation."
+    },
+    {
+      "id": "hgc-q146",
+      "question": "Parmi les régions suivantes, laquelle est la moins peuplée selon le texte ?",
+      "options": [
+        "Massif central",
+        "Paris",
+        "Lyon",
+        "Bordeaux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Massif central est indiqué comme une zone peu peuplée, contrairement aux grandes agglomérations citées."
+    },
+    {
+      "id": "hgc-q147",
+      "question": "Quelles sont les trois parties qui composent une aire urbaine ?",
+      "options": [
+        "Ville‑centre, banlieue et couronne périurbaine",
+        "Ville‑centre, zone industrielle et zone agricole",
+        "Centre historique, périphérie et zone rurale",
+        "Métropole, département et région"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Une aire urbaine regroupe le cœur économique (ville‑centre), la banlieue qui l’entoure, et la couronne périurbaine plus rurale."
+    },
+    {
+      "id": "hgc-q148",
+      "question": "Environ quelle proportion de la population française vit dans une aire urbaine ?",
+      "options": [
+        "9 personnes sur 10",
+        "7 personnes sur 10",
+        "5 personnes sur 10",
+        "3 personnes sur 10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Près de 90 % des Français habitent dans une aire urbaine."
+    },
+    {
+      "id": "hgc-q149",
+      "question": "Parmi les fonctions suivantes, laquelle n’est pas citée comme fonction de commandement d’une métropole ?",
+      "options": [
+        "Économiques",
+        "Politiques",
+        "Culturelles",
+        "Militaires"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les fonctions de commandement mentionnées sont économiques, politiques, culturelles et logistiques ; le militaire n’est pas évoqué."
+    },
+    {
+      "id": "hgc-q150",
+      "question": "Quelle métropole possède le plus grand nombre d’habitants parmi les dix plus grandes métropoles françaises ?",
+      "options": [
+        "Métropole du Grand Paris",
+        "Métropole d’Aix‑Marseille‑Provence",
+        "Métropole du Grand Lyon",
+        "Métropole européenne de Lille"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Grand Paris regroupe 7 millions d’habitants, le plus que les autres métropoles listées."
+    },
+    {
+      "id": "hgc-q151",
+      "question": "Laquelle de ces affirmations décrit correctement le phénomène de métropolisation ?",
+      "options": [
+        "Elle conduit à la diminution des grandes villes",
+        "Elle concentre population, emplois et richesses dans les métropoles",
+        "Elle réduit les enjeux de mobilité",
+        "Elle supprime les préoccupations de développement durable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La métropolisation signifie que la population, les activités économiques, les emplois et les services se concentrent dans les métropoles."
+    },
+    {
+      "id": "hgc-q152",
+      "question": "Quelle affirmation décrit correctement la place de la France dans l'agriculture de l'Union européenne ?",
+      "options": [
+        "C’est la première puissance agricole de l’UE avec 18 % de la production totale",
+        "C’est la deuxième puissance agricole de l’UE avec 12 % de la production totale",
+        "C’est la troisième puissance agricole de l’UE avec 5 % de la production totale",
+        "C’est la quatrième puissance agricole de l’UE avec 25 % de la production totale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est la première puissance agricole de l’UE, représentant 18 % de la production totale de l’Union."
+    },
+    {
+      "id": "hgc-q153",
+      "question": "Quel territoire français est réputé pour la culture du blé et de la betterave ?",
+      "options": [
+        "Le Bassin parisien",
+        "La Bretagne",
+        "Le Sud‑Est",
+        "Le Languedoc"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Bassin parisien est connu pour ses grandes productions de blé et de betterave."
+    },
+    {
+      "id": "hgc-q154",
+      "question": "Parmi les produits suivants, lequel n’est pas cité comme exportation majeure de la France ?",
+      "options": [
+        "Le café",
+        "Le vin",
+        "Le blé",
+        "Les produits laitiers"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le café n’est pas mentionné parmi les exportations françaises ; le vin, le blé et les produits laitiers le sont."
+    },
+    {
+      "id": "hgc-q155",
+      "question": "Quel est l’un des défis majeurs auxquels l’agriculture française doit faire face aujourd’hui ?",
+      "options": [
+        "S’adapter au changement climatique",
+        "Augmenter l’urbanisation des terres agricoles",
+        "Réduire le nombre de tracteurs",
+        "Accroître la production de viande bovine"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le changement climatique impose à l’agriculture française de s’adapter pour maintenir ses productions."
+    },
+    {
+      "id": "hgc-q156",
+      "question": "Quelle pratique est mentionnée comme réponse aux attentes de qualité et d’environnement des consommateurs ?",
+      "options": [
+        "L’agriculture biologique",
+        "La monoculture intensive",
+        "L’intensification des pesticides",
+        "L’importation massive de produits étrangers"
+      ],
+      "correctAnswer": 0,
+      "explanation": "De plus en plus d’agriculteurs adoptent l’agriculture biologique pour répondre aux exigences de durabilité."
+    },
+    {
+      "id": "hgc-q157",
+      "question": "Quel pourcentage approximatif d'emplois en France est occupé par le secteur industriel ?",
+      "options": [
+        "11 %",
+        "25 %",
+        "5 %",
+        "18 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte indique que l’industrie représente aujourd’hui environ 11 % des emplois en France."
+    },
+    {
+      "id": "hgc-q158",
+      "question": "Parmi les secteurs suivants, lequel n’est pas considéré comme une haute technologie en France ?",
+      "options": [
+        "Aéronautique",
+        "Pharmaceutique",
+        "Agroalimentaire",
+        "Énergie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’aéronautique et la pharmacie sont cités comme secteurs de haute technologie, alors que l’agroalimentaire appartient à la catégorie des secteurs importants mais pas de haute technologie."
+    },
+    {
+      "id": "hgc-q159",
+      "question": "Quelle région française est surtout reconnue pour son expertise en chimie et pharmacie ?",
+      "options": [
+        "Île‑de‑France",
+        "Bassin lyonnais",
+        "Sud‑Ouest",
+        "Pays de la Loire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le bassin lyonnais est spécifiquement mentionné comme renommé pour ses activités en chimie et pharmacie."
+    },
+    {
+      "id": "hgc-q160",
+      "question": "Quel défi majeur l’industrie française doit‑elle relever face au changement climatique ?",
+      "options": [
+        "Augmenter la production de charbon",
+        "Développer l’industrie verte",
+        "Réduire les salaires",
+        "Fermer toutes les usines"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte souligne que l’industrie doit s’adapter au changement climatique en investissant dans l’industrie verte et les énergies renouvelables."
+    },
+    {
+      "id": "hgc-q161",
+      "question": "Depuis les années 1980, quelle tendance a le plus marqué l’industrie française ?",
+      "options": [
+        "Croissance continue sans fermeture",
+        "Fermeture massive d’usines et délocalisations",
+        "Nationalisation de toutes les entreprises",
+        "Privatisation du secteur public"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Depuis les années 1980, de nombreuses usines ont fermé et certaines productions ont été délocalisées à l’étranger."
+    },
+    {
+      "id": "hgc-q162",
+      "question": "En 2025, quelle position occupe la France parmi les puissances économiques mondiales ?",
+      "options": [
+        "5ᵉ",
+        "7ᵉ",
+        "10ᵉ",
+        "12ᵉ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France se classe 7ᵉ puissance économique mondiale en 2025."
+    },
+    {
+      "id": "hgc-q163",
+      "question": "Quel pays est le premier partenaire économique de la France pour les importations et les exportations ?",
+      "options": [
+        "États-Unis",
+        "Allemagne",
+        "Chine",
+        "Italie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'Allemagne est le principal partenaire tant pour les importations que pour les exportations françaises."
+    },
+    {
+      "id": "hgc-q164",
+      "question": "Quel pourcentage d'emplois en France était dans le secteur tertiaire en 2023 ?",
+      "options": [
+        "55 %",
+        "80 %",
+        "65 %",
+        "90 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En 2023, 80 % des emplois étaient dans le secteur des services (tertiaire)."
+    },
+    {
+      "id": "hgc-q165",
+      "question": "Les dépenses nationales en recherche et développement représentent environ quel pourcentage du PIB français ?",
+      "options": [
+        "1 %",
+        "2 %",
+        "3 %",
+        "5 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les dépenses R&D sont d’environ 2 % du PIB, soit 57,4 milliards d’euros en 2022."
+    },
+    {
+      "id": "hgc-q166",
+      "question": "Quel était le taux de chômage en France à la fin de l'année 2024 ?",
+      "options": [
+        "5,2 %",
+        "7,8 %",
+        "10,0 %",
+        "12,5 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le taux de chômage s’est stabilisé autour de 7,8 % fin 2024."
+    },
+    {
+      "id": "hgc-q167",
+      "question": "Quel est le niveau du déficit public de la France en 2024, exprimé en pourcentage du PIB ?",
+      "options": [
+        "3,2 %",
+        "5,8 %",
+        "8,4 %",
+        "10,0 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le déficit public s’élève à 5,8 % du PIB en 2024."
+    },
+    {
+      "id": "hgc-q168",
+      "question": "Où se situe la France en Europe ?",
+      "options": [
+        "Ouest",
+        "Nord",
+        "Sud",
+        "Est"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est située à l’ouest du continent européen."
+    },
+    {
+      "id": "hgc-q169",
+      "question": "Combien de pays frontaliers la France partage‑t‑elle ?",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France a des frontières terrestres avec huit pays européens."
+    },
+    {
+      "id": "hgc-q170",
+      "question": "Lequel de ces pays ne partage pas de frontière terrestre avec la France ?",
+      "options": [
+        "Belgique",
+        "Luxembourg",
+        "Portugal",
+        "Suisse"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le Portugal est séparé de la France par l’Espagne ; il n’a donc pas de frontière commune."
+    },
+    {
+      "id": "hgc-q171",
+      "question": "Quelle est la longueur approximative du littoral français ?",
+      "options": [
+        "2 500 km",
+        "3 800 km",
+        "5 500 km",
+        "7 200 km"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France possède plus de 5 500 km de côtes sur la Manche, la mer du Nord, l’Atlantique et la Méditerranée."
+    },
+    {
+      "id": "hgc-q172",
+      "question": "Quel pays possède la plus grande population en Europe ?",
+      "options": [
+        "France",
+        "Allemagne",
+        "Italie",
+        "Espagne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’Allemagne compte environ 83,6 millions d’habitants, la plus forte population du continent."
+    },
+    {
+      "id": "hgc-q173",
+      "question": "Parmi les pays suivants, lequel n’appartient pas aux cinq pays les plus peuplés d’Europe ?",
+      "options": [
+        "Pologne",
+        "Pays‑Bas",
+        "Espagne",
+        "Italie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les Pays‑Bas ne figurent pas parmi les cinq premiers pays européens en nombre d’habitants."
+    },
+    {
+      "id": "hgc-q174",
+      "question": "Les cinq pays les plus peuplés d’Europe représentent environ quel pourcentage de la population totale du continent ?",
+      "options": [
+        "Un tiers",
+        "La moitié",
+        "Deux tiers",
+        "Les trois quarts"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ces cinq pays (Allemagne, France, Italie, Espagne, Pologne) regroupent deux tiers de la population européenne."
+    },
+    {
+      "id": "hgc-q175",
+      "question": "Quel moyen de transport n'est PAS mentionné dans le texte comme faisant partie du réseau de liaison de la France aux capitales européennes ?",
+      "options": [
+        "Les routes",
+        "Les avions",
+        "Les voies navigables",
+        "Les ports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte cite les routes, les trains, les voies navigables et les ports, mais il ne mentionne pas l'aviation."
+    },
+    {
+      "id": "hgc-q176",
+      "question": "Combien de kilomètres d'autoroutes la France possède‑t-elle, selon le texte ?",
+      "options": [
+        "5 000 km",
+        "10 000 km",
+        "15 000 km",
+        "20 000 km"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte indique que la France dispose de plus de 10 000 km d’autoroutes, ce qui en fait l’un des réseaux les plus denses au monde."
+    },
+    {
+      "id": "hgc-q177",
+      "question": "Le corridor Nord‑ouest/Sud‑est relie quelles deux capitales européennes ?",
+      "options": [
+        "Londres et Rome",
+        "Paris et Berlin",
+        "Madrid et Vienne",
+        "Bruxelles et Athènes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ce corridor part de la Grande‑Bretagne (Londres) et rejoint l’Italie (Rome) en passant par le tunnel sous la Manche, Paris et Lyon."
+    },
+    {
+      "id": "hgc-q178",
+      "question": "Par quelles deux villes françaises le corridor Atlantique passe‑t‑il ?",
+      "options": [
+        "Bordeaux et Toulouse",
+        "Marseille et Nice",
+        "Lille et Strasbourg",
+        "Nantes et Montpellier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte précise que le corridor Atlantique relie l’Espagne et le Portugal à la France et à l’Allemagne via Bordeaux et Toulouse."
+    },
+    {
+      "id": "hgc-q179",
+      "question": "Quel avantage principal offre la combinaison de plusieurs moyens de transport sur les corridors européens ?",
+      "options": [
+        "Réduction des coûts",
+        "Possibilité de changer de mode (camion, train, bateau)",
+        "Augmentation du nombre d'emplois",
+        "Amélioration de la sécurité routière"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’intermodalité permet de passer facilement du camion au train, puis au bateau, facilitant le transport des marchandises."
+    },
+    {
+      "id": "hgc-q180",
+      "question": "Pourquoi la France est-elle le pays européen le plus riche en espèces animales et végétales ?",
+      "options": [
+        "Parce qu’elle possède une petite superficie très protégée",
+        "Grâce à la grande diversité de ses milieux naturels et climats",
+        "Du fait de son isolement géographique par rapport aux autres pays",
+        "Parce qu’elle ne compte que des zones tropicales"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La variété des paysages (montagnes, forêts, littoraux, etc.) et des climats, y compris les territoires d’outre‑mer, explique la richesse exceptionnelle de la biodiversité française."
+    },
+    {
+      "id": "hgc-q181",
+      "question": "Quel pourcentage des espèces européennes d’amphibiens se trouve en France ?",
+      "options": [
+        "55 %",
+        "30 %",
+        "70 %",
+        "45 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France abrite 55 % des espèces d’amphibiens présentes sur l’ensemble du territoire européen."
+    },
+    {
+      "id": "hgc-q182",
+      "question": "Que désigne le réseau Natura 2000 ?",
+      "options": [
+        "Un réseau de routes transfrontalières",
+        "Un réseau de sites naturels protégés dans toute l’Europe",
+        "Un programme d’énergie renouvelable",
+        "Un accord commercial entre les États membres"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Natura 2000 regroupe des sites naturels protégés afin de préserver la biodiversité au niveau européen."
+    },
+    {
+      "id": "hgc-q183",
+      "question": "Quelle est la particularité de la « trame verte et bleue » française ?",
+      "options": [
+        "Elle ne concerne que les milieux marins",
+        "Elle relie uniquement les zones urbaines",
+        "Elle combine la connexion des milieux terrestres (verte) et aquatiques/humides (bleue)",
+        "Elle vise à développer l’agriculture intensive"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La trame verte et bleue vise à relier les espaces naturels terrestres et aquatiques pour faciliter les déplacements des espèces."
+    },
+    {
+      "id": "hgc-q184",
+      "question": "Parmi les défis cités, lequel n’est PAS mentionné comme un enjeu pour une Europe plus verte ?",
+      "options": [
+        "Protéger la biodiversité en milieu urbain",
+        "Réduire la pollution de l’air, de l’eau et des sols",
+        "Augmenter la production de charbon",
+        "Agir contre le changement climatique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte ne préconise pas d’augmenter la production de charbon ; il met plutôt l’accent sur la protection de la biodiversité, la réduction de la pollution et la lutte contre le changement climatique."
+    },
+    {
+      "id": "hgc-q185",
+      "question": "Quelle part de la production agricole de l'Union européenne est assurée par la France en valeur ?",
+      "options": [
+        "18 %",
+        "25 %",
+        "12 %",
+        "30 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France représente 18 % de la production agricole de l'UE en valeur, ce qui en fait le premier producteur européen."
+    },
+    {
+      "id": "hgc-q186",
+      "question": "Quelle proportion du territoire français est consacrée à l'agriculture ?",
+      "options": [
+        "Un tiers",
+        "La moitié",
+        "Un quart",
+        "Les trois quarts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Environ la moitié du territoire français est utilisée pour l'agriculture, la plus grande superficie parmi les pays de l'UE."
+    },
+    {
+      "id": "hgc-q187",
+      "question": "Combien d'organisations de producteurs d'origine française existent aujourd'hui ?",
+      "options": [
+        "500",
+        "724",
+        "850",
+        "1 000"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France compte 724 organisations de producteurs, le plus grand nombre au sein de l'Union européenne."
+    },
+    {
+      "id": "hgc-q188",
+      "question": "Parmi les produits suivants, lequel ne figure pas parmi les quatre productions agricoles françaises les plus importantes en valeur ?",
+      "options": [
+        "Vin",
+        "Céréales",
+        "Lait",
+        "Pommes de terre"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Vin, céréales, lait et viande sont les quatre productions les plus importantes ; les pommes de terre, bien que très produites, ne font pas partie du top 4 en valeur."
+    },
+    {
+      "id": "hgc-q189",
+      "question": "Quelle part des céréales européennes est récoltée par la France ?",
+      "options": [
+        "24 %",
+        "30 %",
+        "18 %",
+        "12 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France récolte 24 % des céréales de l'Union européenne, soit environ 65 millions de tonnes en 2023."
+    },
+    {
+      "id": "hgc-q190",
+      "question": "Quel rang occupe la France parmi les exportateurs mondiaux de vins et spiritueux (en valeur) ?",
+      "options": [
+        "1er",
+        "2e",
+        "3e",
+        "4e"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est le premier exportateur mondial de vins et spiritueux en valeur."
+    },
+    {
+      "id": "hgc-q191",
+      "question": "En 2024, quelle est la place de la France parmi les puissances économiques mondiales ?",
+      "options": [
+        "5ᵉ",
+        "7ᵉ",
+        "10ᵉ",
+        "12ᵉ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte indique que la France est la 7ᵉ puissance économique mondiale en 2024."
+    },
+    {
+      "id": "hgc-q192",
+      "question": "Quel était le produit intérieur brut (PIB) de la France en 2024 ?",
+      "options": [
+        "2 830 milliards de dollars",
+        "3 500 milliards de dollars",
+        "1 200 milliards de dollars",
+        "4 000 milliards de dollars"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le PIB de la France en 2024 est indiqué comme étant de 2 830 milliards de dollars."
+    },
+    {
+      "id": "hgc-q193",
+      "question": "Quel rang occupe la France en termes de superficie parmi les pays du monde ?",
+      "options": [
+        "41ᵉ",
+        "30ᵉ",
+        "55ᵉ",
+        "20ᵉ"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Avec environ 667 000 km², la France se classe au 41ᵉ rang mondial en superficie."
+    },
+    {
+      "id": "hgc-q194",
+      "question": "Quelle est la superficie approximative du territoire français ?",
+      "options": [
+        "667 000 km²",
+        "850 000 km²",
+        "500 000 km²",
+        "1 000 000 km²"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte précise une superficie d’environ 667 000 km² pour la France."
+    },
+    {
+      "id": "hgc-q195",
+      "question": "En 2025, quel est le rang de la France en nombre d’habitants dans le monde ?",
+      "options": [
+        "22ᵉ",
+        "15ᵉ",
+        "30ᵉ",
+        "40ᵉ"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est classée 22ᵉ pays le plus peuplé avec environ 68,6 millions d’habitants."
+    },
+    {
+      "id": "hgc-q196",
+      "question": "En quelle année la France a-t-elle acquis son arme nucléaire ?",
+      "options": [
+        "1960",
+        "1975",
+        "1989",
+        "1995"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France a testé sa première bombe atomique en 1960, marquant le début de sa capacité nucléaire."
+    },
+    {
+      "id": "hgc-q197",
+      "question": "Quel statut confère à la France un droit de veto aux Nations unies ?",
+      "options": [
+        "Membre fondateur de l’OTAN",
+        "Membre permanent du Parlement européen",
+        "Membre permanent du Conseil de sécurité de l’ONU",
+        "Membre du G7"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En tant que membre permanent du Conseil de sécurité, la France dispose d’un droit de veto sur les résolutions majeures."
+    },
+    {
+      "id": "hgc-q198",
+      "question": "La puissance maritime de la France repose principalement sur :",
+      "options": [
+        "Sa seule flotte de porte-avions",
+        "Ses territoires d’outre‑mer qui lui assurent une présence dans tous les océans",
+        "Ses droits de pêche exclusifs en Méditerranée",
+        "Le contrôle du canal de Panama"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les territoires d’outre‑mer offrent à la France des ports et des zones économiques exclusives dans tous les océans."
+    },
+    {
+      "id": "hgc-q199",
+      "question": "Quel est l’objectif principal de la doctrine nucléaire française ?",
+      "options": [
+        "Guerre offensive",
+        "Désarmement total",
+        "Dissuasion",
+        "Exploration spatiale"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La doctrine repose sur la dissuasion : la capacité de frappe nucléaire décourage toute agression."
+    },
+    {
+      "id": "hgc-q200",
+      "question": "Dans combien de pays la France possède‑t‑elle un réseau d’ambassades et de consulats ?",
+      "options": [
+        "50",
+        "100",
+        "150",
+        "200"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le réseau diplomatique français est présent dans plus de 150 pays, l’un des plus étendus au monde."
+    },
+    {
+      "id": "hgc-q201",
+      "question": "Qu’est‑ce qu’une Zone Économique Exclusive (ZEE) ?",
+      "options": [
+        "Un espace maritime où un État côtier exerce des droits exclusifs d’exploitation et de gestion des ressources.",
+        "Une zone terrestre où un pays possède des droits de pêche exclusive.",
+        "Un espace aérien réservé aux avions militaires d’un État.",
+        "Une zone de libre‑échange où aucune souveraineté n’est appliquée."
+      ],
+      "correctAnswer": 0,
+      "explanation": "La ZEE est un espace maritime sous souveraineté d’un État côtier, avec des droits exclusifs sur les ressources."
+    },
+    {
+      "id": "hgc-q202",
+      "question": "Par rapport aux autres pays, quelle est la place de la France en termes de superficie de ZEE ?",
+      "options": [
+        "Première au monde",
+        "Deuxième au monde",
+        "Troisième au monde",
+        "Quatrième au monde"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Grâce à ses territoires d’outre‑mer, la France possède la deuxième plus grande ZEE après les États‑Unis."
+    },
+    {
+      "id": "hgc-q203",
+      "question": "Quelle superficie approximative couvre la ZEE française ?",
+      "options": [
+        "Plus de 5 millions de km²",
+        "Plus de 10 millions de km²",
+        "Plus de 15 millions de km²",
+        "Plus de 20 millions de km²"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La ZEE française dépasse les 10 millions de km² d’espaces maritimes."
+    },
+    {
+      "id": "hgc-q204",
+      "question": "Parmi les océans suivants, lequel n’est pas mentionné comme contenant des territoires français ?",
+      "options": [
+        "Océan Atlantique",
+        "Océan Indien",
+        "Océan Pacifique",
+        "Océan Arctique"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le texte cite les océans Atlantique, Indien, Pacifique et Antarctique, mais pas l’Arctique."
+    },
+    {
+      "id": "hgc-q205",
+      "question": "Quelle part de la ZEE française se trouve en Polynésie française ?",
+      "options": [
+        "47 %",
+        "13 %",
+        "5 %",
+        "10 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Polynésie française représente 47 % de la ZEE française, selon la répartition fournie."
+    },
+    {
+      "id": "hgc-q206",
+      "question": "Quel pourcentage du trafic maritime français de marchandises est traité par les grands ports maritimes gérés par l'État ?",
+      "options": [
+        "50 %",
+        "80 %",
+        "90 %",
+        "100 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les grands ports maritimes français, gérés par l’État, traitent plus de 80 % du trafic maritime de marchandises."
+    },
+    {
+      "id": "hgc-q207",
+      "question": "Parmi les ports suivants, lequel n'est PAS un grand port maritime (GPM) en France métropolitaine ?",
+      "options": [
+        "Le Havre",
+        "Marseille",
+        "Dunkerque",
+        "Calais"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Calais est un port de commerce décentralisé, alors que les trois autres sont des grands ports maritimes."
+    },
+    {
+      "id": "hgc-q208",
+      "question": "Combien de ports d'État (grands ports maritimes) compte la France, incluant la métropole et les territoires d'outre-mer ?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France possède 12 grands ports d’État : 7 en métropole, 4 en outre‑mer et 1 port d’intérêt national."
+    },
+    {
+      "id": "hgc-q209",
+      "question": "Lequel de ces ports est classé comme « port d’intérêt national » ?",
+      "options": [
+        "Saint‑Pierre‑et‑Miquelon",
+        "Bordeaux",
+        "La Rochelle",
+        "Fort‑de‑France (Martinique)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le port de Saint‑Pierre‑et‑Miquelon, bien que plus petit, est désigné port d’intérêt national."
+    },
+    {
+      "id": "hgc-q210",
+      "question": "Quel est le rôle principal des grands ports français dans l'économie ?",
+      "options": [
+        "Accueillir les croisières touristiques",
+        "Servir de points d’entrée et sortie des marchandises",
+        "Produire de l’énergie hydraulique",
+        "Gérer la pêche industrielle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les grands ports sont les principaux points d’entrée et de sortie des marchandises, essentiels au commerce international."
+    },
+    {
+      "id": "hgc-q211",
+      "question": "Combien de passagers ont voyagé entre la France et l’international en 2024 ?",
+      "options": [
+        "151 millions",
+        "70 millions",
+        "200 millions",
+        "90 millions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte indique plus de 151 millions de passagers en 2024."
+    },
+    {
+      "id": "hgc-q212",
+      "question": "Quel aéroport français est le deuxième aéroport le plus fréquenté d’Europe en nombre de passagers ?",
+      "options": [
+        "Paris‑Charles de Gaulle (CDG)",
+        "Paris‑Orly",
+        "Nice‑Côte d’Azur",
+        "Lyon‑Saint‑Exupéry"
+      ],
+      "correctAnswer": 0,
+      "explanation": "CDG est le premier aéroport français et le deuxième d’Europe en nombre de passagers."
+    },
+    {
+      "id": "hgc-q213",
+      "question": "Environ combien d’aéroports composent le réseau aérien français ?",
+      "options": [
+        "120",
+        "50",
+        "200",
+        "80"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte précise un réseau dense d’environ 120 aéroports."
+    },
+    {
+      "id": "hgc-q214",
+      "question": "Lequel de ces métiers n’est pas typiquement lié au secteur aérien ?",
+      "options": [
+        "Pilote",
+        "Mécanicien",
+        "Contrôleur aérien",
+        "Médecin généraliste"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le médecin généraliste n’est pas une profession courante du secteur aérien."
+    },
+    {
+      "id": "hgc-q215",
+      "question": "Combien de destinations le CDG dessert‑il dans le monde ?",
+      "options": [
+        "300",
+        "150",
+        "500",
+        "75"
+      ],
+      "correctAnswer": 0,
+      "explanation": "CDG dessert 300 destinations à l’échelle mondiale."
+    },
+    {
+      "id": "hgc-q216",
+      "question": "Quelle place la France occupe-t-elle parmi les destinations touristiques mondiales ?",
+      "options": [
+        "Première",
+        "Deuxième",
+        "Troisième",
+        "Quatrième"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France est la première destination touristique au monde."
+    },
+    {
+      "id": "hgc-q217",
+      "question": "Environ combien de touristes ont visité la France en 2024 ?",
+      "options": [
+        "Plus de 100 millions",
+        "Environ 75 millions",
+        "Environ 50 millions",
+        "Moins de 30 millions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 2024, la France a accueilli plus de 100 millions de visiteurs."
+    },
+    {
+      "id": "hgc-q218",
+      "question": "Parmi les sites suivants, lequel est classé au patrimoine mondial de l'UNESCO en France ?",
+      "options": [
+        "Tour Eiffel",
+        "Mont‑Saint‑Michel",
+        "Côte d'Azur",
+        "Château de Versailles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Mont‑Saint‑Michel figure parmi les sites inscrits au registre UNESCO."
+    },
+    {
+      "id": "hgc-q219",
+      "question": "Quelle part du PIB français est attribuée au tourisme ?",
+      "options": [
+        "5 %",
+        "12 %",
+        "8 %",
+        "15 %"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le tourisme représente environ 8 % du produit intérieur brut français."
+    },
+    {
+      "id": "hgc-q220",
+      "question": "Combien d'emplois sont directement ou indirectement liés au tourisme en France ?",
+      "options": [
+        "Environ 500 000",
+        "Moins de 1 million",
+        "Environ 3 millions",
+        "Plus de 2 millions"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le secteur du tourisme génère plus de 2 millions d'emplois, incluant les postes directs et indirects."
+    },
+    {
+      "id": "hgc-q221",
+      "question": "Dans quelle partie de la France se trouve la région Auvergne‑Rhône‑Alpes ?",
+      "options": [
+        "Sud‑est",
+        "Nord‑ouest",
+        "Centre",
+        "Sud‑ouest"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La région est située dans le sud‑est de la France, bordée par la Suisse et l’Italie."
+    },
+    {
+      "id": "hgc-q222",
+      "question": "Combien de départements composent la région Auvergne‑Rhône‑Alpes ?",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La région comprend 12 départements : Ain, Allier, Ardèche, Cantal, Drôme, Haute‑Loire, Haute‑Saône, Isère, Loire, Puy‑de‑Dôme, Rhône, Savoie."
+    },
+    {
+      "id": "hgc-q223",
+      "question": "Quelle est la préfecture de la région Auvergne‑Rhône‑Alpes ?",
+      "options": [
+        "Grenoble",
+        "Lyon",
+        "Clermont‑Ferrand",
+        "Annecy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lyon est la préfecture (capitale administrative) de la région."
+    },
+    {
+      "id": "hgc-q224",
+      "question": "Parmi les activités suivantes, laquelle n’est pas un secteur économique clé de la région ?",
+      "options": [
+        "Aéronautique",
+        "Pêche en haute mer",
+        "Agroalimentaire",
+        "Tourisme de ski"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La pêche en haute mer n’est pas un secteur majeur dans une région essentiellement alpine et industrielle."
+    },
+    {
+      "id": "hgc-q225",
+      "question": "Comment se situe le taux de chômage de l’Auvergne‑Rhône‑Alpes par rapport à la moyenne nationale ?",
+      "options": [
+        "Supérieur à la moyenne nationale",
+        "Légèrement inférieur à la moyenne nationale",
+        "Exactement égal à la moyenne",
+        "Très élevé"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le taux de chômage est légèrement inférieur à la moyenne nationale, reflétant une économie dynamique."
+    },
+    {
+      "id": "hgc-q226",
+      "question": "Dans quelle partie de la France se situe la région Bourgogne‑Franche‑Comté ?",
+      "options": [
+        "À l’ouest",
+        "Au sud",
+        "À l’est",
+        "Au nord"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La région se trouve à l’est du pays, à la frontière avec la Suisse."
+    },
+    {
+      "id": "hgc-q227",
+      "question": "Combien de départements composent la Bourgogne‑Franche‑Comté ?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La région comprend huit départements : Côte‑d’Or, Doubs, Haute‑Saône, Jura, Nièvre, Saône‑et‑Loire, Territoire de Belfort et Yonne."
+    },
+    {
+      "id": "hgc-q228",
+      "question": "Quelle ville est la préfecture de la Bourgogne‑Franche‑Comté ?",
+      "options": [
+        "Dijon",
+        "Besançon",
+        "Chalon‑sur‑Saône",
+        "Auxerre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dijon est la préfecture de la région."
+    },
+    {
+      "id": "hgc-q229",
+      "question": "Parmi les activités suivantes, laquelle n’est **pas** un secteur économique clé de la région ?",
+      "options": [
+        "Horlogerie",
+        "Agroalimentaire",
+        "Textile",
+        "Viticulture"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le textile n’est pas mentionné parmi les secteurs majeurs (industrie, viticulture, horlogerie, bois, tourisme)."
+    },
+    {
+      "id": "hgc-q230",
+      "question": "Quelle est la population approximative de la Bourgogne‑Franche‑Comté ?",
+      "options": [
+        "1,5 million d’habitants",
+        "2,8 millions d’habitants",
+        "4 millions d’habitants",
+        "5,5 millions d’habitants"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La région compte environ 2,8 millions d’habitants."
+    },
+    {
+      "id": "hgc-q231",
+      "question": "Comment caractérise‑t‑on le taux de chômage dans la région ?",
+      "options": [
+        "Le taux de chômage est généralement élevé",
+        "Le taux de chômage est généralement bas",
+        "Le taux de chômage est identique partout dans la région",
+        "Il n’y a pas de chômage du tout"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le taux de chômage est généralement bas, même s’il varie selon les zones."
+    },
+    {
+      "id": "hgc-q232",
+      "question": "Où se situe la région de la Bretagne ?",
+      "options": [
+        "À l’extrême ouest de la France",
+        "Dans le sud‑est de la France",
+        "Au centre de la France",
+        "Dans le nord de la France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Bretagne forme une péninsule à l’ouest, bordée par la Manche et l’océan Atlantique."
+    },
+    {
+      "id": "hgc-q233",
+      "question": "Combien de départements composent la Bretagne ?",
+      "options": [
+        "Quatre",
+        "Cinq",
+        "Trois",
+        "Six"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les quatre départements sont les Côtes‑d’Armor, le Finistère, l’Ille‑et‑Vilaine et le Morbihan."
+    },
+    {
+      "id": "hgc-q234",
+      "question": "Quelle est la préfecture de la région Bretagne ?",
+      "options": [
+        "Rennes",
+        "Brest",
+        "Quimper",
+        "Vannes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Rennes est la capitale administrative (préfecture) de la Bretagne."
+    },
+    {
+      "id": "hgc-q235",
+      "question": "Dans quel secteur la Bretagne est‑elle première région de France ?",
+      "options": [
+        "Agroalimentaire",
+        "Construction navale",
+        "Énergies marines",
+        "Tourisme"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Bretagne se classe première en France dans le secteur agroalimentaire."
+    },
+    {
+      "id": "hgc-q236",
+      "question": "Comment se caractérise le taux de chômage en Bretagne par rapport à la moyenne nationale ?",
+      "options": [
+        "Il est inférieur à la moyenne nationale",
+        "Il est supérieur à la moyenne nationale",
+        "Il est exactement égal à la moyenne nationale",
+        "Il est très élevé (plus de 15 %)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le taux de chômage breton est plus bas que la moyenne française, reflétant un marché du travail dynamique."
+    },
+    {
+      "id": "hgc-q237",
+      "question": "Quelle est la population approximative de la Bretagne ?",
+      "options": [
+        "Environ 3,5 millions d’habitants",
+        "Environ 5 millions d’habitants",
+        "Environ 2 millions d’habitants",
+        "Environ 4,5 millions d’habitants"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Bretagne compte près de 3,5 millions d’habitants, avec une croissance surtout autour de Rennes et du sud du Morbihan."
+    },
+    {
+      "id": "hgc-q238",
+      "question": "Où se situe la région du Centre-Val de Loire ?",
+      "options": [
+        "Au centre‑nord de la France",
+        "Dans le sud‑est de la France",
+        "À l’ouest de la France",
+        "Dans le nord‑est de la France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La région est située au centre‑nord, entre l’Île‑de‑France et le Massif central."
+    },
+    {
+      "id": "hgc-q239",
+      "question": "Combien de départements composent le Centre-Val de Loire ?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Centre-Val de Loire comprend six départements : Cher, Eure‑et‑Loir, Indre, Indre‑et‑Loire, Loir‑et‑Cher et Loiret."
+    },
+    {
+      "id": "hgc-q240",
+      "question": "Quelle est la préfecture du Centre-Val de Loire ?",
+      "options": [
+        "Orléans",
+        "Tours",
+        "Bourges",
+        "Chartres"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Orléans est la préfecture de la région, tandis que Tours, Bourges et Chartres sont d’autres grandes villes."
+    },
+    {
+      "id": "hgc-q241",
+      "question": "Parmi les secteurs suivants, lequel n’est pas cité comme activité économique clé du Centre-Val de Loire ?",
+      "options": [
+        "Pharmaceutique",
+        "Aéronautique",
+        "Textile",
+        "Vignoble"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte mentionne la pharmaceutique, l’aéronautique, la cosmétique, l’agriculture et le vignoble, mais pas le secteur textile."
+    },
+    {
+      "id": "hgc-q242",
+      "question": "Comment est décrit le taux de chômage dans la région ?",
+      "options": [
+        "Bien supérieur à la moyenne nationale",
+        "Proche de la moyenne nationale",
+        "Bien inférieur à la moyenne nationale",
+        "Inexistant"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le taux de chômage du Centre-Val de Loire est indiqué comme étant proche de la moyenne nationale."
+    },
+    {
+      "id": "hgc-q243",
+      "question": "Où se situe la région de la Corse ?",
+      "options": [
+        "Sur une île de la mer Méditerranée, au sud‑est de la France continentale",
+        "Sur une île de l’océan Atlantique, au nord‑ouest de la France continentale",
+        "Sur le continent, au sud‑ouest de la France",
+        "Dans l’océan Indien, en tant que territoire d’outre‑mer français"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Corse est une île méditerranéenne située au sud‑est de la France métropolitaine."
+    },
+    {
+      "id": "hgc-q244",
+      "question": "Combien de départements composent la Corse ?",
+      "options": [
+        "Un seul",
+        "Deux",
+        "Trois",
+        "Quatre"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Corse est divisée en deux départements : la Corse‑du‑Sud et la Haute‑Corse."
+    },
+    {
+      "id": "hgc-q245",
+      "question": "Quelle ville est la préfecture de la Corse‑du‑Sud ?",
+      "options": [
+        "Ajaccio",
+        "Bastia",
+        "Corte",
+        "Calvi"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ajaccio est la préfecture du département de la Corse‑du‑Sud."
+    },
+    {
+      "id": "hgc-q246",
+      "question": "Parmi les activités suivantes, laquelle n’est pas citée comme secteur économique clé de la Corse ?",
+      "options": [
+        "Tourisme",
+        "Agriculture (vignes, huile d’olive, élevage)",
+        "Industrie lourde",
+        "Artisanat"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’industrie lourde n’est pas mentionnée parmi les principaux secteurs économiques de la Corse."
+    },
+    {
+      "id": "hgc-q247",
+      "question": "Comment se caractérise le taux de chômage en Corse par rapport à la moyenne nationale ?",
+      "options": [
+        "Il est inférieur à la moyenne nationale",
+        "Il est égal à la moyenne nationale",
+        "Il est supérieur à la moyenne nationale",
+        "Il n’existe pas de chômage en Corse"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le taux de chômage en Corse est supérieur à la moyenne nationale, surtout hors saison touristique."
+    },
+    {
+      "id": "hgc-q248",
+      "question": "Où est située la région du Grand Est ?",
+      "options": [
+        "À l’est de la France",
+        "À l’ouest de la France",
+        "Au sud de la France",
+        "Au nord de la France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Grand Est se trouve à l’est du territoire français, limitrophe de la Belgique, du Luxembourg, de l’Allemagne et de la Suisse."
+    },
+    {
+      "id": "hgc-q249",
+      "question": "Lequel de ces départements n’appartient pas au Grand Est ?",
+      "options": [
+        "Bas‑Rhin",
+        "Haute‑Marne",
+        "Gironde",
+        "Vosges"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gironde se situe en Nouvelle‑Aquitaine, alors que les trois autres sont parmi les dix départements du Grand Est."
+    },
+    {
+      "id": "hgc-q250",
+      "question": "Quelle est la préfecture de la région Grand Est ?",
+      "options": [
+        "Strasbourg",
+        "Reims",
+        "Metz",
+        "Nancy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Strasbourg est la capitale administrative (préfecture) du Grand Est."
+    },
+    {
+      "id": "hgc-q251",
+      "question": "Quel secteur économique n’est **pas** mentionné comme clé dans le Grand Est ?",
+      "options": [
+        "Industrie automobile",
+        "Vins de Champagne",
+        "Pêche maritime",
+        "Tourisme patrimonial"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte cite l’industrie, la viticulture, l’agriculture, la logistique et le tourisme patrimonial, mais pas la pêche maritime."
+    },
+    {
+      "id": "hgc-q252",
+      "question": "Dans quelle zone le taux de chômage est‑il généralement le plus bas dans le Grand Est ?",
+      "options": [
+        "Autour de Strasbourg",
+        "Dans les zones industrielles en reconversion",
+        "Dans les zones rurales",
+        "Dans le département de la Moselle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le taux de chômage est plus bas autour de Strasbourg, tandis qu’il est plus élevé dans les zones industrielles en reconversion."
+    },
+    {
+      "id": "hgc-q253",
+      "question": "Où se situe la région des Hauts-de-France ?",
+      "options": [
+        "Au nord de la France, à la frontière avec la Belgique",
+        "Dans le sud‑est de la France, près de la Méditerranée",
+        "À l’ouest, le long de l’Atlantique",
+        "Au centre, autour de la vallée du Rhône"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La région est située au nord, limitrophe de la Belgique et bordée par la Manche."
+    },
+    {
+      "id": "hgc-q254",
+      "question": "Parmi les départements suivants, lequel n’appartient pas aux Hauts-de-France ?",
+      "options": [
+        "Aisne",
+        "Nord",
+        "Oise",
+        "Loire"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les départements des Hauts-de-France sont Aisne, Nord, Oise, Pas‑de‑Calais et Somme ; la Loire se trouve dans la région Auvergne‑Rhône‑Alpes."
+    },
+    {
+      "id": "hgc-q255",
+      "question": "Quelle est la préfecture de la région des Hauts-de-France ?",
+      "options": [
+        "Lille",
+        "Amiens",
+        "Dunkerque",
+        "Calais"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Lille est la capitale régionale et la préfecture du département du Nord."
+    },
+    {
+      "id": "hgc-q256",
+      "question": "Quel secteur économique n’est pas mentionné comme clé dans la région ?",
+      "options": [
+        "Industrie automobile",
+        "Textile",
+        "Pêche maritime",
+        "Numérique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte cite l’industrie, le textile, le numérique, etc., mais pas la pêche maritime."
+    },
+    {
+      "id": "hgc-q257",
+      "question": "Comment se caractérise le taux de chômage dans les Hauts-de-France ?",
+      "options": [
+        "Inférieur à la moyenne nationale",
+        "Égal à la moyenne nationale",
+        "Supérieur à la moyenne nationale",
+        "Nul"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le taux de chômage est indiqué comme étant supérieur à la moyenne nationale."
+    },
+    {
+      "id": "hgc-q258",
+      "question": "Où est située la région de l’Île-de-France ?",
+      "options": [
+        "Au centre‑nord de la France",
+        "Dans le sud‑est de la France",
+        "À l’ouest de la France",
+        "Dans le sud‑ouest de la France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Île‑de‑France se trouve au centre‑nord du pays, autour de Paris."
+    },
+    {
+      "id": "hgc-q259",
+      "question": "Combien de départements composent l’Île-de-France ?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La région comprend huit départements : Essonne, Hauts‑de‑Seine, Paris, Seine‑et‑Marne, Seine‑Saint‑Denis, Val‑de‑Marne, Val‑d’Oise et Yvelines."
+    },
+    {
+      "id": "hgc-q260",
+      "question": "Parmi les villes suivantes, laquelle n’est PAS une des principales villes de l’Île-de-France ?",
+      "options": [
+        "Paris",
+        "Boulogne‑Billancourt",
+        "Lyon",
+        "Saint‑Denis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Lyon se situe dans la région Auvergne‑Rhône‑Alpes, pas en Île‑de‑France."
+    },
+    {
+      "id": "hgc-q261",
+      "question": "Quelle affirmation concernant la démographie de l’Île-de-France est exacte ?",
+      "options": [
+        "Environ 12,4 millions d’habitants",
+        "Moins de 5 millions d’habitants",
+        "Plus de 20 millions d’habitants",
+        "Sa population est en nette décroissance"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Île‑de‑France compte environ 12,4 millions d’habitants, ce qui en fait la région la plus peuplée de France."
+    },
+    {
+      "id": "hgc-q262",
+      "question": "Quel secteur n’est pas mentionné parmi les secteurs économiques clés de l’Île-de-France ?",
+      "options": [
+        "Finance",
+        "Agriculture",
+        "Tourisme",
+        "Recherche"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’agriculture n’est pas citée comme secteur clé ; les principaux sont les services (finance, numérique, communication), le tourisme, la recherche, etc."
+    },
+    {
+      "id": "hgc-q263",
+      "question": "Où se situe la région de la Normandie ?",
+      "options": [
+        "Au nord‑ouest de la France, bordée par la Manche",
+        "Dans le sud‑est de la France, près des Alpes",
+        "Au centre de la France, autour de Clermont‑Ferrand",
+        "Dans le sud‑ouest, à la frontière espagnole"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Normandie est au nord‑ouest de la France et jouxte la Manche."
+    },
+    {
+      "id": "hgc-q264",
+      "question": "Combien de départements composent la Normandie ?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La région regroupe cinq départements : Calvados, Eure, Manche, Orne et Seine‑Maritime."
+    },
+    {
+      "id": "hgc-q265",
+      "question": "Quelle ville est la préfecture de la Normandie ?",
+      "options": [
+        "Rouen",
+        "Caen",
+        "Le Havre",
+        "Évreux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Rouen est la préfecture de la région Normandie."
+    },
+    {
+      "id": "hgc-q266",
+      "question": "Parmi les secteurs suivants, lequel n’est pas cité comme activité économique clé de la Normandie ?",
+      "options": [
+        "Agriculture et élevage",
+        "Textile",
+        "Aéronautique",
+        "Pêche"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte mentionne l’agriculture, l’aéronautique et la pêche, mais pas le textile."
+    },
+    {
+      "id": "hgc-q267",
+      "question": "Comment le taux de chômage en Normandie se compare‑t‑il à la moyenne nationale ?",
+      "options": [
+        "Il est bien inférieur à la moyenne",
+        "Il est proche de la moyenne nationale",
+        "Il est bien supérieur à la moyenne",
+        "Il varie fortement selon les saisons"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le taux de chômage normand est indiqué comme étant proche de la moyenne nationale."
+    },
+    {
+      "id": "hgc-q268",
+      "question": "Dans quelle partie de la France se situe la région Nouvelle-Aquitaine ?",
+      "options": [
+        "Nord-est",
+        "Sud-ouest",
+        "Centre",
+        "Est"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Nouvelle-Aquitaine se trouve dans le sud‑ouest de la France, bordant l’Atlantique et proche de l’Espagne."
+    },
+    {
+      "id": "hgc-q269",
+      "question": "Combien de départements composent la Nouvelle-Aquitaine ?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La région comprend 12 départements, dont la Charente, la Gironde, la Dordogne, etc."
+    },
+    {
+      "id": "hgc-q270",
+      "question": "Quelle ville est la préfecture de la Nouvelle-Aquitaine ?",
+      "options": [
+        "Limoges",
+        "Bordeaux",
+        "Poitiers",
+        "La Rochelle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bordeaux est la préfecture (chef‑lieu) de la région Nouvelle-Aquitaine."
+    },
+    {
+      "id": "hgc-q271",
+      "question": "Parmi les secteurs économiques suivants, lequel est identifié comme clé pour la Nouvelle-Aquitaine ?",
+      "options": [
+        "Industrie textile",
+        "Aéronautique",
+        "Extraction minière",
+        "Construction navale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’aéronautique figure parmi les secteurs économiques majeurs de la région, aux côtés de l’agriculture, du tourisme, etc."
+    },
+    {
+      "id": "hgc-q272",
+      "question": "Comment le taux de chômage de la Nouvelle-Aquitaine se compare‑t-il à la moyenne nationale ?",
+      "options": [
+        "Il est supérieur à la moyenne nationale",
+        "Il est égal à la moyenne nationale",
+        "Il est inférieur à la moyenne nationale",
+        "Il varie mais reste toujours au-dessus de la moyenne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le taux de chômage de la Nouvelle-Aquitaine est globalement inférieur à la moyenne nationale, même s’il varie selon les départements."
+    },
+    {
+      "id": "hgc-q273",
+      "question": "Quel domaine culturel français est associé à plusieurs lauréats du prix Nobel ?",
+      "options": [
+        "Le cinéma",
+        "La mode",
+        "La littérature",
+        "La gastronomie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Des écrivains français comme André Gide, Albert Camus ou Annie Ernaux ont reçu le prix Nobel de littérature."
+    },
+    {
+      "id": "hgc-q274",
+      "question": "Quel événement international célèbre chaque année le 7ᵉ art en France ?",
+      "options": [
+        "Le Salon du Livre de Paris",
+        "Le Festival de Cannes",
+        "La Fashion Week de Paris",
+        "La Fête de la Musique"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Festival de Cannes, créé en 1946, est l’un des festivals de cinéma les plus prestigieux au monde."
+    },
+    {
+      "id": "hgc-q275",
+      "question": "Parmi les maisons suivantes, laquelle n’est pas une maison de haute couture française emblématique ?",
+      "options": [
+        "Chanel",
+        "Dior",
+        "Gucci",
+        "Saint Laurent"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gucci est une maison italienne ; les trois autres sont des maisons françaises de haute couture."
+    },
+    {
+      "id": "hgc-q276",
+      "question": "Quel organisme français est présent dans plus de 130 pays pour diffuser la langue et la culture françaises ?",
+      "options": [
+        "Le Centre national du cinéma",
+        "Les Alliances françaises",
+        "Le Ministère de la Défense",
+        "Le Conseil national de l’enseignement supérieur"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les Alliances françaises (et les Instituts français) sont implantées dans plus de 130 pays pour promouvoir la langue et la culture."
+    },
+    {
+      "id": "hgc-q277",
+      "question": "Quel projet culturel illustre la coopération franco‑émiratie en matière de muséographie ?",
+      "options": [
+        "Le Musée du Quai Branly",
+        "Le Louvre Abu Dhabi",
+        "Le Musée d’Orsay à Tokyo",
+        "Le Centre Pompidou de Shanghai"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Louvre Abu Dhabi résulte d’un accord inédit entre la France et les Émirats arabes unis, partageant expertise et savoir‑faire."
+    },
+    {
+      "id": "hgc-q278",
+      "question": "Quelle place occupe le français parmi les langues les plus parlées au monde ?",
+      "options": [
+        "3ᵉ",
+        "5ᵉ",
+        "7ᵉ",
+        "10ᵉ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le français est la 5ᵉ langue la plus parlée avec plus de 300 millions de locuteurs."
+    },
+    {
+      "id": "hgc-q279",
+      "question": "Dans combien de pays le français est-il langue officielle ?",
+      "options": [
+        "Plus de 10",
+        "Plus de 20",
+        "Plus de 30",
+        "Plus de 50"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le français est langue officielle dans plus de 30 pays."
+    },
+    {
+      "id": "hgc-q280",
+      "question": "Dans quelles organisations internationales le français est‑il utilisé comme langue diplomatique ?",
+      "options": [
+        "ONU, Union européenne, Union africaine et Comité international olympique",
+        "OTAN, OMC, FMI et Banque mondiale",
+        "ASEAN, Mercosur, OPEP et G20",
+        "Toutes les organisations citées"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le français sert de langue diplomatique à l’ONU, l’UE, l’Union africaine et le CIO."
+    },
+    {
+      "id": "hgc-q281",
+      "question": "Combien d’États et gouvernements membres compte l’Organisation Internationale de la Francophonie (OIF) ?",
+      "options": [
+        "50",
+        "73",
+        "93",
+        "120"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’OIF regroupe 93 États et gouvernements membres."
+    },
+    {
+      "id": "hgc-q282",
+      "question": "Parmi les missions de la Francophonie, laquelle n’en fait pas partie ?",
+      "options": [
+        "Valoriser le français dans sa diversité culturelle",
+        "Promouvoir la paix, la démocratie et les droits de l’Homme",
+        "Développer des armes nucléaires",
+        "Encourager la coopération économique au service du développement durable"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Développer des armes nucléaires n’est pas une mission de la Francophonie."
+    },
+    {
+      "id": "hgc-q283",
+      "question": "Qu’entend‑on par patrimoine en France ?",
+      "options": [
+        "Uniquement les monuments historiques",
+        "Seulement les sites naturels",
+        "L’ensemble des biens matériels (monuments) et immatériels (traditions, rituels, arts du spectacle)",
+        "Les seules recettes culinaires"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le patrimoine regroupe à la fois des biens matériels (monuments, sites) et immatériels (traditions, rituels, spectacles)."
+    },
+    {
+      "id": "hgc-q284",
+      "question": "Quel dispositif juridique protège les monuments historiques en France ?",
+      "options": [
+        "Le label Bio",
+        "Le classement au Patrimoine mondial de l’UNESCO",
+        "Le statut de protection du patrimoine culturel",
+        "Le label « Haute Cuisine »"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les monuments historiques bénéficient d’un statut juridique de protection du patrimoine culturel français."
+    },
+    {
+      "id": "hgc-q285",
+      "question": "La gastronomie française est inscrite sur quelle liste internationale ?",
+      "options": [
+        "Le Patrimoine mondial de l’UNESCO",
+        "La Liste rouge de l’UE",
+        "Le Répertoire des sites classés de France",
+        "Le Catalogue des produits bio"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La gastronomie française a été reconnue comme patrimoine immatériel de l’humanité par l’UNESCO."
+    },
+    {
+      "id": "hgc-q286",
+      "question": "Lors d’un événement important, le repas typique de la gastronomie française comprend généralement :",
+      "options": [
+        "Un seul plat principal sans boisson",
+        "Au moins quatre plats, des produits de qualité, du vin sélectionné et une table décorée",
+        "Un buffet à volonté sans vin ni décoration",
+        "Un repas exclusivement végétarien"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un repas traditionnel rassemble plusieurs plats, des produits de qualité, du vin choisi et une présentation soignée."
+    },
+    {
+      "id": "hgc-q287",
+      "question": "Parmi les éléments suivants, lequel fait partie du patrimoine immatériel ?",
+      "options": [
+        "Les châteaux de la Loire",
+        "Les montagnes des Alpes",
+        "Les traditions orales, l’art du spectacle, les pratiques sociales et les rituels",
+        "Les réserves naturelles"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le patrimoine immatériel comprend les traditions, les arts du spectacle, les pratiques sociales et les rituels."
+    },
+    {
+      "id": "hgc-q288",
+      "question": "Quel architecte a conçu la basilique de Fourvière ?",
+      "options": [
+        "Pierre Bossan",
+        "Gustave Eiffel",
+        "Le Corbusier",
+        "Jean Nouvel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pierre Bossan est l'architecte qui a réalisé la basilique entre 1872 et 1884."
+    },
+    {
+      "id": "hgc-q289",
+      "question": "Entre quelles années la construction de la basilique de Fourvière a-t-elle eu lieu ?",
+      "options": [
+        "1872-1884",
+        "1850-1860",
+        "1900-1910",
+        "1920-1930"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les travaux se sont déroulés de 1872 à 1884."
+    },
+    {
+      "id": "hgc-q290",
+      "question": "Quel événement, célébré en décembre, illumine la basilique de Fourvière ?",
+      "options": [
+        "Fête des Lumières",
+        "Noël",
+        "Carnaval de Lyon",
+        "Festival de Jazz"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Fête des Lumières projette des lumières sur la basilique chaque décembre."
+    },
+    {
+      "id": "hgc-q291",
+      "question": "Lequel de ces fromages n’est pas traditionnellement utilisé dans la fondue savoyarde ?",
+      "options": [
+        "Comté",
+        "Beaufort",
+        "Emmental",
+        "Camembert"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La fondue savoyarde utilise comté, beaufort et emmental, mais pas le camembert."
+    },
+    {
+      "id": "hgc-q292",
+      "question": "Dans quelle région française la fondue savoyarde est-elle une spécialité traditionnelle ?",
+      "options": [
+        "Auvergne‑Rhône‑Alpes",
+        "Provence‑Alpes‑Côte d'Azur",
+        "Nouvelle‑Aquitaine",
+        "Bretagne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Cette fondue provient de la région alpine, notamment Auvergne‑Rhône‑Alpes."
+    },
+    {
+      "id": "hgc-q293",
+      "question": "Quel élément de décoration intérieure se trouve dans la basilique de Fourvière ?",
+      "options": [
+        "Mosaïques",
+        "Fresques romaines",
+        "Stuc baroque",
+        "Carrelage en terre cuite"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La basilique est renommée pour ses mosaïques, vitraux et marbres."
+    },
+    {
+      "id": "hgc-q294",
+      "question": "En quelle année l'abbaye de Fontenay a-t-elle été inscrite au patrimoine mondial de l'UNESCO ?",
+      "options": [
+        "1975",
+        "1981",
+        "1990",
+        "2000"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'abbaye de Fontenay est classée au patrimoine mondial de l'UNESCO depuis 1981."
+    },
+    {
+      "id": "hgc-q295",
+      "question": "Qui a fondé l'abbaye de Fontenay en 1118 ?",
+      "options": [
+        "Saint Bernard de Clairvaux",
+        "Saint Thomas d'Aquin",
+        "Saint François d'Assise",
+        "Saint Pierre de Montmartre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'abbaye a été fondée par Saint Bernard de Clairvaux."
+    },
+    {
+      "id": "hgc-q296",
+      "question": "Parmi les affirmations suivantes, laquelle est fausse concernant le bœuf bourguignon ?",
+      "options": [
+        "Il est mijoté dans un vin rouge de Bourgogne",
+        "Il contient du poulet à la place du bœuf",
+        "Il comprend des carottes et des champignons",
+        "C'est un plat convivial symbole de la gastronomie régionale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le plat utilise du bœuf, jamais du poulet."
+    },
+    {
+      "id": "hgc-q297",
+      "question": "En quelle année le parc paysager de l'abbaye de Fontenay a-t-il été classé « Jardin remarquable » ?",
+      "options": [
+        "1995",
+        "2000",
+        "2004",
+        "2010"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le parc a reçu le label « Jardin remarquable » en 2004."
+    },
+    {
+      "id": "hgc-q298",
+      "question": "Le bœuf bourguignon est considéré comme un symbole gastronomique de quelle région ?",
+      "options": [
+        "Provence-Alpes-Côte d'Azur",
+        "Bourgogne-Franche-Comté",
+        "Île-de-France",
+        "Nouvelle-Aquitaine"
+      ],
+      "correctAnswer": 1,
+      "explanation": "C'est un plat emblématique de la Bourgogne‑Franche‑Comté."
+    },
+    {
+      "id": "hgc-q299",
+      "question": "Quel était le but principal de la construction du Fort National de Saint‑Malo au XVIIᵉ siècle ?",
+      "options": [
+        "Protéger la ville",
+        "Servir de palais royal",
+        "Fonctionner comme phare",
+        "Accueillir un marché hebdomadaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le fort a été érigé pour défendre Saint‑Malo contre les attaques maritimes."
+    },
+    {
+      "id": "hgc-q300",
+      "question": "Quelle affirmation décrit correctement l’emplacement du Fort National ?",
+      "options": [
+        "Il est installé sur un îlot rocheux offrant une vue panoramique sur la côte",
+        "Il se trouve au cœur du centre-ville, entouré de rues commerçantes",
+        "Il est caché dans une forêt intérieure de la ville",
+        "Il est perché au sommet d’une montagne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le fort est construit sur un petit îlot rocheux, ce qui lui donne une visibilité exceptionnelle sur la mer."
+    },
+    {
+      "id": "hgc-q301",
+      "question": "Quel ingrédient différencie la galette bretonne de la crêpe traditionnelle ?",
+      "options": [
+        "Farine de sarrasin (blé noir)",
+        "Sucre",
+        "Beurre",
+        "Chocolat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les galettes sont préparées avec de la farine de sarrasin, alors que les crêpes utilisent de la farine de blé."
+    },
+    {
+      "id": "hgc-q302",
+      "question": "Quel accompagnement typique se retrouve sur une galette bretonne ?",
+      "options": [
+        "Jambon, œuf et fromage",
+        "Nutella et banane",
+        "Confiture de fraise",
+        "Caramel au beurre salé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La galette est traditionnellement garnie de jambon, d’un œuf et de fromage, des saveurs salées."
+    },
+    {
+      "id": "hgc-q303",
+      "question": "Comment qualifierait‑on aujourd’hui le Fort National de Saint‑Malo ?",
+      "options": [
+        "Destination touristique prisée, ouverte aux visites",
+        "Ruine abandonnée et inaccessible",
+        "Résidence privée",
+        "Base militaire encore en activité"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le fort est aujourd’hui un site touristique où les visiteurs peuvent découvrir l’histoire maritime et militaire de la région."
+    },
+    {
+      "id": "hgc-q304",
+      "question": "Qui a ordonné la construction du château de Chambord ?",
+      "options": [
+        "François 1er",
+        "Louis XIV",
+        "Henri IV",
+        "Napoléon III"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le château de Chambord a été édifié sur ordre de François 1er, roi de France au début du XVIᵉ siècle."
+    },
+    {
+      "id": "hgc-q305",
+      "question": "Quel style architectural caractérise le château de Chambord ?",
+      "options": [
+        "Gothique",
+        "Baroque",
+        "Renaissance",
+        "Art nouveau"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le château est célèbre pour son architecture de style Renaissance, introduite en France au XVIᵉ siècle."
+    },
+    {
+      "id": "hgc-q306",
+      "question": "Depuis quelle année le château de Chambord est‑il inscrit au patrimoine mondial de l’UNESCO ?",
+      "options": [
+        "1975",
+        "1981",
+        "1990",
+        "2005"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il a été classé au patrimoine mondial de l’UNESCO en 1981."
+    },
+    {
+      "id": "hgc-q307",
+      "question": "Quel élément caractérise la préparation de la tarte Tatin ?",
+      "options": [
+        "Des poires pochées dans du vin rouge",
+        "Des pommes caramélisées cuites à l’envers",
+        "Une pâte feuilletée garnie de crème pâtissière",
+        "Un crumble de fruits secs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La tarte Tatin est une tarte aux pommes caramélisées cuites à l’envers, puis retournée avant de servir."
+    },
+    {
+      "id": "hgc-q308",
+      "question": "Comment la tarte Tatin a‑t‑elle été créée, selon la légende ?",
+      "options": [
+        "En suivant une recette transmise de génération en génération",
+        "Par accident, lorsqu’une sœur a caramélisé des pommes et a recouvert le tout de pâte",
+        "Lors d’un concours culinaire organisé à Orléans",
+        "En imitant une pâtisserie anglaise importée au XIXᵉ siècle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La légende raconte que les sœurs Tatin ont inventé la tarte par accident en caramélisant des pommes, puis en ajoutant une pâte avant la cuisson."
+    },
+    {
+      "id": "hgc-q309",
+      "question": "Où se situe la citadelle de Bonifacio ?",
+      "options": [
+        "Sur une colline du nord de la Corse",
+        "Sur des falaises surplombant la Méditerranée au sud de la Corse",
+        "Dans l'intérieur de la Corse",
+        "Sur une plage de l'ouest de la Corse"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La citadelle est perchée sur les falaises du sud de la Corse, dominant la mer Méditerranée."
+    },
+    {
+      "id": "hgc-q310",
+      "question": "À quelle époque la citadelle de Bonifacio protégeait‑elle la ville des attaques maritimes ?",
+      "options": [
+        "L'Antiquité",
+        "Le Moyen Âge",
+        "La Renaissance",
+        "Le XXe siècle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Au Moyen Âge, la forteresse servait de défense contre les incursions maritimes."
+    },
+    {
+      "id": "hgc-q311",
+      "question": "Quel type de lait est utilisé pour fabriquer le brocciu ?",
+      "options": [
+        "Lait de vache",
+        "Lait de brebis ou de chèvre",
+        "Lait de bufflonne",
+        "Lait de chameau"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le brocciu est un fromage frais à base de lait de brebis ou de chèvre, typique de Corse."
+    },
+    {
+      "id": "hgc-q312",
+      "question": "Parmi les propositions suivantes, laquelle n’est pas une façon traditionnelle de consommer le brocciu ?",
+      "options": [
+        "Nature",
+        "Avec du miel",
+        "Dans des gratins",
+        "Frit avec du bacon"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le brocciu se mange nature, avec du miel ou en gratins, mais il n’est pas traditionnellement frit avec du bacon."
+    },
+    {
+      "id": "hgc-q313",
+      "question": "Que symbolise le brocciu pour l’île de Corse ?",
+      "options": [
+        "Le développement industriel",
+        "L'exportation agricole",
+        "Le savoir‑faire et les traditions de l’île",
+        "La cuisine moderne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le brocciu représente le savoir‑faire artisanal et les traditions culinaires corses."
+    },
+    {
+      "id": "hgc-q314",
+      "question": "En quelle année la place Stanislas a-t-elle été inscrite au patrimoine mondial de l'UNESCO ?",
+      "options": [
+        "1975",
+        "1983",
+        "1990",
+        "2001"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La place Stanislas a été classée au patrimoine mondial de l’UNESCO en 1983."
+    },
+    {
+      "id": "hgc-q315",
+      "question": "Quel style architectural caractérise la place Stanislas ?",
+      "options": [
+        "Baroque",
+        "Classique du XVIIIe siècle",
+        "Art déco",
+        "Moderne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Construite au milieu du XVIIIᵉ siècle, la place Stanislas reflète l’architecture classique de cette époque."
+    },
+    {
+      "id": "hgc-q316",
+      "question": "Parmi les bâtiments suivants, lequel n’entoure pas la place Stanislas ?",
+      "options": [
+        "Hôtel de ville",
+        "Opéra",
+        "Musée des Beaux-Arts",
+        "Cathédrale Saint‑Étienne"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Autour de la place se trouvent l’Hôtel de ville, l’Opéra et le Musée des Beaux‑Arts, mais pas la cathédrale Saint‑Étienne."
+    },
+    {
+      "id": "hgc-q317",
+      "question": "Quel ingrédient principal compose la choucroute alsacienne ?",
+      "options": [
+        "Chou fermenté",
+        "Pommes de terre",
+        "Carottes",
+        "Haricots verts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La choucroute est avant tout un plat à base de chou fermenté."
+    },
+    {
+      "id": "hgc-q318",
+      "question": "Quelle méthode de cuisson est typiquement utilisée pour préparer la choucroute alsacienne ?",
+      "options": [
+        "Cuisson rapide à la poêle",
+        "Cuisson lente",
+        "Grillade",
+        "Friture"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La choucroute est cuite lentement afin que les saveurs des viandes et du chou se mélangent bien."
+    },
+    {
+      "id": "hgc-q319",
+      "question": "En quelle année le beffroi de Lille a-t-il été inauguré ?",
+      "options": [
+        "1932",
+        "1925",
+        "1945",
+        "1918"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le beffroi de Lille a été inauguré en 1932, après la reconstruction de l’hôtel de ville détruit pendant la Première Guerre mondiale."
+    },
+    {
+      "id": "hgc-q320",
+      "question": "Quel titre unique le beffroi de Lille détient‑il en Europe ?",
+      "options": [
+        "Le plus haut beffroi civil d’Europe",
+        "Le plus ancien beffroi du continent",
+        "Le plus long pont suspendu",
+        "Le plus grand clocher religieux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il est reconnu comme le plus haut beffroi civil d’Europe, offrant une vue panoramique exceptionnelle."
+    },
+    {
+      "id": "hgc-q321",
+      "question": "Depuis quelle année le beffroi de Lille est‑il inscrit au patrimoine mondial de l’UNESCO ?",
+      "options": [
+        "2005",
+        "1999",
+        "2010",
+        "1987"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le beffroi a été classé au patrimoine mondial de l’UNESCO en 2005."
+    },
+    {
+      "id": "hgc-q322",
+      "question": "Parmi les plats suivants, lequel peut être préparé avec du maroilles ?",
+      "options": [
+        "Tarte au maroilles",
+        "Ratatouille",
+        "Bouillabaisse",
+        "Quiche lorraine"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le maroilles se prête à la cuisine, notamment à la tarte (ou flamiche) au maroilles."
+    },
+    {
+      "id": "hgc-q323",
+      "question": "Comment caractérise‑t‑on le goût du maroilles ?",
+      "options": [
+        "Un goût fort et une odeur puissante",
+        "Un goût doux et sucré",
+        "Un goût salé et croquant",
+        "Un goût légèrement acide"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le maroilles est connu pour son odeur puissante et son goût fort, reflétant le savoir‑faire fromager des Hauts‑de‑France."
+    },
+    {
+      "id": "hgc-q324",
+      "question": "Quel événement a déclenché la Seconde Guerre mondiale le 1er septembre 1939 ?",
+      "options": [
+        "L’invasion de la Pologne par l’armée allemande",
+        "Le bombardement de Pearl Harbor",
+        "Le débarquement en Normandie",
+        "L’assassinat de l’archiduc François-Ferdinand"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’invasion de la Pologne par l’Allemagne a conduit la France et le Royaume‑Uni à déclarer la guerre, marquant le début du conflit."
+    },
+    {
+      "id": "hgc-q325",
+      "question": "Parmi les pays suivants, lequel n’appartient pas à l’Axe pendant la Seconde Guerre mondiale ?",
+      "options": [
+        "Allemagne",
+        "Italie",
+        "Japon",
+        "Royaume‑Uni"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le Royaume‑Uni faisait partie de l’Alliance (les Alliés), tandis que l’Allemagne, l’Italie et le Japon constituaient l’Axe."
+    },
+    {
+      "id": "hgc-q326",
+      "question": "Quelle est la signification de la bataille de Stalingrad en février 1943 ?",
+      "options": [
+        "Première utilisation d’armes atomiques",
+        "Tournant où l’Axe perd l’avantage stratégique",
+        "Signature de l’armistice avec la France",
+        "Ouverture du front du Pacifique"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La victoire soviétique à Stalingrad marque le premier grand revers de l’Axe et change le cours de la guerre en Europe."
+    },
+    {
+      "id": "hgc-q327",
+      "question": "À quelle date a eu lieu le débarquement des Alliés en Normandie, connu sous le nom de « D‑Day » ?",
+      "options": [
+        "6 juin 1944",
+        "22 juin 1940",
+        "7 décembre 1941",
+        "8 mai 1945"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 6 juin 1944, les forces alliées ont débarqué sur les plages normandes, ouvrant le second front en Europe occidentale."
+    },
+    {
+      "id": "hgc-q328",
+      "question": "Pourquoi la Seconde Guerre mondiale est‑elle qualifiée de « guerre totale » ?",
+      "options": [
+        "Seules les armées professionnelles ont combattu",
+        "Le conflit ne concernait que l’Europe",
+        "Toute la société, l’économie et la culture ont été mobilisées pour la guerre",
+        "Le conflit a duré exactement six ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le terme « guerre totale » désigne la mobilisation complète des populations civiles, de l’industrie et de la propagande au service du conflit."
+    },
+    {
+      "id": "hgc-q329",
+      "question": "Quel organisme a été créé en 1945 pour maintenir la paix après la Seconde Guerre mondiale ?",
+      "options": [
+        "L’OTAN",
+        "L’Union européenne",
+        "L’Organisation des Nations Unies (ONU)",
+        "Le Pacte de Varsovie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’ONU a été fondée en 1945 afin de prévenir de futurs conflits mondiaux et de favoriser la coopération internationale."
+    },
+    {
+      "id": "hgc-q330",
+      "question": "Comment définit‑on l’Empire colonial français ?",
+      "options": [
+        "L’ensemble des territoires qui ont été dirigés par la France",
+        "Un groupe de colonies indépendantes alliées à la France",
+        "Une fédération de nations européennes sous domination française",
+        "Un réseau commercial uniquement maritime"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Empire colonial français regroupe tous les territoires placés sous la souveraineté de la France."
+    },
+    {
+      "id": "hgc-q331",
+      "question": "Parmi les territoires suivants, lequel n’a pas fait partie des premières colonies françaises (1608‑1697) ?",
+      "options": [
+        "Québec",
+        "Guadeloupe",
+        "Saint‑Domingue",
+        "Madagascar"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Madagascar n’est devenu protectorat français qu’en 1895, bien après les premières colonies du XVIIᵉ‑XVIIIᵉ siècle."
+    },
+    {
+      "id": "hgc-q332",
+      "question": "En quelle année l’Algérie a‑t‑elle été conquise par l’armée française ?",
+      "options": [
+        "1830",
+        "1841",
+        "1854",
+        "1887"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Algérie est conquise en 1830, marquant le début de la présence française en Afrique du Nord."
+    },
+    {
+      "id": "hgc-q333",
+      "question": "Lequel de ces territoires n’a PAS fait partie de l’Afrique Occidentale Française (AOF) créée en 1895 ?",
+      "options": [
+        "Sénégal",
+        "Guinée",
+        "Côte d’Ivoire",
+        "Madagascar"
+      ],
+      "correctAnswer": 3,
+      "explanation": "L’AOF regroupait le Sénégal, le Soudan français, la Guinée et la Côte d’Ivoire ; Madagascar appartenait à l’Afrique Équatoriale Française."
+    },
+    {
+      "id": "hgc-q334",
+      "question": "Quel était l’objectif principal du commerce « triangulaire » entre l’Europe, l’Afrique et les Amériques ?",
+      "options": [
+        "Échanger des marchandises européennes contre des esclaves en Afrique, puis les esclaves contre des produits coloniaux en Amérique",
+        "Échanger du sucre contre du café et du tabac entre les colonies",
+        "Faire du troc de tissus contre des épices entre l’Europe et l’Asie",
+        "Transporter des armes européennes vers l’Inde en échange de thon"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le commerce triangulaire consistait à envoyer des biens manufacturés d’Europe vers l’Afrique, à y acheter des esclaves, puis à les vendre en Amérique contre des produits coloniaux."
+    },
+    {
+      "id": "hgc-q335",
+      "question": "En quelle année l’esclavage a‑t‑il été définitivement aboli en France ?",
+      "options": [
+        "1794",
+        "1802",
+        "1815",
+        "1848"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Après plusieurs suspensions, l’esclavage est définitivement aboli le 27 avril 1848 par le décret de Victor Schœlcher."
     }
   ]
 }

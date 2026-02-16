@@ -1,10 +1,18 @@
-const PREFIX = 'quiz_result_';
+const RESULT_PREFIX = 'quiz_result_';
+const PROGRESS_PREFIX = 'quiz_progress_';
 
 export interface QuizResult {
   quizId: string;
   score: number;
   total: number;
   date: string;
+}
+
+export interface QuizProgress {
+  quizId: string;
+  currentIndex: number;
+  answers: (number | null)[];
+  validated: boolean[];
 }
 
 export function saveQuizResult(quizId: string, score: number, total: number): void {
@@ -15,15 +23,16 @@ export function saveQuizResult(quizId: string, score: number, total: number): vo
       total,
       date: new Date().toISOString(),
     };
-    localStorage.setItem(`${PREFIX}${quizId}`, JSON.stringify(result));
+    localStorage.setItem(`${RESULT_PREFIX}${quizId}`, JSON.stringify(result));
+    localStorage.removeItem(`${PROGRESS_PREFIX}${quizId}`);
   } catch {
-    // localStorage unavailable (private browsing, etc.)
+    // localStorage unavailable
   }
 }
 
 export function getQuizResult(quizId: string): QuizResult | null {
   try {
-    const raw = localStorage.getItem(`${PREFIX}${quizId}`);
+    const raw = localStorage.getItem(`${RESULT_PREFIX}${quizId}`);
     if (!raw) return null;
     return JSON.parse(raw) as QuizResult;
   } catch {
@@ -36,7 +45,7 @@ export function getAllQuizResults(): QuizResult[] {
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key?.startsWith(PREFIX)) {
+      if (key?.startsWith(RESULT_PREFIX)) {
         const raw = localStorage.getItem(key);
         if (raw) {
           results.push(JSON.parse(raw) as QuizResult);
@@ -49,9 +58,29 @@ export function getAllQuizResults(): QuizResult[] {
   return results;
 }
 
+export function saveQuizProgress(quizId: string, currentIndex: number, answers: (number | null)[], validated: boolean[]): void {
+  try {
+    const progress: QuizProgress = { quizId, currentIndex, answers, validated };
+    localStorage.setItem(`${PROGRESS_PREFIX}${quizId}`, JSON.stringify(progress));
+  } catch {
+    // localStorage unavailable
+  }
+}
+
+export function getQuizProgress(quizId: string): QuizProgress | null {
+  try {
+    const raw = localStorage.getItem(`${PROGRESS_PREFIX}${quizId}`);
+    if (!raw) return null;
+    return JSON.parse(raw) as QuizProgress;
+  } catch {
+    return null;
+  }
+}
+
 export function resetQuizResult(quizId: string): void {
   try {
-    localStorage.removeItem(`${PREFIX}${quizId}`);
+    localStorage.removeItem(`${RESULT_PREFIX}${quizId}`);
+    localStorage.removeItem(`${PROGRESS_PREFIX}${quizId}`);
   } catch {
     // localStorage unavailable
   }
@@ -62,7 +91,7 @@ export function resetAllQuizzes(): void {
     const keysToRemove: string[] = [];
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key?.startsWith(PREFIX)) {
+      if (key?.startsWith(RESULT_PREFIX) || key?.startsWith(PROGRESS_PREFIX)) {
         keysToRemove.push(key);
       }
     }

@@ -1,127 +1,1219 @@
 {
   "id": "droits-et-devoirs",
   "title": "Droits et devoirs",
-  "description": "Testez vos connaissances sur les droits fondamentaux, les obligations des résidents et des citoyens.",
+  "description": "Testez vos connaissances : Droits fondamentaux • Obligations et devoirs des personnes résidant en France",
   "questions": [
     {
       "id": "dd-q1",
-      "question": "Quel texte fondamental proclame les droits de l'homme en France depuis 1789 ?",
+      "question": "Que désigne-t-on par « droits fondamentaux » ?",
       "options": [
-        "Le Code civil",
-        "La Déclaration des droits de l'homme et du citoyen",
-        "La Charte de la laïcité",
-        "Le contrat d'engagement républicain"
+        "Les droits et libertés élémentaires que chaque personne doit respecter",
+        "Des privilèges réservés aux élus du Parlement",
+        "Des obligations fiscales imposées à tous les citoyens",
+        "Des droits accordés uniquement aux personnes majeures"
       ],
-      "correctAnswer": 1,
-      "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789 est le texte fondateur des droits fondamentaux en France."
+      "correctAnswer": 0,
+      "explanation": "Les droits fondamentaux sont les droits et libertés élémentaires garantissant le bien‑être de chaque individu."
     },
     {
       "id": "dd-q2",
-      "question": "En France, les femmes et les hommes ont-ils les mêmes droits ?",
+      "question": "Parmi les valeurs suivantes, laquelle est garantie par les droits fondamentaux ?",
       "options": [
-        "Oui, l'égalité entre les femmes et les hommes est garantie par la loi",
-        "Non, il existe des exceptions légales",
-        "Oui, mais seulement depuis 2010",
-        "Cela dépend du domaine concerné"
+        "La dignité",
+        "Le droit de posséder un yacht privé",
+        "L’accès exclusif aux postes de direction",
+        "La priorité fiscale pour les grandes entreprises"
       ],
       "correctAnswer": 0,
-      "explanation": "L'égalité entre les femmes et les hommes est un principe fondamental garanti par la Constitution et la loi française."
+      "explanation": "Les droits fondamentaux assurent la dignité, le respect, l’égalité et la justice pour tous."
     },
     {
       "id": "dd-q3",
-      "question": "Parmi les choix suivants, lequel est une obligation pour toute personne résidant en France ?",
+      "question": "Laquelle de ces propositions n’est pas une catégorie de droits fondamentaux ?",
       "options": [
-        "Voter aux élections",
-        "Parler couramment français",
-        "Payer ses impôts",
-        "Adhérer à un parti politique"
+        "Les droits liés à la personne humaine",
+        "Les droits sociaux et économiques",
+        "Les droits de troisième génération (collectifs)",
+        "Les droits de la propriété intellectuelle"
       ],
-      "correctAnswer": 2,
-      "explanation": "Le paiement des impôts est une obligation pour toute personne résidant en France. Le vote est un devoir civique mais pas une obligation légale."
+      "correctAnswer": 3,
+      "explanation": "Les trois premières sont les catégories reconnues ; la propriété intellectuelle n’en fait pas partie."
     },
     {
       "id": "dd-q4",
-      "question": "À partir de quel âge peut-on être appelé à siéger comme juré dans un tribunal ?",
+      "question": "Quel texte a été adopté en 1789 et constitue une source majeure des droits fondamentaux en France ?",
       "options": [
-        "18 ans",
-        "21 ans",
-        "23 ans",
-        "25 ans"
+        "La Déclaration des droits de l'homme et du citoyen",
+        "Le Code civil",
+        "La Charte de l’environnement",
+        "La Convention européenne des droits de l’homme"
       ],
-      "correctAnswer": 2,
-      "explanation": "Un citoyen français peut être appelé à siéger comme juré dans une cour d'assises à partir de 23 ans."
+      "correctAnswer": 0,
+      "explanation": "La Déclaration de 1789 pose les principes fondamentaux de liberté, égalité et fraternité."
     },
     {
       "id": "dd-q5",
-      "question": "Le mariage entre personnes de même sexe est-il autorisé en France ?",
+      "question": "Parmi les documents suivants, lequel est une charte européenne et non française ?",
       "options": [
-        "Non, il est interdit",
-        "Oui, il est autorisé par la loi",
-        "Seulement sous forme de PACS",
-        "Cela dépend de la commune"
+        "La Charte des droits fondamentaux de l'Union européenne",
+        "La Constitution française de 1958",
+        "La Déclaration des droits de l'homme et du citoyen de 1789",
+        "Le Code civil de 1804"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le mariage entre personnes de même sexe est autorisé en France. Chacun est libre de choisir son partenaire, quel que soit son sexe."
+      "correctAnswer": 0,
+      "explanation": "Cette charte a été adoptée par l’UE en 2000, alors que les autres textes sont d’origine française."
     },
     {
       "id": "dd-q6",
-      "question": "Qu'est-ce que la JDC (Journée Défense et Citoyenneté) ?",
+      "question": "Que désigne l’expression « droits liés à la personne humaine » ?",
       "options": [
-        "Un jour férié national",
-        "Une journée obligatoire pour les jeunes liée à la défense nationale",
-        "Un examen pour obtenir la nationalité française",
-        "Une formation réservée aux militaires"
+        "Les droits accordés uniquement aux citoyens français",
+        "Les droits naturels que chaque être humain possède du simple fait d’être humain",
+        "Les privilèges réservés aux fonctionnaires de l’État",
+        "Les droits accordés aux entreprises pour exercer leurs activités"
       ],
       "correctAnswer": 1,
-      "explanation": "La JDC est une journée obligatoire pour tous les jeunes Français. Elle les informe sur la défense nationale et les droits et devoirs du citoyen."
+      "explanation": "Ce sont des droits naturels, inaliénables, qui découlent du fait d’être un être humain."
     },
     {
       "id": "dd-q7",
-      "question": "Les violences physiques envers les enfants (gifles, fessées) sont-elles autorisées en France ?",
+      "question": "Parmi les droits suivants, lequel n’est pas découlé du principe de liberté ?",
       "options": [
-        "Oui, dans le cadre de l'éducation",
-        "Oui, si elles sont modérées",
-        "Non, toute forme de violence envers les enfants est interdite",
-        "Cela dépend de l'âge de l'enfant"
+        "Liberté d’expression",
+        "Droit de grève",
+        "Liberté de culte",
+        "Suffrage universel"
       ],
-      "correctAnswer": 2,
-      "explanation": "Toute forme de violence envers les enfants est interdite en France, y compris les gifles et les fessées. Les violences éducatives ordinaires sont prohibées par la loi."
+      "correctAnswer": 3,
+      "explanation": "Le suffrage universel découle du principe d’égalité devant la loi, pas de la liberté."
     },
     {
       "id": "dd-q8",
-      "question": "Qu'est-ce que le droit à la présomption d'innocence ?",
+      "question": "Quel droit illustre concrètement le principe d’égalité devant la loi ?",
       "options": [
-        "Le droit de ne jamais être jugé",
-        "Le droit d'être considéré comme innocent tant qu'on n'est pas déclaré coupable",
-        "Le droit de ne pas témoigner contre soi-même",
-        "Le droit de choisir son avocat"
+        "Le droit à la présomption d’innocence",
+        "Le droit de grève",
+        "Le droit de vote pour chaque citoyen (suffrage universel)",
+        "Le droit de propriété"
       ],
-      "correctAnswer": 1,
-      "explanation": "La présomption d'innocence signifie que toute personne est considérée comme innocente jusqu'à ce qu'elle soit déclarée coupable par un tribunal."
+      "correctAnswer": 2,
+      "explanation": "Le suffrage universel garantit que chaque citoyen a le même droit de vote, reflet de l’égalité devant la loi."
     },
     {
       "id": "dd-q9",
-      "question": "Qu'est-ce que le PACS ?",
+      "question": "Que signifie la présomption d’innocence ?",
       "options": [
-        "Un programme d'aide au logement",
-        "Un contrat d'union civile entre deux personnes",
-        "Un permis de séjour pour les couples",
-        "Un dispositif d'aide à l'emploi"
+        "Que la personne accusée doit prouver son innocence dès le début du procès",
+        "Que toute personne est considérée coupable tant que le juge ne l’a pas acquittée",
+        "Que la culpabilité doit être prouvée avant de condamner la personne",
+        "Que la personne accusée n’a aucun droit de se défendre"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le PACS (Pacte civil de solidarité) est un contrat d'union civile entre deux personnes, de même sexe ou de sexe différent, qui souhaitent organiser leur vie commune."
+      "correctAnswer": 2,
+      "explanation": "La présomption d’innocence veut que la culpabilité soit prouvée avant toute condamnation."
     },
     {
       "id": "dd-q10",
-      "question": "Le harcèlement scolaire est-il puni par la loi en France ?",
+      "question": "Quel droit est directement lié au droit de propriété ?",
       "options": [
-        "Non, c'est une affaire privée",
-        "Oui, c'est un délit pénal",
-        "Seulement s'il y a des violences physiques",
-        "Uniquement dans les établissements publics"
+        "Le droit de disposer de ses biens et d’entreprendre",
+        "Le droit à un procès équitable",
+        "Le droit à la liberté d’expression",
+        "Le droit à la sûreté"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le droit de propriété garantit la liberté de disposer de ses biens et d’exercer une activité économique."
+    },
+    {
+      "id": "dd-q11",
+      "question": "Parmi les droits économiques et sociaux cités, lequel n’est pas mentionné dans le texte ?",
+      "options": [
+        "Le droit à l’éducation",
+        "Le droit à la santé",
+        "Le droit au travail",
+        "Le droit de vote"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le texte liste l’éducation, la santé, le travail, le logement et la sécurité sociale, mais pas le droit de vote."
+    },
+    {
+      "id": "dd-q12",
+      "question": "L’article 5 du Préambule de la Constitution de 1946 garantit le droit à l’emploi en précisant que :",
+      "options": [
+        "Chacun a le droit d’obtenir un emploi sans discrimination",
+        "Tout salarié bénéficie d’un salaire minimum garanti",
+        "L’emploi ne peut être exercé que dans le secteur public",
+        "Le droit à la retraite à 60 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 5 affirme le devoir de travailler et le droit d’obtenir un emploi, sans distinction d’origine, d’opinion ou de croyance."
+    },
+    {
+      "id": "dd-q13",
+      "question": "Quel article du Préambule de 1946 mentionne la gratuité de l’enseignement public ?",
+      "options": [
+        "Article 5",
+        "Article 11",
+        "Article 13",
+        "Article 15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’article 13 garantit l’accès gratuit et laïque à l’enseignement public à tous les degrés."
+    },
+    {
+      "id": "dd-q14",
+      "question": "Les droits dits de « troisième génération » reposent principalement sur quel principe ?",
+      "options": [
+        "La liberté individuelle",
+        "La solidarité collective",
+        "La propriété privée",
+        "La souveraineté nationale"
       ],
       "correctAnswer": 1,
-      "explanation": "Le harcèlement scolaire est un délit pénal en France. Il est sévèrement puni par la loi, qu'il soit physique, verbal ou en ligne."
+      "explanation": "Ces droits sont fondés sur la solidarité collective et concernent des enjeux internationaux."
+    },
+    {
+      "id": "dd-q15",
+      "question": "Laquelle de ces affirmations concernant les droits de troisième génération est fausse ?",
+      "options": [
+        "Ils concernent aussi bien les citoyens français que les étrangers",
+        "Ils sont tous pleinement opposables devant les tribunaux français",
+        "Ils incluent le droit à un environnement sain",
+        "Ils visent à protéger les générations futures"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ces droits ne sont pas encore tous utilisables devant un tribunal, contrairement à ce qui est indiqué dans l’affirmation fausse."
+    },
+    {
+      "id": "dd-q16",
+      "question": "Comment définit‑on la dignité humaine selon la fiche ?",
+      "options": [
+        "Chaque personne a de la valeur et mérite le respect simplement parce qu’elle est un être humain.",
+        "Une personne ne mérite le respect que si elle contribue à la société.",
+        "Le respect dépend du statut économique de la personne.",
+        "Le respect est accordé uniquement aux citoyens d’un pays."
+      ],
+      "correctAnswer": 0,
+      "explanation": "La dignité humaine signifie que chaque être humain possède une valeur intrinsèque et mérite le respect inconditionnel, quel que soit son statut."
+    },
+    {
+      "id": "dd-q17",
+      "question": "Dans quel texte juridique la dignité humaine est‑elle inscrite comme principe fondamental ?",
+      "options": [
+        "Charte des droits fondamentaux de l’Union européenne de 2000.",
+        "Déclaration des droits de l’homme et du citoyen de 1789.",
+        "Constitution française de 1958.",
+        "Convention européenne des droits de l’homme de 1950."
+      ],
+      "correctAnswer": 0,
+      "explanation": "La dignité humaine figure dans le premier chapitre de la Charte des droits fondamentaux de l’UE (2000)."
+    },
+    {
+      "id": "dd-q18",
+      "question": "Quel article de la Charte des droits fondamentaux de l’UE traite de la dignité humaine ?",
+      "options": [
+        "Article 1",
+        "Article 2",
+        "Article 3",
+        "Article 5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 1 de la Charte énonce le droit à la dignité humaine."
+    },
+    {
+      "id": "dd-q19",
+      "question": "Le droit à l’intégrité de la personne inclut l’interdiction de :",
+      "options": [
+        "Trafic d’organes, pratiques eugéniques et clonage.",
+        "Liberté d’expression, droit de vote et droit à l’éducation.",
+        "Port d’armes, détention arbitraire et censure médiatique.",
+        "Fiscalité progressive, protection de l’environnement et droit du travail."
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 3 interdit le trafic d’organes, les pratiques eugéniques et le clonage, protégeant ainsi l’intégrité physique et mentale."
+    },
+    {
+      "id": "dd-q20",
+      "question": "Selon la Charte, le consentement d’une personne doit être :",
+      "options": [
+        "Libre et éclairé.",
+        "Implicite et présumé.",
+        "Obligatoire uniquement pour les majeurs.",
+        "Non requis en cas d’urgence médicale."
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 3 précise que le consentement doit être donné librement et en connaissance de cause."
+    },
+    {
+      "id": "dd-q21",
+      "question": "Que signifie le droit de disposer de son corps en France ?",
+      "options": [
+        "Le pouvoir de choisir librement les traitements médicaux qui concernent son corps",
+        "L’obligation de suivre les prescriptions médicales imposées par l’État",
+        "Le droit de posséder un corps sain sans maladie",
+        "La possibilité de vendre ses organes sans restriction"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ce droit garantit la liberté de chaque personne de faire ses propres choix concernant son corps."
+    },
+    {
+      "id": "dd-q22",
+      "question": "Quel moyen de contraception nécessite obligatoirement une prescription médicale ?",
+      "options": [
+        "Le préservatif masculin",
+        "Le diaphragme",
+        "Le stérilet hormonal",
+        "Le spermicide"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le stérilet hormonal doit être prescrit par un médecin ou une sage‑femme avant d’être délivré."
+    },
+    {
+      "id": "dd-q23",
+      "question": "Comment les jeunes de moins de 18 ans peuvent‑ils obtenir la contraception d’urgence en France ?",
+      "options": [
+        "En présentant une ordonnance du médecin scolaire",
+        "En la demandant gratuitement et anonymement en pharmacie ou auprès d’une infirmière scolaire",
+        "En payant une somme forfaitaire dans un centre de santé privé",
+        "En remplissant un formulaire d’autorisation parentale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La contraception d’urgence est délivrée sans ordonnance et peut être obtenue gratuitement et anonymement pour les mineurs."
+    },
+    {
+      "id": "dd-q24",
+      "question": "Quel est le principe concernant l’accompagnement d’une mineure qui souhaite recourir à l’IVG ?",
+      "options": [
+        "Elle doit obligatoirement être accompagnée par ses parents",
+        "Elle doit être accompagnée d’une personne majeure de son choix",
+        "Elle ne peut être accompagnée que par un professionnel de santé",
+        "Aucun accompagnement n’est requis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les mineures n’ont pas besoin d’autorisation parentale, mais elles doivent être accompagnées d’une personne majeure de leur choix."
+    },
+    {
+      "id": "dd-q25",
+      "question": "Quel type d’IVG consiste en l’administration de médicaments plutôt qu’en une intervention chirurgicale ?",
+      "options": [
+        "L’IVG instrumentale",
+        "L’IVG médicamenteuse",
+        "L’IVG prophylactique",
+        "L’IVG post-partum"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’IVG médicamenteuse utilise des médicaments pour interrompre la grossesse, contrairement à l’IVG instrumentale qui est chirurgicale."
+    },
+    {
+      "id": "dd-q26",
+      "question": "Comment définit‑on juridiquement un couple en France ?",
+      "options": [
+        "Une union entre deux personnes, de même sexe ou de sexe différent, qui ont une vie commune.",
+        "Une union réservée aux personnes de sexe différent uniquement.",
+        "Un statut réservé aux personnes mariées uniquement.",
+        "Une simple cohabitation sans reconnaissance légale."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le couple regroupe toute union à deux, quel que soit le sexe des partenaires, tant qu’ils partagent une vie commune."
+    },
+    {
+      "id": "dd-q27",
+      "question": "Quel est le critère indispensable à la validité du mariage selon le Code civil français ?",
+      "options": [
+        "Le consentement libre des futurs époux.",
+        "L’âge minimum de 30 ans.",
+        "L’accord des parents des époux.",
+        "La célébration religieuse du mariage."
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 146 du Code civil précise que le mariage ne peut être contracté que si les époux donnent leur consentement libre et éclairé."
+    },
+    {
+      "id": "dd-q28",
+      "question": "Comment peut‑on mettre fin à un PACS ?",
+      "options": [
+        "Par une simple déclaration à la mairie.",
+        "Par un divorce judiciaire.",
+        "Par une décision du tribunal administratif.",
+        "Il n’est pas possible de rompre un PACS."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le PACS se dissout facilement : il suffit d’une déclaration conjointe ou unilatérale auprès de la mairie."
+    },
+    {
+      "id": "dd-q29",
+      "question": "Parmi les affirmations suivantes, laquelle reflète correctement la liberté d’avoir des enfants dans le couple ?",
+      "options": [
+        "La contraception et l’IVG sont accessibles sans l’autorisation du partenaire.",
+        "Le partenaire doit donner son accord pour toute adoption.",
+        "Seules les femmes mariées peuvent recourir à la PMA.",
+        "L’adoption est réservée aux couples français uniquement."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Chaque partenaire décide librement d’avoir ou non des enfants ; la contraception et l’IVG ne nécessitent pas le consentement du conjoint."
+    },
+    {
+      "id": "dd-q30",
+      "question": "Depuis quelle date la Procréation Médicalement Assistée (PMA) est‑elle ouverte à toutes les femmes, qu’elles soient en couple ou seules ?",
+      "options": [
+        "2 août 2021",
+        "1 janvier 2020",
+        "14 juillet 2019",
+        "5 mars 2022"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi bioéthique du 2 août 2021 a élargi l’accès à la PMA à toutes les femmes, sans condition de statut marital."
+    },
+    {
+      "id": "dd-q31",
+      "question": "Qu’est-ce qui définit un citoyen français ?",
+      "options": [
+        "Avoir la nationalité française",
+        "Résider en France depuis plus de 5 ans",
+        "Être né en France",
+        "Posséder un passeport français"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le citoyen français est celui qui possède la nationalité française, ce qui lui confère protection et obligations."
+    },
+    {
+      "id": "dd-q32",
+      "question": "Quel droit fait partie des droits civiques et politiques du citoyen français ?",
+      "options": [
+        "Le droit de vote",
+        "Le droit de conduire sans permis",
+        "Le droit d’exonérer les impôts",
+        "Le droit de choisir son chef d’État"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le droit de vote est un droit politique fondamental accordé à tout citoyen français."
+    },
+    {
+      "id": "dd-q33",
+      "question": "Dans quel texte la citoyenneté française est‑elle inscrite comme droit fondamental ?",
+      "options": [
+        "Déclaration des droits de l’homme et du citoyen de 1789",
+        "Constitution de la Ve République (1958)",
+        "Code civil français",
+        "Traité de Maastricht"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Déclaration des droits de l’homme et du citoyen de 1789 consacre la citoyenneté comme droit fondamental."
+    },
+    {
+      "id": "dd-q34",
+      "question": "La déchéance de nationalité entraîne la perte duquel de ces droits ?",
+      "options": [
+        "Le droit de vote",
+        "Le droit de travailler en France",
+        "Le droit à la retraite",
+        "Le droit de posséder un bien immobilier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Perdre la nationalité supprime les droits liés à la citoyenneté, dont le droit de vote et le passeport."
+    },
+    {
+      "id": "dd-q35",
+      "question": "Parmi les libertés associées à la citoyenneté, laquelle n’est pas mentionnée dans le texte ?",
+      "options": [
+        "Liberté d’expression",
+        "Liberté de voyager",
+        "Liberté de posséder une arme",
+        "Liberté de s’engager"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte cite la liberté d’expression, de voyager, de s’engager, mais pas la liberté de posséder une arme."
+    },
+    {
+      "id": "dd-q36",
+      "question": "Quelle est la date d'adoption officielle de la Déclaration des droits de l'homme et du citoyen (DDHC) ?",
+      "options": [
+        "14 juillet 1789",
+        "26 août 1789",
+        "4 septembre 1791",
+        "21 janvier 1793"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La DDHC a été adoptée le 26 août 1789 par l'Assemblée nationale."
+    },
+    {
+      "id": "dd-q37",
+      "question": "Combien d'articles compose la Déclaration des droits de l'homme et du citoyen ?",
+      "options": [
+        "12 articles",
+        "15 articles",
+        "17 articles",
+        "20 articles"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte comprend une introduction suivie de 17 articles."
+    },
+    {
+      "id": "dd-q38",
+      "question": "Quel principe est énoncé dans l'article premier de la DDHC ?",
+      "options": [
+        "« Les hommes naissent et demeurent libres et égaux en droits »",
+        "« La propriété est un droit inviolable »",
+        "« La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui »",
+        "« La souveraineté appartient au roi »"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'article 1er affirme que les hommes naissent et demeurent libres et égaux en droits."
+    },
+    {
+      "id": "dd-q39",
+      "question": "Selon l'article 10, quelles conditions doivent être respectées pour que la liberté d'opinion ne soit pas restreinte ?",
+      "options": [
+        "Les opinions doivent être approuvées par le gouvernement",
+        "Les opinions ne doivent pas troubler l'ordre public établi par la loi",
+        "Les opinions doivent être exprimées uniquement dans des lieux privés",
+        "Les opinions doivent être publiées dans un journal officiel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'article 10 stipule que nul ne doit être inquiété pour ses opinions tant qu'elles ne troublent pas l'ordre public."
+    },
+    {
+      "id": "dd-q40",
+      "question": "Quel article précise que la séparation des pouvoirs est indispensable à une Constitution ?",
+      "options": [
+        "Article 4",
+        "Article 12",
+        "Article 16",
+        "Article 17"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'article 16 indique qu'une société sans garantie des droits ni séparation des pouvoirs n'a pas de Constitution."
+    },
+    {
+      "id": "dd-q41",
+      "question": "Selon la fiche, quels sont les domaines déterminés par les articles d’une Constitution ?",
+      "options": [
+        "Seule l’organisation de l’État",
+        "Uniquement les droits et libertés fondamentaux",
+        "Les caractéristiques du régime politique et la façon dont les droits sont garantis",
+        "L’organisation de l’État, les caractéristiques du régime, les droits fondamentaux et leur garantie"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les articles de la Constitution définissent l’organisation de l’État, le régime politique, les droits fondamentaux et la manière dont ils sont garantis."
+    },
+    {
+      "id": "dd-q42",
+      "question": "Quelle est la date d’adoption officielle de la Constitution de la Vème République ?",
+      "options": [
+        "28 septembre 1958",
+        "4 octobre 1958",
+        "3 juin 1958",
+        "14 juillet 1789"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Constitution du 4 octobre 1958 est le texte fondateur actuellement en vigueur."
+    },
+    {
+      "id": "dd-q43",
+      "question": "Le référendum constitutionnel de 1962 a modifié le mode d’élection du président de la République en :",
+      "options": [
+        "Élection au suffrage indirect par des grands électeurs",
+        "Élection au suffrage direct par les citoyens",
+        "Élection par le Parlement",
+        "Élection par tirage au sort"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En 1962, le référendum a instauré l’élection du président au suffrage direct, c’est‑à‑dire par le vote des citoyens."
+    },
+    {
+      "id": "dd-q44",
+      "question": "Quel texte fait partie du « bloc de constitutionnalité » ?",
+      "options": [
+        "La Déclaration des droits de l’homme et du citoyen de 1789",
+        "Le Code civil de 1804",
+        "Le Traité de Rome de 1957",
+        "La Convention européenne des droits de l’homme de 1950"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le bloc de constitutionnalité comprend la Constitution de 1958, son Préambule et trois textes fondateurs, dont la Déclaration de 1789."
+    },
+    {
+      "id": "dd-q45",
+      "question": "Quelle est la principale mission du Conseil constitutionnel ?",
+      "options": [
+        "Rédiger les projets de loi",
+        "Gérer la politique étrangère",
+        "Faire respecter la Constitution et le bloc de constitutionnalité",
+        "Contrôler les dépenses municipales"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le Conseil constitutionnel veille à ce que les lois respectent la Constitution, qui est la norme juridique suprême."
+    },
+    {
+      "id": "dd-q46",
+      "question": "En quelle année la Charte de l’environnement a‑t‑elle été intégrée à la Constitution française ?",
+      "options": [
+        "2004",
+        "2005",
+        "2006",
+        "2007"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Charte a été adoptée en 2004 puis inscrite dans le préambule de la Constitution en 2005."
+    },
+    {
+      "id": "dd-q47",
+      "question": "Quel article de la Charte introduit le « principe de précaution » ?",
+      "options": [
+        "Article 3",
+        "Article 5",
+        "Article 7",
+        "Article 9"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’article 5 précise que les autorités publiques appliquent le principe de précaution lorsqu’un dommage grave et irréversible est possible."
+    },
+    {
+      "id": "dd-q48",
+      "question": "Selon le préambule de la Charte, les choix destinés à répondre aux besoins du présent ne doivent pas :",
+      "options": [
+        "Compromettre la capacité des générations futures à satisfaire leurs besoins",
+        "Accroître la compétitivité économique à tout prix",
+        "Réduire les dépenses publiques en matière d’éducation",
+        "Favoriser l’urbanisation massive des territoires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le préambule insiste sur le développement durable : il faut préserver les possibilités des générations futures."
+    },
+    {
+      "id": "dd-q49",
+      "question": "Quel droit est garanti par l’article 1er de la Charte de l’environnement ?",
+      "options": [
+        "Le droit de vivre dans un environnement équilibré et respectueux de la santé",
+        "Le droit à la liberté d’expression",
+        "Le droit de vote à toutes les élections",
+        "Le droit de posséder un bien immobilier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 1er affirme le droit de chaque personne à un environnement sain et équilibré."
+    },
+    {
+      "id": "dd-q50",
+      "question": "Quel article prévoit le droit d’accès aux informations environnementales détenues par les autorités publiques ?",
+      "options": [
+        "Article 6",
+        "Article 7",
+        "Article 8",
+        "Article 10"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’article 7 garantit le droit d’accès à l’information environnementale et la participation aux décisions publiques."
+    },
+    {
+      "id": "dd-q51",
+      "question": "Que signifie le terme « imprescriptibles » tel qu’il apparaît à l’article 2 de la Déclaration des Droits de l’Homme et du Citoyen ?",
+      "options": [
+        "Que ces droits peuvent être révoqués par le Parlement",
+        "Que ces droits sont permanents et ne peuvent être retirés",
+        "Que ces droits ne concernent que les citoyens français",
+        "Que ces droits expirent après vingt ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "« Imprescriptibles » indique que les droits ne peuvent être perdus ou retirés, quels que soient les changements législatifs."
+    },
+    {
+      "id": "dd-q52",
+      "question": "Selon l’article 4 de la DDHC, la liberté consiste à :",
+      "options": [
+        "Faire tout ce que l’on veut, sans aucune restriction",
+        "Faire tout ce qui ne nuit pas à autrui",
+        "Obéir systématiquement aux ordres du gouvernement",
+        "Respecter uniquement les convictions religieuses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’article 4 précise que la liberté s’exerce dans la mesure où elle ne porte pas préjudice aux autres."
+    },
+    {
+      "id": "dd-q53",
+      "question": "Parmi les éléments suivants, lequel n’est **pas** mentionné comme une limite aux libertés individuelles dans la fiche ?",
+      "options": [
+        "L’intérêt général",
+        "Les libertés des autres",
+        "La défense de l’ordre public",
+        "La volonté du président"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La fiche cite l’intérêt général, les libertés d’autrui, l’ordre public et la dignité humaine, mais pas la volonté du président."
+    },
+    {
+      "id": "dd-q54",
+      "question": "Quel(s) droit(s) a/ont été restreint(s) lors de l’état d’urgence sanitaire lié au Covid‑19 en mars 2020 ?",
+      "options": [
+        "La liberté de pensée",
+        "La liberté d’aller et venir, d’entreprendre et de réunion",
+        "La liberté de religion",
+        "La liberté de vote"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’état d’urgence sanitaire a limité la liberté de déplacement, d’activité économique et de rassemblement."
+    },
+    {
+      "id": "dd-q55",
+      "question": "En milieu carcéral, la restriction de la liberté de correspondance est justifiée principalement par :",
+      "options": [
+        "Le respect de la dignité humaine",
+        "La sécurité et le maintien de l’ordre",
+        "L’intérêt général",
+        "La liberté de la presse"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dans les prisons, les correspondances peuvent être limitées pour des raisons de sécurité et de maintien de l’ordre."
+    },
+    {
+      "id": "dd-q56",
+      "question": "Parmi les objectifs garantis par les obligations des résidents français, lequel n’est PAS mentionné dans le texte ?",
+      "options": [
+        "La cohésion sociale",
+        "La sécurité",
+        "Le bon fonctionnement de la société",
+        "La liberté d’expression"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le texte cite la cohésion sociale, la sécurité et le bon fonctionnement, mais pas la liberté d’expression."
+    },
+    {
+      "id": "dd-q57",
+      "question": "Quelle obligation du résident français est inscrite dans la Déclaration des droits de l'homme et du citoyen de 1789 ?",
+      "options": [
+        "Payer des impôts",
+        "Voter aux élections",
+        "Servir dans l'armée",
+        "Respecter le code de la route"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 13 de la Déclaration de 1789 précise que la contribution aux charges publiques (impôts) est un devoir."
+    },
+    {
+      "id": "dd-q58",
+      "question": "Quel délit peut être retenu contre une personne qui ne porte pas secours à une personne en danger ?",
+      "options": [
+        "Vol",
+        "Non‑assistance à personne en danger",
+        "Fraude fiscale",
+        "Pollution illégale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le code pénal sanctionne le fait de ne pas aider une personne en danger sous l’infraction de non‑assistance."
+    },
+    {
+      "id": "dd-q59",
+      "question": "Quel document un résident étranger doit-il garder en règle pour être « en situation régulière » ?",
+      "options": [
+        "Passeport",
+        "Carte d’identité française",
+        "Titre de séjour",
+        "Permis de conduire"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte indique que les étrangers doivent posséder un titre de séjour valide et le renouveler."
+    },
+    {
+      "id": "dd-q60",
+      "question": "Parmi les actions suivantes, laquelle n’est PAS citée comme obligation environnementale du résident français ?",
+      "options": [
+        "Recycler les déchets",
+        "Utiliser des produits chimiques sans restriction",
+        "Économiser l’eau",
+        "Privilégier les transports en commun"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte encourage la limitation des produits chimiques, pas leur usage sans restriction."
+    },
+    {
+      "id": "dd-q61",
+      "question": "Quelle est la première obligation du citoyen français mentionnée dans le texte ?",
+      "options": [
+        "Respecter la loi française et européenne",
+        "Participer aux réunions de quartier",
+        "Faire du bénévolat chaque mois",
+        "Soutenir financièrement les partis politiques"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte indique que le citoyen doit d'abord respecter la loi française et européenne."
+    },
+    {
+      "id": "dd-q62",
+      "question": "Comment le texte décrit‑il le lien entre le droit de vote et le respect des lois ?",
+      "options": [
+        "Le vote rend le citoyen responsable des lois qu'il a élues indirectement",
+        "Le vote permet d'éviter toute responsabilité légale",
+        "Le vote n'a aucune influence sur les lois",
+        "Le vote ne concerne que les élections locales"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En votant, les citoyens élisent les représentants qui créent les lois, ce qui les rend indirectement auteurs de ces lois."
+    },
+    {
+      "id": "dd-q63",
+      "question": "Quelle mention porte la carte d'électeur française selon le texte ?",
+      "options": [
+        "« Voter est un droit, c’est aussi un devoir civique »",
+        "« Le vote est un privilège réservé aux majeurs »",
+        "« Chaque vote compte, même à l'étranger »",
+        "« Votez pour la paix et la prospérité »"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La carte d'électeur indique que voter est à la fois un droit et un devoir civique."
+    },
+    {
+      "id": "dd-q64",
+      "question": "Quelle institution a remplacé le service national depuis 1997 ?",
+      "options": [
+        "La Journée Défense et Citoyenneté (JDC)",
+        "Le Service Civique obligatoire",
+        "La Journée Nationale du Service Militaire",
+        "Le Programme d'Engagement Militaire Volontaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte précise que le service national a été remplacé d'abord par la JAPD puis par la JDC."
+    },
+    {
+      "id": "dd-q65",
+      "question": "Qui peut être tiré au sort pour être juré à la cour d'assises ?",
+      "options": [
+        "Tout citoyen français de plus de 23 ans inscrit sur les listes électorales",
+        "Tout étudiant en droit inscrit à l'université",
+        "Tout fonctionnaire travaillant dans la justice",
+        "Tout militaire en service actif"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le texte indique que les citoyens français de plus de 23 ans, avec leurs droits civiques et inscrits sur les listes électorales, peuvent être jurés."
+    },
+    {
+      "id": "dd-q66",
+      "question": "Comment définit‑on les violences selon la fiche ?",
+      "options": [
+        "Des actes violents commis contre une autre personne",
+        "Des gestes amicaux entre partenaires",
+        "Des discussions politiques animées",
+        "Des activités sportives collectives"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La définition donnée indique que les violences sont des actes violents dirigés contre une autre personne."
+    },
+    {
+      "id": "dd-q67",
+      "question": "Dans quels milieux les violences sont‑elles strictement interdites en France ?",
+      "options": [
+        "Uniquement au sein du travail",
+        "Au sein du couple, de la famille, du travail et dans la rue",
+        "Seulement dans les lieux publics",
+        "Exclusivement à l’école"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La fiche précise que toutes les formes de violences sont interdites dans le couple, la famille, le travail et la rue."
+    },
+    {
+      "id": "dd-q68",
+      "question": "Parmi les exemples suivants, lequel relève de la violence psychologique ?",
+      "options": [
+        "Confisquer les documents d’identité d’une personne",
+        "Offrir un cadeau à son partenaire",
+        "Faire un compliment en public",
+        "Organiser une surprise d’anniversaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Confisquer les pièces d’identité vise à dévaloriser et à contrôler la victime, ce qui constitue une violence psychologique."
+    },
+    {
+      "id": "dd-q69",
+      "question": "Quel acte illustre le mieux la violence physique ?",
+      "options": [
+        "Insulter quelqu’un en public",
+        "Pousser ou tirer quelqu’un par les cheveux",
+        "Contrôler les dépenses financières du partenaire",
+        "Menacer de quitter le domicile"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un geste qui blesse physiquement, comme pousser ou tirer les cheveux, correspond à la violence physique."
+    },
+    {
+      "id": "dd-q70",
+      "question": "La violence économique vise principalement à contrôler :",
+      "options": [
+        "Le temps libre du partenaire",
+        "L’argent et les ressources financières du partenaire",
+        "Les opinions politiques du partenaire",
+        "Le sport pratiqué par le partenaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La violence économique consiste à contrôler l’argent et l’usage des ressources financières du partenaire."
+    },
+    {
+      "id": "dd-q71",
+      "question": "Comment définit‑on la maltraitance des enfants en France ?",
+      "options": [
+        "Tout acte de violence commis sur un mineur par ses parents ou son entourage",
+        "Uniquement les violences physiques infligées par les parents",
+        "Seules les négligences en matière d’alimentation",
+        "Les conflits entre enfants à l’école"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La maltraitance regroupe toutes les violences (physiques, sexuelles, psychologiques, privation de soins) exercées par les parents ou toute personne de l’entourage du mineur."
+    },
+    {
+      "id": "dd-q72",
+      "question": "Parmi les éléments suivants, lequel n’est **pas** une forme de violence mentionnée dans le texte ?",
+      "options": [
+        "Morsure",
+        "Menaces",
+        "Privation volontaire de soins",
+        "Récompense financière"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le texte cite les violences physiques, sexuelles, psychologiques et la privation de soins ; une récompense financière n’en fait pas partie."
+    },
+    {
+      "id": "dd-q73",
+      "question": "Quelle pratique est autorisée comme méthode éducative selon la loi française ?",
+      "options": [
+        "Les fessées",
+        "Les humiliations",
+        "Le dialogue respectueux",
+        "Les menaces"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi interdit les violences physiques et psychologiques (gifles, fessées, humiliations, menaces) ; seul le dialogue respectueux est permis."
+    },
+    {
+      "id": "dd-q74",
+      "question": "Quel critère caractérise le harcèlement scolaire ?",
+      "options": [
+        "Un incident isolé entre deux élèves",
+        "Des violences verbales, morales ou physiques répétées de la part d’un ou plusieurs élèves",
+        "Uniquement des bagarres physiques",
+        "Des faits qui se produisent uniquement en dehors de l’établissement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le harcèlement scolaire se définit par des actes répétés (verbaux, moraux ou physiques) exercés par un ou plusieurs élèves, à l’intérieur ou à l’extérieur de l’établissement."
+    },
+    {
+      "id": "dd-q75",
+      "question": "Quel numéro gratuit peut être appelé 24 h/24 et 7 j/7 en cas d’enfant en danger ?",
+      "options": [
+        "112",
+        "119",
+        "15",
+        "17"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 119, « Allô Enfance en danger », est le numéro d’appel gratuit disponible en permanence pour signaler une situation de danger pour un enfant."
+    },
+    {
+      "id": "dd-q76",
+      "question": "Selon l'OMS, qu'est‑ce qui caractérise une mutilation sexuelle féminine ?",
+      "options": [
+        "Une intervention médicale visant à traiter une maladie génitale",
+        "Une ablation partielle ou totale des organes génitaux externes à des fins non thérapeutiques",
+        "Une pratique culturelle autorisée uniquement lorsqu'elle est pratiquée par un professionnel de santé",
+        "Une modification esthétique des organes génitaux féminins"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'OMS définit la mutilation sexuelle féminine comme toute ablation partielle ou totale des organes génitaux externes réalisée à des fins non thérapeutiques."
+    },
+    {
+      "id": "dd-q77",
+      "question": "Parmi les pratiques suivantes, laquelle est un exemple d’infibulation ?",
+      "options": [
+        "Ablation du gland du clitoris uniquement",
+        "Ablation du gland du clitoris, des petites lèvres et des grandes lèvres",
+        "Cautérisation du col de l'utérus",
+        "Stérilisation chirurgicale volontaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’infibulation consiste en l’ablation du gland du clitoris, des petites lèvres et des grandes lèvres."
+    },
+    {
+      "id": "dd-q78",
+      "question": "Quelle conséquence immédiate ou durable n’est **pas** typiquement associée aux mutilations sexuelles féminines ?",
+      "options": [
+        "Infections et maladies graves",
+        "Douleurs lors des rapports sexuels",
+        "Amélioration de la fertilité",
+        "Risques accrus lors de l’accouchement"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les mutilations sexuelles féminines augmentent les risques d’infections, de douleurs sexuelles et de complications obstétricales, mais n’améliorent pas la fertilité."
+    },
+    {
+      "id": "dd-q79",
+      "question": "Les mutilations sexuelles féminines sont considérées comme une violation de quels droits fondamentaux ?",
+      "options": [
+        "Le droit à la liberté d'expression",
+        "Le droit à l'intégrité physique, psychologique et à la santé",
+        "Le droit de vote",
+        "Le droit de porter des vêtements traditionnels"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Elles portent atteinte à l’intégrité physique, psychologique et à la santé, qui sont des droits fondamentaux."
+    },
+    {
+      "id": "dd-q80",
+      "question": "Quel est le cadre juridique français concernant les mutilations sexuelles féminines pratiquées à l'étranger ?",
+      "options": [
+        "Elles sont punies uniquement si elles sont commises sur le territoire français",
+        "Elles sont interdites et sévèrement punies même lorsqu’elles sont réalisées à l’étranger",
+        "Elles sont tolérées si elles sont justifiées par une tradition culturelle",
+        "Elles sont considérées comme un acte de liberté religieuse et ne sont pas sanctionnées"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi française interdit et sanctionne les mutilations sexuelles féminines, y compris lorsqu’elles sont commises à l’étranger."
+    },
+    {
+      "id": "dd-q81",
+      "question": "Quelle définition correspond le mieux à la « violence sexuelle » telle qu’elle est présentée dans le texte ?",
+      "options": [
+        "Tout acte commis avec violence, contrainte, menace ou surprise sur une partie du corps intime ou sexuelle.",
+        "Seules les violences physiques graves, comme les coups, sont considérées comme violences sexuelles.",
+        "Uniquement les propos à connotation sexuelle sans geste physique sont qualifiés de violences sexuelles.",
+        "Les violences sexuelles ne concernent que les couples mariés."
+      ],
+      "correctAnswer": 0,
+      "explanation": "La violence sexuelle regroupe les actes faits avec violence, contrainte, menace ou surprise sur des parties du corps considérées comme intimes."
+    },
+    {
+      "id": "dd-q82",
+      "question": "Parmi les comportements suivants, lequel est considéré comme du harcèlement sexuel ?",
+      "options": [
+        "Faire un compliment sur le travail d’un collègue.",
+        "Envoyer un SMS à caractère pornographique non sollicité.",
+        "Proposer un rendez‑vous amical à une connaissance.",
+        "Partager un article neutre sur la santé publique."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le harcèlement sexuel inclut les propos ou comportements à connotation sexuelle non désirés, comme un SMS pornographique non sollicité."
+    },
+    {
+      "id": "dd-q83",
+      "question": "Quelle est la différence principale entre une agression sexuelle et un viol selon le texte ?",
+      "options": [
+        "Le viol implique une pénétration sexuelle, l’agression non.",
+        "Le viol nécessite toujours des menaces, l’agression non.",
+        "L’agression sexuelle se fait toujours en public, le viol en privé.",
+        "Le viol dure plus longtemps que l’agression sexuelle."
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le viol se caractérise par une pénétration sexuelle imposée, alors que l’agression sexuelle ne comporte pas de pénétration."
+    },
+    {
+      "id": "dd-q84",
+      "question": "Quelle affirmation concernant le consentement est exacte ?",
+      "options": [
+        "Le silence équivaut à un consentement tacite.",
+        "Le consentement peut être retiré à tout moment.",
+        "Une fois donné, le consentement ne peut plus être retiré.",
+        "Le consentement n’est pas nécessaire si les partenaires sont en couple."
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le consentement est réciproque, mutuel et peut être retiré à tout moment, même après avoir été donné."
+    },
+    {
+      "id": "dd-q85",
+      "question": "Dans quelle situation une personne n’est‑elle pas en mesure de donner son consentement ?",
+      "options": [
+        "Après avoir bu un verre d’eau.",
+        "Sous l’effet d’alcool ou de médicaments.",
+        "En pleine forme physique.",
+        "Après un repas équilibré."
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’alcool ou les médicaments peuvent altérer la capacité de donner un consentement éclairé, le considérant donc comme un refus."
+    },
+    {
+      "id": "dd-q86",
+      "question": "Comment définit‑on la traite des êtres humains ?",
+      "options": [
+        "Le recrutement, le transport, l’hébergement ou l’accueil d’une personne dans le but de l’exploiter",
+        "Le volontariat international sans contrepartie financière",
+        "Le simple déplacement d’une personne d’un pays à un autre pour des vacances",
+        "L’échange d’un service contre de l’argent sans contrainte"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La traite consiste à recruter, transporter, héberger ou accueillir une personne pour l’exploiter, sous quelque forme que ce soit."
+    },
+    {
+      "id": "dd-q87",
+      "question": "Parmi les propositions suivantes, laquelle ne correspond pas à une forme de traite des êtres humains ?",
+      "options": [
+        "Réduction en esclavage ou en servitude",
+        "Travail forcé ou services forcés",
+        "Tourisme volontaire sans contrainte",
+        "Agression ou atteinte sexuelle"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le tourisme volontaire n’implique pas d’exploitation et ne relève donc pas de la traite des êtres humains."
+    },
+    {
+      "id": "dd-q88",
+      "question": "Quel est le statut juridique de l’achat d’actes sexuels en France ?",
+      "options": [
+        "Il est légal pour les majeurs",
+        "Il est interdit",
+        "Il est autorisé uniquement dans les zones touristiques",
+        "Il est toléré si le client est majeur"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, l’achat d’actes sexuels est expressément interdit par la loi."
+    },
+    {
+      "id": "dd-q89",
+      "question": "Qui peut être sanctionné par la loi française dans le cadre de la prostitution ?",
+      "options": [
+        "Uniquement la personne qui se prostitue",
+        "Uniquement le client",
+        "Les clients et les proxénètes",
+        "Seuls les agents de police"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi prévoit des peines pour les clients et les proxénètes, c’est‑à‑dire ceux qui tirent profit ou encouragent la prostitution."
+    },
+    {
+      "id": "dd-q90",
+      "question": "Quel est l’objectif du Parcours de Sortie de Prostitution (PSP) ?",
+      "options": [
+        "Punir les personnes qui se prostituent",
+        "Offrir un accompagnement pour sortir de la prostitution et favoriser la réinsertion",
+        "Imposer une amende aux clients",
+        "Former les personnes à la gestion d’un établissement de prostitution"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le PSP propose un accompagnement et un retrait de peine afin d’aider les personnes à quitter la prostitution et à se réinsérer."
+    },
+    {
+      "id": "dd-q91",
+      "question": "Qu’est‑ce qu’une infraction selon le texte ?",
+      "options": [
+        "Un acte autorisé par la loi",
+        "Un acte ou un comportement interdit par la loi",
+        "Une simple contravention administrative",
+        "Une décision du juge civil"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une infraction désigne tout acte ou comportement prohibé par la loi."
+    },
+    {
+      "id": "dd-q92",
+      "question": "Parmi les faits suivants, lequel constitue une contravention ?",
+      "options": [
+        "Homicide involontaire",
+        "Excès de vitesse",
+        "Vol",
+        "Assassinat prémédité"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’excès de vitesse est un exemple typique de contravention, la moins grave des infractions."
+    },
+    {
+      "id": "dd-q93",
+      "question": "Quel tribunal est compétent pour juger un délit ?",
+      "options": [
+        "Tribunal de police",
+        "Tribunal correctionnel",
+        "Cour d’assises",
+        "Conseil constitutionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les délits sont jugés par le tribunal correctionnel."
+    },
+    {
+      "id": "dd-q94",
+      "question": "Quelle est la peine d’emprisonnement minimale prévue pour un crime ?",
+      "options": [
+        "2 mois",
+        "10 ans",
+        "15 ans",
+        "20 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un crime est puni d’au moins 15 ans de prison, pouvant aller jusqu’à la perpétuité."
+    },
+    {
+      "id": "dd-q95",
+      "question": "Quelle affirmation est exacte concernant les sanctions d’une contravention ?",
+      "options": [
+        "Elle peut entraîner une peine de prison",
+        "L’amende maximale est de 3 000 €",
+        "Elle est jugée par le tribunal correctionnel",
+        "Elle nécessite une amende d’au moins 3 750 €"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La contravention est sanctionnée par une amende pouvant atteindre 3 000 €, sans peine de prison."
+    },
+    {
+      "id": "dd-q96",
+      "question": "Quelle infraction est toujours punissable même lorsqu’elle n’est que tentative ?",
+      "options": [
+        "Tentative de contravention",
+        "Tentative de délit",
+        "Tentative de crime",
+        "Tentative d’infraction civile"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La tentative de crime est toujours punissable, quelle que soit la réussite de l’acte."
+    },
+    {
+      "id": "dd-q97",
+      "question": "Quelle institution assure le respect des lois en ville ?",
+      "options": [
+        "Police",
+        "Gendarmerie",
+        "Ministère de la Justice",
+        "Préfecture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La police est chargée de faire respecter la loi sur le territoire urbain."
+    },
+    {
+      "id": "dd-q98",
+      "question": "Dans quels territoires la gendarmerie intervient‑elle principalement ?",
+      "options": [
+        "Uniquement dans les territoires d'outre‑mer",
+        "Dans les zones rurales, périurbaines et sur les axes de circulation",
+        "Dans les centres‑villes uniquement",
+        "Dans les aéroports et les ports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La gendarmerie couvre les zones rurales, périurbaines et les grands axes routiers."
+    },
+    {
+      "id": "dd-q99",
+      "question": "Quel est le statut juridique des gendarmes ?",
+      "options": [
+        "Fonctionnaires civils",
+        "Militaires",
+        "Agents de sécurité privés",
+        "Élus locaux"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les gendarmes sont des militaires, ce qui les distingue des policiers civils."
+    },
+    {
+      "id": "dd-q100",
+      "question": "Parmi les missions suivantes, laquelle n’est pas partagée par la police et la gendarmerie ?",
+      "options": [
+        "Prévention des infractions",
+        "Maintien de l’ordre public",
+        "Délivrance de passeports",
+        "Protection du pays contre le terrorisme"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La délivrance de passeports relève de la préfecture ou des services consulaires, pas des forces de l’ordre."
+    },
+    {
+      "id": "dd-q101",
+      "question": "Quelle prérogative les policiers et les gendarmes peuvent‑ils exercer conjointement ?",
+      "options": [
+        "Imposer des impôts",
+        "Prononcer des peines de prison",
+        "Émettre des amendes",
+        "Nommer des juges"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les deux corps peuvent infliger des amendes et dresser des procès‑verbaux."
     }
   ]
 }

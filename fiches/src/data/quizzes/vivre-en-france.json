@@ -1,127 +1,1903 @@
 {
   "id": "vivre-en-france",
   "title": "Vivre dans la société française",
-  "description": "Testez vos connaissances sur les démarches administratives, la santé, l'emploi et la parentalité en France.",
+  "description": "Testez vos connaissances : Démarches Administratives • Santé • Emploi • Parentalité",
   "questions": [
     {
       "id": "vf-q1",
-      "question": "Quel numéro appeler en cas d'urgence médicale en France ?",
+      "question": "Qu’est‑ce que la domiciliation selon la fiche ?",
       "options": [
-        "17",
-        "15",
-        "18",
-        "114"
+        "Une adresse administrative attribuée aux personnes qui ne peuvent pas recevoir leur courrier de façon constante et confidentielle",
+        "Un numéro fiscal attribué à chaque contribuable",
+        "Un contrat de location meublée d’une durée de six mois",
+        "Un compte bancaire ouvert auprès d’une banque de proximité"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le 15 est le numéro du SAMU (Service d'aide médicale urgente). Le 17 est la police, le 18 les pompiers, et le 112 est le numéro d'urgence européen."
+      "correctAnswer": 0,
+      "explanation": "La domiciliation est une adresse administrative destinée aux personnes sans adresse stable pour recevoir leur courrier."
     },
     {
       "id": "vf-q2",
-      "question": "Quel est le numéro d'urgence européen, valable dans toute l'Union européenne ?",
+      "question": "Parmi les services suivants, lequel n’est **pas** directement facilité par la domiciliation ?",
       "options": [
-        "911",
-        "999",
-        "112",
-        "115"
+        "L’accès à la scolarisation",
+        "L’ouverture d’un compte bancaire",
+        "La demande et le renouvellement d’un titre de séjour",
+        "L’obtention d’un passeport"
       ],
-      "correctAnswer": 2,
-      "explanation": "Le 112 est le numéro d'urgence européen. Il est accessible gratuitement dans tous les pays de l'Union européenne."
+      "correctAnswer": 3,
+      "explanation": "La fiche mentionne la scolarisation, le compte bancaire, le titre de séjour, mais pas le passeport."
     },
     {
       "id": "vf-q3",
-      "question": "Qu'est-ce que la PUMa ?",
+      "question": "Quel est le délai maximal pour déclarer un changement d’adresse après un déménagement ?",
       "options": [
-        "Un permis de travail",
-        "La Protection Universelle Maladie (couverture santé)",
-        "Un programme d'aide au logement",
-        "Un titre de séjour"
+        "1 mois",
+        "3 mois",
+        "6 mois",
+        "12 mois"
       ],
       "correctAnswer": 1,
-      "explanation": "La PUMa (Protection Universelle Maladie) garantit à toute personne résidant en France de manière stable une prise en charge de ses frais de santé."
+      "explanation": "Le texte indique que le changement d’adresse doit être fait au plus tard 3 mois après le déménagement."
     },
     {
       "id": "vf-q4",
-      "question": "Qu'est-ce qu'un médecin traitant ?",
+      "question": "Quelle est la première démarche à effectuer lorsqu’on change d’adresse ?",
       "options": [
-        "Un médecin spécialiste",
-        "Un médecin généraliste choisi par le patient pour coordonner ses soins",
-        "Un médecin urgentiste",
-        "Un médecin scolaire"
+        "Informer la banque",
+        "Mettre à jour la carte grise",
+        "Faire le changement d’adresse sur service‑public.fr",
+        "Prévenir l’employeur"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le médecin traitant est un médecin généraliste choisi par le patient. Il coordonne le parcours de soins et oriente vers des spécialistes si nécessaire."
+      "correctAnswer": 2,
+      "explanation": "Le premier point de la procédure consiste à déclarer le changement d’adresse sur le site service‑public.fr, qui informe les services publics."
     },
     {
       "id": "vf-q5",
-      "question": "Comment s'appelle l'organisme qui aide les demandeurs d'emploi en France ?",
+      "question": "Qui sont les principales personnes concernées par la domiciliation ?",
       "options": [
-        "La CAF",
-        "France Travail",
-        "La CPAM",
-        "L'OFII"
+        "Les personnes disposant d’un logement stable",
+        "Les personnes sans domicile fixe, en habitat mobile ou précaire",
+        "Les étudiants résidant en résidence universitaire",
+        "Les retraités vivant en maison de retraite"
       ],
       "correctAnswer": 1,
-      "explanation": "France Travail (anciennement Pôle Emploi) est l'organisme public qui accompagne les demandeurs d'emploi dans leur recherche d'emploi et leurs démarches."
+      "explanation": "La fiche précise que la domiciliation s’adresse aux personnes sans domicile fixe, en habitat mobile ou précaire."
     },
     {
       "id": "vf-q6",
-      "question": "L'école publique en France est :",
+      "question": "Quel est l’un des principaux avantages d’un compte bancaire selon la fiche ?",
       "options": [
-        "Gratuite et religieuse",
-        "Payante et laïque",
-        "Gratuite, laïque et obligatoire",
-        "Gratuite mais facultative"
+        "Il permet de gagner des intérêts élevés automatiquement",
+        "Il sécurise l’argent contre la perte ou le vol",
+        "Il garantit un revenu mensuel fixe",
+        "Il élimine toutes les taxes sur les revenus"
       ],
-      "correctAnswer": 2,
-      "explanation": "L'école publique en France est gratuite, laïque (sans enseignement religieux) et obligatoire. L'instruction est obligatoire à partir de 3 ans."
+      "correctAnswer": 1,
+      "explanation": "Le compte bancaire garde l’argent en sécurité, évitant perte ou vol."
     },
     {
       "id": "vf-q7",
-      "question": "Dans quel délai doit-on déclarer une naissance en France ?",
+      "question": "Quelle pièce est indispensable pour la vérification de l’identité lors de l’ouverture d’un compte bancaire ?",
       "options": [
-        "24 heures",
-        "3 jours",
-        "5 jours",
-        "30 jours"
+        "Un justificatif de revenu",
+        "Une pièce d’identité officielle avec photo",
+        "Un certificat de naissance",
+        "Un passeport de voyage expiré"
       ],
-      "correctAnswer": 2,
-      "explanation": "La déclaration de naissance doit être faite dans les 5 jours suivant l'accouchement à la mairie du lieu de naissance."
+      "correctAnswer": 1,
+      "explanation": "La banque exige une pièce d’identité officielle comportant une photographie."
     },
     {
       "id": "vf-q8",
-      "question": "Qu'est-ce que la VAE ?",
+      "question": "Un mineur peut ouvrir seul un compte individuel s’il :",
       "options": [
-        "Une aide financière pour les étudiants",
-        "La Validation des Acquis de l'Expérience, permettant d'obtenir un diplôme par l'expérience",
-        "Un visa pour les travailleurs étrangers",
-        "Une assurance voyage"
+        "A 16 ans, sans autorisation",
+        "Est émancipé",
+        "A un emploi à temps plein",
+        "Possède un livret d’épargne"
       ],
       "correctAnswer": 1,
-      "explanation": "La VAE (Validation des Acquis de l'Expérience) permet d'obtenir un diplôme ou une certification en faisant reconnaître son expérience professionnelle."
+      "explanation": "Seul un mineur émancipé peut ouvrir un compte sans autorisation des représentants légaux."
     },
     {
       "id": "vf-q9",
-      "question": "Qu'est-ce que l'autorité parentale en France ?",
+      "question": "Si une banque refuse d’ouvrir un compte, quelle démarche peut‑on entreprendre ?",
       "options": [
-        "Le droit exclusif du père sur les enfants",
-        "Un ensemble de droits et devoirs exercés par les deux parents dans l'intérêt de l'enfant",
-        "Le droit de l'État sur l'éducation des enfants",
-        "Un pouvoir réservé au parent qui a la garde"
+        "Déposer une plainte auprès du tribunal administratif",
+        "Saisir la Banque de France pour faire valoir son droit au compte",
+        "Demander à une autre banque de payer les frais d’ouverture",
+        "Faire appel directement au ministère de l’Économie"
       ],
       "correctAnswer": 1,
-      "explanation": "L'autorité parentale est un ensemble de droits et de devoirs exercés conjointement par les deux parents, dans l'intérêt de l'enfant."
+      "explanation": "La Banque de France est l’autorité compétente pour le droit au compte."
     },
     {
       "id": "vf-q10",
-      "question": "Quelle est la différence entre un CDI et un CDD ?",
+      "question": "Parmi les missions suivantes, laquelle n’est pas attribuée à la Banque de France ?",
       "options": [
-        "Le CDI est à temps plein, le CDD à temps partiel",
-        "Le CDI est un contrat à durée indéterminée, le CDD à durée déterminée",
-        "Le CDI est pour le secteur public, le CDD pour le privé",
-        "Il n'y a pas de différence"
+        "Gestion du droit au compte",
+        "Accompagnement des personnes en situation de surendettement",
+        "Émission de cartes de crédit pour les particuliers",
+        "Définition de la stratégie monétaire et stabilité des prix"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Émettre des cartes de crédit relève des banques commerciales, pas de la Banque de France."
+    },
+    {
+      "id": "vf-q11",
+      "question": "Qu’est‑ce que la responsabilité civile selon la fiche ?",
+      "options": [
+        "L’obligation de réparer les dommages causés volontairement à autrui",
+        "L’obligation de réparer les dommages matériels, corporels ou moraux causés involontairement",
+        "Le droit de réclamer des dommages à une autre personne",
+        "Une sanction pénale imposée par le juge"
       ],
       "correctAnswer": 1,
-      "explanation": "Le CDI (Contrat à Durée Indéterminée) n'a pas de date de fin, tandis que le CDD (Contrat à Durée Déterminée) a une durée limitée dans le temps."
+      "explanation": "La responsabilité civile implique de réparer les préjudices causés sans le vouloir."
+    },
+    {
+      "id": "vf-q12",
+      "question": "Dans quels contextes la responsabilité civile peut‑elle être engagée ?",
+      "options": [
+        "Uniquement lors d’un accident de la route",
+        "Seulement pendant les activités professionnelles",
+        "À domicile, en conduisant, dans la vie quotidienne et au travail",
+        "Exclusivement lors d’un sinistre couvert par l’assurance habitation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte indique que les dommages peuvent survenir à la maison, en voiture, dans la vie privée ou professionnelle."
+    },
+    {
+      "id": "vf-q13",
+      "question": "Qui peut engager la responsabilité civile du titulaire d’une assurance ?",
+      "options": [
+        "Un voisin qui cause un bruit excessif",
+        "Un enfant mineur, un animal domestique ou un objet sous votre responsabilité",
+        "Un employé qui agit en dehors de ses fonctions",
+        "Un fournisseur qui ne livre pas à temps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le texte précise que les dommages causés par un enfant, un animal ou un objet sous votre garde engagent votre responsabilité civile."
+    },
+    {
+      "id": "vf-q14",
+      "question": "Quelle affirmation décrit le mieux l’assurance responsabilité civile ?",
+      "options": [
+        "Elle est gratuite et facultative pour tous les assurés",
+        "Elle garantit la protection des tiers et est payante et obligatoire",
+        "Elle ne couvre que les dommages matériels, pas les dommages corporels",
+        "Elle ne s’applique qu’aux accidents de la route"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’assurance responsabilité civile est obligatoire, payante et protège les tiers en cas de dommages."
+    },
+    {
+      "id": "vf-q15",
+      "question": "Parmi les assurances suivantes, lesquelles peuvent inclure une garantie de responsabilité civile ?",
+      "options": [
+        "Assurance habitation uniquement",
+        "Assurance automobile uniquement",
+        "Assurance habitation et automobile",
+        "Assurance santé uniquement"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte mentionne que les assurances habitation et automobile comportent une garantie responsabilité civile."
+    },
+    {
+      "id": "vf-q16",
+      "question": "Quel est le principal objectif de l’impôt en France ?",
+      "options": [
+        "Financer les services publics et la solidarité (écoles, routes, aides sociales)",
+        "Augmenter les salaires des politiciens",
+        "Financer exclusivement les entreprises privées",
+        "Réduire les richesses des ménages"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les impôts servent à financer les services publics et les aides sociales, assurant la solidarité nationale."
+    },
+    {
+      "id": "vf-q17",
+      "question": "Comment fonctionne l’impôt sur le revenu en France ?",
+      "options": [
+        "Il est progressif : le taux augmente avec le niveau de revenu du foyer",
+        "Il applique le même taux à tous les contribuables, quel que soit le revenu",
+        "Il ne concerne que les personnes très riches",
+        "Il ne s’applique qu’aux étrangers résidant en France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’impôt sur le revenu est progressif : plus les revenus sont élevés, plus la part prélevée augmente."
+    },
+    {
+      "id": "vf-q18",
+      "question": "Qui est tenu de déclarer ses revenus en France ?",
+      "options": [
+        "Toute personne résidant en France et âgée de plus de 18 ans, qu’elle soit française ou non",
+        "Seuls les citoyens français de plus de 18 ans",
+        "Uniquement les salariés",
+        "Seules les personnes dont le revenu dépasse un certain seuil"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’obligation de déclaration concerne toutes les personnes résidant en France et majeures, même sans revenu."
+    },
+    {
+      "id": "vf-q19",
+      "question": "À quel moment doit-on déposer la déclaration de revenus chaque année ?",
+      "options": [
+        "Entre janvier et février pour l'année en cours",
+        "Entre juin et juillet pour l'année suivante",
+        "Entre avril et mai pour l'année précédente",
+        "À n'importe quel moment avant le 31 décembre"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La déclaration annuelle s’effectue entre avril et mai et porte sur les revenus de l’année précédente."
+    },
+    {
+      "id": "vf-q20",
+      "question": "Quelles sont les conséquences possibles en cas de non‑déclaration de ses revenus ?",
+      "options": [
+        "Des pénalités financières, le remboursement des aides perçues et une possible peine de prison",
+        "Une prime d’État pour encourager la régularisation",
+        "Une exonération totale d’impôt",
+        "La fermeture automatique du compte bancaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ne pas déclarer ses revenus expose à des sanctions financières, au remboursement d’aides et éventuellement à une peine d’emprisonnement."
+    },
+    {
+      "id": "vf-q21",
+      "question": "Parmi les moyens suivants, lequel n'est pas indiqué pour connaître le type de titre de séjour qui vous correspond ?",
+      "options": [
+        "Se rendre dans une maison France Service",
+        "Contacter le centre de contact citoyen au 0806 001 620",
+        "Envoyer une lettre au ministère de la Culture",
+        "Consulter le site de l’ANEF"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte indique la maison France Service, le point d’accueil numérique, le site de la préfecture ou de l’ANEF, et le téléphone ; le ministère de la Culture n’est pas mentionné."
+    },
+    {
+      "id": "vf-q22",
+      "question": "Quand devez‑vous informer la préfecture d’un changement d’adresse ou de domiciliation ?",
+      "options": [
+        "Dans les 48 heures suivant le déménagement",
+        "Immédiatement",
+        "Lors du prochain renouvellement du titre de séjour",
+        "Il n’est pas nécessaire d’en informer la préfecture"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il faut informer la préfecture dès le changement d’adresse, sans délai précisé, donc immédiatement."
+    },
+    {
+      "id": "vf-q23",
+      "question": "Combien de demandes de titre de séjour pour le même motif peut‑on faire au maximum en une année ?",
+      "options": [
+        "Une",
+        "Deux",
+        "Trois",
+        "Illimitées"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte précise qu’on peut faire jusqu’à trois demandes de titre de séjour pour le même motif par an."
+    },
+    {
+      "id": "vf-q24",
+      "question": "Quel document n’est requis que pour les titres de séjour d’une durée supérieure à un an ?",
+      "options": [
+        "Attestation de réussite à l’examen civique",
+        "Contrat d’engagement à respecter les principes de la République",
+        "Certification linguistique de niveau A2",
+        "Copie du passeport"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La certification linguistique de niveau A2 est demandée uniquement pour les titres de séjour de plus d’un an."
+    },
+    {
+      "id": "vf-q25",
+      "question": "Quel est le délai minimum recommandé pour déposer une demande de renouvellement de titre de séjour avant son expiration ?",
+      "options": [
+        "Un mois",
+        "Deux mois",
+        "Trois mois",
+        "Six mois"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La demande de renouvellement doit être déposée au moins trois mois avant la fin de validité du titre."
+    },
+    {
+      "id": "vf-q26",
+      "question": "Quelle procédure permet d'obtenir la nationalité française en cas de mariage avec un Français ?",
+      "options": [
+        "Décret de naturalisation",
+        "Déclaration",
+        "Visa de long séjour",
+        "Carte de séjour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le mariage avec un Français donne droit à la naturalisation par déclaration, pas par décret."
+    },
+    {
+      "id": "vf-q27",
+      "question": "Quelle condition est vérifiée lors de l'entretien d'assimilation organisé à la préfecture ?",
+      "options": [
+        "Maîtrise du français",
+        "Adhésion aux principes et valeurs de la République",
+        "Âge minimum de 18 ans",
+        "Revenu minimum annuel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'entretien d'assimilation porte sur l'adhésion aux principes et valeurs essentielles de la République."
+    },
+    {
+      "id": "vf-q28",
+      "question": "Quel site permet de simuler les pièces justificatives nécessaires à la demande de naturalisation ?",
+      "options": [
+        "service-public.fr",
+        "site de la préfecture",
+        "site de l'ANEF",
+        "Tous les précédents"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le simulateur disponible sur service-public.fr indique les documents à fournir selon chaque situation."
+    },
+    {
+      "id": "vf-q29",
+      "question": "Quelle étape doit être réalisée avant de déposer le dossier complet de demande de naturalisation ?",
+      "options": [
+        "Faire une simulation sur le site service-public.fr",
+        "Se rendre à la mairie",
+        "Passer un examen de français",
+        "Obtenir un passeport"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il faut d'abord faire une simulation en ligne pour connaître les pièces justificatives requises."
+    },
+    {
+      "id": "vf-q30",
+      "question": "En cas de difficulté avec les démarches en ligne, quel service peut être contacté ?",
+      "options": [
+        "Centre de contact citoyens de l'ANTS",
+        "Service des impôts",
+        "Police nationale",
+        "Ministère de l'Éducation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le centre de contact citoyens de l'ANTS (0806 001 620) aide les usagers rencontrant des problèmes avec les procédures numériques."
+    },
+    {
+      "id": "vf-q31",
+      "question": "Dans quel délai la déclaration de naissance doit-elle être effectuée ?",
+      "options": [
+        "Dans les 5 jours suivant la naissance",
+        "Dans les 10 jours suivant la naissance",
+        "Dans le mois qui suit la naissance",
+        "Dans les 2 semaines suivant la naissance"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi impose de déclarer la naissance dans les cinq jours qui suivent l'accouchement."
+    },
+    {
+      "id": "vf-q32",
+      "question": "Où doit-on déposer la déclaration de naissance ?",
+      "options": [
+        "À la mairie du lieu de naissance",
+        "À la préfecture du département",
+        "Au cabinet du médecin qui a assisté à l'accouchement",
+        "À l'école de l'enfant"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La déclaration se fait à la mairie du lieu où l'enfant est né, afin que l'officier d'état civil établisse l'acte de naissance."
+    },
+    {
+      "id": "vf-q33",
+      "question": "Quel document n'est pas requis si le père reconnaît son enfant après la naissance ?",
+      "options": [
+        "La pièce d'identité du père",
+        "Le certificat médical d'accouchement",
+        "Le justificatif de domicile du père",
+        "L’acte de reconnaissance établi avant la naissance"
+      ],
+      "correctAnswer": 3,
+      "explanation": "L’acte de reconnaissance avant la naissance n'existe pas si le père reconnaît l'enfant après la naissance, il n'est donc pas demandé."
+    },
+    {
+      "id": "vf-q34",
+      "question": "Quel droit l'acte de naissance permet-il d'obtenir pour l'enfant ?",
+      "options": [
+        "Des allocations familiales",
+        "Un permis de conduire",
+        "Une carte bancaire",
+        "Un passeport"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'acte de naissance sert à obtenir des droits sociaux comme les allocations familiales, la Sécurité sociale, etc."
+    },
+    {
+      "id": "vf-q35",
+      "question": "Quel document est nécessaire uniquement si les parents possèdent déjà un livret de famille ?",
+      "options": [
+        "Le livret de famille pour y inscrire l'enfant",
+        "Le certificat médical d'accouchement",
+        "La pièce d'identité du parent",
+        "Le justificatif de domicile de moins de 3 mois"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le livret de famille existant doit être présenté pour y ajouter la mention de l'enfant."
+    },
+    {
+      "id": "vf-q36",
+      "question": "Quel est l’âge minimal requis pour se marier en France sans autorisation particulière ?",
+      "options": [
+        "16 ans",
+        "18 ans",
+        "20 ans",
+        "21 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, le mariage civil est possible dès 18 ans sans besoin d’autorisation."
+    },
+    {
+      "id": "vf-q37",
+      "question": "Lequel des liens suivants interdit le mariage en France ?",
+      "options": [
+        "Cousins germains",
+        "Cousins au second degré",
+        "Frères et sœurs",
+        "Cousins issus de germains"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le mariage entre frères et sœurs est prohibé car il constitue un lien de parenté directe."
+    },
+    {
+      "id": "vf-q38",
+      "question": "Où doit être célébrée la cérémonie du mariage civil ?",
+      "options": [
+        "Dans la mairie du lieu de naissance des futurs mariés",
+        "Dans la commune où vit au moins l’un des deux futurs mariés ou un parent",
+        "Dans n’importe quelle mairie du pays",
+        "Dans le domicile des futurs mariés"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le mariage civil a lieu dans la commune où réside au moins l’un des époux ou l’un de leurs parents."
+    },
+    {
+      "id": "vf-q39",
+      "question": "Quel document n’est pas exigé le jour de la cérémonie de mariage civil ?",
+      "options": [
+        "Acte de mariage français",
+        "Livret de famille",
+        "Certificat de capacité matrimoniale",
+        "Pièces d’identité des témoins"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le certificat de capacité matrimoniale n’est pas requis pour un mariage civil en France."
+    },
+    {
+      "id": "vf-q40",
+      "question": "Pour faire reconnaître un mariage célébré à l’étranger, il faut demander la transcription de l’acte de mariage auprès de :",
+      "options": [
+        "Le consulat français à l'étranger",
+        "Le Service Central d’État Civil (SCEC)",
+        "Le tribunal de grande instance",
+        "La mairie du domicile en France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La transcription se fait auprès du consulat français à l’étranger ou, en France, du Service Central d’État Civil."
+    },
+    {
+      "id": "vf-q41",
+      "question": "Quel est le premier geste à faire en cas de problème de santé courant en France ?",
+      "options": [
+        "Consulter son médecin traitant",
+        "Se rendre immédiatement à l’hôpital",
+        "Aller directement à la pharmacie",
+        "Appeler le service d’urgence"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour un problème de santé courant, on commence par consulter son médecin traitant, conformément au parcours de soins coordonnés."
+    },
+    {
+      "id": "vf-q42",
+      "question": "Que désigne le « parcours de soins coordonnés » ?",
+      "options": [
+        "Consulter d’abord un spécialiste puis le médecin traitant",
+        "Aller directement à la pharmacie pour obtenir un médicament",
+        "Consulter d’abord son médecin traitant, qui oriente ensuite vers un spécialiste si besoin",
+        "Se soigner soi‑même sans passer par un professionnel de santé"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le parcours de soins coordonnés implique de consulter d’abord son médecin traitant, qui pourra orienter le patient vers d’autres professionnels."
+    },
+    {
+      "id": "vf-q43",
+      "question": "Dans quelle situation doit‑on se rendre à l’hôpital sans passer par le médecin traitant ?",
+      "options": [
+        "Pour un rhume léger",
+        "Pour un contrôle de routine",
+        "En cas d’accident ou de douleur violente",
+        "Pour renouveler une ordonnance déjà existante"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les situations graves (accident, douleurs violentes, malaise) justifient un déplacement direct à l’hôpital, en urgence ou sur rendez‑vous."
+    },
+    {
+      "id": "vf-q44",
+      "question": "Quel est le rôle du pharmacien après la consultation chez le médecin ?",
+      "options": [
+        "Prescrire de nouveaux médicaments",
+        "Donner des conseils sur les douleurs du quotidien et délivrer les traitements prescrits",
+        "Effectuer une intervention chirurgicale",
+        "Orienter le patient vers un spécialiste sans ordonnance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le pharmacien conseille sur les douleurs du quotidien et délivre les médicaments ou dispositifs médicaux prescrits par le médecin."
+    },
+    {
+      "id": "vf-q45",
+      "question": "Parmi les professionnels suivants, lequel n’est généralement pas intégré au parcours de soins coordonnés tel que décrit dans la fiche ?",
+      "options": [
+        "Cardiologue",
+        "Dermatologue",
+        "Physiothérapeute",
+        "Opticien"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le parcours de soins coordonnés concerne les médecins (généralistes, spécialistes) et certains professionnels de santé, mais l’opticien n’est pas un professionnel médical référé par le médecin traitant."
+    },
+    {
+      "id": "vf-q46",
+      "question": "Quel est le rôle principal du médecin généraliste en tant que premier recours ?",
+      "options": [
+        "Réaliser des chirurgies complexes",
+        "Assurer prévention, dépistage, diagnostic, traitement, orientation et éducation pour la santé",
+        "Prescrire uniquement des médicaments psychotropes",
+        "Gérer uniquement les urgences hospitalières"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le médecin généraliste assure les soins de premier recours : prévention, dépistage, diagnostic, traitement, orientation et éducation."
+    },
+    {
+      "id": "vf-q47",
+      "question": "Quand le médecin généraliste devient-il médecin traitant ?",
+      "options": [
+        "Dès la première consultation",
+        "Lorsqu’il est déclaré officiellement par le patient",
+        "Après cinq ans de suivi continu",
+        "Lorsqu’il travaille dans un hôpital"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le médecin devient médecin traitant lorsqu’il est désigné par le patient comme coordinateur de son suivi médical."
+    },
+    {
+      "id": "vf-q48",
+      "question": "Parmi les missions suivantes, laquelle n’est pas typiquement assurée par le médecin traitant ?",
+      "options": [
+        "Suivi de la vaccination",
+        "Rédaction d’un protocole de soins pour une affection de longue durée",
+        "Réalisation d’une IRM sans prescription",
+        "Orientation vers un spécialiste"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le médecin traitant ne réalise pas d’examens d’imagerie comme une IRM sans prescription d’un spécialiste."
+    },
+    {
+      "id": "vf-q49",
+      "question": "Quel outil permet de prendre rendez‑vous en ligne avec son médecin traitant ?",
+      "options": [
+        "Doctolib",
+        "Google Maps",
+        "Wikipédia",
+        "Netflix"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Des plateformes comme Doctolib ou Maiia offrent la prise de rendez‑vous en ligne avec les médecins."
+    },
+    {
+      "id": "vf-q50",
+      "question": "Le médecin traitant centralise les informations du patient. Quelle affirmation décrit le mieux cette fonction ?",
+      "options": [
+        "Il garde uniquement les résultats de laboratoire",
+        "Il tient à jour le dossier médical complet incluant diagnostics, traitements et examens",
+        "Il ne conserve aucune donnée pour respecter la confidentialité",
+        "Il partage automatiquement toutes les données avec les réseaux sociaux"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le médecin traitant maintient un dossier médical complet, rassemblant diagnostics, traitements, résultats d’examens, etc."
+    },
+    {
+      "id": "vf-q51",
+      "question": "Quel est le rôle principal d’un médecin spécialiste ?",
+      "options": [
+        "Diagnostiquer et traiter des problèmes spécifiques ou complexes",
+        "Prescrire n’importe quel médicament sans restriction",
+        "Effectuer des bilans de santé généraux pour tous les patients",
+        "Assurer le transport d’urgence des patients"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le spécialiste possède une formation pointue pour gérer des pathologies précises, contrairement aux généralistes."
+    },
+    {
+      "id": "vf-q52",
+      "question": "Dans le parcours de soins coordonnés, qui doit prescrire le rendez‑vous chez le spécialiste ?",
+      "options": [
+        "Le médecin spécialiste lui‑même",
+        "Le patient directement",
+        "Le médecin généraliste (médecin traitant)",
+        "Le pharmacien"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le médecin traitant rédige l’ordonnance qui autorise la consultation d’un spécialiste dans le cadre du parcours coordonné."
+    },
+    {
+      "id": "vf-q53",
+      "question": "Parmi les professions suivantes, laquelle n’est pas citée dans le texte comme spécialité médicale ?",
+      "options": [
+        "Cardiologue",
+        "Ophtalmologue",
+        "Orthopédiste",
+        "Neuropsychiatre"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte mentionne cardiologie, ophtalmologie, gynécologie, neurologie, etc., mais pas l’orthopédie."
+    },
+    {
+      "id": "vf-q54",
+      "question": "Quelle méthode n’est pas proposée pour prendre rendez‑vous avec un médecin spécialiste ?",
+      "options": [
+        "Appeler le cabinet du spécialiste",
+        "Réserver en ligne via Doctolib ou Maiia",
+        "Envoyer un fax au cabinet du spécialiste",
+        "Utiliser la plateforme de prise de rendez‑vous du médecin"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte indique l’appel téléphonique et la réservation en ligne, mais ne mentionne pas l’envoi de fax."
+    },
+    {
+      "id": "vf-q55",
+      "question": "En cas d’urgence, que dit le texte concernant les délais d’attente chez un spécialiste ?",
+      "options": [
+        "Ils sont toujours plus longs que chez le généraliste",
+        "Ils sont identiques à tous les rendez‑vous",
+        "Ils peuvent être raccourcis malgré la tendance habituelle à être plus longs",
+        "Ils ne sont jamais raccourcis, même en urgence"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte précise que le délai est souvent plus long, « sauf en cas d’urgence », ce qui implique une possible réduction du temps d’attente."
+    },
+    {
+      "id": "vf-q56",
+      "question": "En France, qu’est‑ce qu’une structure d’accueil gratuite ?",
+      "options": [
+        "Un établissement privé qui facture les patients selon leurs revenus",
+        "Un service public qui permet d’être soigné sans payer",
+        "Une clinique qui propose des soins uniquement aux assurés sociaux",
+        "Un laboratoire de recherche qui ne traite pas les patients"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les structures d’accueil gratuites font partie du service public et offrent des soins sans frais."
+    },
+    {
+      "id": "vf-q57",
+      "question": "Si vous avez besoin d’un soin généraliste sans rendez‑vous préalable, où devez‑vous vous rendre ?",
+      "options": [
+        "Dans les permanences d’accès aux soins de santé (PASS) des hôpitaux publics",
+        "Dans les centres de santé sexuelle (CS)",
+        "Dans les centres de lutte anti‑tuberculose (CLAT)",
+        "Dans les services d’oncologie des cliniques privées"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les PASS des hôpitaux publics sont ouverts à tous pour des soins généralistes."
+    },
+    {
+      "id": "vf-q58",
+      "question": "Qui peut administrer un vaccin dans le cadre des structures d’accueil gratuites ?",
+      "options": [
+        "Un médecin, une sage‑femme, un pharmacien ou un infirmier",
+        "Un psychologue, un assistant social ou un kinésithérapeute",
+        "Un dentiste, un optométriste ou un podologue",
+        "Un agent de sécurité hospitalier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Vacciner peut être fait par médecin, sage‑femme, pharmacien ou infirmier."
+    },
+    {
+      "id": "vf-q59",
+      "question": "Pour obtenir une contraception ou un accompagnement à l’IVG, il faut se rendre :",
+      "options": [
+        "Dans les centres de santé sexuelle",
+        "Dans les permanences d’accès aux soins de santé en psychiatrie (PASS Psy)",
+        "Dans les centres de lutte anti‑tuberculose (CLAT)",
+        "Dans les services de cardiologie des hôpitaux publics"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les centres de santé sexuelle offrent contraception, conseils sexuels et accompagnement à l’IVG."
+    },
+    {
+      "id": "vf-q60",
+      "question": "Quel dispositif est dédié à la prise en charge de la santé mentale des adultes ?",
+      "options": [
+        "Les permanences d’accès aux soins de santé en psychiatrie (PASS Psy)",
+        "Les centres de dépistage du VIH (CeGIDD)",
+        "Les centres médico‑psychopédagogiques (CMPP)",
+        "Les centres de santé sexuelle (CS)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le PASS Psy est la structure d’accueil gratuite pour la santé mentale des adultes."
+    },
+    {
+      "id": "vf-q61",
+      "question": "Quel service des hôpitaux est réservé aux urgences les plus graves et vitales ?",
+      "options": [
+        "Service des urgences hospitaliers",
+        "SOS Médecins",
+        "Pharmacie de garde",
+        "Centre de vaccination"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les services d’urgence hospitaliers prennent en charge les détresses et urgences vitales, ouvertes 24 h/24 et 7 j/7."
+    },
+    {
+      "id": "vf-q62",
+      "question": "En cas de danger vital (blessure grave, perte de connaissance, etc.), quel numéro faut‑il composer ?",
+      "options": [
+        "3624",
+        "15",
+        "119",
+        "3919"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le SAMU, joignable au 15, intervient immédiatement pour les situations à danger vital."
+    },
+    {
+      "id": "vf-q63",
+      "question": "Pour une forte fièvre ou une douleur importante sans danger vital immédiat, quel service peut être contacté ?",
+      "options": [
+        "SAMU (15)",
+        "SOS Médecins (3624)",
+        "Police (17)",
+        "Pompiers (18)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SOS Médecins (3624) intervient à domicile pour les urgences non vitales, 24 h/24 et 7 j/7."
+    },
+    {
+      "id": "vf-q64",
+      "question": "Quel numéro doit être appelé lorsqu’un enfant se trouve en danger ?",
+      "options": [
+        "119",
+        "3114",
+        "3919",
+        "15"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 119 est le numéro dédié à la protection de l’enfance en situation de danger."
+    },
+    {
+      "id": "vf-q65",
+      "question": "Une femme victime de violences doit composer quel numéro d’urgence ?",
+      "options": [
+        "3919",
+        "119",
+        "3624",
+        "15"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 3919 est le numéro d’écoute et d’accompagnement des femmes victimes de violences."
+    },
+    {
+      "id": "vf-q66",
+      "question": "Que garantit la Protection Universelle Maladie (PUMa) ?",
+      "options": [
+        "Un accès gratuit aux soins pour tous les étrangers résidant en France",
+        "Un droit à la prise en charge financière des frais de santé pour toute personne qui travaille ou réside en France de façon stable et régulière et qui est affiliée à l’Assurance maladie",
+        "Une prise en charge uniquement des séjours hospitaliers",
+        "Une couverture réservée aux enfants de moins de 18 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La PUMa assure la prise en charge financière de base pour les personnes travaillant ou résidant régulièrement en France et affiliées à l’Assurance maladie."
+    },
+    {
+      "id": "vf-q67",
+      "question": "Qui a l’obligation de proposer une couverture complémentaire (mutuelle) aux salariés du secteur privé ?",
+      "options": [
+        "L’État",
+        "L’employeur",
+        "L’Assurance maladie",
+        "Le syndicat professionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tout employeur du secteur privé doit proposer une mutuelle à ses salariés, même si celle‑ci n’est pas obligatoire pour le salarié."
+    },
+    {
+      "id": "vf-q68",
+      "question": "Quelle affirmation décrit correctement la Complémentaire Santé Solidaire (C2S) ?",
+      "options": [
+        "Elle est obligatoire pour tous les résidents français",
+        "Elle est gratuite pour toutes les personnes, quel que soit leur revenu",
+        "Elle s’adresse aux personnes aux ressources modestes et peut être gratuite ou coûter moins d’un euro par jour",
+        "Elle ne couvre que les soins dentaires"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La C2S est destinée aux personnes aux ressources modestes ; selon le niveau de ressources, elle est gratuite ou très peu coûteuse."
+    },
+    {
+      "id": "vf-q69",
+      "question": "Parmi les dépenses suivantes, laquelle n’est pas prise en charge intégralement par la couverture de base (PUMa) ?",
+      "options": [
+        "Une consultation médicale",
+        "Une hospitalisation",
+        "Le coût complet d’une paire de lunettes",
+        "Un médicament prescrit"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La PUMa rembourse partiellement les lunettes ; le coût complet nécessite une complémentaire santé."
+    },
+    {
+      "id": "vf-q70",
+      "question": "Qui peut être couvert par la même complémentaire santé souscrite par un assuré ?",
+      "options": [
+        "Uniquement l’assuré lui‑même",
+        "L’assuré et son conjoint uniquement",
+        "Tous les membres du foyer de l’assuré",
+        "Seulement les enfants de moins de 16 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La mutuelle ou la C2S peuvent couvrir l’ensemble des membres du foyer (conjoint, enfants, etc.)."
+    },
+    {
+      "id": "vf-q71",
+      "question": "Qu’est‑ce qu’un médecin de garde ?",
+      "options": [
+        "Un médecin généraliste qui travaille uniquement le week‑end",
+        "Un médecin spécialiste hospitalier",
+        "Un médecin généraliste qui assure des consultations hors des heures d’ouverture normales",
+        "Un infirmier de garde"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le médecin de garde est un généraliste qui intervient en dehors des horaires habituels des cabinets (soir, nuit, week‑end, jours fériés)."
+    },
+    {
+      "id": "vf-q72",
+      "question": "Quel type de problème le médecin de garde prend‑il en charge en priorité ?",
+      "options": [
+        "Les urgences vitales nécessitant une réanimation",
+        "Les problèmes de santé urgents mais non vitaux",
+        "Les consultations de suivi de routine",
+        "Les prescriptions de médicaments non urgentes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il intervient sur les urgences non vitales afin de ne pas surcharger les services d’urgence hospitaliers."
+    },
+    {
+      "id": "vf-q73",
+      "question": "Par quels moyens le médecin de garde peut‑il intervenir auprès d’un patient ?",
+      "options": [
+        "En se déplaçant à domicile",
+        "En accueillant le patient dans un centre de garde",
+        "En donnant des conseils par téléphone",
+        "Toutes les réponses précédentes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le médecin de garde peut se rendre au domicile, recevoir le patient dans un centre de garde ou conseiller par téléphone."
+    },
+    {
+      "id": "vf-q74",
+      "question": "Quel numéro devez‑vous composer pour contacter un médecin de garde ?",
+      "options": [
+        "112",
+        "15 (SAMU)",
+        "17 (police)",
+        "32 37"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le 15 (SAMU) permet d’être orienté vers la permanence des soins ou le médecin de garde de votre région."
+    },
+    {
+      "id": "vf-q75",
+      "question": "Quel numéro devez‑vous appeler pour connaître l’adresse de la pharmacie de garde la plus proche ?",
+      "options": [
+        "15 (SAMU)",
+        "17 (gendarmerie ou police)",
+        "32 37 (service d’information)",
+        "09 70 10 10 (service d’urgence)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le 32 37 fournit l’information sur la pharmacie de garde la plus proche (coût de 0,35 €/minute)."
+    },
+    {
+      "id": "vf-q76",
+      "question": "Après la fin de validité du titre de séjour, pendant combien de temps la PUMa continue-t-elle à prendre en charge les dépenses de santé ?",
+      "options": [
+        "3 mois",
+        "6 mois",
+        "12 mois",
+        "Indéfiniment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La PUMa maintient la prise en charge pendant 6 mois à compter de la date de fin de validité du titre de séjour."
+    },
+    {
+      "id": "vf-q77",
+      "question": "Quel délai supplémentaire peut être accordé à la PUMa après réception du courrier de notification de fermeture des droits ?",
+      "options": [
+        "30 jours",
+        "45 jours",
+        "60 jours",
+        "Aucun délai supplémentaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La PUMa bénéficie de 45 jours additionnels dès la réception du courrier de fermeture des droits."
+    },
+    {
+      "id": "vf-q78",
+      "question": "La Complémentaire Santé Solidaire (C2S) peut être maintenue pendant combien de temps après l’expiration du titre de séjour ?",
+      "options": [
+        "3 mois",
+        "6 mois",
+        "9 mois",
+        "12 mois"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La C2S peut être maintenue sur demande pendant 6 mois, même durée que la PUMa."
+    },
+    {
+      "id": "vf-q79",
+      "question": "Quelle affirmation est exacte concernant la prolongation de la C2S par rapport à la PUMa ?",
+      "options": [
+        "La C2S peut être prolongée de 45 jours comme la PUMa",
+        "La C2S peut être prolongée de 30 jours",
+        "La C2S ne peut pas être prolongée au-delà des 6 mois",
+        "La C2S est automatiquement renouvelée indéfiniment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Contrairement à la PUMa, la C2S ne bénéficie pas de la prolongation de 45 jours."
+    },
+    {
+      "id": "vf-q80",
+      "question": "Pour maintenir la C2S après l’expiration du titre de séjour, que doit‑faire l’assuré ?",
+      "options": [
+        "Ne rien faire, le maintien est automatique",
+        "Faire une demande explicite de maintien",
+        "Attendre que la caisse le renouvelle automatiquement",
+        "Payer une cotisation supplémentaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La C2S peut être maintenue sur demande, il faut donc formuler explicitement cette demande."
+    },
+    {
+      "id": "vf-q81",
+      "question": "Quel document identifie de façon unique et personnelle chaque assuré en France ?",
+      "options": [
+        "Le numéro de sécurité sociale",
+        "La carte Vitale",
+        "Le numéro d'identification fiscal",
+        "Le code de santé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le numéro de sécurité sociale à 15 chiffres est l’identifiant unique de chaque assuré."
+    },
+    {
+      "id": "vf-q82",
+      "question": "Après une consultation médicale, quel document est transmis électroniquement à l'Assurance Maladie ?",
+      "options": [
+        "La feuille de soins électronique",
+        "L'ordonnance papier",
+        "Le relevé bancaire",
+        "L'attestation de droits"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le professionnel envoie la feuille de soins électronique, qui déclenche le remboursement."
+    },
+    {
+      "id": "vf-q83",
+      "question": "Quelle condition permet de bénéficier du tiers‑payant lors d'une visite chez le professionnel de santé ?",
+      "options": [
+        "Présenter sa carte Vitale",
+        "Avoir une mutuelle privée",
+        "Payer la totalité en espèces",
+        "Être âgé de plus de 65 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le tiers‑payant s’applique lorsque la carte Vitale est présentée, l’Assurance Maladie règle directement le professionnel."
+    },
+    {
+      "id": "vf-q84",
+      "question": "Où faut‑il demander le remboursement des frais de santé ?",
+      "options": [
+        "À la caisse primaire d'Assurance maladie",
+        "À la banque",
+        "À la mairie",
+        "Au service des impôts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le remboursement est géré par la caisse primaire d'Assurance maladie."
+    },
+    {
+      "id": "vf-q85",
+      "question": "Quel est le rôle principal du compte Ameli ?",
+      "options": [
+        "Suivre ses remboursements et gérer ses informations en ligne",
+        "Conserver les dossiers médicaux sous forme papier",
+        "Payer directement les factures de santé",
+        "S'inscrire aux listes électorales"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le compte Ameli permet de consulter les remboursements, communiquer avec les conseillers et mettre à jour ses données."
+    },
+    {
+      "id": "vf-q86",
+      "question": "Qui peut bénéficier de la protection universelle maladie (PUMa) ?",
+      "options": [
+        "Les résidents français depuis plus de 3 mois",
+        "Tous les touristes séjournant en France",
+        "Uniquement les salariés du secteur privé",
+        "Exclusivement les retraités"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La PUMa s’adresse aux personnes résidant en France de façon stable depuis au moins 3 mois."
+    },
+    {
+      "id": "vf-q87",
+      "question": "Quel formulaire doit être rempli par chaque adulte pour ouvrir ses droits à la PUMa ?",
+      "options": [
+        "Le formulaire de demande personnelle d’ouverture de droits",
+        "Le formulaire de demande d’allocation logement",
+        "Le formulaire de demande de carte vitale",
+        "Le formulaire de demande d’assurance chômage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C’est le formulaire de demande personnelle d’ouverture de droits qui doit être complété par chaque adulte."
+    },
+    {
+      "id": "vf-q88",
+      "question": "Parmi les documents suivants, lequel peut servir de justificatif de présence en France depuis plus de 3 mois ?",
+      "options": [
+        "Une quittance de loyer",
+        "Un passeport étranger non tamponné",
+        "Une carte de séjour expirée",
+        "Un relevé bancaire d’un compte à l’étranger"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les quittances de loyer (ou factures d’électricité, téléphone, etc.) attestent d’une présence continue en France."
+    },
+    {
+      "id": "vf-q89",
+      "question": "Que doit‑on faire si l’on n’a pas de domicile fixe pour la demande de PUMa ?",
+      "options": [
+        "Demander une domiciliation auprès d’un service habilité",
+        "Déclarer l’impossibilité d’obtenir la PUMa",
+        "Fournir uniquement une attestation d’hébergement",
+        "Envoyer le dossier à la préfecture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En l’absence de domicile fixe, il est possible de demander une domiciliation pour recevoir le courrier."
+    },
+    {
+      "id": "vf-q90",
+      "question": "Où doit‑on envoyer ou déposer le dossier complet de demande de PUMa ?",
+      "options": [
+        "À la CPAM du département ou à la CPAM la plus proche (ou la MSA si concerné)",
+        "À la mairie de la commune de résidence",
+        "À la Caisse d’Allocations Familiales (CAF)",
+        "À la préfecture du département"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le dossier doit être adressé à la CPAM du département ou déposé à la CPAM la plus proche (ou à la MSA le cas échéant)."
+    },
+    {
+      "id": "vf-q91",
+      "question": "En quelle année la Convention internationale des droits de l’enfant a-t-elle été adoptée et combien d'États l’ont signée ?",
+      "options": [
+        "1989, 196 États",
+        "1990, 150 États",
+        "1985, 180 États",
+        "1989, 195 États"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Convention a été adoptée en 1989 et 196 États l’ont signée."
+    },
+    {
+      "id": "vf-q92",
+      "question": "Quel pays n’a pas signé la Convention internationale des droits de l’enfant ?",
+      "options": [
+        "États-Unis",
+        "Canada",
+        "Royaume-Uni",
+        "Australie"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Tous les pays membres de l’ONU l’ont signé sauf les États-Unis."
+    },
+    {
+      "id": "vf-q93",
+      "question": "Le principe de « l’intérêt supérieur de l’enfant » signifie que :",
+      "options": [
+        "L'enfant décide toujours de son avenir",
+        "Les parents décident toujours à la place de l'enfant",
+        "L'intérêt de l'enfant prime sur sa volonté et celle de ses parents",
+        "L'État décide sans tenir compte de l'enfant"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Ce principe place l'intérêt de l'enfant au-dessus de sa volonté et de celle de ses parents, sauf si cela le met en danger."
+    },
+    {
+      "id": "vf-q94",
+      "question": "Parmi les droits suivants, lequel n’est pas inscrit dans la Convention internationale des droits de l’enfant ?",
+      "options": [
+        "Droit à la santé",
+        "Droit à la liberté d'expression",
+        "Droit à la protection contre l'exploitation",
+        "Droit à la propriété immobilière"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La Convention ne prévoit pas de droit à la propriété immobilière pour les enfants."
+    },
+    {
+      "id": "vf-q95",
+      "question": "Quel organisme dépend de l’ONU et agit sur la base de la Convention internationale des droits de l’enfant ?",
+      "options": [
+        "UNICEF",
+        "UNESCO",
+        "OMS",
+        "FAO"
+      ],
+      "correctAnswer": 0,
+      "explanation": "UNICEF est l’agence de l’ONU chargée de la protection et du bien‑être des enfants, fondée sur la Convention."
+    },
+    {
+      "id": "vf-q96",
+      "question": "Qui prend la décision de retirer l’autorité parentale à un parent ?",
+      "options": [
+        "Le ministère de la Justice",
+        "Le tribunal",
+        "Le conseil municipal",
+        "Le parent lui‑même"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le retrait de l’autorité parentale est prononcé par un tribunal, pas par une autorité administrative ou le parent."
+    },
+    {
+      "id": "vf-q97",
+      "question": "Un parent peut‑il renoncer volontairement à son autorité parentale ?",
+      "options": [
+        "Oui, s’il signe un acte notarié",
+        "Oui, en cas de séparation de fait",
+        "Non, la renonciation n’est pas autorisée",
+        "Oui, si l’enfant a plus de 18 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La loi interdit à un parent de renoncer à son autorité parentale ; seul le tribunal peut la retirer."
+    },
+    {
+      "id": "vf-q98",
+      "question": "Parmi les situations suivantes, laquelle peut entraîner le retrait de l’autorité parentale ?",
+      "options": [
+        "Un parent qui travaille à l’étranger pendant plus de deux ans",
+        "Un parent qui ne participe pas aux réunions de l’école pendant un an",
+        "Un parent qui commet un crime ou un délit sur son enfant",
+        "Un parent qui possède un second emploi"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La commission d’un crime ou d’un délit sur l’enfant (ou l’autre parent) constitue un motif de retrait."
+    },
+    {
+      "id": "vf-q99",
+      "question": "Quel droit le parent conserve‑t‑il après un retrait total de l’autorité parentale ?",
+      "options": [
+        "Le droit de décider du lieu de résidence de l’enfant",
+        "Le droit de gérer les biens de l’enfant",
+        "Le devoir de contribuer à l’entretien et à l’éducation de l’enfant",
+        "Le droit d’exercer la garde exclusive"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Même après un retrait total, le parent doit toujours contribuer à l’entretien et à l’éducation de l’enfant."
+    },
+    {
+      "id": "vf-q100",
+      "question": "Dans un retrait partiel de l’autorité parentale, le parent peut‑il conserver :",
+      "options": [
+        "Le droit de prendre toutes les décisions médicales",
+        "Le droit de surveiller et d’éduquer l’enfant",
+        "Le droit d’exclure l’autre parent des décisions familiales",
+        "Le droit de disposer librement des biens de l’enfant"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le retrait partiel implique que le parent garde certains droits, comme la surveillance et l’éducation, tout en perdant d’autres."
+    },
+    {
+      "id": "vf-q101",
+      "question": "Quel est l’âge minimum d’accueil dans les crèches et micro‑crèches ?",
+      "options": [
+        "2 mois",
+        "2 mois et demi",
+        "6 mois",
+        "1 an"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les structures de garde professionnelles peuvent accueillir les tout‑petits dès 2 mois et demi."
+    },
+    {
+      "id": "vf-q102",
+      "question": "Quelle structure garde au maximum 10 enfants ?",
+      "options": [
+        "Crèche collective",
+        "Micro‑crèche",
+        "Halte‑garderie",
+        "Assistante maternelle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Par définition, la micro‑crèche accueille jusqu’à 10 enfants."
+    },
+    {
+      "id": "vf-q103",
+      "question": "Quelle affirmation décrit le mieux le fonctionnement d’une halte‑garderie ?",
+      "options": [
+        "Elle accueille les enfants tous les jours de la semaine",
+        "Elle permet jusqu’à 3 demi‑journées de garde par semaine",
+        "Elle ne nécessite pas de personnel qualifié",
+        "Elle accepte uniquement les enfants de plus de 3 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La halte‑garderie propose un nombre limité de demi‑journées, au maximum trois par semaine."
+    },
+    {
+      "id": "vf-q104",
+      "question": "Quelle aide financière est spécifiquement destinée à faciliter le choix du mode de garde pour les familles à faibles revenus ?",
+      "options": [
+        "Allocation de rentrée scolaire",
+        "Aide personnalisée au logement",
+        "Complément de libre choix du mode de garde (CMG)",
+        "Prime d’activité"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le CMG (Complément de libre choix du mode de garde) aide les familles modestes à financer la garde d’enfants."
+    },
+    {
+      "id": "vf-q105",
+      "question": "Quel est l’inconvénient principal de la garde à domicile selon le texte ?",
+      "options": [
+        "Plus économique que les crèches",
+        "Encadrement plus strict que les crèches",
+        "Solution plus chère et moins encadrée",
+        "Disponible uniquement pour les enfants de plus de 3 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Faire garder son enfant à domicile est généralement plus coûteux et bénéficie d’un encadrement moins strict que les structures collectives."
+    },
+    {
+      "id": "vf-q106",
+      "question": "Quel est l’âge à partir duquel la scolarité devient obligatoire en France ?",
+      "options": [
+        "2 ans",
+        "3 ans",
+        "5 ans",
+        "6 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tous les enfants résidant en France doivent aller à l’école dès l’âge de 3 ans."
+    },
+    {
+      "id": "vf-q107",
+      "question": "Quel diplôme obtient un élève à la fin du collège ?",
+      "options": [
+        "Le Baccalauréat",
+        "Le Diplôme National du Brevet (DNB)",
+        "Le Certificat d’Études Primaires",
+        "Le Brevet d’Études Supérieures"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le diplôme délivré à la fin du collège s’appelle le brevet des collèges ou diplôme national du brevet (DNB)."
+    },
+    {
+      "id": "vf-q108",
+      "question": "Combien de niveaux comporte le cycle du cours élémentaire (école primaire) ?",
+      "options": [
+        "3 niveaux",
+        "4 niveaux",
+        "5 niveaux",
+        "6 niveaux"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le cours élémentaire comprend cinq niveaux : CP, CE1, CE2, CM1 et CM2."
+    },
+    {
+      "id": "vf-q109",
+      "question": "Parmi les objectifs suivants, lequel n’est pas mentionné comme bénéfice de l’école maternelle ?",
+      "options": [
+        "Apprendre la langue française",
+        "Se préparer à l’université",
+        "Faire des amis",
+        "Apprendre à vivre ensemble"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’école maternelle vise à apprendre la langue, à vivre ensemble, à se faire des amis, mais pas à préparer directement à l’université."
+    },
+    {
+      "id": "vf-q110",
+      "question": "Après quel âge la scolarité n’est plus obligatoire en France, tout en restant possible ?",
+      "options": [
+        "15 ans",
+        "16 ans",
+        "17 ans",
+        "18 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Après 16 ans, la scolarité n’est plus obligatoire, mais les jeunes peuvent poursuivre leurs études."
+    },
+    {
+      "id": "vf-q111",
+      "question": "Comment les parents peuvent-ils inscrire leur enfant dans une école publique ?",
+      "options": [
+        "En contactant directement la mairie ou l’école la plus proche de leur domicile",
+        "En remplissant un formulaire en ligne sur le site du ministère de l’Éducation nationale",
+        "En demandant une autorisation spéciale auprès du préfet",
+        "En payant des frais d’inscription auprès de l’établissement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’inscription dans une école publique se fait simplement en s’adressant à la mairie ou à l’école de proximité."
+    },
+    {
+      "id": "vf-q112",
+      "question": "Quel est l’un des principes fondamentaux de l’École républicaine mentionnés dans le texte ?",
+      "options": [
+        "La gratuité",
+        "Le caractère sélectif",
+        "Le financement privé",
+        "L’obligation de porter un uniforme"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’École républicaine est décrite comme gratuite, laïque et obligatoire."
+    },
+    {
+      "id": "vf-q113",
+      "question": "Parmi les affirmations suivantes, laquelle est vraie concernant les diplômes délivrés par les écoles privées ?",
+      "options": [
+        "Tous les diplômes privés ont la même valeur officielle que ceux des écoles publiques",
+        "Aucun diplôme privé n’a de valeur officielle",
+        "Certains diplômes privés n’ont pas de valeur officielle",
+        "Les diplômes privés sont toujours reconnus à l’étranger"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le texte précise que les diplômes des écoles privées n’ont pas tous une valeur officielle."
+    },
+    {
+      "id": "vf-q114",
+      "question": "Quel motif peut justifier l’autorisation de « faire l’école à la maison » ?",
+      "options": [
+        "Le souhait du parent de suivre un programme éducatif différent",
+        "L’état de santé de l’enfant",
+        "Le désir de l’enfant de voyager fréquemment",
+        "Le fait que l’enfant ait de très bonnes notes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’état de santé de l’enfant est l’un des motifs encadrés par la loi pour l’instruction à domicile."
+    },
+    {
+      "id": "vf-q115",
+      "question": "Quel avantage les écoles privées offrent‑elles par rapport aux écoles publiques selon le texte ?",
+      "options": [
+        "L’absence totale de contrôle de l’État",
+        "La possibilité d’inscrire son enfant sans contrainte de domicile",
+        "Des frais d’inscription toujours inférieurs à ceux des écoles publiques",
+        "Des diplômes toujours reconnus officiellement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les écoles privées permettent d’inscrire l’enfant sans être limité par le lieu de résidence."
+    },
+    {
+      "id": "vf-q116",
+      "question": "Quel est l’âge légal obligatoire pour fréquenter l’école en France ?",
+      "options": [
+        "De 3 à 16 ans",
+        "De 6 à 18 ans",
+        "De 5 à 15 ans",
+        "De 2 à 12 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi impose la scolarité obligatoire de 3 à 16 ans."
+    },
+    {
+      "id": "vf-q117",
+      "question": "Quel pourcentage d’enfants scolarisés parle une langue autre que le français à la maison ?",
+      "options": [
+        "Plus d’un tiers",
+        "La moitié",
+        "Un quart",
+        "Tous"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Plus d’un tiers des élèves utilisent une autre langue chez eux."
+    },
+    {
+      "id": "vf-q118",
+      "question": "Quel dispositif est destiné aux élèves allophones nouvellement arrivés ?",
+      "options": [
+        "UPE2A",
+        "UPE2A‑NSA",
+        "Classe ordinaire",
+        "Programme d’échange"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’UPE2A accueille les élèves allophones qui viennent d’arriver en France."
+    },
+    {
+      "id": "vf-q119",
+      "question": "À quoi sert le test de positionnement effectué à l’entrée de l’école ?",
+      "options": [
+        "Déterminer le niveau de français et orienter vers le dispositif adapté",
+        "Attribuer un enseignant particulier",
+        "Évaluer les compétences en mathématiques",
+        "Décider du lieu de résidence"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le test permet de placer l’élève dans le dispositif (UPE2A ou UPE2A‑NSA) qui correspond à son niveau de français."
+    },
+    {
+      "id": "vf-q120",
+      "question": "Une fois qu’un élève allophone maîtrise le français, quels cours peut‑il suivre ?",
+      "options": [
+        "Les mêmes cours que les autres enfants",
+        "Des cours de langue uniquement",
+        "Des cours de rattrapage en mathématiques",
+        "Aucun cours, il quitte l’école"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Après la maîtrise du français, l’élève intègre les classes ordinaires comme les autres élèves."
+    },
+    {
+      "id": "vf-q121",
+      "question": "Quel document l’école utilise-t-elle pour informer les parents des résultats pendant le cours élémentaire ?",
+      "options": [
+        "Livret scolaire",
+        "Bulletin scolaire",
+        "Carnet de liaison",
+        "Rapport d’inspection"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pendant le cours élémentaire, les informations sont transmises aux parents via le livret scolaire."
+    },
+    {
+      "id": "vf-q122",
+      "question": "À quel niveau scolaire les informations sont‑elles transmises par le bulletin scolaire ?",
+      "options": [
+        "Maternelle",
+        "Collège et lycée",
+        "Primaire",
+        "Université"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le bulletin scolaire est utilisé à partir du collège et jusqu’au lycée."
+    },
+    {
+      "id": "vf-q123",
+      "question": "Lequel des éléments suivants n’est PAS une tâche attendue des parents selon le texte ?",
+      "options": [
+        "Lire le livret scolaire ou le bulletin scolaire",
+        "Participer aux réunions parents‑professeurs",
+        "Enseigner les matières principales",
+        "Faire les démarches administratives (inscriptions…)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les parents doivent accompagner la scolarité, mais ils ne sont pas censés enseigner les matières principales."
+    },
+    {
+      "id": "vf-q124",
+      "question": "Où les parents peuvent‑ils consulter le carnet de liaison ?",
+      "options": [
+        "Sur le tableau d’affichage de l’école",
+        "Sur l’espace numérique de travail (ENT) de l’école",
+        "Dans le cahier de l’élève",
+        "Sur le site du ministère de l’Éducation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le carnet de liaison est souvent numérique et accessible via l’ENT de l’école."
+    },
+    {
+      "id": "vf-q125",
+      "question": "Quel rôle les représentants des parents d’élèves remplissent‑ils ?",
+      "options": [
+        "Décider du programme national",
+        "Participer aux décisions importantes concernant l’organisation de l’école",
+        "Enseigner les cours de soutien",
+        "Gérer le budget de l’école"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les représentants des parents d’élèves participent aux décisions importantes relatives à l’organisation de l’école."
+    },
+    {
+      "id": "vf-q126",
+      "question": "Que signifie l’acronyme OEPRE ?",
+      "options": [
+        "Ouvrir l’École aux Parents pour la Réussite des Enfants",
+        "Organisation des Écoles pour la Promotion de la Recherche Éducative",
+        "Office d’Échange et de Promotion des Ressources Éducatives",
+        "Observatoire des Écoles et des Parents en Réseau"
+      ],
+      "correctAnswer": 0,
+      "explanation": "OEPRE désigne « Ouvrir l’École aux Parents pour la Réussite des Enfants », le nom du dispositif."
+    },
+    {
+      "id": "vf-q127",
+      "question": "Quels ministères sont à l’origine du dispositif OEPRE ?",
+      "options": [
+        "Ministère de l’Intérieur et Ministère de l’Éducation Nationale",
+        "Ministère de la Santé et Ministère de l’Agriculture",
+        "Ministère de la Culture et Ministère du Travail",
+        "Ministère de la Justice et Ministère des Affaires étrangères"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le dispositif OEPRE est porté conjointement par le Ministère de l’Intérieur et le Ministère de l’Éducation Nationale."
+    },
+    {
+      "id": "vf-q128",
+      "question": "Quel public cible prioritairement le dispositif OEPRE ?",
+      "options": [
+        "Les parents étrangers souhaitant s’intégrer en France",
+        "Les enseignants français en formation continue",
+        "Les élèves de lycée préparant le baccalauréat",
+        "Les travailleurs saisonniers du secteur agricole"
+      ],
+      "correctAnswer": 0,
+      "explanation": "OEPRE s’adresse aux parents étrangers afin de les aider à accompagner la réussite scolaire de leurs enfants."
+    },
+    {
+      "id": "vf-q129",
+      "question": "Parmi les thèmes suivants, lequel fait partie du programme de formation OEPRE ?",
+      "options": [
+        "Apprentissage de la langue française, des valeurs républicaines et du fonctionnement de l’école",
+        "Initiation à la programmation informatique avancée",
+        "Cours de cuisine gastronomique française",
+        "Formation à la conduite automobile"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les ateliers OEPRE portent sur la langue française, les valeurs de la République et le fonctionnement de l’école."
+    },
+    {
+      "id": "vf-q130",
+      "question": "Quelle est la durée totale de la formation OEPRE au cours d’une année scolaire ?",
+      "options": [
+        "Entre 60 et 120 heures réparties sur l’année",
+        "Exactement 30 heures en une seule semaine",
+        "Plus de 200 heures, toutes en soirée",
+        "10 heures, uniquement pendant les vacances d’été"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La formation OEPRE dure entre 60 h et 120 h, réparties sur l’ensemble de l’année scolaire."
+    },
+    {
+      "id": "vf-q131",
+      "question": "Où se déroulent habituellement les ateliers OEPRE ?",
+      "options": [
+        "Dans les écoles, collèges et lycées, partout en France",
+        "Uniquement dans les centres culturels des ambassades étrangères",
+        "Dans les salles de sport municipales",
+        "Exclusivement en ligne, via une plateforme numérique"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les ateliers OEPRE sont organisés dans les établissements scolaires (écoles, collèges, lycées) sur tout le territoire français."
+    },
+    {
+      "id": "vf-q132",
+      "question": "Quels documents sont obligatoires pour conduire une voiture personnelle en France ?",
+      "options": [
+        "Permis de conduire valide, carte grise à jour, assurance automobile",
+        "Passeport, assurance automobile, contrôle technique",
+        "Permis de conduire valide, vignette Crit'Air, assurance automobile",
+        "Carte grise à jour, certificat de conformité, permis de conduire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La loi exige un permis valide, une carte grise à jour et une assurance pour chaque véhicule."
+    },
+    {
+      "id": "vf-q133",
+      "question": "Quel est l’âge minimum requis pour passer le permis de conduire en France ?",
+      "options": [
+        "16 ans",
+        "17 ans",
+        "18 ans",
+        "20 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il faut avoir au moins 17 ans pour s’inscrire à l’examen du permis de conduire."
+    },
+    {
+      "id": "vf-q134",
+      "question": "Combien d’heures de formation pratique minimum sont obligatoires pour obtenir le permis de conduire ?",
+      "options": [
+        "10 heures",
+        "15 heures",
+        "20 heures",
+        "30 heures"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La formation pratique comprend au minimum 20 heures de conduite."
+    },
+    {
+      "id": "vf-q135",
+      "question": "Quel dispositif permet de financer le permis de conduire à 1 € par jour pour les jeunes de 15 à 25 ans ?",
+      "options": [
+        "Aide de la CAF",
+        "Permis à 1 € par jour",
+        "Prêt étudiant",
+        "Bourse Erasmus"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le dispositif « permis à 1 € par jour » est destiné aux 15‑25 ans pour faciliter le financement du permis."
+    },
+    {
+      "id": "vf-q136",
+      "question": "Si vous restez plus d’un an en France avec un permis étranger non échangeable, que devez‑vous faire pour continuer à conduire ?",
+      "options": [
+        "Continuer à conduire avec le même permis étranger",
+        "Demander un titre de séjour uniquement",
+        "Passer le permis de conduire français",
+        "Acheter une voiture sans permis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Lorsque le permis étranger n’est pas échangeable, il faut obtenir le permis français après un an de séjour."
+    },
+    {
+      "id": "vf-q137",
+      "question": "Qui doit obligatoirement être inscrit à France Travail dès qu’il n’a pas d’emploi ?",
+      "options": [
+        "Toute personne étrangère en situation régulière (titre de séjour, réfugié, protection internationale)",
+        "Seules les personnes qui parlent couramment le français",
+        "Uniquement les personnes de plus de 50 ans",
+        "Tous les citoyens français résidant en France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’inscription est obligatoire pour toute personne étrangère en situation régulière qui ne travaille pas."
+    },
+    {
+      "id": "vf-q138",
+      "question": "Quel est l’objectif principal du questionnaire d’orientation proposé par France Travail ?",
+      "options": [
+        "Évaluer les besoins de la personne en matière d’emploi et de formation",
+        "Attribuer un niveau de revenu mensuel",
+        "Déterminer la nationalité du demandeur",
+        "Attribuer un logement social"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le questionnaire sert à faire un premier point sur les besoins, le niveau de français, les compétences et l’usage du numérique."
+    },
+    {
+      "id": "vf-q139",
+      "question": "Quelle fonctionnalité n’est PAS proposée par l’application « Travailler en France » ?",
+      "options": [
+        "Proposer des offres d’emploi traduites dans plusieurs langues",
+        "Permettre de créer un CV facilement même sans maîtriser le français",
+        "Attribuer automatiquement un emploi à l’utilisateur",
+        "Fournir des informations utiles pour la recherche d’emploi"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’application aide à la recherche d’emploi mais n’attribue pas automatiquement un poste."
+    },
+    {
+      "id": "vf-q140",
+      "question": "Après l’inscription automatique à France Travail, quelle est la première démarche à effectuer pour bénéficier des services ?",
+      "options": [
+        "Remplir le questionnaire d’orientation",
+        "Se rendre directement à la préfecture",
+        "Demander un nouveau titre de séjour",
+        "Téléphoner au 09 84 98 37 94 sans autre action"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La première étape après l’inscription est de répondre au questionnaire d’orientation."
+    },
+    {
+      "id": "vf-q141",
+      "question": "Que doit‑on faire pour rester inscrit à France Travail lorsqu’on renouvelle son titre de séjour ?",
+      "options": [
+        "Apporter le nouveau titre de séjour à l’accueil de l’agence France Travail dès réception",
+        "Annuler son inscription et en créer une nouvelle après le renouvellement",
+        "Ne rien faire, l’inscription reste valable automatiquement",
+        "Envoyer le nouveau titre de séjour par courrier recommandé à la préfecture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il faut présenter le nouveau titre de séjour à l’accueil de l’agence France Travail dès que possible."
+    },
+    {
+      "id": "vf-q142",
+      "question": "Quel est le nombre maximum d'heures de formation au français que l'employeur peut financer, et quel pourcentage du temps de travail peut être consacré à cette formation ?",
+      "options": [
+        "40 heures, 5 % du temps de travail",
+        "80 heures, jusqu’à 10 % du temps de travail",
+        "100 heures, 20 % du temps de travail",
+        "60 heures, 15 % du temps de travail"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'employeur peut financer jusqu’à 80 heures de formation, avec une répartition pouvant atteindre 10 % du temps de travail hebdomadaire."
+    },
+    {
+      "id": "vf-q143",
+      "question": "Quel droit d'absence le salarié obtient‑il lorsqu’il utilise son CPF pour suivre une formation de français ?",
+      "options": [
+        "14 heures (2 jours)",
+        "28 heures (4 jours)",
+        "35 heures (5 jours)",
+        "56 heures (8 jours)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le CPF donne droit à une absence de 28 heures, soit l’équivalent de 4 jours de travail à plein temps."
+    },
+    {
+      "id": "vf-q144",
+      "question": "Quel organisme délivre l’attestation de comparabilité demandée pour étudier ou travailler en France ?",
+      "options": [
+        "Le Ministère de l’Éducation nationale",
+        "Le Centre Enic‑Naric",
+        "Pôle Emploi",
+        "La Chambre de Commerce et d’Industrie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’attestation de comparabilité est fournie par le Centre Enic‑Naric."
+    },
+    {
+      "id": "vf-q145",
+      "question": "Parmi les professions suivantes, laquelle n’est pas considérée comme réglementée en France pour la reconnaissance du diplôme ?",
+      "options": [
+        "Avocat",
+        "Médecin",
+        "Architecte",
+        "Commercial"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Avocat, médecin et architecte sont des métiers réglementés ; commercial ne l’est pas."
+    },
+    {
+      "id": "vf-q146",
+      "question": "Quelle est la durée minimale d’expérience requise pour pouvoir demander une Validation des Acquis de l’Expérience (VAE) ?",
+      "options": [
+        "6 mois",
+        "1 an",
+        "2 ans",
+        "5 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une expérience d’au moins un an, directement liée au diplôme visé, est nécessaire pour la VAE."
+    },
+    {
+      "id": "vf-q147",
+      "question": "Quel frais est exonéré pour les demandeurs d’asile ou les réfugiés lors de la procédure de reconnaissance d’un diplôme étranger ?",
+      "options": [
+        "Les 20 € de dépôt du dossier",
+        "Les 100 € d’analyse du dossier",
+        "Les deux frais (20 € + 100 €)",
+        "Aucun frais n’est exonéré"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les demandeurs d’asile, réfugiés et bénéficiaires de protection subsidiaire ou temporaire sont exemptés des deux frais."
+    },
+    {
+      "id": "vf-q148",
+      "question": "Qu’est‑ce qu’un contrat de travail ?",
+      "options": [
+        "Un accord où une personne travaille gratuitement pour un ami",
+        "Un accord où une personne travaille contre salaire pour le compte d’un employeur",
+        "Un accord de volontariat sans rémunération",
+        "Un accord réservé aux travailleurs indépendants"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le contrat de travail lie un salarié à un employeur contre rémunération."
+    },
+    {
+      "id": "vf-q149",
+      "question": "Parmi les affirmations suivantes concernant le CDI, laquelle est fausse ?",
+      "options": [
+        "Il n’a pas de date de fin",
+        "Il peut être à temps plein ou à temps partiel",
+        "Il doit obligatoirement être rédigé par écrit",
+        "Il peut être rompu par l’employeur ou le salarié"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le CDI n’est pas obligé d’être écrit, même si une forme écrite est recommandée."
+    },
+    {
+      "id": "vf-q150",
+      "question": "Quelle est la durée maximale habituelle d’un CDD ?",
+      "options": [
+        "6 mois",
+        "12 mois",
+        "18 mois",
+        "Il n’y a pas de limite"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En règle générale, un CDD ne doit pas dépasser 18 mois."
+    },
+    {
+      "id": "vf-q151",
+      "question": "Quel type de contrat est destiné à une tâche très courte (quelques heures ou une journée) ?",
+      "options": [
+        "CDI",
+        "CDD d’usage (contrat d’extra)",
+        "Contrat de professionnalisation",
+        "Contrat d’intérim"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le CDD d’usage, appelé aussi contrat d’extra, sert à des missions très brèves."
+    },
+    {
+      "id": "vf-q152",
+      "question": "En cas de cumul de plusieurs contrats, quelle règle doit être respectée ?",
+      "options": [
+        "Travailler jusqu’à 12 heures par jour",
+        "Dépasser 1 607 heures par an si l’on a plusieurs contrats",
+        "Ne pas dépasser 48 heures de travail par semaine (ou 44 heures en moyenne sur 12 semaines)",
+        "Une clause d’exclusivité autorise le cumul d’une autre activité"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La législation impose un plafond de 48 h/semaine, ou 44 h en moyenne sur 12 semaines."
+    },
+    {
+      "id": "vf-q153",
+      "question": "Que signifie une clause d’exclusivité dans un contrat de travail ?",
+      "options": [
+        "Le salarié peut travailler pour plusieurs employeurs sans restriction",
+        "Le salarié doit travailler uniquement pour l’employeur et ne peut pas cumuler d’autre activité professionnelle",
+        "Le salarié doit effectuer au moins 40 heures de travail chaque semaine",
+        "Le salarié ne peut travailler qu’à temps partiel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une clause d’exclusivité interdit au salarié de cumuler le contrat avec une autre activité professionnelle."
+    },
+    {
+      "id": "vf-q154",
+      "question": "Que comprend l’autorité parentale ?",
+      "options": [
+        "Seulement les droits des parents",
+        "Seulement les devoirs des parents",
+        "Les droits et les devoirs des parents",
+        "Seulement la garde physique de l’enfant"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L’autorité parentale regroupe à la fois les droits et les devoirs que les parents ont envers leur enfant."
+    },
+    {
+      "id": "vf-q155",
+      "question": "À quel moment les parents doivent‑ils déclarer leur enfant à la mairie ?",
+      "options": [
+        "Lorsqu’il entre à l’école primaire",
+        "À la naissance de l’enfant",
+        "Quand l’enfant atteint 3 ans",
+        "Au moment où l’enfant obtient son premier emploi"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La déclaration de naissance à la mairie doit être faite dès la naissance de l’enfant."
+    },
+    {
+      "id": "vf-q156",
+      "question": "Parmi les obligations suivantes, laquelle n’est pas un devoir des parents au titre de l’autorité parentale ?",
+      "options": [
+        "Surveiller la sécurité et les déplacements de l’enfant",
+        "Assurer l’éducation scolaire et morale de l’enfant",
+        "Gérer les biens de l’enfant jusqu’à ses 16 ans",
+        "Utiliser la violence physique pour discipliner l’enfant"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La violence physique est interdite ; les parents doivent exercer leurs devoirs sans recourir à la violence."
+    },
+    {
+      "id": "vf-q157",
+      "question": "Jusqu’à quel âge les parents ont‑ils la jouissance légale des biens de leur enfant ?",
+      "options": [
+        "12 ans",
+        "16 ans",
+        "18 ans",
+        "21 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les parents peuvent jouir légalement des biens de l’enfant jusqu’à ses 16 ans."
+    },
+    {
+      "id": "vf-q158",
+      "question": "L’autorité parentale prend fin dans les cas suivants, sauf :",
+      "options": [
+        "Lorsque l’enfant atteint 18 ans",
+        "Lorsque l’enfant est émancipé avant 18 ans",
+        "Lorsque les parents décident de quitter le pays",
+        "En cas de retrait judiciaire de l’autorité parentale"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le départ du pays des parents ne met pas fin à l’autorité parentale ; les autres situations y mettent fin."
     }
   ]
 }
