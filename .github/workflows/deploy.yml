@@ -29,22 +29,22 @@ jobs:
         with:
           node-version: '24'
           cache: 'npm'
-          cache-dependency-path: fiches/package-lock.json
+          cache-dependency-path: website/package-lock.json
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./fiches
+        working-directory: ./website
 
       - name: Install Chromium
         run: sudo apt-get update && sudo apt-get install -y chromium-browser
 
       - name: Generate pages from JSON data
         run: npm run generate
-        working-directory: ./fiches
+        working-directory: ./website
 
       - name: Build Astro site
         run: npm run build
-        working-directory: ./fiches
+        working-directory: ./website
         env:
           CHROMIUM_PATH: /usr/bin/chromium-browser
 
@@ -53,14 +53,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: built-site
-          path: fiches/dist
+          path: website/dist
           retention-days: 1
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
-          path: fiches/dist
+          path: website/dist
 
   deploy:
     needs: build
@@ -90,7 +90,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: built-site
-          path: fiches/dist
+          path: website/dist
 
       - name: Deploy to Cloudflare Pages
         id: cloudflare
@@ -99,7 +99,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: open-formation-civique
-          directory: fiches/dist
+          directory: website/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment PR with preview URL
@@ -119,7 +119,6 @@ jobs:
             The preview will update automatically with each new commit to this PR.
             
             ---
-            *Powered by [Cloudflare Pages](https://pages.cloudflare.com/) 🇪🇺*`;
             
             github.rest.issues.createComment({
               owner: context.repo.owner,

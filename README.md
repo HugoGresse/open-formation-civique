@@ -13,7 +13,7 @@ Disponible sur l'url : https://open-formation-civique.fr
 ├── crawler/                    # Crawler pour extraire les données
 │   ├── formation-civique-data.json
 │   └── ...
-└── fiches/                     # Site web Starlight
+└── website/                     # Site web Starlight
     ├── src/content/docs/
     ├── generate-pages.js
     └── ...
@@ -36,7 +36,7 @@ npm run start && npm run process
 Le site web Starlight est généré automatiquement à partir des données JSON.
 
 ```bash
-cd fiches
+cd website
 npm install
 npm run generate  # Génère les pages depuis le JSON
 npm run dev       # Lance le serveur de développement
@@ -65,7 +65,7 @@ Le site est configuré pour être déployé automatiquement sur GitHub Pages via
    - Sous "Source", sélectionnez "GitHub Actions"
 
 3. **Vérifier la configuration** :
-   - Dans [fiches/astro.config.mjs](fiches/astro.config.mjs), vérifiez que :
+   - Dans [website/astro.config.mjs](website/astro.config.mjs), vérifiez que :
      - `site` correspond à `https://VOTRE-USERNAME.github.io`
      - `base` correspond à `/VOTRE-REPO-NAME`
    - Si vous utilisez un domaine personnalisé, ajustez `site` en conséquence

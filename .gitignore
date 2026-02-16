@@ -29,9 +29,9 @@ yarn-error.log*
 Thumbs.db
 
 # Astro/Starlight build output
-fiches/dist/
-fiches/.astro/
+website/dist/
+website/.astro/
 
 # Generated content (regenerated from JSON on build)
 # Note: The entire docs directory is generated, so we exclude it all
-fiches/src/content/docs/
+website/src/content/docs/

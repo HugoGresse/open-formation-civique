@@ -46,7 +46,7 @@ npm run preview
 ## 📁 Structure
 
 ```
-fiches/
+website/
 ├── src/
 │   └── content/
 │       └── docs/
