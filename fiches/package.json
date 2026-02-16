@@ -10,16 +10,18 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate": "npx tsx scripts/generate-pages.ts",
-    "generate:quizzes": "node --env-file=.env scripts/generate-quizzes.js"
+    "generate:quizzes": "npx tsx --env-file=.env scripts/generate-quizzes.ts"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",
     "@openrouter/sdk": "^0.5.1",
     "astro": "^5.12.2",
+    "cli-progress": "^3.12.0",
     "p-limit": "^7.3.0",
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
     "starlight-to-pdf": "^1.4.0",
     "tsx": "^4.19.0"
   }
