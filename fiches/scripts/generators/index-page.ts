@@ -54,6 +54,9 @@ import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
   <Card title="RGPD et sans cookie" icon="approve-check">
     Ce site respecte votre vie privée. Aucun cookie n'est utilisé et aucune donnée personnelle n'est collectée. Les analytics sont anonymes et conformes au RGPD.
   </Card>
+  <Card title="Quiz générés par IA" icon="puzzle">
+    Les questions des quiz sont générées automatiquement par à partir du contenu des fiches. Elles peuvent contenir quelques erreurs ou imprécisions.
+  </Card>
 </CardGrid>
 `;
 
