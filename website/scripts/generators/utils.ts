@@ -41,6 +41,7 @@ export const officialCspDirMap: Record<string, string> = {
   'Droits et devoirs': 'csp-droits-et-devoirs',
   'Histoire, géographie et culture': 'csp-histoire-geographie-culture',
   'Vivre dans la société française': 'csp-vivre-en-france',
+  'Mise en situation': 'csp-mise-en-situation'
 };
 
 /** Map for official CR quiz directories */
@@ -48,6 +49,7 @@ export const officialCrDirMap: Record<string, string> = {
   'Principes et valeurs de la République': 'cr-principes-et-valeurs',
   'Système institutionnel et politique': 'cr-systeme-institutionnel',
   'Droits et devoirs': 'cr-droits-et-devoirs',
+  'Mise en situation': 'cr-mise-en-sitation'
 };
 
 /** ID prefixes for official quiz questions */
@@ -57,9 +59,11 @@ export const officialIdPrefixMap: Record<string, string> = {
   'csp-droits-et-devoirs': 'csp-dd',
   'csp-histoire-geographie-culture': 'csp-hgc',
   'csp-vivre-en-france': 'csp-vf',
+  'csp-mise-en-situation': 'csp-ms',
   'cr-principes-et-valeurs': 'cr-pv',
   'cr-systeme-institutionnel': 'cr-si',
   'cr-droits-et-devoirs': 'cr-dd',
+  'cr-mise-en-situation': 'cr-ms',
 };
 
 /** All quiz IDs including official quizzes */
