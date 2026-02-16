@@ -30,7 +30,7 @@ export default defineConfig({
 					},
 				},
 			],
-			customCss: ['./src/styles/quiz.css'],
+			customCss: ['./src/styles/quiz.css', './src/styles/content.css'],
 			defaultLocale: 'root',
 			locales: {
 				root: {

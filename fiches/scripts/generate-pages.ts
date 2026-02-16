@@ -1,4 +1,4 @@
-import { readFileSync, mkdirSync } from 'fs';
+import { readFileSync, mkdirSync, cpSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import type { CrawlerData } from './generators/types.js';
@@ -17,6 +17,14 @@ const data: CrawlerData = JSON.parse(
 // Create content directory structure
 const contentDir = join(ROOT_DIR, 'src/content/docs');
 mkdirSync(contentDir, { recursive: true });
+
+// Copy crawler images to public/images/
+const crawlerImagesDir = join(__dirname, '../../crawler/images');
+const publicImagesDir = join(ROOT_DIR, 'public/images');
+if (existsSync(crawlerImagesDir)) {
+  cpSync(crawlerImagesDir, publicImagesDir, { recursive: true });
+  console.log('✓ Copied crawler images to public/images/');
+}
 
 // Generate all pages
 generateIndexPage(data, contentDir);

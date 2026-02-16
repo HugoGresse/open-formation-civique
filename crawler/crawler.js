@@ -1,5 +1,83 @@
 import { CheerioCrawler, Dataset } from 'crawlee';
 import TurndownService from 'turndown';
+import { mkdir, writeFile } from 'fs/promises';
+import { existsSync } from 'fs';
+import { join } from 'path';
+
+const IMAGES_DIR = './images';
+
+// Ensure images directory exists
+await mkdir(IMAGES_DIR, { recursive: true });
+
+/**
+ * Extract a clean filename from an image URL.
+ * "https://s3.../images/file.original.jpg?X-Amz-..." → "file.jpg"
+ */
+function getImageFilename(url) {
+    try {
+        const pathname = new URL(url).pathname;
+        const filename = pathname.split('/').pop();
+        // Remove .original suffix: "file.original.jpg" → "file.jpg"
+        return filename.replace(/\.original\./, '.');
+    } catch {
+        return null;
+    }
+}
+
+/**
+ * Download an image and save it locally. Returns the local filename or null.
+ */
+async function downloadImage(imageUrl) {
+    const filename = getImageFilename(imageUrl);
+    if (!filename) return null;
+
+    const localPath = join(IMAGES_DIR, filename);
+
+    // Skip if already downloaded
+    if (existsSync(localPath)) {
+        return filename;
+    }
+
+    try {
+        const response = await fetch(imageUrl);
+        if (!response.ok) {
+            console.warn(`  ⚠ Failed to download image (${response.status}): ${filename}`);
+            return null;
+        }
+        const buffer = Buffer.from(await response.arrayBuffer());
+        await writeFile(localPath, buffer);
+        console.log(`  📷 Downloaded: ${filename}`);
+        return filename;
+    } catch (error) {
+        console.warn(`  ⚠ Error downloading image ${filename}: ${error.message}`);
+        return null;
+    }
+}
+
+/**
+ * Find all images in the given Cheerio selection, download them,
+ * and replace their src attributes with local paths.
+ */
+async function downloadAndReplaceImages($, selector) {
+    const images = $(selector).find('img');
+    const downloads = [];
+
+    images.each((_, img) => {
+        const $img = $(img);
+        const src = $img.attr('src');
+        if (src && src.startsWith('http')) {
+            downloads.push(
+                downloadImage(src).then(filename => {
+                    if (filename) {
+                        $img.attr('src', `/images/${filename}`);
+                    }
+                })
+            );
+        }
+    });
+
+    await Promise.all(downloads);
+}
 
 /**
  * Crawler for formation-civique.interieur.gouv.fr
@@ -322,6 +400,10 @@ const crawler = new CheerioCrawler({
 
                 // Extract the main content
                 const mainContent = $('main, article, .fr-container').first();
+
+                // Download images and replace URLs with local paths
+                await downloadAndReplaceImages($, mainContent);
+
                 const htmlContent = mainContent.html();
 
                 // Convert HTML to Markdown
@@ -361,6 +443,10 @@ const crawler = new CheerioCrawler({
             let combinedHtml = '';
 
             if (containers.length >= 4) {
+                // Download images from all relevant containers
+                for (let i = 3; i < containers.length; i++) {
+                    await downloadAndReplaceImages($, containers.eq(i));
+                }
                 // Get all containers from index 3 (4th container) onwards
                 for (let i = 3; i < containers.length; i++) {
                     combinedHtml += containers.eq(i).html() || '';
@@ -368,7 +454,9 @@ const crawler = new CheerioCrawler({
                 log.info(`✓ Extracted content from ${containers.length - 3} containers (4th onwards)`);
             } else {
                 // Fallback to main content if less than 4 containers
-                combinedHtml = $('main, article, .fr-container').first().html() || '';
+                const fallbackContent = $('main, article, .fr-container').first();
+                await downloadAndReplaceImages($, fallbackContent);
+                combinedHtml = fallbackContent.html() || '';
                 log.info(`✓ Fallback: Extracted content from main element`);
             }
 

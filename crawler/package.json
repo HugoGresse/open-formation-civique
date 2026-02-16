@@ -7,7 +7,6 @@
   "scripts": {
     "start": "node crawler.js",
     "process": "node process-data.js",
-    "example": "node example-usage.js",
     "clean": "rm -rf storage"
   },
   "keywords": [

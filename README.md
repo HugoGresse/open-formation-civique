@@ -1,8 +1,12 @@
 # Open Formation Civique
 
-Crawler et site web de fiches thématiques pour la formation civique française, basé sur les contenus de [formation-civique.interieur.gouv.fr](https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/).
+Site web de fiches thématiques et de quiz pour la formation civique française, basé sur les contenus de [formation-civique.interieur.gouv.fr](https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/).
 
-## 📁 Structure du projet
+Disponible sur l'url : https://open-formation-civique.fr 
+
+
+
+## 📁 Structure du projet et contribution
 
 ```
 .
@@ -15,19 +19,19 @@ Crawler et site web de fiches thématiques pour la formation civique française,
     └── ...
 ```
 
-## 🚀 Démarrage rapide
+### 🚀 Démarrage rapide
 
-### Crawler
+#### 1. Crawler
 
 Le crawler extrait toutes les fiches depuis le site officiel et les sauvegarde en JSON.
 
 ```bash
 cd crawler
 npm install
-npm run start
+npm run start && npm run process
 ```
 
-### Site web
+#### 2. Site web
 
 Le site web Starlight est généré automatiquement à partir des données JSON.
 
@@ -40,11 +44,11 @@ npm run dev       # Lance le serveur de développement
 
 Le site sera accessible sur `http://localhost:4321`
 
-## 🌐 Déploiement sur GitHub Pages
+#### 🌐 Déploiement sur GitHub Pages
 
 Le site est configuré pour être déployé automatiquement sur GitHub Pages via GitHub Actions.
 
-### Configuration requise
+##### Configuration requise
 
 1. **Créer un repository GitHub** (si ce n'est pas déjà fait) :
    ```bash
@@ -66,7 +70,7 @@ Le site est configuré pour être déployé automatiquement sur GitHub Pages via
      - `base` correspond à `/VOTRE-REPO-NAME`
    - Si vous utilisez un domaine personnalisé, ajustez `site` en conséquence
 
-### Déploiement automatique
+##### Déploiement automatique
 
 Une fois configuré, chaque push sur la branche `main` déclenchera automatiquement :
 1. L'installation des dépendances
@@ -76,7 +80,7 @@ Une fois configuré, chaque push sur la branche `main` déclenchera automatiquem
 
 Le site sera accessible à : `https://VOTRE-USERNAME.github.io/VOTRE-REPO-NAME/`
 
-### Déploiement manuel
+##### Déploiement manuel
 
 Vous pouvez aussi déclencher un déploiement manuellement :
 - Allez dans l'onglet "Actions" de votre repository
@@ -89,14 +93,6 @@ Vous pouvez aussi déclencher un déploiement manuellement :
 - **Format** : JSON structuré avec 5 thématiques principales
 - **Dernière mise à jour** : Voir `crawledAt` dans [crawler/formation-civique-data.json](crawler/formation-civique-data.json)
 
-### Les 5 thématiques
-
-1. **Principes et valeurs de la République** - Devise, symboles et laïcité
-2. **Système institutionnel et politique** - Démocratie, séparation des pouvoirs, institutions
-3. **Droits et devoirs** - Droits fondamentaux et obligations
-4. **Histoire, géographie et culture** - Histoire de France, géographie, culture
-5. **Vivre dans la société française** - Démarches administratives, santé, emploi, parentalité
-
 ## 🛠️ Technologies
 
 ### Crawler
@@ -108,28 +104,6 @@ Vous pouvez aussi déclencher un déploiement manuellement :
 - [Astro](https://astro.build) - Framework web moderne
 - [Starlight](https://starlight.astro.build) - Thème de documentation
 - [Sharp](https://sharp.pixelplumbing.com) - Optimisation d'images
-
-## 📝 Mise à jour des données
-
-Pour mettre à jour le contenu du site avec les dernières données :
-
-```bash
-# 1. Crawler les nouvelles données
-cd crawler
-npm run start
-
-# 2. Régénérer les pages du site
-cd ../fiches
-npm run generate
-
-# 3. Vérifier en local
-npm run dev
-
-# 4. Commit et push (déclenche le déploiement automatique)
-git add .
-git commit -m "Update content"
-git push
-```
 
 ## 📄 License
 
