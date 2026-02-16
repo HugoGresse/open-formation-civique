@@ -44,6 +44,11 @@ export default defineConfig({
 					autogenerate: { directory: 'vivre-en-france' },
 				},
 				{
+					label: 'Quiz',
+					badge: { text: 'QCM', variant: 'note' },
+					autogenerate: { directory: 'quiz' },
+				},
+				{
 					label: 'Télécharger en PDF',
 					link: '/formation-civique.pdf',
 					badge: { text: 'PDF', variant: 'tip' },

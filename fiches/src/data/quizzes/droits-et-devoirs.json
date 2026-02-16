@@ -1,0 +1,127 @@
+{
+  "id": "droits-et-devoirs",
+  "title": "Droits et devoirs",
+  "description": "Testez vos connaissances sur les droits fondamentaux, les obligations des résidents et des citoyens.",
+  "questions": [
+    {
+      "id": "dd-q1",
+      "question": "Quel texte fondamental proclame les droits de l'homme en France depuis 1789 ?",
+      "options": [
+        "Le Code civil",
+        "La Déclaration des droits de l'homme et du citoyen",
+        "La Charte de la laïcité",
+        "Le contrat d'engagement républicain"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789 est le texte fondateur des droits fondamentaux en France."
+    },
+    {
+      "id": "dd-q2",
+      "question": "En France, les femmes et les hommes ont-ils les mêmes droits ?",
+      "options": [
+        "Oui, l'égalité entre les femmes et les hommes est garantie par la loi",
+        "Non, il existe des exceptions légales",
+        "Oui, mais seulement depuis 2010",
+        "Cela dépend du domaine concerné"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'égalité entre les femmes et les hommes est un principe fondamental garanti par la Constitution et la loi française."
+    },
+    {
+      "id": "dd-q3",
+      "question": "Parmi les choix suivants, lequel est une obligation pour toute personne résidant en France ?",
+      "options": [
+        "Voter aux élections",
+        "Parler couramment français",
+        "Payer ses impôts",
+        "Adhérer à un parti politique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le paiement des impôts est une obligation pour toute personne résidant en France. Le vote est un devoir civique mais pas une obligation légale."
+    },
+    {
+      "id": "dd-q4",
+      "question": "À partir de quel âge peut-on être appelé à siéger comme juré dans un tribunal ?",
+      "options": [
+        "18 ans",
+        "21 ans",
+        "23 ans",
+        "25 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un citoyen français peut être appelé à siéger comme juré dans une cour d'assises à partir de 23 ans."
+    },
+    {
+      "id": "dd-q5",
+      "question": "Le mariage entre personnes de même sexe est-il autorisé en France ?",
+      "options": [
+        "Non, il est interdit",
+        "Oui, il est autorisé par la loi",
+        "Seulement sous forme de PACS",
+        "Cela dépend de la commune"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le mariage entre personnes de même sexe est autorisé en France. Chacun est libre de choisir son partenaire, quel que soit son sexe."
+    },
+    {
+      "id": "dd-q6",
+      "question": "Qu'est-ce que la JDC (Journée Défense et Citoyenneté) ?",
+      "options": [
+        "Un jour férié national",
+        "Une journée obligatoire pour les jeunes liée à la défense nationale",
+        "Un examen pour obtenir la nationalité française",
+        "Une formation réservée aux militaires"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La JDC est une journée obligatoire pour tous les jeunes Français. Elle les informe sur la défense nationale et les droits et devoirs du citoyen."
+    },
+    {
+      "id": "dd-q7",
+      "question": "Les violences physiques envers les enfants (gifles, fessées) sont-elles autorisées en France ?",
+      "options": [
+        "Oui, dans le cadre de l'éducation",
+        "Oui, si elles sont modérées",
+        "Non, toute forme de violence envers les enfants est interdite",
+        "Cela dépend de l'âge de l'enfant"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Toute forme de violence envers les enfants est interdite en France, y compris les gifles et les fessées. Les violences éducatives ordinaires sont prohibées par la loi."
+    },
+    {
+      "id": "dd-q8",
+      "question": "Qu'est-ce que le droit à la présomption d'innocence ?",
+      "options": [
+        "Le droit de ne jamais être jugé",
+        "Le droit d'être considéré comme innocent tant qu'on n'est pas déclaré coupable",
+        "Le droit de ne pas témoigner contre soi-même",
+        "Le droit de choisir son avocat"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La présomption d'innocence signifie que toute personne est considérée comme innocente jusqu'à ce qu'elle soit déclarée coupable par un tribunal."
+    },
+    {
+      "id": "dd-q9",
+      "question": "Qu'est-ce que le PACS ?",
+      "options": [
+        "Un programme d'aide au logement",
+        "Un contrat d'union civile entre deux personnes",
+        "Un permis de séjour pour les couples",
+        "Un dispositif d'aide à l'emploi"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le PACS (Pacte civil de solidarité) est un contrat d'union civile entre deux personnes, de même sexe ou de sexe différent, qui souhaitent organiser leur vie commune."
+    },
+    {
+      "id": "dd-q10",
+      "question": "Le harcèlement scolaire est-il puni par la loi en France ?",
+      "options": [
+        "Non, c'est une affaire privée",
+        "Oui, c'est un délit pénal",
+        "Seulement s'il y a des violences physiques",
+        "Uniquement dans les établissements publics"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le harcèlement scolaire est un délit pénal en France. Il est sévèrement puni par la loi, qu'il soit physique, verbal ou en ligne."
+    }
+  ]
+}
