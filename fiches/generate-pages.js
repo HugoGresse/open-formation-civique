@@ -53,10 +53,6 @@ hero:
       link: principes-et-valeurs/
       icon: right-arrow
       variant: primary
-    - text: Tester vos connaissances
-      link: /quiz/
-      icon: pencil
-      variant: secondary
     - text: Télécharger en PDF
       link: /formation-civique.pdf
       icon: document
@@ -157,6 +153,4 @@ ${PDF_LINK}
     console.log(`✓ Created ${thematicDir}/${ficheSlug}.md (${pages.length} section${pages.length > 1 ? 's' : ''})`);
   });
 });
-
 console.log('\n✅ All pages generated successfully!');
-console.log(`Total pages created: ${data.contentPages.length + 1} (including index)`);
