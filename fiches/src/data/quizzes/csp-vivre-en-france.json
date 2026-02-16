@@ -1,0 +1,379 @@
+{
+  "id": "csp-vivre-en-france",
+  "title": "CSP - Vivre dans la société française",
+  "description": "Quiz officiel CSP : Vivre dans la société française",
+  "questions": [
+    {
+      "id": "csp-vf-q1",
+      "question": "Les enfants qui ne parlent pas français :",
+      "options": [
+        "ne peuvent pas aller à l'école tant qu'ils ne maîtrisent pas la langue",
+        "doivent suivre des cours payants avant d'intégrer l'école publique",
+        "sont scolarisés, car l'école est un droit pour tous les enfants",
+        "sont obligés de suivre l'école à la maison"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En France, l'accès à la scolarisation est un droit fondamental. La domiciliation permet notamment l'accès à la scolarisation, et l'acte de naissance permet d'inscrire l'enfant à l'école, quelle que soit sa maîtrise de la langue."
+    },
+    {
+      "id": "csp-vf-q2",
+      "question": "Une femme peut-elle créer son entreprise ?",
+      "options": [
+        "Oui, une femme peut créer son entreprise librement, comme un homme",
+        "Non, elle doit avoir l'autorisation de son mari ou de son père",
+        "Oui, mais seulement dans certains secteurs d'activité réservés aux femmes",
+        "Non, la création d'entreprise est réservée aux hommes en France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En France, l'égalité entre les femmes et les hommes est un principe fondamental. Une femme a le droit d'exercer une activité professionnelle et de créer une entreprise sans aucune autorisation d'un tiers."
+    },
+    {
+      "id": "csp-vf-q3",
+      "question": "À partir de quel âge un mineur peut-il travailler ?",
+      "options": [
+        "À partir de 16 ans (ou 14 ans sous conditions strictes)",
+        "À partir de 10 ans",
+        "À partir de 12 ans, avec l'accord de l'école",
+        "Jamais avant 18 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'âge légal pour travailler est de 16 ans. Toutefois, des dérogations existent pour travailler dès 14 ans (notamment pendant les vacances scolaires ou en apprentissage), sous des conditions très encadrées."
+    },
+    {
+      "id": "csp-vf-q4",
+      "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
+      "options": [
+        "La Caisse primaire d'Assurance maladie (CPAM)",
+        "La mairie de votre domicile",
+        "La préfecture",
+        "L'hôpital le plus proche"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C'est la Caisse primaire d'Assurance maladie (CPAM) qui gère les droits des assurés et effectue les remboursements des soins. Le compte Ameli permet de suivre ces remboursements."
+    },
+    {
+      "id": "csp-vf-q5",
+      "question": "Qu’est-ce qu’un numéro d’urgence ?",
+      "options": [
+        "Un numéro de téléphone gratuit disponible 24h/24 pour les situations graves (ex: 15, 17, 18, 112)",
+        "Le numéro de téléphone de votre médecin traitant",
+        "Un numéro payant pour prendre rendez-vous à la mairie",
+        "Le numéro de votre carte bancaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les numéros d'urgence (comme le 15 pour le SAMU, le 17 pour la police, le 18 pour les pompiers) sont gratuits et accessibles en permanence pour signaler un danger vital ou une situation grave nécessitant une intervention immédiate."
+    },
+    {
+      "id": "csp-vf-q6",
+      "question": "Concernant l'accès aux soins, quelle proposition est correcte ?",
+      "options": [
+        "Toute personne résidant en France de manière stable et régulière a droit à la prise en charge de ses frais de santé (PUMa)",
+        "Seules les personnes qui travaillent ont le droit d'être soignées",
+        "Il faut obligatoirement avoir la nationalité française pour aller à l'hôpital",
+        "L'accès aux soins est toujours payant et jamais remboursé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Protection Universelle Maladie (PUMa) garantit la prise en charge des frais de santé à toute personne travaillant ou résidant en France de manière stable et régulière."
+    },
+    {
+      "id": "csp-vf-q7",
+      "question": "En cas de problème de santé non urgent, à qui faut-il s’adresser en premier ?",
+      "options": [
+        "À son médecin traitant (médecin généraliste)",
+        "Directement aux urgences de l'hôpital",
+        "Au SAMU en appelant le 15",
+        "À la mairie"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour un problème de santé courant, il faut respecter le parcours de soins coordonnés en consultant d'abord son médecin traitant. Les urgences et le 15 sont réservés aux situations graves ou vitales."
+    },
+    {
+      "id": "csp-vf-q8",
+      "question": "Que doit faire un employeur pour fixer un salaire ?",
+      "options": [
+        "Il peut fixer le salaire qu'il veut, sans limite basse",
+        "Il doit respecter un montant minimum légal (le SMIC)",
+        "Il doit demander l'autorisation à la mairie",
+        "Il doit payer le même salaire à tous ses employés"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, la rémunération est libre mais l'employeur a l'obligation de respecter le salaire minimum légal (SMIC) ou les minimums prévus par la convention collective."
+    },
+    {
+      "id": "csp-vf-q9",
+      "question": "Qu'est-ce que le SMIC ?",
+      "options": [
+        "Le salaire moyen de tous les Français",
+        "Le salaire maximum autorisé en France",
+        "Le salaire minimum légal en France",
+        "Une aide financière pour les personnes sans emploi"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le SMIC (Salaire Minimum Interprofessionnel de Croissance) est le salaire horaire minimum en dessous duquel il est interdit de payer un salarié."
+    },
+    {
+      "id": "csp-vf-q10",
+      "question": "Quelle est la première démarche à réaliser pour chercher un emploi ?",
+      "options": [
+        "S'inscrire auprès de France Travail (anciennement Pôle Emploi)",
+        "S'inscrire à la préfecture",
+        "Contacter la mairie de son domicile",
+        "Ouvrir un compte bancaire professionnel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'inscription à France Travail est la démarche principale pour être accompagné dans sa recherche d'emploi et percevoir des allocations si on y a droit."
+    },
+    {
+      "id": "csp-vf-q11",
+      "question": "Quelle est la durée légale du temps de travail par semaine ?",
+      "options": [
+        "30 heures",
+        "35 heures",
+        "39 heures",
+        "45 heures"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La durée légale du travail en France est fixée à 35 heures par semaine. Au-delà, ce sont des heures supplémentaires."
+    },
+    {
+      "id": "csp-vf-q12",
+      "question": "Qui est aidé par France Travail ?",
+      "options": [
+        "Uniquement les entreprises",
+        "Les personnes à la recherche d'un emploi",
+        "Les personnes retraitées",
+        "Les étudiants pour leurs devoirs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "France Travail a pour mission d'accueillir, d'indemniser, d'orienter et d'accompagner les personnes à la recherche d'un emploi."
+    },
+    {
+      "id": "csp-vf-q13",
+      "question": "Une personne étrangère en situation régulière peut créer son entreprise :",
+      "options": [
+        "Non, c'est réservé aux citoyens français",
+        "Oui, aux mêmes conditions qu'un Français",
+        "Oui, mais seulement après 10 ans de résidence",
+        "Non, sauf si elle est mariée à un Français"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tout étranger résidant régulièrement en France et titulaire d'un titre de séjour l'autorisant à exercer une activité professionnelle peut créer son entreprise."
+    },
+    {
+      "id": "csp-vf-q14",
+      "question": "L'autorité parentale prévoit l'obligation :",
+      "options": [
+        "De donner de l'argent de poche à son enfant",
+        "D'assurer l'éducation, la sécurité et la santé de son enfant",
+        "De choisir le futur métier de son enfant",
+        "D'acheter un logement à son enfant pour ses 18 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'autorité parentale est un ensemble de droits et de devoirs. Les parents ont l'obligation de protéger l'enfant, de le nourrir, de l'héberger et d'assurer son éducation."
+    },
+    {
+      "id": "csp-vf-q15",
+      "question": "Pour qui l'école est-elle obligatoire ?",
+      "options": [
+        "Uniquement pour les garçons",
+        "Uniquement pour les enfants de nationalité française",
+        "Pour tous les enfants (filles et garçons) de 3 à 16 ans",
+        "Pour les enfants de 6 à 18 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En France, l'instruction est obligatoire pour tous les enfants, français ou étrangers, garçons et filles, âgés de 3 à 16 ans."
+    },
+    {
+      "id": "csp-vf-q16",
+      "question": "Quel diplôme obtient-on à la fin du lycée ?",
+      "options": [
+        "Le brevet des collèges",
+        "Le baccalauréat",
+        "La licence",
+        "Le certificat de formation générale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le baccalauréat (souvent appelé le 'Bac') est le diplôme national qui marque la fin des études au lycée et permet d'accéder aux études supérieures."
+    },
+    {
+      "id": "csp-vf-q17",
+      "question": "Dans quels établissements scolaires vont les élèves après l'école élémentaire ?",
+      "options": [
+        "Au lycée",
+        "À l'université",
+        "Au collège",
+        "À la crèche"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le parcours scolaire en France suit cet ordre : école maternelle, école élémentaire, collège, puis lycée."
+    },
+    {
+      "id": "csp-vf-q18",
+      "question": "Pour qui l'école est elle obligatoire ?",
+      "options": [
+        "Seulement pour les enfants dont les parents travaillent",
+        "Pour tous les enfants résidant en France, quelle que soit leur nationalité",
+        "Uniquement pour les enfants nés en France",
+        "Pour les adultes qui veulent apprendre le français"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'obligation scolaire s'applique à tous les enfants résidant sur le territoire français, qu'ils soient français ou étrangers."
+    },
+    {
+      "id": "csp-vf-q19",
+      "question": "Un enfant inscrit à l'école :",
+      "options": [
+        "Peut venir en cours seulement s'il en a envie",
+        "Doit être présent à tous les cours (obligation d'assiduité)",
+        "Peut choisir ses horaires de cours",
+        "Ne doit venir que le matin"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'inscription à l'école implique une obligation d'assiduité : l'enfant doit être présent à tous les cours prévus par l'emploi du temps, sauf en cas d'absence justifiée (maladie, etc.)."
+    },
+    {
+      "id": "csp-vf-q20",
+      "question": "Quel est le rôle du médecin traitant ?",
+      "options": [
+        "Il vend des médicaments aux patients",
+        "Il assure le suivi médical régulier et coordonne le parcours de soins",
+        "Il réalise uniquement les opérations chirurgicales",
+        "Il s'occupe des démarches administratives pour le titre de séjour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le médecin traitant est votre interlocuteur privilégié : il vous soigne, gère votre dossier médical et vous oriente vers des spécialistes si nécessaire."
+    },
+    {
+      "id": "csp-vf-q21",
+      "question": "Dans quelles situations doit-on se rendre aux urgences de l'hôpital ?",
+      "options": [
+        "Pour un simple rhume ou une toux légère",
+        "Pour renouveler une ordonnance habituelle",
+        "Uniquement en cas de détresse vitale ou de blessure grave",
+        "Pour faire un bilan de santé annuel"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les urgences sont réservées aux situations graves (accident, malaise grave, danger vital). Pour les problèmes courants, il faut consulter son médecin traitant."
+    },
+    {
+      "id": "csp-vf-q22",
+      "question": "Quel est l’objectif des vaccinations obligatoires ?",
+      "options": [
+        "Obtenir une réduction sur les impôts",
+        "Protéger sa santé et celle des autres contre des maladies graves",
+        "Pouvoir s'inscrire à la salle de sport",
+        "Remplacer la carte Vitale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La vaccination est un acte de prévention qui permet de se protéger soi-même et de protéger les autres (notamment les plus fragiles) contre des maladies contagieuses."
+    },
+    {
+      "id": "csp-vf-q23",
+      "question": "À quoi sert la carte Vitale ?",
+      "options": [
+        "À payer ses courses au supermarché",
+        "À prouver son identité lors d'un contrôle de police",
+        "À prouver ses droits à l'Assurance Maladie et faciliter les remboursements",
+        "À retirer de l'argent au distributeur automatique"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La carte Vitale contient vos informations administratives. Elle permet au médecin de télétransmettre la feuille de soins pour que vous soyez remboursé rapidement."
+    },
+    {
+      "id": "csp-vf-q24",
+      "question": "À quoi sert une mutuelle santé ?",
+      "options": [
+        "À compléter les remboursements de la Sécurité sociale",
+        "À remplacer le médecin traitant",
+        "À payer les impôts sur le revenu",
+        "À ouvrir un compte bancaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La mutuelle (ou complémentaire santé) sert à rembourser la part des frais médicaux qui n'est pas prise en charge par l'Assurance Maladie obligatoire."
+    },
+    {
+      "id": "csp-vf-q25",
+      "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+      "options": [
+        "Jusqu'à 11 ans",
+        "Jusqu'à 14 ans",
+        "Jusqu'à 16 ans",
+        "Jusqu'à 18 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En France, l'instruction est obligatoire pour tous les enfants, français ou étrangers, de 3 ans jusqu'à l'âge de 16 ans révolus."
+    },
+    {
+      "id": "csp-vf-q26",
+      "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
+      "options": [
+        "Le 15",
+        "Le 17",
+        "Le 18",
+        "Le 115"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 15 est le numéro du SAMU, à utiliser en cas d'urgence médicale vitale (malaise grave, blessure importante)."
+    },
+    {
+      "id": "csp-vf-q27",
+      "question": "Quel numéro d'urgence permet d'appeler les pompiers ?",
+      "options": [
+        "Le 18",
+        "Le 15",
+        "Le 17",
+        "Le 3919"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 18 est le numéro des pompiers, à appeler en cas d'incendie ou d'accident. Le 17 concerne la police et le 15 le SAMU."
+    },
+    {
+      "id": "csp-vf-q28",
+      "question": "Après avoir obtenu le permis de conduire, que faut-il faire pour pouvoir conduire sa voiture ?",
+      "options": [
+        "Il faut obligatoirement l'assurer",
+        "Il faut s'inscrire à la mairie",
+        "Il faut repasser le code de la route",
+        "Il faut demander une autorisation au maire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'assurance responsabilité civile est obligatoire pour conduire un véhicule. Elle permet de couvrir les dommages causés aux autres."
+    },
+    {
+      "id": "csp-vf-q29",
+      "question": "À quelles conditions un mariage est-il reconnu juridiquement ?",
+      "options": [
+        "S'il est célébré à la mairie (mariage civil)",
+        "S'il est célébré à l'église (mariage religieux)",
+        "S'il est célébré uniquement en présence de la famille",
+        "S'il est célébré devant un notaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En France, seul le mariage civil, célébré à la mairie par un officier d'état civil, est reconnu par la loi."
+    },
+    {
+      "id": "csp-vf-q30",
+      "question": "Quand faut-il déclarer son enfant au service d'état civil de la mairie ?",
+      "options": [
+        "Dans les 5 jours qui suivent la naissance",
+        "Dans le mois qui suit la naissance",
+        "Avant la naissance",
+        "Avant l'entrée à l'école"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La déclaration de naissance est obligatoire et doit être réalisée à la mairie du lieu de naissance dans les 5 jours qui suivent l'accouchement."
+    },
+    {
+      "id": "csp-vf-q31",
+      "question": "Le travail non déclaré est :",
+      "options": [
+        "Interdit et puni par la loi",
+        "Autorisé pour les petits montants",
+        "Autorisé si l'employeur est d'accord",
+        "Conseillé pour ne pas payer d'impôts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il est obligatoire de déclarer ses revenus et son activité. Le travail non déclaré est illégal et prive le travailleur de ses droits sociaux (retraite, chômage)."
+    }
+  ]
+}

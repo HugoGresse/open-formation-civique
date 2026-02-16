@@ -1,7 +1,15 @@
 import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import type { CrawlerData, ContentPage } from './types.js';
-import { yamlValue, thematicDirMap, thematicIdPrefixMap, quizThematicIds } from './utils.js';
+import type { CrawlerData, ContentPage, Question } from './types.js';
+import {
+  yamlValue,
+  thematicDirMap,
+  thematicIdPrefixMap,
+  allQuizThematicIds,
+  officialCspDirMap,
+  officialCrDirMap,
+  officialIdPrefixMap,
+} from './utils.js';
 
 export function generateQuizPages(
   data: CrawlerData,
@@ -71,6 +79,10 @@ export function generateQuizPages(
     );
   }
 
+  // Generate official quiz files (CSP and CR)
+  generateOfficialQuizFiles(quizzesDir, rootDir, 'csp', 'CSP', officialCspDirMap);
+  generateOfficialQuizFiles(quizzesDir, rootDir, 'cr', 'CR', officialCrDirMap);
+
   // Generate quiz pages from quiz JSON data
   const quizContentDir = join(contentDir, 'quiz');
   mkdirSync(quizContentDir, { recursive: true });
@@ -91,7 +103,7 @@ import QuizSummary from '../../../components/QuizSummary.astro';
   console.log('✓ Created quiz/index.mdx');
 
   // Individual quiz pages
-  quizThematicIds.forEach((quizId) => {
+  allQuizThematicIds.forEach((quizId) => {
     const quizFilePath = join(quizzesDir, `${quizId}.json`);
     if (!existsSync(quizFilePath)) {
       console.warn(`⚠ Quiz file not found: ${quizId}.json, skipping`);
@@ -115,4 +127,55 @@ import quizData from '../../../data/quizzes/${quizId}.json';
     writeFileSync(join(quizContentDir, `${quizId}.mdx`), quizPageContent);
     console.log(`✓ Created quiz/${quizId}.mdx`);
   });
+}
+
+function generateOfficialQuizFiles(
+  quizzesDir: string,
+  rootDir: string,
+  sourceKey: string,
+  sourceLabel: string,
+  dirMap: Record<string, string>,
+): void {
+  const fileName = `officials-${sourceKey}-questions-with-answers.json`;
+  const filePath = join(rootDir, '../crawler', fileName);
+
+  if (!existsSync(filePath)) {
+    console.log(`\n⚠ No ${fileName} found, skipping ${sourceLabel} quiz generation.`);
+    return;
+  }
+
+  console.log(`\n📝 Generating ${sourceLabel} quiz files from ${fileName}...`);
+  const data: Record<string, { questions: Question[] }> = JSON.parse(
+    readFileSync(filePath, 'utf-8'),
+  );
+
+  for (const [thematicTitle, { questions }] of Object.entries(data)) {
+    const quizDir = dirMap[thematicTitle];
+    if (!quizDir) {
+      console.warn(`⚠ Unknown thematic "${thematicTitle}" in ${fileName}, skipping`);
+      continue;
+    }
+
+    const prefix = officialIdPrefixMap[quizDir];
+    const displayTitle = `${sourceLabel} - ${thematicTitle}`;
+
+    const quizJson = {
+      id: quizDir,
+      title: displayTitle,
+      description: `Quiz officiel ${sourceLabel} : ${thematicTitle}`,
+      questions: questions.map((q, i) => ({
+        id: `${prefix}-q${i + 1}`,
+        question: q.question,
+        options: q.options,
+        correctAnswer: q.correctAnswer,
+        explanation: q.explanation,
+      })),
+    };
+
+    writeFileSync(
+      join(quizzesDir, `${quizDir}.json`),
+      JSON.stringify(quizJson, null, 2) + '\n',
+    );
+    console.log(`✓ Generated ${quizDir}.json (${questions.length} questions)`);
+  }
 }

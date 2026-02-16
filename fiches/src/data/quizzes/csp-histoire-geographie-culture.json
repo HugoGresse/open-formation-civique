@@ -1,0 +1,571 @@
+{
+  "id": "csp-histoire-geographie-culture",
+  "title": "CSP - Histoire, géographie et culture",
+  "description": "Quiz officiel CSP : Histoire, géographie et culture",
+  "questions": [
+    {
+      "id": "csp-hgc-q1",
+      "question": "En quelle année l'esclavage a-t-il été aboli définitivement en France ?",
+      "options": [
+        "1789",
+        "1804",
+        "1848",
+        "1944"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'esclavage a été définitivement aboli le 27 avril 1848 sous la IIème République, grâce à l'action de Victor Schœlcher."
+    },
+    {
+      "id": "csp-hgc-q2",
+      "question": "Depuis quelle année l'école publique est-elle gratuite ?",
+      "options": [
+        "1881",
+        "1905",
+        "1936",
+        "1958"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les lois de Jules Ferry rendent l'école primaire publique gratuite en 1881, puis obligatoire et laïque en 1882 (sous la IIIème République)."
+    },
+    {
+      "id": "csp-hgc-q3",
+      "question": "Combien y a-t-il eu de républiques en France ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France a connu cinq républiques depuis la Révolution française. Nous vivons actuellement sous la Vème République, instaurée en 1958."
+    },
+    {
+      "id": "csp-hgc-q4",
+      "question": "Qui était le roi de France au moment de la Révolution française ?",
+      "options": [
+        "Louis XIV",
+        "Louis XV",
+        "Louis XVI",
+        "Napoléon Ier"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Louis XVI était le roi de France lorsque la Révolution a éclaté en 1789. Il a été renversé en 1792 lors de la fin de la monarchie."
+    },
+    {
+      "id": "csp-hgc-q5",
+      "question": "Qui a fondé la Ve République ?",
+      "options": [
+        "François Mitterrand",
+        "Charles de Gaulle",
+        "Napoléon Bonaparte",
+        "Jules Ferry"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le général de Gaulle a fondé la Vème République en 1958 et en a été le premier président élu."
+    },
+    {
+      "id": "csp-hgc-q6",
+      "question": "Que célèbre-t-on le 14 juillet ?",
+      "options": [
+        "L'armistice de la Première Guerre mondiale",
+        "La prise de la Bastille et la Fête de la Fédération",
+        "La libération de Paris",
+        "La victoire de 1945"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La fête nationale du 14 juillet commémore la prise de la Bastille (1789), symbole de la fin de l'arbitraire royal, et la Fête de la Fédération (1790), symbole de l'union de la nation."
+    },
+    {
+      "id": "csp-hgc-q7",
+      "question": "Qu'est-ce que le Louvre ?",
+      "options": [
+        "Un musée célèbre situé à Paris",
+        "Le siège du gouvernement français",
+        "Une grande gare ferroviaire",
+        "Un stade de football"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Louvre est l'un des plus grands musées du monde, situé à Paris. C'est un ancien palais royal qui abrite des œuvres d'art célèbres comme la Joconde."
+    },
+    {
+      "id": "csp-hgc-q8",
+      "question": "Qui était Jean de la Fontaine ?",
+      "options": [
+        "Un célèbre poète connu pour ses Fables",
+        "Un roi de France du Moyen Âge",
+        "Un général de Napoléon",
+        "Un architecte de la tour Eiffel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Jean de la Fontaine est un poète français du XVIIe siècle, très célèbre pour ses Fables qui mettent souvent en scène des animaux pour donner une leçon de morale."
+    },
+    {
+      "id": "csp-hgc-q9",
+      "question": "Quel écrivain est français ?",
+      "options": [
+        "Victor Hugo",
+        "William Shakespeare",
+        "Johann Wolfgang von Goethe",
+        "Dante Alighieri"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Victor Hugo est l'un des plus grands écrivains français. Il a écrit des œuvres majeures comme 'Les Misérables' ou 'Notre-Dame de Paris'."
+    },
+    {
+      "id": "csp-hgc-q10",
+      "question": "Dans quelle ville se trouve la tour Eiffel ?",
+      "options": [
+        "Paris",
+        "Lyon",
+        "Marseille",
+        "Bordeaux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La tour Eiffel, symbole de la France construit pour l'Exposition universelle de 1889, se situe à Paris, la capitale."
+    },
+    {
+      "id": "csp-hgc-q11",
+      "question": "Quand célèbre-t-on Noël ?",
+      "options": [
+        "Le 25 décembre",
+        "Le 14 juillet",
+        "Le 1er mai",
+        "Le 11 novembre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Noël est une fête chrétienne et traditionnelle célébrée chaque année le 25 décembre. C'est un jour férié en France."
+    },
+    {
+      "id": "csp-hgc-q12",
+      "question": "En quelle année a débuté la Révolution française ?",
+      "options": [
+        "1789",
+        "1792",
+        "1804",
+        "1848"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Révolution française débute en 1789 avec la convocation des États généraux et la prise de la Bastille. Elle marque la fin de l'Ancien Régime."
+    },
+    {
+      "id": "csp-hgc-q13",
+      "question": "Qui était Napoléon Ier ?",
+      "options": [
+        "Un roi de France de la dynastie des Capétiens",
+        "Un empereur et chef militaire",
+        "Le premier président de la République",
+        "Un célèbre écrivain du XIXème siècle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Napoléon Bonaparte, devenu Napoléon Ier, a dirigé la France d'abord comme Premier Consul puis comme Empereur (1er Empire) de 1804 à 1815."
+    },
+    {
+      "id": "csp-hgc-q14",
+      "question": "Lequel de ces personnages historiques est français ?",
+      "options": [
+        "Napoléon Bonaparte",
+        "Winston Churchill",
+        "Abraham Lincoln",
+        "Jules César"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Napoléon Bonaparte est une figure majeure de l'histoire de France, ayant dirigé le pays sous le Consulat et le Premier Empire."
+    },
+    {
+      "id": "csp-hgc-q15",
+      "question": "Dans quelle République est-on aujourd'hui ?",
+      "options": [
+        "La IIIème République",
+        "La IVème République",
+        "La Vème République",
+        "La VIème République"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Depuis 1958 et l'adoption de la Constitution voulue par le général de Gaulle, la France est sous le régime de la Vème République."
+    },
+    {
+      "id": "csp-hgc-q16",
+      "question": "Qu'est-ce que la Shoah ?",
+      "options": [
+        "L'extermination des Juifs par les nazis durant la Seconde Guerre mondiale",
+        "Une bataille décisive de la Première Guerre mondiale",
+        "Le nom donné à la Résistance française",
+        "Un traité de paix signé en 1945"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Shoah désigne le génocide perpétré par l'Allemagne nazie pendant la Seconde Guerre mondiale, visant l'extermination systématique des Juifs d'Europe."
+    },
+    {
+      "id": "csp-hgc-q17",
+      "question": "Quel pays ou région du monde a été colonisé par la France ?",
+      "options": [
+        "L'Algérie",
+        "Le Brésil",
+        "L'Australie",
+        "L'Inde entière"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Algérie a été une colonie française (puis des départements français) de 1830 jusqu'à son indépendance en 1962."
+    },
+    {
+      "id": "csp-hgc-q18",
+      "question": "Qui était Simone de Beauvoir ?",
+      "options": [
+        "Une philosophe et écrivaine féministe",
+        "Une célèbre scientifique, prix Nobel de chimie",
+        "Une reine de France au Moyen Âge",
+        "Une résistante exécutée pendant la Seconde Guerre mondiale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Simone de Beauvoir est une figure majeure du féminisme et de la littérature française, auteure notamment du 'Deuxième Sexe'."
+    },
+    {
+      "id": "csp-hgc-q19",
+      "question": "Qui était Albert Camus ?",
+      "options": [
+        "Un écrivain et philosophe, prix Nobel de littérature",
+        "Un général de la Première Guerre mondiale",
+        "Un célèbre navigateur français",
+        "Le premier président de la Ve République"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Albert Camus est un célèbre écrivain et philosophe français (auteur de 'L'Étranger'), qui a reçu le prix Nobel de littérature en 1957."
+    },
+    {
+      "id": "csp-hgc-q20",
+      "question": "Qui était Paul Cézanne ?",
+      "options": [
+        "Un peintre impressionniste et précurseur du cubisme",
+        "Un architecte qui a construit la Tour Eiffel",
+        "Un compositeur de musique classique",
+        "Un homme politique du XIXe siècle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Paul Cézanne est un peintre français majeur, célèbre pour ses paysages de Provence et considéré comme le père de l'art moderne."
+    },
+    {
+      "id": "csp-hgc-q21",
+      "question": "Qui était Marc Chagall ?",
+      "options": [
+        "Un peintre surréaliste d'origine russe naturalisé français",
+        "Un célèbre couturier de haute couture",
+        "Un champion olympique de natation",
+        "Un ministre de la Culture sous François Mitterrand"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Marc Chagall était un peintre célèbre pour son style poétique et coloré. Il a notamment peint le plafond de l'Opéra Garnier à Paris."
+    },
+    {
+      "id": "csp-hgc-q22",
+      "question": "Qui était Joséphine Baker ?",
+      "options": [
+        "Une artiste de music-hall et résistante entrée au Panthéon",
+        "Une scientifique ayant découvert le radium",
+        "La première femme ministre en France",
+        "Une écrivaine du XVIIe siècle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Joséphine Baker était une chanteuse et danseuse franco-américaine, résistante durant la guerre et militante antiraciste. Elle est entrée au Panthéon en 2021."
+    },
+    {
+      "id": "csp-hgc-q23",
+      "question": "Qui était une chanteuse française célèbre ?",
+      "options": [
+        "Édith Piaf",
+        "Marie Curie",
+        "Coco Chanel",
+        "Jeanne d'Arc"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Édith Piaf, surnommée 'la Môme', est l'une des chanteuses françaises les plus célèbres au monde, interprète de 'La Vie en rose'."
+    },
+    {
+      "id": "csp-hgc-q24",
+      "question": "Quelle ville est située au bord de la mer Méditerranée ?",
+      "options": [
+        "Paris",
+        "Marseille",
+        "Strasbourg",
+        "Bordeaux"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marseille est la deuxième ville de France et le principal port français situé sur la côte méditerranéenne, au sud-est du pays."
+    },
+    {
+      "id": "csp-hgc-q25",
+      "question": "Où se situe la Corse ?",
+      "options": [
+        "Dans l'océan Atlantique",
+        "Dans la mer Méditerranée",
+        "Dans la Manche",
+        "Dans les Antilles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Corse est une île et une collectivité territoriale française située en mer Méditerranée, au sud-est de la France continentale."
+    },
+    {
+      "id": "csp-hgc-q26",
+      "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
+      "options": [
+        "Les Pyrénées",
+        "Les Vosges",
+        "Les Alpes",
+        "Le Massif central"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les Alpes forment la frontière naturelle entre la France et l'Italie. C'est là que se trouve le Mont Blanc, le plus haut sommet d'Europe occidentale."
+    },
+    {
+      "id": "csp-hgc-q27",
+      "question": "Qui était Molière ?",
+      "options": [
+        "Un célèbre peintre de la Renaissance",
+        "Un roi de France du Moyen Âge",
+        "Un comédien et dramaturge du XVIIème siècle",
+        "Un général de Napoléon"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Jean-Baptiste Poquelin, dit Molière, est le plus célèbre auteur de pièces de théâtre comiques (comédies) sous le règne de Louis XIV."
+    },
+    {
+      "id": "csp-hgc-q28",
+      "question": "Qui était Charles Baudelaire ?",
+      "options": [
+        "Un poète du XIXème siècle",
+        "Un navigateur et explorateur",
+        "Un président de la République",
+        "Un scientifique célèbre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Charles Baudelaire est un poète majeur du XIXème siècle, célèbre notamment pour son recueil 'Les Fleurs du mal'."
+    },
+    {
+      "id": "csp-hgc-q29",
+      "question": "Qui était George Sand ?",
+      "options": [
+        "Un homme politique révolutionnaire",
+        "Une femme écrivaine du XIXème siècle",
+        "Une célèbre scientifique",
+        "Une reine de France"
+      ],
+      "correctAnswer": 1,
+      "explanation": "George Sand est le pseudonyme d'Aurore Dupin. C'était une grande romancière du XIXème siècle, connue pour ses œuvres littéraires et son engagement pour la liberté des femmes."
+    },
+    {
+      "id": "csp-hgc-q30",
+      "question": "Qui a rendu l’école gratuite, laïque et obligatoire ?",
+      "options": [
+        "Jules Ferry",
+        "Charlemagne",
+        "Napoléon Bonaparte",
+        "Louis XIV"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C'est Jules Ferry qui a fait voter les lois rendant l'école gratuite, laïque et obligatoire en 1881-1882, sous la IIIème République."
+    },
+    {
+      "id": "csp-hgc-q31",
+      "question": "Quand a eu lieu la Seconde Guerre mondiale ?",
+      "options": [
+        "1939 - 1945",
+        "1914 - 1918",
+        "1870 - 1871",
+        "1954 - 1962"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ce conflit mondial a débuté en 1939 et s'est terminé en 1945. En France, il inclut la période de l'Occupation et du régime de Vichy (1940-1944)."
+    },
+    {
+      "id": "csp-hgc-q32",
+      "question": "Quand a eu lieu la Première Guerre mondiale ?",
+      "options": [
+        "1914 - 1918",
+        "1939 - 1945",
+        "1870 - 1871",
+        "1789 - 1799"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Déclenchée après l'attentat de Sarajevo, la Première Guerre mondiale s'étend de 1914 à l'armistice du 11 novembre 1918."
+    },
+    {
+      "id": "csp-hgc-q33",
+      "question": "En quelle année a été créée la Communauté Économique Européenne (CEE) ?",
+      "options": [
+        "1957",
+        "1945",
+        "1981",
+        "1992"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La CEE, ancêtre de l'Union européenne, a été créée par le traité de Rome en 1957 pour construire un marché commun."
+    },
+    {
+      "id": "csp-hgc-q34",
+      "question": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
+      "options": [
+        "L'armistice de la Première Guerre mondiale (1918)",
+        "La prise de la Bastille (1789)",
+        "La victoire de la Seconde Guerre mondiale (1945)",
+        "L'abolition de l'esclavage (1848)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 11 novembre commémore la signature de l'armistice de 1918 qui a mis fin aux combats de la Première Guerre mondiale."
+    },
+    {
+      "id": "csp-hgc-q35",
+      "question": "Qui a été le premier Président élu sous la Ve République ?",
+      "options": [
+        "Charles de Gaulle",
+        "François Mitterrand",
+        "Georges Pompidou",
+        "Valéry Giscard d'Estaing"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le général de Gaulle a fondé la Vème République en 1958 et en a été le premier président."
+    },
+    {
+      "id": "csp-hgc-q36",
+      "question": "Quelle est la capitale de la France ?",
+      "options": [
+        "Lyon",
+        "Paris",
+        "Marseille",
+        "Bruxelles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Paris est la capitale politique, économique et culturelle de la France. C'est là que siègent le Président de la République et le Gouvernement."
+    },
+    {
+      "id": "csp-hgc-q37",
+      "question": "Sur quel continent se situe la France métropolitaine ?",
+      "options": [
+        "L'Afrique",
+        "L'Amérique",
+        "L'Europe",
+        "L'Asie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France métropolitaine, c'est-à-dire la partie du territoire située sur le continent (souvent appelée l'Hexagone) et la Corse, se trouve en Europe de l'Ouest."
+    },
+    {
+      "id": "csp-hgc-q38",
+      "question": "Quelle île est un département d'outre-mer français ?",
+      "options": [
+        "La Corse",
+        "La Réunion",
+        "Madagascar",
+        "La Sicile"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Réunion est un département et une région d'outre-mer (DROM) situé dans l'océan Indien. La Corse est une île française, mais elle fait partie de la métropole."
+    },
+    {
+      "id": "csp-hgc-q39",
+      "question": "Combien y a-t-il de régions en France métropolitaine ?",
+      "options": [
+        "13",
+        "22",
+        "96",
+        "5"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Depuis la réforme territoriale de 2016, la France métropolitaine compte 13 régions (en incluant la Corse). Si l'on compte les régions d'outre-mer, le total est de 18."
+    },
+    {
+      "id": "csp-hgc-q40",
+      "question": "Quelle ville est un grand port maritime ?",
+      "options": [
+        "Paris",
+        "Clermont-Ferrand",
+        "Marseille",
+        "Strasbourg"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Marseille est le plus grand port maritime de France, situé sur la côte méditerranéenne. Le Havre est également un grand port important."
+    },
+    {
+      "id": "csp-hgc-q41",
+      "question": "Quelle est la mer au sud de la France métropolitaine ?",
+      "options": [
+        "La Manche",
+        "L'océan Atlantique",
+        "La mer du Nord",
+        "La mer Méditerranée"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La mer Méditerranée borde le sud-est de la France. À l'ouest se trouve l'océan Atlantique, et au nord la Manche et la mer du Nord."
+    },
+    {
+      "id": "csp-hgc-q42",
+      "question": "Quelle guerre a eu lieu entre 1914 et 1918 ?",
+      "options": [
+        "La Première Guerre mondiale",
+        "La Seconde Guerre mondiale",
+        "La guerre d'Algérie",
+        "La guerre de Cent Ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Première Guerre mondiale s'est déroulée de 1914 à 1918. Elle s'est achevée par l'Armistice signé le 11 novembre 1918."
+    },
+    {
+      "id": "csp-hgc-q43",
+      "question": "Pourquoi l’année 1958 est importante pour la France ?",
+      "options": [
+        "C'est la fin de la monarchie",
+        "C'est la naissance de la Vème République",
+        "C'est l'abolition de la peine de mort",
+        "C'est le début de la Révolution française"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Depuis 1958, le régime politique de la France est celui de la Vème République, fondée sous l'impulsion du général de Gaulle."
+    },
+    {
+      "id": "csp-hgc-q44",
+      "question": "Quel fleuve coule en France ?",
+      "options": [
+        "La Loire",
+        "L'Amazone",
+        "Le Nil",
+        "Le Danube"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Loire est le plus long fleuve de France. Les autres grands fleuves français sont la Seine, le Rhône, la Garonne et le Rhin."
+    },
+    {
+      "id": "csp-hgc-q45",
+      "question": "Quelle ville est française ?",
+      "options": [
+        "Barcelone",
+        "Bruxelles",
+        "Bordeaux",
+        "Genève"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Bordeaux est une grande ville située dans le sud-ouest de la France. Les autres villes citées se trouvent en Espagne, en Belgique et en Suisse."
+    },
+    {
+      "id": "csp-hgc-q46",
+      "question": "Quel océan borde la côte ouest française ?",
+      "options": [
+        "L'océan Atlantique",
+        "L'océan Pacifique",
+        "L'océan Indien",
+        "L'océan Arctique"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France métropolitaine est bordée à l'ouest par l'océan Atlantique."
+    },
+    {
+      "id": "csp-hgc-q47",
+      "question": "Qu'est-ce que Paris ?",
+      "options": [
+        "La capitale de la France",
+        "Une région d'outre-mer",
+        "Une chaîne de montagnes",
+        "Un pays voisin de la France"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Paris est la capitale politique et administrative de la République française."
+    }
+  ]
+}

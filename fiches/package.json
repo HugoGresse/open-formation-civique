@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate": "npx tsx scripts/generate-pages.ts",
-    "generate:quizzes": "npx tsx --env-file=.env scripts/generate-quizzes.ts"
+    "generate:quizzes": "npx tsx --env-file=.env scripts/generate-quizzes.ts",
+    "generate:official-quizzes": "npx tsx --env-file=.env scripts/generate-official-quizzes.ts"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",

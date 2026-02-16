@@ -39,11 +39,20 @@ prev: false
 
 import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
 
+## Quiz
+
+<CardGrid>
+  <LinkCard title="Quiz thématiques" description="Quiz générés à partir du contenu des fiches" href="/quiz/" />
+  <LinkCard title="Quiz officiels CSP" description="Questions officielles du Contrat de Séjour Pluriannuel" href="/quiz/csp-principes-et-valeurs/" />
+  <LinkCard title="Quiz officiels CR" description="Questions officielles de la Carte de Résident" href="/quiz/cr-principes-et-valeurs/" />
+</CardGrid>
+
 ## Les 5 thématiques
 
 <CardGrid>
   ${thematicCards}
 </CardGrid>
+
 
 ## À propos
 

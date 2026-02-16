@@ -1,0 +1,556 @@
+{
+  "id": "csp-systeme-institutionnel",
+  "title": "CSP - Système institutionnel et politique",
+  "description": "Quiz officiel CSP : Système institutionnel et politique",
+  "questions": [
+    {
+      "id": "csp-si-q1",
+      "question": "Quel est le rôle de l'autorité judiciaire ?",
+      "options": [
+        "Contrôler l'application des lois et sanctionner leur non-respect",
+        "Voter les lois à l'Assemblée nationale",
+        "Diriger l'armée et la diplomatie",
+        "Nommer les ministres du Gouvernement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'autorité judiciaire, exercée par les juges et magistrats, a pour mission de contrôler l'application des lois, de trancher les litiges et de sanctionner les infractions."
+    },
+    {
+      "id": "csp-si-q2",
+      "question": "Quel pouvoir détient un juge ? Le pouvoir :",
+      "options": [
+        "Judiciaire",
+        "Législatif",
+        "Exécutif",
+        "Absolu"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans le principe de séparation des pouvoirs, les juges exercent le pouvoir judiciaire (appliquer la loi et rendre la justice), distinct du législatif (voter la loi) et de l'exécutif (faire respecter la loi)."
+    },
+    {
+      "id": "csp-si-q3",
+      "question": "L'autorité judiciaire est exercée par :",
+      "options": [
+        "Les juges et les magistrats",
+        "Le Président de la République",
+        "Les députés et les sénateurs",
+        "Les préfets et les maires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'autorité judiciaire est confiée à des juges et des magistrats indépendants, qui sont recrutés par concours et non choisis par le pouvoir politique."
+    },
+    {
+      "id": "csp-si-q4",
+      "question": "Que se passe-t-il si un ministre ne respecte pas la loi ?",
+      "options": [
+        "Il peut être sanctionné comme tout citoyen",
+        "Il ne peut pas être jugé car il fait partie du Gouvernement",
+        "Il est protégé par le Président de la République",
+        "Il décide lui-même de sa sanction"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans un État de droit, la loi est la même pour tous. Un ministre n'est pas au-dessus des lois et peut être sanctionné par la justice s'il ne la respecte pas."
+    },
+    {
+      "id": "csp-si-q5",
+      "question": "Qui est élu lors des élections législatives ?",
+      "options": [
+        "Les députés",
+        "Les sénateurs",
+        "Le Président de la République",
+        "Les maires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les élections législatives permettent aux citoyens d'élire les députés qui siègent à l'Assemblée nationale pour voter les lois."
+    },
+    {
+      "id": "csp-si-q6",
+      "question": "Combien de députés composent l’Assemblée nationale ?",
+      "options": [
+        "577 députés",
+        "348 députés",
+        "101 députés",
+        "81 députés"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Assemblée nationale est composée de 577 députés élus au suffrage universel direct pour un mandat de 5 ans."
+    },
+    {
+      "id": "csp-si-q7",
+      "question": "Quel est le rôle du Parlement ?",
+      "options": [
+        "Il vote la loi et contrôle l'action du Gouvernement",
+        "Il dirige l'armée et la diplomatie",
+        "Il rend la justice et sanctionne les infractions",
+        "Il nomme les préfets dans les départements"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Parlement (composé de l'Assemblée nationale et du Sénat) détient le pouvoir législatif : il propose, discute et vote les lois. Il a aussi pour mission de contrôler l'action du Gouvernement."
+    },
+    {
+      "id": "csp-si-q8",
+      "question": "Quel est le régime politique de la France aujourd'hui ?",
+      "options": [
+        "Une monarchie constitutionnelle",
+        "Une république démocratique",
+        "Un empire parlementaire",
+        "Une dictature militaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France est une République (le pouvoir n'est pas héréditaire) et une démocratie (le pouvoir vient du peuple qui élit ses représentants au suffrage universel)."
+    },
+    {
+      "id": "csp-si-q9",
+      "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
+      "options": [
+        "15 États",
+        "27 États",
+        "28 États",
+        "50 États"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'Union européenne compte 27 États membres depuis le départ du Royaume-Uni (Brexit) en 2020. La Croatie était le dernier pays à avoir rejoint l'UE en 2013."
+    },
+    {
+      "id": "csp-si-q10",
+      "question": "Quel État n'est pas membre de l'Union européenne ?",
+      "options": [
+        "L'Allemagne",
+        "L'Italie",
+        "Le Royaume-Uni",
+        "La Pologne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le Royaume-Uni a quitté l'Union européenne le 31 janvier 2020 (Brexit). L'Allemagne, l'Italie et la Pologne sont toujours des États membres."
+    },
+    {
+      "id": "csp-si-q11",
+      "question": "Quelle condition est nécessaire pour voter aux élections européennes ?",
+      "options": [
+        "Avoir la nationalité d'un pays membre de l'UE et être inscrit sur les listes électorales",
+        "Être propriétaire d'un logement en France",
+        "Parler couramment trois langues européennes",
+        "Avoir un casier judiciaire vierge depuis 10 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour voter, il faut avoir la nationalité d'un pays de l'UE, avoir au moins 18 ans, jouir de ses droits civils et politiques, et être inscrit sur les listes électorales."
+    },
+    {
+      "id": "csp-si-q12",
+      "question": "À quelle fréquence les élections européennes sont-elles organisées ?",
+      "options": [
+        "Tous les 3 ans",
+        "Tous les 5 ans",
+        "Tous les 6 ans",
+        "Tous les 10 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les élections européennes ont lieu tous les 5 ans pour élire les députés qui siègent au Parlement européen."
+    },
+    {
+      "id": "csp-si-q13",
+      "question": "Quel pays est un pays fondateur de l'Union européenne ?",
+      "options": [
+        "L'Espagne",
+        "L'Italie",
+        "Le Royaume-Uni",
+        "La Pologne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'Italie fait partie des 6 pays fondateurs de la CEE en 1957 (traité de Rome), avec la France, l'Allemagne, la Belgique, le Luxembourg et les Pays-Bas."
+    },
+    {
+      "id": "csp-si-q14",
+      "question": "Quelle est la monnaie utilisée en France ?",
+      "options": [
+        "Le Franc",
+        "Le Dollar",
+        "L'Euro",
+        "La Livre sterling"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La France utilise l'Euro, qui est la monnaie unique partagée par la majorité des pays de l'Union européenne."
+    },
+    {
+      "id": "csp-si-q15",
+      "question": "Qui élit les députés européens ?",
+      "options": [
+        "Le Président de la République",
+        "Les députés de l'Assemblée nationale",
+        "Les citoyens des pays de l'Union européenne",
+        "Les maires et les conseillers régionaux"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les députés européens sont élus au suffrage universel direct tous les 5 ans par les citoyens et citoyennes des pays membres de l'Union européenne."
+    },
+    {
+      "id": "csp-si-q16",
+      "question": "Quand célèbre-t-on la journée de l'Europe ?",
+      "options": [
+        "Le 14 juillet",
+        "Le 9 mai",
+        "Le 8 mai",
+        "Le 11 novembre"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Journée de l'Europe est célébrée le 9 mai. Elle fait partie des symboles de l'Union européenne avec le drapeau et l'hymne."
+    },
+    {
+      "id": "csp-si-q17",
+      "question": "Quand sont élus les sénateurs ?",
+      "options": [
+        "Tous les 3 ans (renouvellement par moitié)",
+        "Tous les 5 ans (en même temps que les députés)",
+        "Tous les 6 ans (renouvellement complet)",
+        "Tous les ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les sénateurs sont élus pour un mandat de 6 ans, mais le Sénat se renouvelle par moitié tous les 3 ans lors des élections sénatoriales."
+    },
+    {
+      "id": "csp-si-q18",
+      "question": "Qui est élu lors des élections municipales ?",
+      "options": [
+        "Les conseillers municipaux",
+        "Les députés",
+        "Les conseillers régionaux",
+        "Le préfet"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les élections municipales permettent d'élire les conseillers municipaux pour 6 ans. Ce sont eux qui éliront ensuite le maire."
+    },
+    {
+      "id": "csp-si-q19",
+      "question": "Qui est élu lors des élections présidentielles ?",
+      "options": [
+        "Le président de la République",
+        "Le Premier ministre",
+        "Les sénateurs",
+        "Les présidents de région"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'élection présidentielle permet aux citoyens d'élire directement le président de la République au suffrage universel."
+    },
+    {
+      "id": "csp-si-q20",
+      "question": "À partir de quel âge a-t-on le droit de voter ?",
+      "options": [
+        "18 ans",
+        "16 ans",
+        "21 ans",
+        "25 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En France, il faut être majeur, c'est-à-dire avoir 18 ans révolus, pour avoir le droit de voter."
+    },
+    {
+      "id": "csp-si-q21",
+      "question": "Pour combien de temps est élu le président de la République française ?",
+      "options": [
+        "5 ans",
+        "4 ans",
+        "7 ans",
+        "10 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le mandat du président de la République dure 5 ans. On appelle cette période un quinquennat."
+    },
+    {
+      "id": "csp-si-q22",
+      "question": "Pour combien de temps sont élus les députés ?",
+      "options": [
+        "5 ans",
+        "3 ans",
+        "6 ans",
+        "4 ans"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les députés, qui siègent à l'Assemblée nationale, sont élus pour un mandat de 5 ans lors des élections législatives."
+    },
+    {
+      "id": "csp-si-q23",
+      "question": "Quel est le rôle des députés ?",
+      "options": [
+        "Voter les lois et contrôler l'action du Gouvernement",
+        "Juger les personnes qui ne respectent pas la loi",
+        "Diriger l'armée et nommer les ministres",
+        "Gérer les écoles maternelles et primaires"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les députés siègent à l'Assemblée nationale (pouvoir législatif). Leur rôle principal est de proposer, négocier et voter la loi, ainsi que de contrôler le Gouvernement."
+    },
+    {
+      "id": "csp-si-q24",
+      "question": "La séparation des pouvoirs est un principe fondamental. Quels sont les trois pouvoirs concernés ?",
+      "options": [
+        "Le pouvoir législatif, le pouvoir exécutif et le pouvoir judiciaire",
+        "Le pouvoir politique, le pouvoir médiatique et le pouvoir économique",
+        "Le pouvoir présidentiel, le pouvoir ministériel et le pouvoir local"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La séparation des pouvoirs garantit la démocratie en répartissant les rôles : le législatif vote la loi, l'exécutif l'applique, et le judiciaire sanctionne son non-respect."
+    },
+    {
+      "id": "csp-si-q25",
+      "question": "Qui possède le pouvoir législatif ?",
+      "options": [
+        "Le Parlement (l'Assemblée nationale et le Sénat)",
+        "Le Président de la République et le Gouvernement",
+        "Les juges et les magistrats",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le pouvoir législatif est exercé par le Parlement, qui est composé de deux chambres : l'Assemblée nationale (les députés) et le Sénat (les sénateurs)."
+    },
+    {
+      "id": "csp-si-q26",
+      "question": "Qui sanctionne l'auteur d'un vol ?",
+      "options": [
+        "L'autorité judiciaire (les juges)",
+        "Le Président de la République",
+        "Le maire de la commune",
+        "Le député"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C'est l'autorité judiciaire qui applique les lois et sanctionne les infractions. Pour un vol, c'est la justice pénale qui intervient."
+    },
+    {
+      "id": "csp-si-q27",
+      "question": "Qui élit les députés ?",
+      "options": [
+        "Les citoyens français au suffrage universel direct",
+        "Les grands électeurs (maires, conseillers régionaux, etc.)",
+        "Le Président de la République",
+        "Les sénateurs"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les 577 députés de l'Assemblée nationale sont élus directement par les citoyens français lors des élections législatives."
+    },
+    {
+      "id": "csp-si-q28",
+      "question": "Qui vote les lois ?",
+      "options": [
+        "Le Parlement (l'Assemblée nationale et le Sénat)",
+        "Le Gouvernement seul",
+        "Le Conseil constitutionnel",
+        "Les citoyens par référendum pour chaque loi"
+      ],
+      "correctAnswer": 0,
+      "explanation": "C'est le rôle du pouvoir législatif : l'Assemblée nationale et le Sénat discutent, amendent et votent les textes de loi."
+    },
+    {
+      "id": "csp-si-q29",
+      "question": "Qui nomme le Premier ministre ?",
+      "options": [
+        "Les citoyens, directement par vote",
+        "Le président de la République",
+        "Le président de l'Assemblée nationale",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "C'est le président de la République qui nomme le Premier ministre. Il choisit généralement une personne issue de la majorité politique à l'Assemblée nationale."
+    },
+    {
+      "id": "csp-si-q30",
+      "question": "Le Parlement est composé :",
+      "options": [
+        "De l'Assemblée nationale et du Sénat",
+        "Du président de la République et du Gouvernement",
+        "De l'Assemblée nationale et des conseils régionaux",
+        "Uniquement de l'Assemblée nationale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le pouvoir législatif est exercé par le Parlement, qui est composé de deux chambres : l'Assemblée nationale (les députés) et le Sénat (les sénateurs)."
+    },
+    {
+      "id": "csp-si-q31",
+      "question": "Qu'est-ce que le pouvoir exécutif ? Le pouvoir :",
+      "options": [
+        "De voter la loi",
+        "De rendre la justice",
+        "D'appliquer la loi",
+        "De sanctionner les infractions"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le pouvoir exécutif (le président de la République et le Gouvernement) est chargé d'appliquer et de faire respecter les lois votées par le pouvoir législatif."
+    },
+    {
+      "id": "csp-si-q32",
+      "question": "Les dirigeants sont élus par les citoyens dans :",
+      "options": [
+        "Une dictature",
+        "Une monarchie absolue",
+        "Une démocratie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La démocratie est le régime politique où le pouvoir appartient au peuple, qui choisit ses représentants par le vote (suffrage universel)."
+    },
+    {
+      "id": "csp-si-q33",
+      "question": "A-t-on le droit de ne pas respecter une loi ?",
+      "options": [
+        "Oui, si on n'est pas d'accord avec elle",
+        "Non, la loi s'impose à tous",
+        "Oui, si on est un élu politique",
+        "Oui, si personne ne nous voit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dans un État de droit, nul n'est au-dessus des lois. Le respect de la loi est obligatoire pour garantir la vie en société et l'égalité de tous."
+    },
+    {
+      "id": "csp-si-q34",
+      "question": "Qui doit respecter la loi ?",
+      "options": [
+        "Seulement les citoyens",
+        "Tout le monde, y compris l'État et les élus",
+        "Tout le monde, sauf le président de la République",
+        "Uniquement les personnes majeures"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le principe de l'État de droit signifie que la loi est la même pour tous : les citoyens, les étrangers, les entreprises, mais aussi l'État et les autorités politiques."
+    },
+    {
+      "id": "csp-si-q35",
+      "question": "Qui réside au palais de l'Élysée ?",
+      "options": [
+        "Le Premier ministre",
+        "Le président de la République",
+        "Le président du Sénat",
+        "Le président de l'Assemblée nationale"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le président de la République, qui est le chef de l'État et des armées, réside au Palais de l'Élysée. Le Premier ministre réside à l'hôtel de Matignon."
+    },
+    {
+      "id": "csp-si-q36",
+      "question": "Combien y a-t-il de départements en France ?",
+      "options": [
+        "18",
+        "96",
+        "101",
+        "35 000"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Il y a 101 départements en France (96 en métropole et 5 en Outre-mer). Il ne faut pas confondre avec les 18 régions."
+    },
+    {
+      "id": "csp-si-q37",
+      "question": "Qui représente l'État dans un département ?",
+      "options": [
+        "Le maire",
+        "Le député",
+        "Le préfet",
+        "Le président du conseil départemental"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le préfet est le représentant de l'État dans le département. Il est nommé par le président de la République et dirige les services de l'État (police, délivrance des titres...)."
+    },
+    {
+      "id": "csp-si-q38",
+      "question": "Qui dirige la commune ?",
+      "options": [
+        "Le préfet",
+        "Le maire et le conseil municipal",
+        "Le député",
+        "Le président de la région"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La commune est une collectivité territoriale dirigée par des personnes élues : le maire et les conseillers municipaux."
+    },
+    {
+      "id": "csp-si-q39",
+      "question": "Est-ce que le président de la République a tous les pouvoirs ?",
+      "options": [
+        "Oui, car il est le chef de l'État",
+        "Non, car il y a une séparation des pouvoirs (législatif, exécutif, judiciaire)",
+        "Oui, mais il doit demander l'autorisation au Premier ministre"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Non, la France est un État de droit basé sur la séparation des pouvoirs. Le Président détient le pouvoir exécutif, mais il ne détient ni le pouvoir législatif (le Parlement), ni le pouvoir judiciaire (les juges)."
+    },
+    {
+      "id": "csp-si-q40",
+      "question": "Qui est le préfet ?",
+      "options": [
+        "Un élu local choisi par les habitants",
+        "Le représentant de l'État dans le département",
+        "Le chef des juges du département",
+        "Le chef de l'armée française"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le préfet représente l'État dans le département. Il n'est pas élu, mais nommé. Il veille au respect des lois, à la sécurité et dirige les services administratifs de l'État."
+    },
+    {
+      "id": "csp-si-q41",
+      "question": "Pour combien de temps sont élus les sénateurs ?",
+      "options": [
+        "Pour 3 ans",
+        "Pour 5 ans",
+        "Pour 6 ans",
+        "Pour 7 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les sénateurs sont élus pour une durée de 6 ans. Ils sont élus au suffrage universel indirect par les grands électeurs."
+    },
+    {
+      "id": "csp-si-q42",
+      "question": "Qui possède le pouvoir exécutif ?",
+      "options": [
+        "L'Assemblée nationale et le Sénat",
+        "Le président de la République et le Gouvernement",
+        "Les juges et les magistrats",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le pouvoir exécutif est exercé par le président de la République (chef de l'État) et le Gouvernement (Premier ministre et ministres), qui appliquent les lois."
+    },
+    {
+      "id": "csp-si-q43",
+      "question": "Quelle condition est nécessaire pour voter aux élections ?",
+      "options": [
+        "Payer des impôts sur le revenu",
+        "Être inscrit sur les listes électorales",
+        "Avoir un emploi stable",
+        "Être marié ou pacsé"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'inscription sur les listes électorales est obligatoire pour pouvoir voter. Il faut aussi être majeur et jouir de ses droits civils et politiques."
+    },
+    {
+      "id": "csp-si-q44",
+      "question": "Qui peut voter aux élections en France ?",
+      "options": [
+        "Tous les résidents en France, quelle que soit leur nationalité",
+        "Les citoyens français majeurs jouissant de leurs droits civils",
+        "Uniquement les personnes qui paient des impôts",
+        "Les citoyens français à partir de 16 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le droit de vote est accordé aux citoyens de nationalité française, majeurs (18 ans) et jouissant de leurs droits civils. Les citoyens de l'UE peuvent aussi voter aux élections municipales et européennes."
+    },
+    {
+      "id": "csp-si-q45",
+      "question": "Que signifie « suffrage universel » ?",
+      "options": [
+        "Le droit de vote est réservé aux hommes",
+        "Le droit de vote dépend de la richesse et des impôts payés",
+        "Le droit de vote est accordé à tous les citoyens sans distinction",
+        "Le vote est obligatoire pour tout le monde sous peine d'amende"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le suffrage universel signifie que tous les citoyens majeurs peuvent voter sans distinction de sexe, d'origine, de religion ou d'idéaux politiques."
+    },
+    {
+      "id": "csp-si-q46",
+      "question": "Concernant les partis politiques, quelle proposition est correcte ?",
+      "options": [
+        "Il n'y a qu'un seul parti politique autorisé en France",
+        "La pluralité des partis garantit la liberté d'expression des opinions",
+        "Il est obligatoire d'adhérer à un parti politique pour voter",
+        "Les médias doivent donner la parole uniquement au parti du Gouvernement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La pluralité des partis politiques est un principe fondamental de la démocratie française qui permet l'expression de différentes opinions politiques."
+    }
+  ]
+}

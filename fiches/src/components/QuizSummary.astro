@@ -1,22 +1,53 @@
 ---
 import QuizCard from './QuizCard.astro';
 
-import principesData from '../data/quizzes/principes-et-valeurs.json';
-import systemeData from '../data/quizzes/systeme-institutionnel.json';
-import droitsData from '../data/quizzes/droits-et-devoirs.json';
-import histoireData from '../data/quizzes/histoire-geographie-culture.json';
-import vivreData from '../data/quizzes/vivre-en-france.json';
+interface QuizData {
+  id: string;
+  title: string;
+  description: string;
+  questions: { id: string }[];
+}
 
-const quizzes = [
-  { data: principesData, href: '/quiz/principes-et-valeurs/' },
-  { data: systemeData, href: '/quiz/systeme-institutionnel/' },
-  { data: droitsData, href: '/quiz/droits-et-devoirs/' },
-  { data: histoireData, href: '/quiz/histoire-geographie-culture/' },
-  { data: vivreData, href: '/quiz/vivre-en-france/' },
+const quizModules = import.meta.glob<{ default: QuizData }>('../data/quizzes/*.json', {
+  eager: true,
+});
+
+const orderPrefixes = [
+  'principes-et-valeurs',
+  'systeme-institutionnel',
+  'droits-et-devoirs',
+  'histoire-geographie-culture',
+  'vivre-en-france',
+  'csp-principes-et-valeurs',
+  'csp-systeme-institutionnel',
+  'csp-droits-et-devoirs',
+  'csp-histoire-geographie-culture',
+  'csp-vivre-en-france',
+  'cr-principes-et-valeurs',
+  'cr-systeme-institutionnel',
+  'cr-droits-et-devoirs',
 ];
+
+const allQuizzes = Object.values(quizModules)
+  .map((mod) => {
+    const data = mod.default;
+    return { data, href: `/quiz/${data.id}/` };
+  })
+  .sort((a, b) => {
+    const aIdx = orderPrefixes.indexOf(a.data.id);
+    const bIdx = orderPrefixes.indexOf(b.data.id);
+    return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx);
+  });
+
+const thematicQuizzes = allQuizzes.filter(
+  (q) => !q.data.id.startsWith('csp-') && !q.data.id.startsWith('cr-'),
+);
+const cspQuizzes = allQuizzes.filter((q) => q.data.id.startsWith('csp-'));
+const crQuizzes = allQuizzes.filter((q) => q.data.id.startsWith('cr-'));
+const total = allQuizzes.length;
 ---
 
-<div class="quiz-summary">
+<div class="quiz-summary" data-total={total}>
   <div class="quiz-summary-header">
     <div class="quiz-summary-progress">
       <span class="quiz-summary-progress-text" id="summary-progress-text">Progression : chargement...</span>
@@ -28,7 +59,8 @@ const quizzes = [
   </div>
 
   <div class="quiz-card-list">
-    {quizzes.map(({ data, href }) => (
+    <h3 class="quiz-section-title">Quiz thématiques</h3>
+    {thematicQuizzes.map(({ data, href }) => (
       <QuizCard
         quizId={data.id}
         title={data.title}
@@ -37,6 +69,44 @@ const quizzes = [
         href={href}
       />
     ))}
+
+    {cspQuizzes.length > 0 && (
+      <>
+        <h3 class="quiz-section-title">Quiz officiels CSP</h3>
+        <p class="quiz-section-description">
+          Questions officielles de l'examen de connaissance du <strong>Contrat de S&eacute;jour Pluriannuel (CSP)</strong>.
+          <a href="https://formation-civique.interieur.gouv.fr/examen-civique/liste-officielle-des-questions-de-connaissance-csp/" target="_blank" rel="noopener">Voir la liste officielle</a>
+        </p>
+        {cspQuizzes.map(({ data, href }) => (
+          <QuizCard
+            quizId={data.id}
+            title={data.title}
+            description={data.description}
+            questionCount={data.questions.length}
+            href={href}
+          />
+        ))}
+      </>
+    )}
+
+    {crQuizzes.length > 0 && (
+      <>
+        <h3 class="quiz-section-title">Quiz officiels CR</h3>
+        <p class="quiz-section-description">
+          Questions officielles de l'examen de connaissance de la <strong>Carte de R&eacute;sident (CR)</strong>.
+          <a href="https://formation-civique.interieur.gouv.fr/examen-civique/liste-officielle-des-questions-de-connaissance-cr/" target="_blank" rel="noopener">Voir la liste officielle</a>
+        </p>
+        {crQuizzes.map(({ data, href }) => (
+          <QuizCard
+            quizId={data.id}
+            title={data.title}
+            description={data.description}
+            questionCount={data.questions.length}
+            href={href}
+          />
+        ))}
+      </>
+    )}
   </div>
 </div>
 
@@ -46,7 +116,8 @@ const quizzes = [
   function updateProgress() {
     const results = getAllQuizResults();
     const completed = results.length;
-    const total = 5;
+    const summaryEl = document.querySelector('.quiz-summary') as HTMLElement | null;
+    const total = parseInt(summaryEl?.dataset?.total || '0', 10);
     const progressText = document.getElementById('summary-progress-text');
     const progressFill = document.getElementById('summary-progress-fill');
 
@@ -131,5 +202,29 @@ const quizzes = [
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+  }
+
+  .quiz-section-title {
+    margin: 1rem 0 0.3rem;
+    font-size: 1rem;
+    color: var(--sl-color-gray-2);
+    border-bottom: 1px solid var(--sl-color-gray-6);
+    padding-bottom: 0.3rem;
+  }
+
+  .quiz-section-title:first-child {
+    margin-top: 0;
+  }
+
+  .quiz-section-description {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .quiz-section-description a {
+    color: var(--sl-color-accent);
+    text-decoration: underline;
   }
 </style>
