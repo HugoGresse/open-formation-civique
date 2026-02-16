@@ -13,8 +13,13 @@ export default defineConfig({
 	trailingSlash: 'always',
 	integrations: [
 		starlight({
-			title: 'Formation Civique',
-			description: 'Fiches thématiques pour la formation civique',
+			title: 'Open Formation Civique',
+			description: 'Fiches thématiques et quiz pour la formation civique',
+			favicon: '/favicon.png',
+			logo: {
+				src: './public/favicon.png',
+				alt: 'Formation Civique',
+			},
 			customCss: ['./src/styles/quiz.css'],
 			defaultLocale: 'root',
 			locales: {

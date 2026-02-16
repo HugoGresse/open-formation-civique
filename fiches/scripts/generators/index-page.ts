@@ -12,12 +12,12 @@ export function generateIndexPage(data: CrawlerData, contentDir: string): void {
     .join('\n  ');
 
   const indexContent = `---
-title: Formation Civique
+title: Quizz et fiches complètes et gratuits.
 description: Bienvenue sur le site de la formation civique
 template: splash
 hero:
-  title: Formation Civique
-  tagline: Fiches thématiques pour comprendre les principes et valeurs de la République française
+  title: Open-Formation-Civique.fr
+  tagline: Fiches thématiques et quiz, gratuits et open source, pour comprendre les principes et les valeurs de la République française.
   actions:
     - text: Découvrir les fiches
       link: principes-et-valeurs/
