@@ -20,6 +20,16 @@ export default defineConfig({
 				src: './public/favicon.png',
 				alt: 'Formation Civique',
 			},
+			head: [
+				{
+					tag: 'script',
+					attrs: {
+						defer: true,
+						'data-domain': 'open-formation-civique.fr',
+						src: 'https://plausible.gresse.io/js/script.js',
+					},
+				},
+			],
 			customCss: ['./src/styles/quiz.css'],
 			defaultLocale: 'root',
 			locales: {
