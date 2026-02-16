@@ -20,9 +20,9 @@
       "question": "Quel droit permet à une personne de se défendre devant la justice ?",
       "options": [
         "Le droit à un procès équitable",
-        "Le droit de propriété",
+        "Le droit à l'éducation",
         "Le droit de grève",
-        "Le droit à l'éducation"
+        "Le droit de propriété"
       ],
       "correctAnswer": 0,
       "explanation": "Le droit à la sûreté implique le respect des droits de la défense, notamment le droit à un procès équitable (être accompagné d'un avocat, comprendre la langue, présomption d'innocence)."
@@ -31,108 +31,108 @@
       "id": "csp-dd-q3",
       "question": "Quel est le texte fondateur établissant en France les droits et les devoirs de chaque citoyen ?",
       "options": [
-        "La Déclaration des droits de l'homme et du citoyen de 1789",
-        "Le Code de la route",
         "Le traité de Versailles",
-        "L'édit de Nantes"
+        "L'édit de Nantes",
+        "La Déclaration des droits de l'homme et du citoyen de 1789",
+        "Le Code de la route"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Déclaration des droits de l'homme et du citoyen de 1789 est le texte fondamental qui affirme les droits naturels, universels et inaliénables de l'Homme ainsi que les droits et devoirs du citoyen."
     },
     {
       "id": "csp-dd-q4",
       "question": "Quel texte a été adopté pendant la Révolution française ?",
       "options": [
-        "La Déclaration des droits de l'homme et du citoyen (1789)",
-        "La Constitution de la Ve République (1958)",
         "La Charte de l'environnement (2004)",
-        "Le Code Civil (1804)"
+        "Le Code Civil (1804)",
+        "La Déclaration des droits de l'homme et du citoyen (1789)",
+        "La Constitution de la Ve République (1958)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Déclaration des droits de l'homme et du citoyen a été adoptée le 26 août 1789, au tout début de la Révolution française, marquant la fin de l'Ancien Régime."
     },
     {
       "id": "csp-dd-q5",
       "question": "Quelle liberté permet à une personne de ne pas avoir de religion ?",
       "options": [
+        "La liberté d'association",
         "La liberté de culte ou de conscience",
         "La liberté de mouvement",
-        "La liberté d'association",
         "La liberté de la presse"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La liberté de culte (ou de religion) et de conscience garantit à chacun le droit de croire en une religion, d'en changer, ou de ne pas croire du tout (athéisme)."
     },
     {
       "id": "csp-dd-q6",
       "question": "Une femme peut avorter :",
       "options": [
-        "Librement, sans condition d'âge",
+        "Uniquement pour des raisons médicales graves",
         "Uniquement si son mari est d'accord",
         "Seulement si elle est majeure",
-        "Uniquement pour des raisons médicales graves"
+        "Librement, sans condition d'âge"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "L’interruption volontaire de grossesse (IVG) est un droit pour toutes les femmes, majeures ou mineures (accompagnées d'un adulte de leur choix), sans besoin d'autorisation du partenaire."
     },
     {
       "id": "csp-dd-q7",
       "question": "Qu'est-ce qu'une infraction ?",
       "options": [
+        "Une erreur administrative sur sa déclaration d'impôts",
         "Un acte interdit par la loi et puni par une sanction pénale",
         "Une simple impolitesse envers un représentant de l'État",
-        "Un désaccord verbal entre deux voisins",
-        "Une erreur administrative sur sa déclaration d'impôts"
+        "Un désaccord verbal entre deux voisins"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Une infraction est un comportement (action ou omission) qui ne respecte pas la loi et pour lequel une peine est prévue (amende, prison, etc.)."
     },
     {
       "id": "csp-dd-q8",
       "question": "Comment peut-on réduire ses déchets ?",
       "options": [
-        "En triant ses emballages et en compostant les déchets organiques",
-        "En brûlant ses poubelles dans son jardin",
         "En jetant tout dans la même poubelle pour gagner du temps",
-        "En achetant uniquement des produits avec beaucoup d'emballages plastiques"
+        "En achetant uniquement des produits avec beaucoup d'emballages plastiques",
+        "En brûlant ses poubelles dans son jardin",
+        "En triant ses emballages et en compostant les déchets organiques"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le tri sélectif, le compostage et la consommation responsable sont des gestes citoyens essentiels pour préserver l'environnement, conformément à la Charte de l'environnement."
     },
     {
       "id": "csp-dd-q9",
       "question": "Déposer une machine à laver cassée sur le trottoir est :",
       "options": [
+        "Un geste solidaire pour ceux qui bricolent",
         "Interdit et passible d'une amende (dépôt sauvage)",
         "Autorisé si on met un mot dessus",
-        "Obligatoire pour que les éboueurs la ramassent",
-        "Un geste solidaire pour ceux qui bricolent"
+        "Obligatoire pour que les éboueurs la ramassent"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "L'abandon d'objets encombrants sur la voie publique est un dépôt sauvage illégal. Il faut les emmener à la déchetterie ou utiliser le service des encombrants de la mairie."
     },
     {
       "id": "csp-dd-q10",
       "question": "En quoi consiste la traite des êtres humains ?",
       "options": [
-        "C'est le fait de recruter ou transporter des personnes pour les exploiter (travail forcé, exploitation sexuelle...)",
         "C'est le transport légal de passagers dans les transports en commun",
+        "C'est le fait de recruter ou transporter des personnes pour les exploiter (travail forcé, exploitation sexuelle...)",
         "C'est l'accueil de réfugiés par des associations humanitaires",
         "C'est le commerce international de marchandises entre pays"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La traite des êtres humains est une forme d'esclavage moderne qui viole la dignité humaine, principe fondamental protégé par les textes européens et français."
     },
     {
       "id": "csp-dd-q11",
       "question": "Que doit faire une victime de violences ?",
       "options": [
-        "Porter plainte auprès de la police ou de la gendarmerie",
+        "Attendre que l'auteur des violences s'excuse",
         "Garder le silence pour ne pas aggraver la situation",
         "Se faire justice elle-même",
-        "Attendre que l'auteur des violences s'excuse"
+        "Porter plainte auprès de la police ou de la gendarmerie"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Toute victime a le droit d'être protégée et aidée. Elle doit signaler les faits aux forces de l'ordre pour faire valoir ses droits et assurer sa sécurité."
     },
     {
@@ -140,9 +140,9 @@
       "question": "Quelle est l'infraction la plus grave ?",
       "options": [
         "Le crime",
-        "Le délit",
+        "L'incivilité",
         "La contravention",
-        "L'incivilité"
+        "Le délit"
       ],
       "correctAnswer": 0,
       "explanation": "En droit français, les infractions sont classées par gravité : la contravention (la moins grave), le délit, et le crime (la plus grave, jugée aux assises)."
@@ -152,9 +152,9 @@
       "question": "Comment s’appelle la Constitution actuelle de la France ?",
       "options": [
         "La Constitution de 1958 (Vème République)",
-        "La Constitution de 1789",
+        "La Constitution de 1946 (IVème République)",
         "Le Code Civil de 1804",
-        "La Constitution de 1946 (IVème République)"
+        "La Constitution de 1789"
       ],
       "correctAnswer": 0,
       "explanation": "La France est actuellement sous la Vème République, régie par la Constitution du 4 octobre 1958."
@@ -163,48 +163,48 @@
       "id": "csp-dd-q14",
       "question": "Comment s'appelle le texte qui énonce les droits et devoirs des personnes résidant en France ?",
       "options": [
+        "L'Hymne national (La Marseillaise)",
         "La Déclaration des droits de l'homme et du citoyen",
-        "Le Traité de Versailles",
         "Le Code de la route",
-        "L'Hymne national (La Marseillaise)"
+        "Le Traité de Versailles"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Ce texte fondamental de 1789 définit les droits naturels, inaliénables et sacrés de l'homme ainsi que les droits et devoirs du citoyen."
     },
     {
       "id": "csp-dd-q15",
       "question": "Concernant les droits individuels, quelle proposition est correcte ?",
       "options": [
+        "On peut vendre ses droits fondamentaux à une autre personne",
         "La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui",
-        "Les droits individuels permettent de tout faire sans aucune limite",
         "Seuls les citoyens français possèdent des droits individuels",
-        "On peut vendre ses droits fondamentaux à une autre personne"
+        "Les droits individuels permettent de tout faire sans aucune limite"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Selon l'article 4 de la Déclaration de 1789, l'exercice des droits naturels de chaque homme a pour seules limites celles qui assurent aux autres la jouissance de ces mêmes droits."
     },
     {
       "id": "csp-dd-q16",
       "question": "De quelle année date la Déclaration des droits de l’homme et du citoyen ?",
       "options": [
-        "1789",
-        "1958",
         "1945",
-        "1804"
+        "1804",
+        "1789",
+        "1958"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Déclaration des droits de l'homme et du citoyen a été adoptée le 26 août 1789, au début de la Révolution française."
     },
     {
       "id": "csp-dd-q17",
       "question": "Lequel de ces droits est un droit fondamental ?",
       "options": [
+        "Le droit de conduire sans permis",
         "La liberté d'expression",
         "Le droit de ne pas payer d'impôts",
-        "Le droit de conduire sans permis",
         "Le droit de se faire justice soi-même"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La liberté d'expression (penser et dire ce que l'on pense) est une liberté fondamentale garantie par la Déclaration de 1789."
     },
     {
@@ -212,9 +212,9 @@
       "question": "Parmi ces textes, lequel garantit les droits et libertés en France ?",
       "options": [
         "La Constitution de 1958",
-        "Le règlement de copropriété",
         "Le journal officiel",
-        "Le dictionnaire"
+        "Le dictionnaire",
+        "Le règlement de copropriété"
       ],
       "correctAnswer": 0,
       "explanation": "La Constitution de 1958 et son préambule (qui inclut la Déclaration de 1789) forment le bloc de constitutionnalité qui garantit les droits et libertés."
@@ -224,107 +224,107 @@
       "question": "Pourquoi les libertés individuelles peuvent-elles être limitées ?",
       "options": [
         "Pour permettre au gouvernement de tout contrôler",
-        "Pour respecter les droits des autres et préserver l'ordre public",
         "Les libertés individuelles ne peuvent jamais être limitées",
-        "Uniquement pour des raisons économiques"
+        "Uniquement pour des raisons économiques",
+        "Pour respecter les droits des autres et préserver l'ordre public"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Selon la Déclaration des Droits de l'Homme, la liberté consiste à faire tout ce qui ne nuit pas à autrui. Les limites servent à protéger l'intérêt général et la sécurité de tous."
     },
     {
       "id": "csp-dd-q20",
       "question": "Que doit faire une personne en cas d’accident ?",
       "options": [
-        "Elle doit porter secours ou alerter les secours",
-        "Elle doit prendre des photos pour les réseaux sociaux",
         "Elle doit continuer son chemin pour ne pas être en retard",
-        "Elle doit attendre que quelqu'un d'autre intervienne"
+        "Elle doit attendre que quelqu'un d'autre intervienne",
+        "Elle doit porter secours ou alerter les secours",
+        "Elle doit prendre des photos pour les réseaux sociaux"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Ne pas porter assistance à une personne en danger est puni par la loi. Il faut sécuriser les lieux et appeler les secours (15, 18 ou 112)."
     },
     {
       "id": "csp-dd-q21",
       "question": "Que permet la citoyenneté française ?",
       "options": [
-        "Elle permet de ne plus payer d'impôts",
-        "Elle permet de participer à la vie politique (voter et être élu)",
         "Elle permet de voyager gratuitement dans le monde",
-        "Elle permet de ne pas respecter certaines lois"
+        "Elle permet de ne pas respecter certaines lois",
+        "Elle permet de participer à la vie politique (voter et être élu)",
+        "Elle permet de ne plus payer d'impôts"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "La citoyenneté donne des droits politiques spécifiques, comme le droit de vote et d'éligibilité, en plus des droits civils garantis à tous."
     },
     {
       "id": "csp-dd-q22",
       "question": "Que risque une personne qui ne respecte pas la loi ?",
       "options": [
-        "Elle risque des sanctions pénales (amende, prison)",
-        "Elle ne risque rien si personne ne la voit",
         "Elle risque de perdre immédiatement sa nationalité",
-        "Elle risque seulement un avertissement verbal"
+        "Elle risque seulement un avertissement verbal",
+        "Elle ne risque rien si personne ne la voit",
+        "Elle risque des sanctions pénales (amende, prison)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Nul n'est censé ignorer la loi. Le non-respect des règles expose à des sanctions décidées par la justice, comme des amendes ou des peines de prison."
     },
     {
       "id": "csp-dd-q23",
       "question": "Quel est le rôle de la gendarmerie ?",
       "options": [
-        "Voter les lois à la place des citoyens",
-        "Assurer la sécurité des personnes et des biens, surtout en zone rurale",
         "Juger les coupables au tribunal",
-        "Soigner les victimes d'accidents"
+        "Voter les lois à la place des citoyens",
+        "Soigner les victimes d'accidents",
+        "Assurer la sécurité des personnes et des biens, surtout en zone rurale"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "La gendarmerie nationale est une force armée chargée de missions de police (sécurité, ordre public), principalement dans les zones rurales et périurbaines."
     },
     {
       "id": "csp-dd-q24",
       "question": "Quel est le rôle de la police ?",
       "options": [
-        "Garantir la sécurité et maintenir l'ordre public, principalement en ville",
         "Décider des peines de prison pour les criminels",
-        "Collecter les impôts des citoyens",
-        "Faire la guerre aux pays ennemis"
+        "Garantir la sécurité et maintenir l'ordre public, principalement en ville",
+        "Faire la guerre aux pays ennemis",
+        "Collecter les impôts des citoyens"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La police nationale a pour mission de garantir la paix publique, d'assurer la sécurité des personnes et des biens, et de rechercher les auteurs d'infractions, principalement en zone urbaine."
     },
     {
       "id": "csp-dd-q25",
       "question": "Est-il toujours possible de divorcer ?",
       "options": [
-        "Oui, la liberté conjugale permet de mettre fin au mariage",
         "Non, il faut obligatoirement l'accord des deux époux",
         "Non, le divorce est interdit si le couple a des enfants",
+        "Oui, la liberté conjugale permet de mettre fin au mariage",
         "Oui, mais seulement après 10 ans de mariage"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La liberté conjugale permet à chaque époux de mettre fin à l'union. Le divorce est possible même sans faute et ne nécessite pas toujours l'accord des deux parties (divorce pour altération définitive du lien conjugal par exemple)."
     },
     {
       "id": "csp-dd-q26",
       "question": "La peine de mort est :",
       "options": [
-        "Interdite en France",
-        "Autorisée pour les crimes les plus graves",
         "Autorisée seulement en temps de guerre",
-        "Décidée par le Président de la République"
+        "Interdite en France",
+        "Décidée par le Président de la République",
+        "Autorisée pour les crimes les plus graves"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le droit à la vie est un droit essentiel. La peine de mort a été abolie en France en 1981 et son interdiction est inscrite dans la Constitution."
     },
     {
       "id": "csp-dd-q27",
       "question": "Concernant les limites aux libertés individuelles, quelle proposition est correcte ?",
       "options": [
-        "La liberté consiste à faire tout ce qui ne nuit pas à autrui",
-        "La liberté est totale et sans aucune limite",
         "Seul le Président peut limiter les libertés individuelles",
+        "La liberté est totale et sans aucune limite",
+        "La liberté consiste à faire tout ce qui ne nuit pas à autrui",
         "Les libertés individuelles n'existent que pour les citoyens majeurs"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Selon l'article 4 de la Déclaration des droits de l'homme et du citoyen, l'exercice des droits naturels de chaque homme n'a de bornes que celles qui assurent aux autres membres de la société la jouissance de ces mêmes droits."
     },
     {
@@ -332,9 +332,9 @@
       "question": "En France, est-ce légal d'être marié à plusieurs personnes en même temps ?",
       "options": [
         "Non, la polygamie est interdite",
+        "Non, sauf si les mariages ont été célébrés à l'étranger",
         "Oui, si tous les conjoints sont d'accord",
-        "Oui, mais seulement pour les hommes",
-        "Non, sauf si les mariages ont été célébrés à l'étranger"
+        "Oui, mais seulement pour les hommes"
       ],
       "correctAnswer": 0,
       "explanation": "En France, le mariage est l'union exclusive de deux personnes. La polygamie (le fait d'être marié à plusieurs personnes) est interdite par la loi."
@@ -343,24 +343,24 @@
       "id": "csp-dd-q29",
       "question": "Faut-il réduire ses déchets ?",
       "options": [
-        "Oui, pour préserver l'environnement et les générations futures",
         "Non, car les services de nettoyage s'en occupent",
         "Non, cela n'a aucun impact sur la planète",
-        "Oui, mais seulement si on habite à la campagne"
+        "Oui, mais seulement si on habite à la campagne",
+        "Oui, pour préserver l'environnement et les générations futures"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "La Charte de l'environnement précise que toute personne a le devoir de prendre part à la préservation de l'environnement. Réduire ses déchets contribue à un développement durable."
     },
     {
       "id": "csp-dd-q30",
       "question": "Jeter une bouteille dans la rue est :",
       "options": [
-        "Interdit et passible d'une amende",
-        "Autorisé si personne ne nous voit",
         "Autorisé s'il n'y a pas de poubelle à proximité",
-        "Un droit fondamental de liberté d'expression"
+        "Interdit et passible d'une amende",
+        "Un droit fondamental de liberté d'expression",
+        "Autorisé si personne ne nous voit"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le respect de l'environnement et de la salubrité publique (hygiène) fait partie des devoirs de chacun. Jeter des déchets sur la voie publique est une infraction sanctionnée par la loi."
     }
   ]

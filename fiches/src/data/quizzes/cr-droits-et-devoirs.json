@@ -7,60 +7,60 @@
       "id": "cr-dd-q1",
       "question": "À quelle liberté la PMA fait-elle référence ?",
       "options": [
-        "La liberté d'avoir des enfants",
-        "La liberté de circulation",
+        "La liberté de culte",
         "La liberté d'expression",
-        "La liberté de culte"
+        "La liberté d'avoir des enfants",
+        "La liberté de circulation"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La PMA (Procréation Médicalement Assistée) est un droit qui découle de la liberté individuelle de choisir d'avoir ou de ne pas avoir d'enfant, ouverte à toutes les femmes depuis la loi bioéthique de 2021."
     },
     {
       "id": "cr-dd-q2",
       "question": "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
       "options": [
-        "L'intérêt général et la défense de l'ordre public",
         "La volonté du Président de la République",
-        "Les intérêts économiques des entreprises",
-        "La tradition religieuse"
+        "L'intérêt général et la défense de l'ordre public",
+        "La tradition religieuse",
+        "Les intérêts économiques des entreprises"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Les droits et libertés individuels peuvent être limités par l'intérêt général, la défense de l'ordre public (sécurité, tranquillité, salubrité) et le respect des libertés d'autrui."
     },
     {
       "id": "cr-dd-q3",
       "question": "Concernant le droit de se marier, quelle proposition est correcte ?",
       "options": [
+        "L'autorisation des parents est toujours obligatoire, même pour les majeurs",
         "Chacun est libre de choisir son conjoint, quel que soit son sexe",
         "Le mariage est obligatoire pour avoir des enfants",
-        "Seuls les couples de sexes différents peuvent se marier",
-        "L'autorisation des parents est toujours obligatoire, même pour les majeurs"
+        "Seuls les couples de sexes différents peuvent se marier"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "En France, la liberté conjugale garantit à chacun la liberté de choisir son conjoint (quel que soit son sexe) et de se marier ou non."
     },
     {
       "id": "cr-dd-q4",
       "question": "Est-il toujours possible de divorcer ?",
       "options": [
+        "Non, le mariage est un engagement définitif",
         "Oui, la liberté conjugale permet de mettre fin au mariage",
         "Non, seulement si le conjoint est d'accord",
-        "Non, le mariage est un engagement définitif",
         "Oui, mais seulement après 10 ans de mariage"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La liberté conjugale permet à chaque conjoint de mettre fin à l'union. Le divorce met fin au mariage, sans avoir nécessairement besoin d'une faute."
     },
     {
       "id": "cr-dd-q5",
       "question": "La peine de mort est :",
       "options": [
-        "Interdite, car le droit à la vie est un droit fondamental",
         "Autorisée pour les crimes les plus graves",
         "Autorisée seulement en temps de guerre",
-        "Décidée par le Président de la République"
+        "Décidée par le Président de la République",
+        "Interdite, car le droit à la vie est un droit fondamental"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le droit à la vie est un droit essentiel lié au respect de la personne humaine (inscrit dans la Charte des droits fondamentaux de l'UE). La peine de mort est abolie en France."
     },
     {
@@ -68,9 +68,9 @@
       "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'homme et du Citoyen de 1789 ?",
       "options": [
         "Les hommes naissent et demeurent libres et égaux en droits",
-        "Liberté, Égalité, Fraternité",
+        "Chacun a le droit de travailler et le droit d'obtenir un emploi",
         "L'environnement est le patrimoine commun des êtres humains",
-        "Chacun a le droit de travailler et le droit d'obtenir un emploi"
+        "Liberté, Égalité, Fraternité"
       ],
       "correctAnswer": 0,
       "explanation": "C'est l'article 1er de la Déclaration de 1789. La devise est une devise républicaine, la citation sur l'environnement vient de la Charte de 2004, et celle sur le travail du Préambule de 1946."
@@ -79,12 +79,12 @@
       "id": "cr-dd-q7",
       "question": "Quel exemple illustre une limitation de liberté pour protéger l'intérêt général ?",
       "options": [
-        "L'interdiction de circuler pendant une crise sanitaire (confinement)",
         "L'interdiction de voter pour certaines opinions politiques",
+        "L'interdiction de circuler pendant une crise sanitaire (confinement)",
         "L'obligation de choisir un métier imposé par l'État",
         "L'interdiction de pratiquer une religion chez soi"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Les libertés individuelles peuvent être restreintes pour l'intérêt général, comme lors de l'état d'urgence sanitaire contre le Covid-19 où la liberté d'aller et venir a été limitée."
     },
     {
@@ -93,8 +93,8 @@
       "options": [
         "Alerter les secours ou les forces de l'ordre",
         "Filmer la scène pour la mettre sur les réseaux sociaux",
-        "Ignorer la situation pour ne pas se mettre en danger",
-        "Encourager l'auteur des violences"
+        "Encourager l'auteur des violences",
+        "Ignorer la situation pour ne pas se mettre en danger"
       ],
       "correctAnswer": 0,
       "explanation": "La non-assistance à personne en danger est punie par la loi. Si l'on est témoin de violences, il faut alerter la police ou les secours (17, 18, 112)."
@@ -103,24 +103,24 @@
       "id": "cr-dd-q9",
       "question": "Quelle est l'infraction la plus grave ?",
       "options": [
-        "Le crime",
-        "Le délit",
         "La contravention",
-        "L'incivilité"
+        "Le crime",
+        "L'incivilité",
+        "Le délit"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "En droit français, les infractions sont classées par gravité croissante : la contravention (la moins grave), le délit, et enfin le crime (la plus grave)."
     },
     {
       "id": "cr-dd-q10",
       "question": "Quelle obligation concerne toutes les personnes résidant en France quelle que soit leur nationalité ?",
       "options": [
-        "Respecter les lois de la République",
         "Voter aux élections présidentielles",
+        "Effectuer son service militaire",
         "Posséder la carte d'identité française",
-        "Effectuer son service militaire"
+        "Respecter les lois de la République"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Toute personne présente sur le sol français, citoyen ou étranger, a le devoir de respecter les lois. Le droit de vote, en revanche, est souvent lié à la nationalité."
     },
     {
@@ -128,9 +128,9 @@
       "question": "Quelle proposition représente un exemple de crime ?",
       "options": [
         "Un meurtre",
+        "Un vol simple à l'étalage",
         "Un excès de vitesse",
-        "Un tapage nocturne",
-        "Un vol simple à l'étalage"
+        "Un tapage nocturne"
       ],
       "correctAnswer": 0,
       "explanation": "Le meurtre est un crime, jugé par la Cour d'assises. Les autres exemples sont des contraventions ou des délits."
@@ -141,8 +141,8 @@
       "options": [
         "Le vol ou le harcèlement",
         "Le stationnement interdit",
-        "L'assassinat",
-        "Le non-respect du tri sélectif"
+        "Le non-respect du tri sélectif",
+        "L'assassinat"
       ],
       "correctAnswer": 0,
       "explanation": "Le vol, le harcèlement ou les violences graves sont des délits, jugés par le Tribunal correctionnel. L'assassinat est un crime, et le stationnement une contravention."
@@ -151,96 +151,96 @@
       "id": "cr-dd-q13",
       "question": "Le recours à l'avortement est-il autorisé ?",
       "options": [
-        "Oui, pour toutes les femmes, sans condition d'âge",
-        "Oui, mais uniquement pour les femmes majeures",
         "Non, c'est interdit par la loi",
+        "Oui, mais uniquement pour les femmes majeures",
+        "Oui, pour toutes les femmes, sans condition d'âge",
         "Oui, mais seulement avec l'accord du conjoint"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "L'IVG (Interruption Volontaire de Grossesse) est autorisée en France pour toutes les femmes, y compris les mineures (qui n'ont pas besoin de l'autorisation des parents mais doivent être accompagnées d'un majeur)."
     },
     {
       "id": "cr-dd-q14",
       "question": "Que contient la Constitution ?",
       "options": [
-        "L'organisation de l'État et les droits fondamentaux",
-        "Le code de la route et les règles de circulation",
         "La liste de tous les impôts à payer",
+        "Le code de la route et les règles de circulation",
+        "L'organisation de l'État et les droits fondamentaux",
         "Le règlement intérieur des entreprises"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Constitution est le texte fondateur qui détermine l'organisation de l'État, le régime politique et garantit les droits et libertés fondamentaux des citoyens."
     },
     {
       "id": "cr-dd-q15",
       "question": "Que garantit la liberté de la presse ?",
       "options": [
-        "Le droit de diffuser des informations et des opinions librement",
-        "Le droit de publier des fausses informations sans conséquence",
         "L'obligation pour les journalistes de toujours être d'accord avec le gouvernement",
+        "Le droit de publier des fausses informations sans conséquence",
+        "Le droit de diffuser des informations et des opinions librement",
         "L'interdiction de critiquer les personnalités politiques"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La liberté de la presse découle de la liberté d'expression (article 11 de la DDHC). Elle permet de parler, écrire et imprimer librement, sauf abus définis par la loi (comme la diffamation)."
     },
     {
       "id": "cr-dd-q16",
       "question": "Que prévoit la Charte de l'environnement ?",
       "options": [
-        "Le droit de vivre dans un environnement équilibré et respectueux de la santé",
-        "L'interdiction totale de construire des usines",
         "La gratuité de l'eau pour tous les citoyens",
+        "L'interdiction totale de construire des usines",
+        "Le droit de vivre dans un environnement équilibré et respectueux de la santé",
         "L'obligation de devenir végétarien"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Charte de l'environnement de 2004, intégrée à la Constitution, stipule que chacun a le droit de vivre dans un environnement sain et le devoir de prendre part à sa préservation."
     },
     {
       "id": "cr-dd-q17",
       "question": "Que signifie la dignité humaine ?",
       "options": [
-        "Chaque personne mérite le respect simplement parce qu'elle est un être humain",
         "Le respect est réservé aux personnes qui travaillent",
-        "C'est le fait d'être toujours poli avec ses voisins",
-        "C'est un droit réservé aux citoyens français uniquement"
+        "Chaque personne mérite le respect simplement parce qu'elle est un être humain",
+        "C'est un droit réservé aux citoyens français uniquement",
+        "C'est le fait d'être toujours poli avec ses voisins"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La dignité humaine signifie qu'un être humain ne doit jamais être traité comme un objet. Il mérite un respect inconditionnel, peu importe son âge, son sexe, sa santé ou son origine."
     },
     {
       "id": "cr-dd-q18",
       "question": "Que signifie le droit de manifester ?",
       "options": [
-        "Le droit d'exprimer collectivement une opinion sur la voie publique",
-        "Le droit de casser des vitrines si on est en colère",
+        "Le droit de bloquer les routes sans autorisation",
         "L'obligation de défiler dans la rue tous les dimanches",
-        "Le droit de bloquer les routes sans autorisation"
+        "Le droit de casser des vitrines si on est en colère",
+        "Le droit d'exprimer collectivement une opinion sur la voie publique"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le droit de manifester est une liberté fondamentale liée à la liberté d'expression. Il permet aux citoyens de se rassembler pour exprimer leurs opinions, à condition de respecter l'ordre public."
     },
     {
       "id": "cr-dd-q19",
       "question": "Qui veille au maintien de l’ordre public ?",
       "options": [
-        "L'État, par l'intermédiaire de la force publique (police et gendarmerie)",
-        "Les citoyens eux-mêmes, en organisant des milices privées",
         "Les entreprises de sécurité privée uniquement",
-        "Les associations de quartier"
+        "Les associations de quartier",
+        "L'État, par l'intermédiaire de la force publique (police et gendarmerie)",
+        "Les citoyens eux-mêmes, en organisant des milices privées"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Selon l'article 12 de la Déclaration des droits de l'homme et du citoyen, la garantie des droits nécessite une \"force publique\". Cette force (l'État) est instituée pour l'avantage de tous afin d'assurer la sécurité et l'ordre."
     },
     {
       "id": "cr-dd-q20",
       "question": "S'agissant des déchets, quelle proposition est correcte ?",
       "options": [
+        "Seules les usines et les entreprises sont concernées par la gestion des déchets",
         "Je dois trier mes déchets et ne pas les jeter sur la voie publique",
         "Je peux jeter mes déchets n'importe où car des services de nettoyage existent",
-        "Seules les usines et les entreprises sont concernées par la gestion des déchets",
         "Il est interdit de trier ses déchets en France"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La Charte de l'environnement de 2004 stipule que \"toute personne a le devoir de prendre part à la préservation et à l'amélioration de l'environnement\". Ne pas jeter ses déchets par terre et respecter le tri sélectif fait partie de ce devoir citoyen."
     },
     {
@@ -249,8 +249,8 @@
       "options": [
         "Procréation Médicalement Assistée",
         "Protection Médicale des Adultes",
-        "Programme de Maintien de l'Autonomie",
-        "Prestation Mensuelle d'Allocation"
+        "Prestation Mensuelle d'Allocation",
+        "Programme de Maintien de l'Autonomie"
       ],
       "correctAnswer": 0,
       "explanation": "La PMA signifie Procréation Médicalement Assistée. C'est un droit ouvert à toutes les femmes (en couple ou seules) depuis la loi bioéthique du 2 août 2021."
@@ -259,36 +259,36 @@
       "id": "cr-dd-q22",
       "question": "Quel texte est le plus difficile à modifier ?",
       "options": [
-        "La Constitution",
-        "Une loi ordinaire",
         "Un arrêté municipal",
-        "Le règlement intérieur d'une entreprise"
+        "Le règlement intérieur d'une entreprise",
+        "La Constitution",
+        "Une loi ordinaire"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Constitution est le texte fondateur de la Vème République. Elle est très difficile à modifier, contrairement aux lois ordinaires, car elle organise le fonctionnement de l'État et garantit les droits fondamentaux."
     },
     {
       "id": "cr-dd-q23",
       "question": "Quelle liberté permet à une personne de croire en la religion de son choix ?",
       "options": [
+        "Le droit de propriété",
         "La liberté de culte",
         "La liberté de circulation",
-        "Le droit de grève",
-        "Le droit de propriété"
+        "Le droit de grève"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La liberté de culte (ou de religion) découle du principe de liberté. Elle permet à chacun de choisir sa religion ou de ne pas en avoir."
     },
     {
       "id": "cr-dd-q24",
       "question": "Qu'est-ce que le droit de grève ?",
       "options": [
-        "Le droit de cesser le travail pour exprimer un désaccord",
-        "Le droit de démissionner sans préavis",
         "Le droit de refuser de payer ses impôts",
-        "Le droit de détruire son outil de travail"
+        "Le droit de cesser le travail pour exprimer un désaccord",
+        "Le droit de détruire son outil de travail",
+        "Le droit de démissionner sans préavis"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le droit de grève est une liberté fondamentale qui permet à une personne employée d'arrêter de travailler pour exprimer une revendication ou un désaccord."
     },
     {
@@ -296,8 +296,8 @@
       "question": "Qu'est-ce que la Constitution ?",
       "options": [
         "Le texte fondateur qui organise l'État et définit les droits fondamentaux",
-        "Un livre d'histoire sur la Révolution française",
         "Le règlement intérieur de l'Assemblée nationale",
+        "Un livre d'histoire sur la Révolution française",
         "Un contrat de travail signé par tous les citoyens"
       ],
       "correctAnswer": 0,
@@ -307,36 +307,36 @@
       "id": "cr-dd-q26",
       "question": "Qui peut demander à avorter ?",
       "options": [
-        "Toutes les femmes, sans condition d'âge",
-        "Uniquement les femmes majeures (plus de 18 ans)",
         "Uniquement les femmes mariées",
-        "Uniquement les femmes ayant l'accord de leurs parents"
+        "Uniquement les femmes ayant l'accord de leurs parents",
+        "Uniquement les femmes majeures (plus de 18 ans)",
+        "Toutes les femmes, sans condition d'âge"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "L'IVG (Interruption Volontaire de Grossesse) est possible pour toutes les femmes, sans condition d'âge. Les mineures n'ont pas besoin de l'autorisation de leurs parents mais doivent être accompagnées d'un majeur de leur choix."
     },
     {
       "id": "cr-dd-q27",
       "question": "Une femme majeure de nationalité française a-t-elle le droit de voter aux élections ?",
       "options": [
-        "Oui, c'est un droit acquis pour toutes les citoyennes majeures",
-        "Non, le vote est réservé aux hommes",
         "Oui, mais seulement avec l'autorisation de son mari",
-        "Non, sauf si elle travaille"
+        "Non, le vote est réservé aux hommes",
+        "Non, sauf si elle travaille",
+        "Oui, c'est un droit acquis pour toutes les citoyennes majeures"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le suffrage universel garantit le droit de vote à chaque citoyen majeur, et l'égalité des sexes assure que les femmes ont les mêmes droits politiques que les hommes."
     },
     {
       "id": "cr-dd-q28",
       "question": "Concernant l'utilisation des réseaux sociaux, quelle proposition est correcte ?",
       "options": [
-        "Je peux dire tout ce que je veux, même des insultes, car je suis libre",
         "La liberté d'expression s'arrête là où elle nuit à autrui (insultes, diffamation)",
+        "Je peux dire tout ce que je veux, même des insultes, car je suis libre",
         "La loi française ne s'applique pas sur Internet",
         "Je suis obligé de donner ma véritable identité à tout le monde"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "La liberté d'expression est un droit fondamental, mais elle est limitée par le respect des autres. La loi punit les abus comme les injures ou l'incitation à la haine, même sur Internet."
     },
     {
@@ -355,34 +355,34 @@
       "id": "cr-dd-q30",
       "question": "L'État peut-il limiter les droits et libertés ?",
       "options": [
-        "Non, jamais, les libertés sont absolues",
         "Oui, pour protéger l'ordre public, la santé ou l'intérêt général",
         "Oui, mais uniquement pour les personnes étrangères",
-        "Non, sauf en cas de guerre uniquement"
+        "Non, sauf en cas de guerre uniquement",
+        "Non, jamais, les libertés sont absolues"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Les droits et libertés ne sont pas illimités. Ils peuvent être restreints par l'État pour garantir la sécurité, la santé publique (comme lors du Covid-19) et les droits des autres."
     },
     {
       "id": "cr-dd-q31",
       "question": "Parmi ces actions, laquelle permet d'adopter une attitude respectueuse de l’environnement ?",
       "options": [
-        "Laisser les lumières allumées inutilement",
         "Trier ses déchets",
+        "Utiliser sa voiture pour de très courts trajets",
         "Jeter des piles dans la poubelle normale",
-        "Utiliser sa voiture pour de très courts trajets"
+        "Laisser les lumières allumées inutilement"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "La Charte de l'environnement indique que toute personne a le devoir de prendre part à la préservation de l'environnement. Le tri des déchets est une action concrète en ce sens."
     },
     {
       "id": "cr-dd-q32",
       "question": "Quelle proposition constitue une obligation ?",
       "options": [
-        "Voter à chaque élection",
-        "Payer ses impôts",
         "Adhérer à un parti politique",
-        "Lire le journal tous les jours"
+        "Payer ses impôts",
+        "Lire le journal tous les jours",
+        "Voter à chaque élection"
       ],
       "correctAnswer": 1,
       "explanation": "Le citoyen a des droits mais aussi des devoirs. Payer l'impôt est une obligation (une contribution commune) pour permettre le fonctionnement de l'État et des services publics."
@@ -391,34 +391,34 @@
       "id": "cr-dd-q33",
       "question": "Pour quel motif peut-on limiter la liberté d'expression ?",
       "options": [
+        "Si l'opinion est exprimée dans une langue étrangère",
         "Si l'opinion exprimée ne plaît pas au gouvernement",
-        "Si elle trouble l'ordre public ou nuit à autrui",
         "On ne peut jamais limiter la liberté d'expression",
-        "Si l'opinion est exprimée dans une langue étrangère"
+        "Si elle trouble l'ordre public ou nuit à autrui"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Selon les articles 10 et 11 de la Déclaration des droits de l'homme et du citoyen, la liberté d'expression s'arrête là où elle trouble l'ordre public établi par la loi ou lorsqu'elle nuit à autrui (injures, diffamation, incitation à la haine)."
     },
     {
       "id": "cr-dd-q34",
       "question": "Pourquoi doit-on trier ses déchets ?",
       "options": [
-        "Pour préserver l'environnement et la santé",
+        "C'est une tradition française sans but précis",
         "Uniquement pour éviter de payer une amende",
-        "Pour donner du travail aux éboueurs",
-        "C'est une tradition française sans but précis"
+        "Pour préserver l'environnement et la santé",
+        "Pour donner du travail aux éboueurs"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Charte de l'environnement (intégrée à la Constitution) stipule que toute personne a le devoir de prendre part à la préservation et à l'amélioration de l'environnement, pour assurer un développement durable aux générations futures."
     },
     {
       "id": "cr-dd-q35",
       "question": "Que doit faire une victime de violences ?",
       "options": [
-        "Se faire justice elle-même par la violence",
         "Garder le silence pour ne pas déranger",
+        "Attendre que la situation s'améliore toute seule",
         "Porter plainte auprès des forces de l'ordre",
-        "Attendre que la situation s'améliore toute seule"
+        "Se faire justice elle-même par la violence"
       ],
       "correctAnswer": 2,
       "explanation": "L'État garantit le droit à la sûreté et à l'intégrité de la personne. Une victime doit signaler les faits à la police ou à la gendarmerie pour que la justice puisse intervenir et la protéger."
@@ -427,12 +427,12 @@
       "id": "cr-dd-q36",
       "question": "Que doit-on faire face aux ordres des policiers ou gendarmes ?",
       "options": [
-        "Obéir immédiatement",
         "Négocier si on n'est pas d'accord",
         "S'enfuir pour éviter le contrôle",
+        "Obéir immédiatement",
         "Appeler un ami pour demander son avis"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "L'article 7 de la Déclaration des droits de l'homme et du citoyen précise que tout citoyen appelé ou saisi en vertu de la loi doit obéir à l'instant ; il se rend coupable par la résistance."
     },
     {
@@ -440,23 +440,23 @@
       "question": "Quel est le rôle de la police ?",
       "options": [
         "Décider des lois à la place du gouvernement",
+        "Servir les intérêts particuliers de ceux qui la dirigent",
         "Garantir la sécurité et les droits des citoyens",
-        "Punir les citoyens sans passer par un juge",
-        "Servir les intérêts particuliers de ceux qui la dirigent"
+        "Punir les citoyens sans passer par un juge"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Selon l'article 12 de la Déclaration de 1789, la force publique (police, gendarmerie) est instituée pour l'avantage de tous afin de garantir les droits de l'Homme et du Citoyen, et non pour l'utilité particulière de ceux à qui elle est confiée."
     },
     {
       "id": "cr-dd-q38",
       "question": "Quel est un exemple d’assistance à personne en danger ?",
       "options": [
+        "Regarder ailleurs pour ne pas être impliqué",
         "Filmer une agression pour la mettre sur internet",
         "Appeler les secours (15, 18 ou 112) face à un accident",
-        "Regarder ailleurs pour ne pas être impliqué",
         "Donner de l'argent à une association caritative"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Porter assistance à une personne en danger est un devoir civique et une obligation légale. Alerter les secours d'urgence est le premier geste de solidarité pour protéger la vie d'autrui."
     }
   ]

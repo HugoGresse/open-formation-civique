@@ -134,6 +134,16 @@ ${questionsText}`,
     ) {
       throw new Error(`Invalid question structure: ${JSON.stringify(q).substring(0, 200)}`);
     }
+
+    // Shuffle options so the correct answer isn't always first
+    const correctOption = q.options[q.correctAnswer];
+    const indices = q.options.map((_, i) => i);
+    for (let i = indices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    q.options = indices.map((i) => q.options[i]);
+    q.correctAnswer = q.options.indexOf(correctOption);
   }
 
   return parsed;

@@ -19,34 +19,34 @@
       "id": "csp-hgc-q2",
       "question": "Depuis quelle année l'école publique est-elle gratuite ?",
       "options": [
-        "1881",
-        "1905",
         "1936",
-        "1958"
+        "1958",
+        "1881",
+        "1905"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Les lois de Jules Ferry rendent l'école primaire publique gratuite en 1881, puis obligatoire et laïque en 1882 (sous la IIIème République)."
     },
     {
       "id": "csp-hgc-q3",
       "question": "Combien y a-t-il eu de républiques en France ?",
       "options": [
-        "3",
         "4",
         "5",
+        "3",
         "6"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "La France a connu cinq républiques depuis la Révolution française. Nous vivons actuellement sous la Vème République, instaurée en 1958."
     },
     {
       "id": "csp-hgc-q4",
       "question": "Qui était le roi de France au moment de la Révolution française ?",
       "options": [
-        "Louis XIV",
+        "Napoléon Ier",
         "Louis XV",
         "Louis XVI",
-        "Napoléon Ier"
+        "Louis XIV"
       ],
       "correctAnswer": 2,
       "explanation": "Louis XVI était le roi de France lorsque la Révolution a éclaté en 1789. Il a été renversé en 1792 lors de la fin de la monarchie."
@@ -55,60 +55,60 @@
       "id": "csp-hgc-q5",
       "question": "Qui a fondé la Ve République ?",
       "options": [
+        "Jules Ferry",
         "François Mitterrand",
-        "Charles de Gaulle",
         "Napoléon Bonaparte",
-        "Jules Ferry"
+        "Charles de Gaulle"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Le général de Gaulle a fondé la Vème République en 1958 et en a été le premier président élu."
     },
     {
       "id": "csp-hgc-q6",
       "question": "Que célèbre-t-on le 14 juillet ?",
       "options": [
-        "L'armistice de la Première Guerre mondiale",
         "La prise de la Bastille et la Fête de la Fédération",
-        "La libération de Paris",
-        "La victoire de 1945"
+        "La victoire de 1945",
+        "L'armistice de la Première Guerre mondiale",
+        "La libération de Paris"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "La fête nationale du 14 juillet commémore la prise de la Bastille (1789), symbole de la fin de l'arbitraire royal, et la Fête de la Fédération (1790), symbole de l'union de la nation."
     },
     {
       "id": "csp-hgc-q7",
       "question": "Qu'est-ce que le Louvre ?",
       "options": [
-        "Un musée célèbre situé à Paris",
+        "Un stade de football",
         "Le siège du gouvernement français",
         "Une grande gare ferroviaire",
-        "Un stade de football"
+        "Un musée célèbre situé à Paris"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le Louvre est l'un des plus grands musées du monde, situé à Paris. C'est un ancien palais royal qui abrite des œuvres d'art célèbres comme la Joconde."
     },
     {
       "id": "csp-hgc-q8",
       "question": "Qui était Jean de la Fontaine ?",
       "options": [
-        "Un célèbre poète connu pour ses Fables",
         "Un roi de France du Moyen Âge",
         "Un général de Napoléon",
-        "Un architecte de la tour Eiffel"
+        "Un architecte de la tour Eiffel",
+        "Un célèbre poète connu pour ses Fables"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Jean de la Fontaine est un poète français du XVIIe siècle, très célèbre pour ses Fables qui mettent souvent en scène des animaux pour donner une leçon de morale."
     },
     {
       "id": "csp-hgc-q9",
       "question": "Quel écrivain est français ?",
       "options": [
-        "Victor Hugo",
-        "William Shakespeare",
+        "Dante Alighieri",
         "Johann Wolfgang von Goethe",
-        "Dante Alighieri"
+        "Victor Hugo",
+        "William Shakespeare"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Victor Hugo est l'un des plus grands écrivains français. Il a écrit des œuvres majeures comme 'Les Misérables' ou 'Notre-Dame de Paris'."
     },
     {
@@ -116,9 +116,9 @@
       "question": "Dans quelle ville se trouve la tour Eiffel ?",
       "options": [
         "Paris",
+        "Bordeaux",
         "Lyon",
-        "Marseille",
-        "Bordeaux"
+        "Marseille"
       ],
       "correctAnswer": 0,
       "explanation": "La tour Eiffel, symbole de la France construit pour l'Exposition universelle de 1889, se situe à Paris, la capitale."
@@ -127,12 +127,12 @@
       "id": "csp-hgc-q11",
       "question": "Quand célèbre-t-on Noël ?",
       "options": [
-        "Le 25 décembre",
-        "Le 14 juillet",
         "Le 1er mai",
-        "Le 11 novembre"
+        "Le 11 novembre",
+        "Le 14 juillet",
+        "Le 25 décembre"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Noël est une fête chrétienne et traditionnelle célébrée chaque année le 25 décembre. C'est un jour férié en France."
     },
     {
@@ -151,34 +151,34 @@
       "id": "csp-hgc-q13",
       "question": "Qui était Napoléon Ier ?",
       "options": [
-        "Un roi de France de la dynastie des Capétiens",
-        "Un empereur et chef militaire",
+        "Un célèbre écrivain du XIXème siècle",
         "Le premier président de la République",
-        "Un célèbre écrivain du XIXème siècle"
+        "Un roi de France de la dynastie des Capétiens",
+        "Un empereur et chef militaire"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Napoléon Bonaparte, devenu Napoléon Ier, a dirigé la France d'abord comme Premier Consul puis comme Empereur (1er Empire) de 1804 à 1815."
     },
     {
       "id": "csp-hgc-q14",
       "question": "Lequel de ces personnages historiques est français ?",
       "options": [
+        "Jules César",
         "Napoléon Bonaparte",
         "Winston Churchill",
-        "Abraham Lincoln",
-        "Jules César"
+        "Abraham Lincoln"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Napoléon Bonaparte est une figure majeure de l'histoire de France, ayant dirigé le pays sous le Consulat et le Premier Empire."
     },
     {
       "id": "csp-hgc-q15",
       "question": "Dans quelle République est-on aujourd'hui ?",
       "options": [
-        "La IIIème République",
         "La IVème République",
+        "La VIème République",
         "La Vème République",
-        "La VIème République"
+        "La IIIème République"
       ],
       "correctAnswer": 2,
       "explanation": "Depuis 1958 et l'adoption de la Constitution voulue par le général de Gaulle, la France est sous le régime de la Vème République."
@@ -187,12 +187,12 @@
       "id": "csp-hgc-q16",
       "question": "Qu'est-ce que la Shoah ?",
       "options": [
-        "L'extermination des Juifs par les nazis durant la Seconde Guerre mondiale",
-        "Une bataille décisive de la Première Guerre mondiale",
+        "Un traité de paix signé en 1945",
         "Le nom donné à la Résistance française",
-        "Un traité de paix signé en 1945"
+        "L'extermination des Juifs par les nazis durant la Seconde Guerre mondiale",
+        "Une bataille décisive de la Première Guerre mondiale"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La Shoah désigne le génocide perpétré par l'Allemagne nazie pendant la Seconde Guerre mondiale, visant l'extermination systématique des Juifs d'Europe."
     },
     {
@@ -200,9 +200,9 @@
       "question": "Quel pays ou région du monde a été colonisé par la France ?",
       "options": [
         "L'Algérie",
-        "Le Brésil",
         "L'Australie",
-        "L'Inde entière"
+        "L'Inde entière",
+        "Le Brésil"
       ],
       "correctAnswer": 0,
       "explanation": "L'Algérie a été une colonie française (puis des départements français) de 1830 jusqu'à son indépendance en 1962."
@@ -211,12 +211,12 @@
       "id": "csp-hgc-q18",
       "question": "Qui était Simone de Beauvoir ?",
       "options": [
-        "Une philosophe et écrivaine féministe",
         "Une célèbre scientifique, prix Nobel de chimie",
+        "Une philosophe et écrivaine féministe",
         "Une reine de France au Moyen Âge",
         "Une résistante exécutée pendant la Seconde Guerre mondiale"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Simone de Beauvoir est une figure majeure du féminisme et de la littérature française, auteure notamment du 'Deuxième Sexe'."
     },
     {
@@ -224,9 +224,9 @@
       "question": "Qui était Albert Camus ?",
       "options": [
         "Un écrivain et philosophe, prix Nobel de littérature",
+        "Le premier président de la Ve République",
         "Un général de la Première Guerre mondiale",
-        "Un célèbre navigateur français",
-        "Le premier président de la Ve République"
+        "Un célèbre navigateur français"
       ],
       "correctAnswer": 0,
       "explanation": "Albert Camus est un célèbre écrivain et philosophe français (auteur de 'L'Étranger'), qui a reçu le prix Nobel de littérature en 1957."
@@ -235,12 +235,12 @@
       "id": "csp-hgc-q20",
       "question": "Qui était Paul Cézanne ?",
       "options": [
-        "Un peintre impressionniste et précurseur du cubisme",
         "Un architecte qui a construit la Tour Eiffel",
+        "Un homme politique du XIXe siècle",
         "Un compositeur de musique classique",
-        "Un homme politique du XIXe siècle"
+        "Un peintre impressionniste et précurseur du cubisme"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Paul Cézanne est un peintre français majeur, célèbre pour ses paysages de Provence et considéré comme le père de l'art moderne."
     },
     {
@@ -249,8 +249,8 @@
       "options": [
         "Un peintre surréaliste d'origine russe naturalisé français",
         "Un célèbre couturier de haute couture",
-        "Un champion olympique de natation",
-        "Un ministre de la Culture sous François Mitterrand"
+        "Un ministre de la Culture sous François Mitterrand",
+        "Un champion olympique de natation"
       ],
       "correctAnswer": 0,
       "explanation": "Marc Chagall était un peintre célèbre pour son style poétique et coloré. Il a notamment peint le plafond de l'Opéra Garnier à Paris."
@@ -259,12 +259,12 @@
       "id": "csp-hgc-q22",
       "question": "Qui était Joséphine Baker ?",
       "options": [
-        "Une artiste de music-hall et résistante entrée au Panthéon",
+        "Une écrivaine du XVIIe siècle",
         "Une scientifique ayant découvert le radium",
         "La première femme ministre en France",
-        "Une écrivaine du XVIIe siècle"
+        "Une artiste de music-hall et résistante entrée au Panthéon"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Joséphine Baker était une chanteuse et danseuse franco-américaine, résistante durant la guerre et militante antiraciste. Elle est entrée au Panthéon en 2021."
     },
     {
@@ -283,22 +283,22 @@
       "id": "csp-hgc-q24",
       "question": "Quelle ville est située au bord de la mer Méditerranée ?",
       "options": [
-        "Paris",
         "Marseille",
         "Strasbourg",
-        "Bordeaux"
+        "Bordeaux",
+        "Paris"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Marseille est la deuxième ville de France et le principal port français situé sur la côte méditerranéenne, au sud-est du pays."
     },
     {
       "id": "csp-hgc-q25",
       "question": "Où se situe la Corse ?",
       "options": [
-        "Dans l'océan Atlantique",
+        "Dans les Antilles",
         "Dans la mer Méditerranée",
         "Dans la Manche",
-        "Dans les Antilles"
+        "Dans l'océan Atlantique"
       ],
       "correctAnswer": 1,
       "explanation": "La Corse est une île et une collectivité territoriale française située en mer Méditerranée, au sud-est de la France continentale."
@@ -307,12 +307,12 @@
       "id": "csp-hgc-q26",
       "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
       "options": [
-        "Les Pyrénées",
         "Les Vosges",
         "Les Alpes",
-        "Le Massif central"
+        "Le Massif central",
+        "Les Pyrénées"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Les Alpes forment la frontière naturelle entre la France et l'Italie. C'est là que se trouve le Mont Blanc, le plus haut sommet d'Europe occidentale."
     },
     {
@@ -321,10 +321,10 @@
       "options": [
         "Un célèbre peintre de la Renaissance",
         "Un roi de France du Moyen Âge",
-        "Un comédien et dramaturge du XVIIème siècle",
-        "Un général de Napoléon"
+        "Un général de Napoléon",
+        "Un comédien et dramaturge du XVIIème siècle"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Jean-Baptiste Poquelin, dit Molière, est le plus célèbre auteur de pièces de théâtre comiques (comédies) sous le règne de Louis XIV."
     },
     {
@@ -344,11 +344,11 @@
       "question": "Qui était George Sand ?",
       "options": [
         "Un homme politique révolutionnaire",
+        "Une reine de France",
         "Une femme écrivaine du XIXème siècle",
-        "Une célèbre scientifique",
-        "Une reine de France"
+        "Une célèbre scientifique"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "George Sand est le pseudonyme d'Aurore Dupin. C'était une grande romancière du XIXème siècle, connue pour ses œuvres littéraires et son engagement pour la liberté des femmes."
     },
     {
@@ -356,9 +356,9 @@
       "question": "Qui a rendu l’école gratuite, laïque et obligatoire ?",
       "options": [
         "Jules Ferry",
-        "Charlemagne",
         "Napoléon Bonaparte",
-        "Louis XIV"
+        "Louis XIV",
+        "Charlemagne"
       ],
       "correctAnswer": 0,
       "explanation": "C'est Jules Ferry qui a fait voter les lois rendant l'école gratuite, laïque et obligatoire en 1881-1882, sous la IIIème République."
@@ -367,72 +367,72 @@
       "id": "csp-hgc-q31",
       "question": "Quand a eu lieu la Seconde Guerre mondiale ?",
       "options": [
-        "1939 - 1945",
         "1914 - 1918",
+        "1939 - 1945",
         "1870 - 1871",
         "1954 - 1962"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Ce conflit mondial a débuté en 1939 et s'est terminé en 1945. En France, il inclut la période de l'Occupation et du régime de Vichy (1940-1944)."
     },
     {
       "id": "csp-hgc-q32",
       "question": "Quand a eu lieu la Première Guerre mondiale ?",
       "options": [
-        "1914 - 1918",
-        "1939 - 1945",
+        "1789 - 1799",
         "1870 - 1871",
-        "1789 - 1799"
+        "1914 - 1918",
+        "1939 - 1945"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Déclenchée après l'attentat de Sarajevo, la Première Guerre mondiale s'étend de 1914 à l'armistice du 11 novembre 1918."
     },
     {
       "id": "csp-hgc-q33",
       "question": "En quelle année a été créée la Communauté Économique Européenne (CEE) ?",
       "options": [
-        "1957",
         "1945",
-        "1981",
-        "1992"
+        "1957",
+        "1992",
+        "1981"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La CEE, ancêtre de l'Union européenne, a été créée par le traité de Rome en 1957 pour construire un marché commun."
     },
     {
       "id": "csp-hgc-q34",
       "question": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
       "options": [
-        "L'armistice de la Première Guerre mondiale (1918)",
-        "La prise de la Bastille (1789)",
         "La victoire de la Seconde Guerre mondiale (1945)",
-        "L'abolition de l'esclavage (1848)"
+        "L'armistice de la Première Guerre mondiale (1918)",
+        "L'abolition de l'esclavage (1848)",
+        "La prise de la Bastille (1789)"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le 11 novembre commémore la signature de l'armistice de 1918 qui a mis fin aux combats de la Première Guerre mondiale."
     },
     {
       "id": "csp-hgc-q35",
       "question": "Qui a été le premier Président élu sous la Ve République ?",
       "options": [
-        "Charles de Gaulle",
-        "François Mitterrand",
         "Georges Pompidou",
+        "François Mitterrand",
+        "Charles de Gaulle",
         "Valéry Giscard d'Estaing"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Le général de Gaulle a fondé la Vème République en 1958 et en a été le premier président."
     },
     {
       "id": "csp-hgc-q36",
       "question": "Quelle est la capitale de la France ?",
       "options": [
+        "Bruxelles",
         "Lyon",
-        "Paris",
         "Marseille",
-        "Bruxelles"
+        "Paris"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Paris est la capitale politique, économique et culturelle de la France. C'est là que siègent le Président de la République et le Gouvernement."
     },
     {
@@ -440,20 +440,20 @@
       "question": "Sur quel continent se situe la France métropolitaine ?",
       "options": [
         "L'Afrique",
+        "L'Asie",
         "L'Amérique",
-        "L'Europe",
-        "L'Asie"
+        "L'Europe"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "La France métropolitaine, c'est-à-dire la partie du territoire située sur le continent (souvent appelée l'Hexagone) et la Corse, se trouve en Europe de l'Ouest."
     },
     {
       "id": "csp-hgc-q38",
       "question": "Quelle île est un département d'outre-mer français ?",
       "options": [
-        "La Corse",
-        "La Réunion",
         "Madagascar",
+        "La Réunion",
+        "La Corse",
         "La Sicile"
       ],
       "correctAnswer": 1,
@@ -463,48 +463,48 @@
       "id": "csp-hgc-q39",
       "question": "Combien y a-t-il de régions en France métropolitaine ?",
       "options": [
-        "13",
         "22",
         "96",
+        "13",
         "5"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Depuis la réforme territoriale de 2016, la France métropolitaine compte 13 régions (en incluant la Corse). Si l'on compte les régions d'outre-mer, le total est de 18."
     },
     {
       "id": "csp-hgc-q40",
       "question": "Quelle ville est un grand port maritime ?",
       "options": [
-        "Paris",
-        "Clermont-Ferrand",
         "Marseille",
-        "Strasbourg"
+        "Strasbourg",
+        "Clermont-Ferrand",
+        "Paris"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Marseille est le plus grand port maritime de France, situé sur la côte méditerranéenne. Le Havre est également un grand port important."
     },
     {
       "id": "csp-hgc-q41",
       "question": "Quelle est la mer au sud de la France métropolitaine ?",
       "options": [
-        "La Manche",
         "L'océan Atlantique",
-        "La mer du Nord",
-        "La mer Méditerranée"
+        "La mer Méditerranée",
+        "La Manche",
+        "La mer du Nord"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "La mer Méditerranée borde le sud-est de la France. À l'ouest se trouve l'océan Atlantique, et au nord la Manche et la mer du Nord."
     },
     {
       "id": "csp-hgc-q42",
       "question": "Quelle guerre a eu lieu entre 1914 et 1918 ?",
       "options": [
-        "La Première Guerre mondiale",
-        "La Seconde Guerre mondiale",
+        "La guerre de Cent Ans",
         "La guerre d'Algérie",
-        "La guerre de Cent Ans"
+        "La Seconde Guerre mondiale",
+        "La Première Guerre mondiale"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "La Première Guerre mondiale s'est déroulée de 1914 à 1918. Elle s'est achevée par l'Armistice signé le 11 novembre 1918."
     },
     {
@@ -513,8 +513,8 @@
       "options": [
         "C'est la fin de la monarchie",
         "C'est la naissance de la Vème République",
-        "C'est l'abolition de la peine de mort",
-        "C'est le début de la Révolution française"
+        "C'est le début de la Révolution française",
+        "C'est l'abolition de la peine de mort"
       ],
       "correctAnswer": 1,
       "explanation": "Depuis 1958, le régime politique de la France est celui de la Vème République, fondée sous l'impulsion du général de Gaulle."
@@ -525,8 +525,8 @@
       "options": [
         "La Loire",
         "L'Amazone",
-        "Le Nil",
-        "Le Danube"
+        "Le Danube",
+        "Le Nil"
       ],
       "correctAnswer": 0,
       "explanation": "La Loire est le plus long fleuve de France. Les autres grands fleuves français sont la Seine, le Rhône, la Garonne et le Rhin."
@@ -535,24 +535,24 @@
       "id": "csp-hgc-q45",
       "question": "Quelle ville est française ?",
       "options": [
-        "Barcelone",
-        "Bruxelles",
         "Bordeaux",
-        "Genève"
+        "Genève",
+        "Bruxelles",
+        "Barcelone"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Bordeaux est une grande ville située dans le sud-ouest de la France. Les autres villes citées se trouvent en Espagne, en Belgique et en Suisse."
     },
     {
       "id": "csp-hgc-q46",
       "question": "Quel océan borde la côte ouest française ?",
       "options": [
-        "L'océan Atlantique",
         "L'océan Pacifique",
-        "L'océan Indien",
-        "L'océan Arctique"
+        "L'océan Atlantique",
+        "L'océan Arctique",
+        "L'océan Indien"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La France métropolitaine est bordée à l'ouest par l'océan Atlantique."
     },
     {

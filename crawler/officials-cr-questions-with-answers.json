@@ -4,109 +4,109 @@
       {
         "question": "A-t-on le droit de changer de religion ?",
         "options": [
-          "Oui, la liberté de conscience permet d'avoir une religion, d'en changer ou de ne pas en avoir",
           "Non, on doit garder la religion de ses parents",
-          "Oui, mais seulement avec l'autorisation de la mairie",
-          "Non, une fois qu'on a choisi une religion, c'est définitif"
+          "Oui, la liberté de conscience permet d'avoir une religion, d'en changer ou de ne pas en avoir",
+          "Non, une fois qu'on a choisi une religion, c'est définitif",
+          "Oui, mais seulement avec l'autorisation de la mairie"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "En France, la liberté de conscience est un droit fondamental. Chacun est libre de croire, de ne pas croire, ou de changer de religion à tout moment."
       },
       {
         "question": "Que représente la laïcité ?",
         "options": [
-          "La neutralité de l'État et la liberté de conscience pour tous",
-          "L'interdiction de toutes les religions en France",
           "L'obligation pour tous les citoyens d'être athées",
-          "La promotion d'une seule religion officielle par l'État"
+          "La promotion d'une seule religion officielle par l'État",
+          "L'interdiction de toutes les religions en France",
+          "La neutralité de l'État et la liberté de conscience pour tous"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "La laïcité garantit la séparation des Églises et de l'État. L'État est neutre et ne finance aucun culte, mais il garantit à chacun la liberté de croire ou de ne pas croire."
       },
       {
         "question": "Qu'est ce qui est interdit par la Charte de la laïcité à l'école ?",
         "options": [
-          "Le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse",
-          "Le fait de parler de religion pendant la récréation",
           "Le fait d'étudier l'histoire des religions en classe",
-          "Le port de vêtements de couleur bleue, blanche ou rouge"
+          "Le port de vêtements de couleur bleue, blanche ou rouge",
+          "Le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse",
+          "Le fait de parler de religion pendant la récréation"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Depuis la loi de 2004, il est interdit dans les écoles, collèges et lycées publics de porter des signes religieux ostensibles (visibles) pour protéger les élèves de toute pression."
       },
       {
         "question": "Que dit l'article 1er de la Constitution française ?",
         "options": [
+          "La langue de la République est l'anglais",
           "La France est une République indivisible, laïque, démocratique et sociale",
           "La France est une monarchie constitutionnelle",
-          "La langue de la République est l'anglais",
           "La devise de la République est Travail, Famille, Patrie"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'article 1er définit les piliers de la République. Elle assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion."
       },
       {
         "question": "Complétez les paroles de la Marseillaise : \"Allons enfants de la patrie […]\"",
         "options": [
-          "Le jour de gloire est arrivé",
+          "Le jour de liberté est arrivé",
           "Le jour de fête est arrivé",
           "Le jour de paix est arrivé",
-          "Le jour de liberté est arrivé"
+          "Le jour de gloire est arrivé"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le premier couplet de l'hymne national français, La Marseillaise, commence par : « Allons enfants de la Patrie, Le jour de gloire est arrivé ! »."
       },
       {
         "question": "En application de la liberté individuelle, quelle proposition est correcte ? Une personne peut :",
         "options": [
-          "Choisir son conjoint",
-          "Conduire sans permis",
           "Refuser de payer ses impôts",
-          "Construire une maison sans autorisation"
+          "Conduire sans permis",
+          "Construire une maison sans autorisation",
+          "Choisir son conjoint"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "La liberté individuelle permet à chacun de vivre comme il le souhaite (choisir son conjoint, ses opinions, etc.), tant que cela respecte la loi et la liberté des autres."
       },
       {
         "question": "Concernant la pratique de la religion, quelle proposition est correcte ?",
         "options": [
+          "Seule la religion catholique est autorisée en public",
           "Chacun est libre de pratiquer sa religion dans le respect de l'ordre public",
           "Il est obligatoire d'avoir une religion en France",
-          "La pratique religieuse est interdite dans la rue",
-          "Seule la religion catholique est autorisée en public"
+          "La pratique religieuse est interdite dans la rue"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La France garantit la liberté de conscience. Chacun est libre de croire ou de ne pas croire, et de pratiquer sa religion, tant que cela ne trouble pas l'ordre public."
       },
       {
         "question": "En tant que parent, peut-on refuser que son enfant participe aux cours de sport à l'école car ils sont mixtes ?",
         "options": [
-          "Non, les enseignements sont obligatoires et la mixité est une valeur de l'école républicaine",
-          "Oui, si cela est contraire aux convictions religieuses de la famille",
           "Oui, mais seulement pour la natation",
-          "Non, sauf si l'enfant est d'accord"
+          "Non, sauf si l'enfant est d'accord",
+          "Oui, si cela est contraire aux convictions religieuses de la famille",
+          "Non, les enseignements sont obligatoires et la mixité est une valeur de l'école républicaine"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "À l'école publique, les enseignements sont obligatoires pour tous les élèves. On ne peut pas contester un enseignement ou demander une adaptation (comme la non-mixité) au nom de convictions religieuses."
       },
       {
         "question": "Quelle est la devise de la France ?",
         "options": [
-          "Liberté, Égalité, Fraternité",
-          "Travail, Famille, Patrie",
+          "Honneur et Patrie",
           "Unité, Indivisibilité, Solidarité",
-          "Honneur et Patrie"
+          "Liberté, Égalité, Fraternité",
+          "Travail, Famille, Patrie"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La devise officielle de la République française est « Liberté, Égalité, Fraternité ». Elle est inscrite dans la Constitution et sur les bâtiments publics."
       },
       {
         "question": "La répudiation de sa femme est :",
         "options": [
           "Interdite en France",
+          "Autorisée pour des motifs religieux",
           "Autorisée si le mariage a eu lieu à l'étranger",
-          "Autorisée avec l'accord d'un juge",
-          "Autorisée pour des motifs religieux"
+          "Autorisée avec l'accord d'un juge"
         ],
         "correctAnswer": 0,
         "explanation": "La répudiation est interdite en France car elle est contraire au principe d'égalité entre les femmes et les hommes. Seul le divorce prononcé légalement est reconnu."
@@ -114,328 +114,328 @@
       {
         "question": "Qu'est-ce que la Marseillaise ?",
         "options": [
-          "C'est l'hymne national de la France",
           "C'est la devise de la République",
+          "C'est le nom du drapeau français",
           "C'est une danse traditionnelle du sud de la France",
-          "C'est le nom du drapeau français"
+          "C'est l'hymne national de la France"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "La Marseillaise est l'hymne national de la France. C'est un chant patriotique composé en 1792 pendant la Révolution française."
       },
       {
         "question": "Sur quel document peut-on voir Marianne ?",
         "options": [
-          "Sur les timbres et les pièces de monnaie",
+          "Sur les menus des restaurants",
           "Sur le permis de conduire uniquement",
           "Sur les billets de train",
-          "Sur les menus des restaurants"
+          "Sur les timbres et les pièces de monnaie"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Marianne, symbole de la République, est représentée sur les timbres, les pièces de monnaie et les documents officiels comme la carte d'identité."
       },
       {
         "question": "Un employeur refuse d’embaucher des femmes dans son entreprise. Que dit la loi ?",
         "options": [
+          "C'est autorisé dans les petites entreprises seulement",
           "C'est interdit, car la loi garantit l'égalité professionnelle entre les femmes et les hommes",
           "C'est autorisé si le travail est difficile",
-          "C'est autorisé si l'employeur préfère travailler avec des hommes",
-          "C'est autorisé dans les petites entreprises seulement"
+          "C'est autorisé si l'employeur préfère travailler avec des hommes"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La discrimination à l'embauche fondée sur le sexe est interdite. La loi garantit aux femmes des droits égaux à ceux des hommes dans tous les domaines, y compris le travail."
       },
       {
         "question": "Une des valeurs de la devise républicaine est l'égalité. Qu'est-ce que cela signifie ?",
         "options": [
-          "Tous les citoyens ont les mêmes droits et les mêmes devoirs",
-          "Tout le monde doit avoir le même salaire",
           "Tout le monde doit avoir les mêmes opinions politiques",
-          "Tous les citoyens doivent habiter dans la même ville"
+          "Tous les citoyens ont les mêmes droits et les mêmes devoirs",
+          "Tous les citoyens doivent habiter dans la même ville",
+          "Tout le monde doit avoir le même salaire"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'égalité signifie que la loi est la même pour tous (égalité devant la loi) et que tous les citoyens ont les mêmes droits civiques et sociaux, sans distinction d'origine ou de religion."
       },
       {
         "question": "Quelle est la place de la langue française dans la République ?",
         "options": [
-          "C'est la seule langue officielle de la République",
-          "C'est une langue optionnelle dans l'administration",
           "Elle a la même valeur officielle que les langues régionales",
-          "Elle n'est obligatoire que pour l'école"
+          "C'est une langue optionnelle dans l'administration",
+          "Elle n'est obligatoire que pour l'école",
+          "C'est la seule langue officielle de la République"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Selon la Constitution, le français est la langue de la République. C'est la seule langue officielle utilisée dans l'administration, la justice et les services publics."
       },
       {
         "question": "Quels sont des symboles officiels de la République française ?",
         "options": [
-          "Le drapeau tricolore, la Marseillaise et Marianne",
-          "Le coq, le béret et la baguette",
           "La Tour Eiffel et le Mont Saint-Michel",
+          "Le coq, le béret et la baguette",
+          "Le drapeau tricolore, la Marseillaise et Marianne",
           "Le drapeau européen et l'hymne à la joie"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Les symboles officiels de la République incluent le drapeau bleu-blanc-rouge, l'hymne national (La Marseillaise), la figure de Marianne et la devise (Liberté, Égalité, Fraternité)."
       },
       {
         "question": "A-t-on le droit d'insulter publiquement quelqu’un parce qu’il est différent (handicap, apparence physique, sexe…) ?",
         "options": [
-          "Non, c'est interdit et puni par la loi",
           "Oui, car la liberté d'expression est totale en France",
           "Oui, si c'est fait sous forme de blague",
+          "Non, c'est interdit et puni par la loi",
           "Non, sauf si c'est sur les réseaux sociaux"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La liberté d'expression a des limites. La loi punit les insultes, les propos haineux et les discriminations envers des personnes en raison de leur religion, leur origine, leur sexe ou leur handicap."
       },
       {
         "question": "Le régime de la France est :",
         "options": [
+          "Une théocratie",
           "Une république démocratique",
-          "Une monarchie constitutionnelle",
           "Un empire",
-          "Une théocratie"
+          "Une monarchie constitutionnelle"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La France est une République indivisible, laïque, démocratique et sociale. Elle est fondée sur la volonté du peuple (démocratie) et n'a pas de roi."
       },
       {
         "question": "Pourquoi le principe de laïcité doit-il être respecté à l'école ?",
         "options": [
+          "Pour enseigner uniquement la religion catholique",
           "Pour protéger la conscience des élèves et éviter le prosélytisme",
-          "Pour interdire aux élèves d'avoir une religion chez eux",
           "Pour obliger tous les élèves à devenir athées",
-          "Pour enseigner uniquement la religion catholique"
+          "Pour interdire aux élèves d'avoir une religion chez eux"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'école publique est un lieu neutre. La laïcité y protège les élèves de toute pression religieuse (prosélytisme) afin qu'ils puissent se forger leur propre opinion librement."
       },
       {
         "question": "En quelle année la loi de séparation des Églises et de l'Etat a-t-elle été votée ?",
         "options": [
-          "1905",
-          "1789",
           "1882",
+          "1789",
+          "1905",
           "1958"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La loi de 1905 est le pilier de la laïcité en France. Elle sépare les Églises et l'État : l'État ne finance ni ne reconnait aucune religion officielle."
       },
       {
         "question": "Une personne a-t-elle le droit de ne pas croire en une religion ?",
         "options": [
-          "Oui, c'est la liberté de conscience",
-          "Non, il est obligatoire d'avoir une religion",
+          "Non, sauf si elle est étrangère",
           "Oui, mais elle doit payer une taxe spéciale",
-          "Non, sauf si elle est étrangère"
+          "Oui, c'est la liberté de conscience",
+          "Non, il est obligatoire d'avoir une religion"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La liberté de conscience, garantie par la laïcité, donne le droit de croire en une religion, d'en changer, ou de ne pas croire du tout (être athée)."
       },
       {
         "question": "Quel droit est garanti par la laïcité ?",
         "options": [
-          "La liberté de conscience et de pratiquer sa religion",
-          "Le droit d'imposer sa religion aux autres",
           "Le droit de refuser d'obéir à la loi pour motif religieux",
+          "Le droit d'imposer sa religion aux autres",
+          "La liberté de conscience et de pratiquer sa religion",
           "Le droit d'interdire les religions dans la rue"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La laïcité garantit à chacun la liberté de croire ou de ne pas croire, et de pratiquer sa religion librement, tant que cela ne trouble pas l'ordre public."
       },
       {
         "question": "Les impôts permettent de financer les dépenses publiques. Quelle proposition est correcte ?",
         "options": [
+          "Ils sont facultatifs, on peut choisir de ne pas les payer",
           "Ils servent à financer les services publics comme les hôpitaux, les écoles et la police",
           "Ils servent uniquement à payer le salaire du Président",
-          "Ils sont facultatifs, on peut choisir de ne pas les payer",
           "Ils sont payés uniquement par les entreprises, pas par les citoyens"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Selon l'article 13 de la Déclaration des droits de l'homme, une contribution commune est indispensable pour l'entretien de la force publique et les dépenses d'administration."
       },
       {
         "question": "Peut-on brûler publiquement un drapeau français ?",
         "options": [
-          "Oui, c'est une forme de liberté d'expression totale",
           "Non, il est interdit de faire outrage au drapeau français",
-          "Oui, mais seulement lors des manifestations sportives",
-          "Non, sauf si le drapeau est vieux et abîmé"
+          "Non, sauf si le drapeau est vieux et abîmé",
+          "Oui, c'est une forme de liberté d'expression totale",
+          "Oui, mais seulement lors des manifestations sportives"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Le drapeau tricolore est un symbole de la République. La loi interdit de le détruire ou de l'utiliser de manière dégradante en public (outrage au drapeau)."
       },
       {
         "question": "Que fait l’État pour lutter contre les discriminations ?",
         "options": [
-          "Il punit par la loi les actes de discrimination (racisme, sexisme, handicap...)",
-          "Il conseille simplement d'être gentil, sans faire de lois",
           "Il autorise les discriminations si elles sont justifiées par la religion",
-          "Il interdit aux femmes d'accéder à certains métiers"
+          "Il punit par la loi les actes de discrimination (racisme, sexisme, handicap...)",
+          "Il interdit aux femmes d'accéder à certains métiers",
+          "Il conseille simplement d'être gentil, sans faire de lois"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'égalité est un principe fondamental. La loi interdit et punit le fait de limiter l'accès aux droits ou aux services selon l'origine, le sexe, le handicap ou l'orientation sexuelle."
       },
       {
         "question": "Que représente Marianne ?",
         "options": [
-          "Elle représente la République française et ses valeurs (liberté, démocratie)",
           "C'est une sainte religieuse qui protège la France",
+          "Elle représente la République française et ses valeurs (liberté, démocratie)",
           "C'est la femme du premier Président de la République",
           "Elle représente uniquement la ville de Paris"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Marianne est une figure symbolique de la République apparue sous la Révolution. Son bonnet phrygien symbolise la liberté retrouvée (comme les esclaves affranchis de l'Antiquité)."
       },
       {
         "question": "Qu'est-ce que la liberté d'association ?",
         "options": [
+          "L'interdiction de se rassembler à plus de trois personnes",
           "Le droit de se réunir et de créer des groupes pour défendre des intérêts communs",
           "L'obligation d'adhérer à un parti politique",
-          "Le droit de ne pas respecter les lois en groupe",
-          "L'interdiction de se rassembler à plus de trois personnes"
+          "Le droit de ne pas respecter les lois en groupe"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "C'est une liberté collective qui permet aux citoyens de se rassembler, de participer à des manifestations ou d'adhérer à un syndicat pour défendre des causes communes."
       },
       {
         "question": "Qu'est-ce que la liberté ?",
         "options": [
-          "C'est pouvoir faire tout ce qui ne nuit pas à autrui",
-          "C'est le droit de faire absolument tout ce qu'on veut, sans limite",
+          "C'est la possibilité de ne pas payer ses impôts",
           "C'est le droit d'imposer son opinion aux autres par la force",
-          "C'est la possibilité de ne pas payer ses impôts"
+          "C'est pouvoir faire tout ce qui ne nuit pas à autrui",
+          "C'est le droit de faire absolument tout ce qu'on veut, sans limite"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Selon la Déclaration des droits de l'homme (art. 4), la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui. La loi pose des limites pour que la liberté des uns n'empêche pas celle des autres."
       },
       {
         "question": "À l'école publique, qui peut porter des signes religieux très visibles ?",
         "options": [
           "Les élèves",
+          "Personne (ni les élèves, ni le personnel)",
           "Les enseignants",
-          "Le directeur de l'école",
-          "Personne (ni les élèves, ni le personnel)"
+          "Le directeur de l'école"
         ],
-        "correctAnswer": 3,
+        "correctAnswer": 1,
         "explanation": "Depuis la loi de 2004, il est interdit aux élèves de porter des signes religieux ostensibles (très visibles) dans les écoles publiques. Les enseignants, en tant qu'agents de l'État, sont également soumis à une stricte neutralité."
       },
       {
         "question": "Selon le principe de laïcité, que signifie la neutralité de l’État ?",
         "options": [
+          "L'État interdit la pratique religieuse dans la rue",
           "L'État finance toutes les religions de manière égale",
           "L'État est indépendant des religions et n'en finance aucune",
-          "L'État interdit la pratique religieuse dans la rue",
           "L'État choisit les chefs religieux"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Depuis la loi de 1905 de séparation des Églises et de l'État, la République ne reconnaît, ne salarie ni ne subventionne aucun culte."
       },
       {
         "question": "Que peut faire un usager du service public dans une mairie ?",
         "options": [
-          "Il peut porter un signe religieux",
-          "Il doit obligatoirement cacher sa religion",
           "Il peut exiger que l'agent public partage sa religion",
-          "Il peut refuser de parler à un agent du sexe opposé"
+          "Il peut refuser de parler à un agent du sexe opposé",
+          "Il peut porter un signe religieux",
+          "Il doit obligatoirement cacher sa religion"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La neutralité s'impose aux agents, pas aux usagers. Un usager peut porter un signe religieux tant qu'il ne trouble pas l'ordre public et respecte les règles de sécurité (visage découvert)."
       },
       {
         "question": "Qui doit respecter le principe de neutralité religieuse dans une préfecture ?",
         "options": [
           "Les usagers qui viennent faire une demande",
+          "Les personnes qui accompagnent les usagers",
           "Uniquement le préfet",
-          "Les agents qui y travaillent",
-          "Les personnes qui accompagnent les usagers"
+          "Les agents qui y travaillent"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 3,
         "explanation": "Les agents du service public (comme ceux d'une préfecture) représentent l'État. Ils ne doivent pas manifester leurs convictions religieuses, politiques ou philosophiques dans le cadre de leur travail."
       },
       {
         "question": "La laïcité impose-t-elle aux agents publics d'être neutres vis-à-vis des usagers ?",
         "options": [
-          "Non, ils peuvent essayer de convaincre les usagers de changer de religion",
           "Oui, ils ne doivent pas montrer leurs convictions pour traiter tous les usagers à égalité",
+          "Oui, mais seulement s'ils travaillent dans une école",
           "Non, la neutralité ne concerne que les bâtiments, pas les personnes",
-          "Oui, mais seulement s'ils travaillent dans une école"
+          "Non, ils peuvent essayer de convaincre les usagers de changer de religion"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "La neutralité des agents permet de garantir que tous les usagers sont traités de la même manière, quelles que soient leurs croyances ou leurs opinions."
       },
       {
         "question": "Que garantit le principe de laïcité ?",
         "options": [
-          "L'interdiction de croire en Dieu",
-          "L'obligation d'avoir une religion",
           "La liberté de conscience (croire ou ne pas croire)",
-          "La suppression des lieux de culte"
+          "La suppression des lieux de culte",
+          "L'interdiction de croire en Dieu",
+          "L'obligation d'avoir une religion"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "La laïcité repose sur la liberté de conscience : chaque citoyen est libre d'avoir une religion, d'en changer ou de ne pas en avoir."
       },
       {
         "question": "Parmi les propositions suivantes, laquelle constitue une participation citoyenne ?",
         "options": [
+          "Regarder la télévision",
           "Adhérer à une association ou un syndicat",
           "Faire ses courses le dimanche",
-          "Posséder un permis de conduire",
-          "Regarder la télévision"
+          "Posséder un permis de conduire"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La participation citoyenne inclut des actions collectives comme adhérer à un syndicat pour défendre des intérêts communs ou participer à la vie associative."
       },
       {
         "question": "Que garantit la liberté d’expression ?",
         "options": [
           "Le droit d'insulter autrui sur internet",
-          "Le droit de dire, d'écrire et de publier ses opinions",
           "Le droit d'imposer ses idées par la force",
+          "Le droit de dire, d'écrire et de publier ses opinions",
           "Le droit de diffuser de fausses informations"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "La liberté d'expression permet à chacun de parler, écrire et publier librement ses opinions, dans les limites définies par la loi (pas d'incitation à la haine, etc.)."
       },
       {
         "question": "À quoi sert un titre de séjour ?",
         "options": [
           "À voyager gratuitement dans les transports en commun",
-          "À prouver qu'un étranger a le droit de résider en France",
-          "À obtenir automatiquement la nationalité française"
+          "À obtenir automatiquement la nationalité française",
+          "À prouver qu'un étranger a le droit de résider en France"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Le titre de séjour est un document officiel qui autorise une personne étrangère à vivre légalement sur le territoire français."
       },
       {
         "question": "La liberté de circulation permet à toute personne de :",
         "options": [
+          "Entrer dans une propriété privée sans autorisation",
           "Conduire un véhicule sans permis",
-          "Se déplacer librement sur le territoire",
-          "Entrer dans une propriété privée sans autorisation"
+          "Se déplacer librement sur le territoire"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "La liberté de circulation garantit le droit d'aller et venir partout sur le territoire français, sous réserve d'avoir les documents nécessaires (comme un titre de séjour)."
       },
       {
         "question": "Sur quel site internet peut-on retrouver le symbole de la République française ?",
         "options": [
-          "Sur les sites de vente en ligne",
           "Sur les sites officiels de l'administration (.gouv.fr)",
+          "Sur les sites de vente en ligne",
           "Sur les blogs personnels"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Les symboles de la République, comme Marianne, figurent sur les documents officiels et les sites internet de l'État et de l'administration (finissant par .gouv.fr)."
       },
       {
         "question": "Complétez ces paroles de la Marseillaise : \"Aux armes […] ! Formez vos bataillons\"",
         "options": [
-          "soldats",
           "citoyens",
           "enfants",
-          "habitants"
+          "habitants",
+          "soldats"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Le refrain de l'hymne national appelle les 'citoyens' à défendre la patrie et les valeurs de la République."
       }
     ]
@@ -445,34 +445,34 @@
       {
         "question": "Quelle condition est nécessaire pour voter aux élections européennes ?",
         "options": [
+          "Être propriétaire d'un logement en France",
           "Avoir au moins 18 ans la veille du 1er tour",
           "Avoir obligatoirement la nationalité française",
-          "Être propriétaire d'un logement en France",
           "Parler couramment trois langues européennes"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Pour voter, il faut avoir au moins 18 ans, habiter en France, être inscrit sur les listes électorales et avoir la nationalité d'un pays membre de l'UE (pas obligatoirement française)."
       },
       {
         "question": "Quel pays est un pays fondateur de l'Union européenne ?",
         "options": [
+          "La Pologne",
           "L'Allemagne de l'Ouest",
-          "Le Royaume-Uni",
           "L'Espagne",
-          "La Pologne"
+          "Le Royaume-Uni"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'Allemagne de l'Ouest fait partie des 6 pays fondateurs de la CEE (ancêtre de l'UE) en 1957, avec la Belgique, la France, l'Italie, le Luxembourg et les Pays-Bas."
       },
       {
         "question": "Quel est le régime politique de la France aujourd'hui ?",
         "options": [
-          "Une République démocratique",
-          "Une Monarchie constitutionnelle",
           "Un Empire",
-          "Une Dictature"
+          "Une Dictature",
+          "Une République démocratique",
+          "Une Monarchie constitutionnelle"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La France est une République (le pouvoir est exercé par des représentants élus) et une démocratie (le pouvoir vient du peuple via le vote)."
       },
       {
@@ -480,8 +480,8 @@
         "options": [
           "La résidence officielle du Premier ministre",
           "La résidence officielle du président de la République",
-          "Le siège de l'Assemblée nationale",
-          "Le siège du Sénat"
+          "Le siège du Sénat",
+          "Le siège de l'Assemblée nationale"
         ],
         "correctAnswer": 0,
         "explanation": "Le Premier ministre réside et travaille à l'hôtel de Matignon, tandis que le président de la République réside au Palais de l'Élysée."
@@ -489,55 +489,55 @@
       {
         "question": "Le Parlement est composé :",
         "options": [
-          "De l'Assemblée nationale et du Sénat",
+          "Des ministres et du président de la République",
           "Du Conseil constitutionnel et du Conseil d'État",
           "Uniquement de l'Assemblée nationale",
-          "Des ministres et du président de la République"
+          "De l'Assemblée nationale et du Sénat"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le pouvoir législatif est exercé par le Parlement, qui est composé de deux chambres : l'Assemblée nationale (députés) et le Sénat (sénateurs)."
       },
       {
         "question": "Quel est le rôle du président de la République ?",
         "options": [
-          "Il est le chef de l'État et des armées, et promulgue les lois",
-          "Il vote les lois à la place du Parlement",
           "Il dirige les débats à l'Assemblée nationale",
+          "Il vote les lois à la place du Parlement",
+          "Il est le chef de l'État et des armées, et promulgue les lois",
           "Il rend la justice dans les tribunaux"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le président de la République est le chef de l'État et des armées. Il nomme le Premier ministre et promulgue les lois votées par le Parlement."
       },
       {
         "question": "Quel est le rôle du Premier ministre ?",
         "options": [
-          "Il dirige le Gouvernement et conduit la politique de la Nation",
           "Il est le chef des armées",
+          "Il juge les conflits entre les citoyens",
           "Il vote les lois au Sénat",
-          "Il juge les conflits entre les citoyens"
+          "Il dirige le Gouvernement et conduit la politique de la Nation"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Nommé par le président, le Premier ministre dirige le Gouvernement. Avec ses ministres, il conduit la politique nationale et fait appliquer les lois."
       },
       {
         "question": "Qui est le chef du Gouvernement ?",
         "options": [
-          "Le Premier ministre",
-          "Le président de la République",
           "Le président de l'Assemblée nationale",
-          "Le ministre de l'Intérieur"
+          "Le ministre de l'Intérieur",
+          "Le président de la République",
+          "Le Premier ministre"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "C'est le Premier ministre qui dirige le Gouvernement. Le président de la République, lui, est le chef de l'État."
       },
       {
         "question": "Pour combien de temps sont élus les sénateurs ?",
         "options": [
           "Pour 5 ans",
-          "Pour 6 ans",
-          "Pour 10 ans"
+          "Pour 10 ans",
+          "Pour 6 ans"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Les sénateurs sont élus pour une durée de 6 ans au suffrage universel indirect par les grands électeurs."
       },
       {
@@ -563,62 +563,62 @@
       {
         "question": "Qui est le préfet ?",
         "options": [
-          "Le représentant de l'État dans le département",
+          "Le maire de la plus grande ville du département",
           "Le chef des juges du département",
-          "Le maire de la plus grande ville du département"
+          "Le représentant de l'État dans le département"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le préfet est nommé par le Président de la République pour représenter l'État dans le département. Il dirige les services de l'État et veille au respect des lois."
       },
       {
         "question": "Quelle condition est nécessaire pour voter aux élections ?",
         "options": [
+          "Être inscrit sur les listes électorales",
           "Être propriétaire d'un logement",
-          "Avoir un emploi stable",
-          "Être inscrit sur les listes électorales"
+          "Avoir un emploi stable"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "Pour voter, il faut obligatoirement être inscrit sur les listes électorales, en plus d'être majeur et de jouir de ses droits civils et politiques."
       },
       {
         "question": "Qui dirige la commune ?",
         "options": [
+          "Le maire et les conseillers municipaux",
           "Le préfet",
-          "Le député",
-          "Le maire et les conseillers municipaux"
+          "Le député"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "La commune est dirigée par le maire et le conseil municipal, qui sont élus par les citoyens lors des élections municipales pour un mandat de 6 ans."
       },
       {
         "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
         "options": [
-          "1957",
           "1992",
-          "2002",
-          "2007"
+          "1957",
+          "2007",
+          "2002"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Le traité de Maastricht a été signé en 1992. Il marque la création officielle de l'Union européenne et permet la libre circulation des marchandises, des personnes et des capitaux."
       },
       {
         "question": "Où est le siège du Parlement européen ?",
         "options": [
+          "À Luxembourg",
           "À Strasbourg (France)",
-          "À Bruxelles (Belgique)",
           "À Berlin (Allemagne)",
-          "À Luxembourg"
+          "À Bruxelles (Belgique)"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Le siège officiel du Parlement européen est situé à Strasbourg, en France, même si certaines activités se déroulent aussi à Bruxelles et Luxembourg."
       },
       {
         "question": "Où est le siège de la Commission européenne ?",
         "options": [
-          "À Paris (France)",
+          "À La Haye (Pays-Bas)",
           "À Francfort (Allemagne)",
           "À Bruxelles (Belgique)",
-          "À La Haye (Pays-Bas)"
+          "À Paris (France)"
         ],
         "correctAnswer": 2,
         "explanation": "La Commission européenne, qui est l'organe exécutif de l'UE, a son siège principal à Bruxelles, en Belgique."
@@ -626,54 +626,54 @@
       {
         "question": "Quel État n'est pas membre de l'Union européenne ?",
         "options": [
-          "L'Allemagne",
-          "L'Italie",
+          "La Pologne",
           "Le Royaume-Uni",
-          "La Pologne"
+          "L'Allemagne",
+          "L'Italie"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 1,
         "explanation": "Le Royaume-Uni a quitté l'Union européenne le 31 janvier 2020 suite au Brexit. C'est le premier pays à avoir quitté l'UE."
       },
       {
         "question": "Quand célèbre-t-on la journée de l'Europe ?",
         "options": [
+          "Le 9 mai",
           "Le 14 juillet",
           "Le 8 mai",
-          "Le 9 mai",
           "Le 11 novembre"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "La journée de l'Europe est célébrée le 9 mai. Elle commémore la déclaration Schuman de 1950, considérée comme l'acte fondateur de la construction européenne."
       },
       {
         "question": "À quelle fréquence les élections européennes sont-elles organisées ?",
         "options": [
-          "Tous les 3 ans",
-          "Tous les 5 ans",
           "Tous les 6 ans",
-          "Tous les 7 ans"
+          "Tous les 3 ans",
+          "Tous les 7 ans",
+          "Tous les 5 ans"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 3,
         "explanation": "Les élections européennes ont lieu tous les 5 ans au suffrage universel direct pour élire les députés du Parlement européen."
       },
       {
         "question": "Qu'est-ce que l'État de droit ?",
         "options": [
-          "Un système où le Président décide seul des lois",
           "Un système où la loi est la même pour tous, y compris pour l'État",
           "Un système où la police a tous les pouvoirs",
-          "Un système où les juges sont élus par le gouvernement"
+          "Un système où les juges sont élus par le gouvernement",
+          "Un système où le Président décide seul des lois"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "L'État de droit est un système où le droit est supérieur aux pouvoirs politiques. La loi s'impose à tous, aux citoyens comme à l'État."
       },
       {
         "question": "Le président de la République a commis un crime. Quelle proposition est correcte ?",
         "options": [
+          "Il est jugé par le peuple directement",
           "Il ne peut pas être jugé car il est le chef de l'État",
-          "Il choisit lui-même sa punition",
           "Il est soumis aux mêmes lois que les autres citoyens",
-          "Il est jugé par le peuple directement"
+          "Il choisit lui-même sa punition"
         ],
         "correctAnswer": 2,
         "explanation": "Dans un État de droit, le principe d'égalité devant la loi signifie que tout le monde est soumis aux mêmes lois, qu'il soit politicien ou pas."
@@ -681,9 +681,9 @@
       {
         "question": "La loi est l'expression de :",
         "options": [
-          "La volonté du Président",
+          "La volonté des juges",
           "La volonté générale",
-          "La volonté des juges"
+          "La volonté du Président"
         ],
         "correctAnswer": 1,
         "explanation": "Comme l'indique le contenu sur la validation de la loi, la loi est considérée comme l'expression de la volonté générale du peuple."
@@ -691,171 +691,171 @@
       {
         "question": "Quelle est la durée du mandat du conseil municipal et du maire ?",
         "options": [
-          "5 ans",
           "6 ans",
-          "7 ans"
+          "7 ans",
+          "5 ans"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Les élus municipaux (le maire et les conseillers municipaux) sont élus pour une durée de 6 ans lors des élections municipales."
       },
       {
         "question": "Que garantit l’État de droit ?",
         "options": [
-          "Le respect des droits fondamentaux et de la démocratie",
           "Le pouvoir absolu du gouvernement",
+          "Le respect des droits fondamentaux et de la démocratie",
           "L'absence totale de règles pour les citoyens"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'État de droit garantit le respect des droits fondamentaux et protège contre l'arbitraire, ce qui est une condition essentielle de la démocratie."
       },
       {
         "question": "Une personne peut-elle voter à la place d'une autre ?",
         "options": [
-          "Non, jamais, le vote est strictement personnel",
+          "Oui, uniquement si cette personne a fait une procuration",
           "Oui, on peut toujours voter pour un membre de sa famille",
-          "Oui, uniquement si cette personne a fait une procuration"
+          "Non, jamais, le vote est strictement personnel"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "Bien que le vote soit personnel, il est possible de voter pour une autre personne si elle a établi une procuration de vote officielle."
       },
       {
         "question": "Quel traité concerne la construction de l'Union européenne ?",
         "options": [
-          "Le traité de Maastricht",
+          "Le traité de Verdun",
           "Le traité de Versailles",
-          "Le traité de l'Élysée",
-          "Le traité de Verdun"
+          "Le traité de Maastricht",
+          "Le traité de l'Élysée"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Signé en 1992, le traité de Maastricht a officiellement créé l'Union européenne (UE) et a permis la libre circulation des personnes."
       },
       {
         "question": "Quel État a quitté l'Union européenne en 2020 ?",
         "options": [
-          "Le Royaume-Uni",
-          "La Grèce",
           "La Suisse",
+          "La Grèce",
+          "Le Royaume-Uni",
           "L'Allemagne"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le Royaume-Uni a quitté l'Union européenne le 31 janvier 2020. C'est le premier pays à le faire (le Brexit)."
       },
       {
         "question": "Quelle est la devise de l’Union européenne ?",
         "options": [
-          "« Unie dans la diversité »",
+          "« Un pour tous, tous pour un »",
           "« Liberté, Égalité, Fraternité »",
           "« L'union fait la force »",
-          "« Un pour tous, tous pour un »"
+          "« Unie dans la diversité »"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "La devise « Unie dans la diversité » est utilisée depuis 2000 pour illustrer la coopération entre les pays malgré leurs différences culturelles."
       },
       {
         "question": "Quel est l'hymne de l'Union européenne ?",
         "options": [
-          "L'Ode à la joie",
-          "La Marseillaise",
           "Le Chant des Partisans",
-          "God Save the King"
+          "God Save the King",
+          "L'Ode à la joie",
+          "La Marseillaise"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "L'hymne européen est l'« Ode à la joie », une mélodie tirée de la 9ème symphonie de Ludwig van Beethoven. Il symbolise la liberté, la paix et la solidarité."
       },
       {
         "question": "De quoi est composé le drapeau européen ?",
         "options": [
-          "D'un cercle de 12 étoiles dorées",
           "D'autant d'étoiles que de pays membres",
+          "D'un cercle de 12 étoiles dorées",
           "D'une colombe blanche au centre",
           "De bandes verticales bleues et jaunes"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Le drapeau est composé d'un cercle de douze étoiles. Ce nombre est invariable et symbolise la perfection, l'unité et l'harmonie, et non le nombre de pays membres."
       },
       {
         "question": "De quelle couleur est le drapeau européen ?",
         "options": [
-          "Bleu avec des étoiles jaunes",
-          "Blanc avec des étoiles bleues",
           "Bleu avec des étoiles blanches",
-          "Rouge avec des étoiles jaunes"
+          "Rouge avec des étoiles jaunes",
+          "Bleu avec des étoiles jaunes",
+          "Blanc avec des étoiles bleues"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le drapeau européen représente un cercle de douze étoiles jaunes sur un fond bleu."
       },
       {
         "question": "Pourquoi séparer les trois pouvoirs dans une démocratie ?",
         "options": [
-          "Pour garantir les droits fondamentaux et éviter qu'une seule autorité n'exerce le pouvoir de façon arbitraire",
           "Pour permettre au Président de la République de décider seul des lois",
-          "Pour que le Gouvernement puisse contrôler les juges et les tribunaux",
-          "Pour simplifier l'organisation administrative du pays"
+          "Pour garantir les droits fondamentaux et éviter qu'une seule autorité n'exerce le pouvoir de façon arbitraire",
+          "Pour simplifier l'organisation administrative du pays",
+          "Pour que le Gouvernement puisse contrôler les juges et les tribunaux"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La séparation des pouvoirs (législatif, exécutif, judiciaire) permet un équilibre où les pouvoirs se contrôlent mutuellement, garantissant ainsi la démocratie et les droits des citoyens."
       },
       {
         "question": "Qui sanctionne l'auteur d'un vol ?",
         "options": [
-          "La justice pénale (les juges et magistrats)",
-          "Le maire de la commune",
           "La justice administrative",
-          "Le député de la circonscription"
+          "Le député de la circonscription",
+          "La justice pénale (les juges et magistrats)",
+          "Le maire de la commune"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "C'est l'autorité judiciaire, et plus précisément la justice pénale, qui est chargée de punir les infractions à la loi commises par les citoyens, comme le vol."
       },
       {
         "question": "Quel est le rôle du gouvernement ?",
         "options": [
-          "Il conduit la politique nationale et fait appliquer les lois",
+          "Il modifie la Constitution selon ses envies",
           "Il vote les lois à l'Assemblée nationale",
           "Il rend la justice et sanctionne les infractions",
-          "Il modifie la Constitution selon ses envies"
+          "Il conduit la politique nationale et fait appliquer les lois"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le Gouvernement (Premier ministre et ministres) détient le pouvoir exécutif : il dirige l'administration, conduit la politique de la nation et s'assure que les lois votées sont respectées."
       },
       {
         "question": "Que se passe-t-il si un ministre ne respecte pas la loi ?",
         "options": [
-          "Il peut être sanctionné comme tout citoyen",
-          "Il ne peut pas être jugé car il représente l'État",
           "Il est protégé par le Président et ne risque rien",
-          "Il doit seulement payer une amende symbolique"
+          "Il peut être sanctionné comme tout citoyen",
+          "Il doit seulement payer une amende symbolique",
+          "Il ne peut pas être jugé car il représente l'État"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Dans un État de droit, l'égalité devant la loi s'applique à tous. Un ministre n'est pas au-dessus des lois et peut être sanctionné par la justice s'il commet une infraction."
       },
       {
         "question": "Combien de députés composent l’Assemblée nationale ?",
         "options": [
-          "577 députés",
           "348 députés",
-          "101 députés",
-          "81 députés"
+          "81 députés",
+          "577 députés",
+          "101 députés"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "L'Assemblée nationale est composée de 577 députés élus au suffrage universel direct par les citoyens français."
       },
       {
         "question": "Qui peut voter aux élections en France ?",
         "options": [
-          "Les citoyens français majeurs, inscrits sur les listes électorales et jouissant de leurs droits civils",
           "Toute personne qui habite en France depuis plus de 5 ans",
-          "Uniquement les personnes qui paient des impôts",
-          "Les citoyens français à partir de 16 ans"
+          "Les citoyens français majeurs, inscrits sur les listes électorales et jouissant de leurs droits civils",
+          "Les citoyens français à partir de 16 ans",
+          "Uniquement les personnes qui paient des impôts"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Le droit de vote est accordé aux citoyens de nationalité française, âgés de plus de 18 ans, jouissant de leurs droits civils et politiques, et inscrits sur les listes électorales."
       },
       {
         "question": "Est-ce que le vote est obligatoire ?",
         "options": [
           "Non, c'est un droit et non un devoir",
-          "Oui, c'est une obligation pour tous les citoyens",
-          "Seulement pour les élections présidentielles"
+          "Seulement pour les élections présidentielles",
+          "Oui, c'est une obligation pour tous les citoyens"
         ],
         "correctAnswer": 0,
         "explanation": "En France, le vote n'est pas obligatoire. C'est un droit fondamental et civique, mais ce n'est pas un devoir sanctionné par la loi."
@@ -864,8 +864,8 @@
         "question": "À la fin de son mandat, le président de la République peut-il décider de rester au pouvoir ?",
         "options": [
           "Non, il doit se présenter aux élections pour être réélu",
-          "Oui, s'il estime que le pays a besoin de lui",
-          "Oui, mais seulement avec l'accord du Premier ministre"
+          "Oui, mais seulement avec l'accord du Premier ministre",
+          "Oui, s'il estime que le pays a besoin de lui"
         ],
         "correctAnswer": 0,
         "explanation": "La France est une démocratie, pas une dictature. Le pouvoir vient du peuple : pour rester au pouvoir, le Président doit être réélu au suffrage universel."
@@ -883,40 +883,40 @@
       {
         "question": "Qui nomme le Premier ministre ?",
         "options": [
-          "Le président de la République",
           "Les citoyens directement par un vote",
-          "Le président de l'Assemblée nationale"
+          "Le président de l'Assemblée nationale",
+          "Le président de la République"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le président de la République nomme le Premier ministre, en tenant compte de la majorité politique à l'Assemblée nationale."
       },
       {
         "question": "Quelle est l'organisation administrative de la France ?",
         "options": [
+          "La France est divisée en États indépendants comme aux États-Unis",
           "L'État partage ses compétences avec les communes, les départements et les régions",
-          "Tout est décidé uniquement par l'État central à Paris",
-          "La France est divisée en États indépendants comme aux États-Unis"
+          "Tout est décidé uniquement par l'État central à Paris"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "L'organisation est décentralisée : l'État transfère des compétences aux collectivités territoriales (communes, départements, régions) pour gérer les affaires locales."
       },
       {
         "question": "Qu'est-ce que le pouvoir législatif ? Le pouvoir :",
         "options": [
-          "De voter la loi",
           "D'appliquer la loi",
-          "De sanctionner le non-respect de la loi"
+          "De sanctionner le non-respect de la loi",
+          "De voter la loi"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le pouvoir législatif, exercé par le Parlement (Assemblée nationale et Sénat), consiste à proposer, discuter et voter les lois."
       },
       {
         "question": "Combien y a-t-il de régions en France ?",
         "options": [
-          "13 régions",
+          "101 régions",
           "18 régions",
           "22 régions",
-          "101 régions"
+          "13 régions"
         ],
         "correctAnswer": 1,
         "explanation": "La France compte 18 régions au total : 13 régions en métropole et 5 régions d'Outre-mer."
@@ -924,56 +924,56 @@
       {
         "question": "Quel est le rôle du Défenseur des droits ?",
         "options": [
-          "Il défend les droits des citoyens face à l'administration et lutte contre les discriminations",
-          "Il est l'avocat personnel du Président de la République",
           "Il dirige la police nationale et la gendarmerie",
-          "Il vote les lois à la place des députés"
+          "Il vote les lois à la place des députés",
+          "Il est l'avocat personnel du Président de la République",
+          "Il défend les droits des citoyens face à l'administration et lutte contre les discriminations"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "C'est une autorité administrative indépendante chargée de défendre les droits et libertés des citoyens, notamment face aux administrations."
       },
       {
         "question": "Depuis quand l'euro est-elle la monnaie unique ?",
         "options": [
-          "Depuis 1957 (Traité de Rome)",
-          "Depuis 1992 (Traité de Maastricht)",
           "Depuis 2002 (Mise en circulation des pièces et billets)",
-          "Depuis 2010 (Traité de Lisbonne)"
+          "Depuis 1992 (Traité de Maastricht)",
+          "Depuis 2010 (Traité de Lisbonne)",
+          "Depuis 1957 (Traité de Rome)"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "Bien que créée virtuellement avant, l'euro a été mis en circulation sous forme de pièces et de billets pour le grand public en 2002."
       },
       {
         "question": "Quel est le rôle principal du département ?",
         "options": [
-          "L'action sociale (RSA, aide aux handicapés) et la gestion des collèges",
+          "La défense nationale et la diplomatie",
           "La gestion des lycées et le développement économique",
-          "La gestion des écoles maternelles et l'urbanisme",
-          "La défense nationale et la diplomatie"
+          "L'action sociale (RSA, aide aux handicapés) et la gestion des collèges",
+          "La gestion des écoles maternelles et l'urbanisme"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Le département est chef de file de l'action sociale et s'occupe de l'entretien et de la gestion des collèges."
       },
       {
         "question": "Quel est le rôle principal des communes ?",
         "options": [
-          "Gérer les lycées et la formation professionnelle",
-          "Gérer les écoles primaires, l'urbanisme et les services de proximité",
+          "Voter les lois nationales",
           "Gérer le paiement du RSA et les collèges",
-          "Voter les lois nationales"
+          "Gérer les lycées et la formation professionnelle",
+          "Gérer les écoles primaires, l'urbanisme et les services de proximité"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 3,
         "explanation": "La commune s'occupe des services de proximité, de l'état civil, de l'urbanisme et de la gestion des écoles maternelles et élémentaires."
       },
       {
         "question": "Combien de communes environ existe-t-il en France ?",
         "options": [
-          "Environ 3 500",
-          "Environ 10 000",
           "Environ 35 000",
-          "Environ 100 000"
+          "Environ 10 000",
+          "Environ 100 000",
+          "Environ 3 500"
         ],
-        "correctAnswer": 2,
+        "correctAnswer": 0,
         "explanation": "La France compte environ 35 000 communes (34 875 exactement selon les derniers chiffres), ce qui est un nombre très élevé par rapport à ses voisins européens."
       }
     ]
@@ -983,65 +983,65 @@
       {
         "question": "À quelle liberté la PMA fait-elle référence ?",
         "options": [
-          "La liberté d'avoir des enfants",
-          "La liberté de circulation",
+          "La liberté de culte",
           "La liberté d'expression",
-          "La liberté de culte"
+          "La liberté d'avoir des enfants",
+          "La liberté de circulation"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La PMA (Procréation Médicalement Assistée) est un droit qui découle de la liberté individuelle de choisir d'avoir ou de ne pas avoir d'enfant, ouverte à toutes les femmes depuis la loi bioéthique de 2021."
       },
       {
         "question": "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
         "options": [
-          "L'intérêt général et la défense de l'ordre public",
           "La volonté du Président de la République",
-          "Les intérêts économiques des entreprises",
-          "La tradition religieuse"
+          "L'intérêt général et la défense de l'ordre public",
+          "La tradition religieuse",
+          "Les intérêts économiques des entreprises"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Les droits et libertés individuels peuvent être limités par l'intérêt général, la défense de l'ordre public (sécurité, tranquillité, salubrité) et le respect des libertés d'autrui."
       },
       {
         "question": "Concernant le droit de se marier, quelle proposition est correcte ?",
         "options": [
+          "L'autorisation des parents est toujours obligatoire, même pour les majeurs",
           "Chacun est libre de choisir son conjoint, quel que soit son sexe",
           "Le mariage est obligatoire pour avoir des enfants",
-          "Seuls les couples de sexes différents peuvent se marier",
-          "L'autorisation des parents est toujours obligatoire, même pour les majeurs"
+          "Seuls les couples de sexes différents peuvent se marier"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "En France, la liberté conjugale garantit à chacun la liberté de choisir son conjoint (quel que soit son sexe) et de se marier ou non."
       },
       {
         "question": "Est-il toujours possible de divorcer ?",
         "options": [
+          "Non, le mariage est un engagement définitif",
           "Oui, la liberté conjugale permet de mettre fin au mariage",
           "Non, seulement si le conjoint est d'accord",
-          "Non, le mariage est un engagement définitif",
           "Oui, mais seulement après 10 ans de mariage"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La liberté conjugale permet à chaque conjoint de mettre fin à l'union. Le divorce met fin au mariage, sans avoir nécessairement besoin d'une faute."
       },
       {
         "question": "La peine de mort est :",
         "options": [
-          "Interdite, car le droit à la vie est un droit fondamental",
           "Autorisée pour les crimes les plus graves",
           "Autorisée seulement en temps de guerre",
-          "Décidée par le Président de la République"
+          "Décidée par le Président de la République",
+          "Interdite, car le droit à la vie est un droit fondamental"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le droit à la vie est un droit essentiel lié au respect de la personne humaine (inscrit dans la Charte des droits fondamentaux de l'UE). La peine de mort est abolie en France."
       },
       {
         "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'homme et du Citoyen de 1789 ?",
         "options": [
           "Les hommes naissent et demeurent libres et égaux en droits",
-          "Liberté, Égalité, Fraternité",
+          "Chacun a le droit de travailler et le droit d'obtenir un emploi",
           "L'environnement est le patrimoine commun des êtres humains",
-          "Chacun a le droit de travailler et le droit d'obtenir un emploi"
+          "Liberté, Égalité, Fraternité"
         ],
         "correctAnswer": 0,
         "explanation": "C'est l'article 1er de la Déclaration de 1789. La devise est une devise républicaine, la citation sur l'environnement vient de la Charte de 2004, et celle sur le travail du Préambule de 1946."
@@ -1049,12 +1049,12 @@
       {
         "question": "Quel exemple illustre une limitation de liberté pour protéger l'intérêt général ?",
         "options": [
-          "L'interdiction de circuler pendant une crise sanitaire (confinement)",
           "L'interdiction de voter pour certaines opinions politiques",
+          "L'interdiction de circuler pendant une crise sanitaire (confinement)",
           "L'obligation de choisir un métier imposé par l'État",
           "L'interdiction de pratiquer une religion chez soi"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Les libertés individuelles peuvent être restreintes pour l'intérêt général, comme lors de l'état d'urgence sanitaire contre le Covid-19 où la liberté d'aller et venir a été limitée."
       },
       {
@@ -1062,8 +1062,8 @@
         "options": [
           "Alerter les secours ou les forces de l'ordre",
           "Filmer la scène pour la mettre sur les réseaux sociaux",
-          "Ignorer la situation pour ne pas se mettre en danger",
-          "Encourager l'auteur des violences"
+          "Encourager l'auteur des violences",
+          "Ignorer la situation pour ne pas se mettre en danger"
         ],
         "correctAnswer": 0,
         "explanation": "La non-assistance à personne en danger est punie par la loi. Si l'on est témoin de violences, il faut alerter la police ou les secours (17, 18, 112)."
@@ -1071,32 +1071,32 @@
       {
         "question": "Quelle est l'infraction la plus grave ?",
         "options": [
-          "Le crime",
-          "Le délit",
           "La contravention",
-          "L'incivilité"
+          "Le crime",
+          "L'incivilité",
+          "Le délit"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "En droit français, les infractions sont classées par gravité croissante : la contravention (la moins grave), le délit, et enfin le crime (la plus grave)."
       },
       {
         "question": "Quelle obligation concerne toutes les personnes résidant en France quelle que soit leur nationalité ?",
         "options": [
-          "Respecter les lois de la République",
           "Voter aux élections présidentielles",
+          "Effectuer son service militaire",
           "Posséder la carte d'identité française",
-          "Effectuer son service militaire"
+          "Respecter les lois de la République"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Toute personne présente sur le sol français, citoyen ou étranger, a le devoir de respecter les lois. Le droit de vote, en revanche, est souvent lié à la nationalité."
       },
       {
         "question": "Quelle proposition représente un exemple de crime ?",
         "options": [
           "Un meurtre",
+          "Un vol simple à l'étalage",
           "Un excès de vitesse",
-          "Un tapage nocturne",
-          "Un vol simple à l'étalage"
+          "Un tapage nocturne"
         ],
         "correctAnswer": 0,
         "explanation": "Le meurtre est un crime, jugé par la Cour d'assises. Les autres exemples sont des contraventions ou des délits."
@@ -1106,8 +1106,8 @@
         "options": [
           "Le vol ou le harcèlement",
           "Le stationnement interdit",
-          "L'assassinat",
-          "Le non-respect du tri sélectif"
+          "Le non-respect du tri sélectif",
+          "L'assassinat"
         ],
         "correctAnswer": 0,
         "explanation": "Le vol, le harcèlement ou les violences graves sont des délits, jugés par le Tribunal correctionnel. L'assassinat est un crime, et le stationnement une contravention."
@@ -1115,89 +1115,89 @@
       {
         "question": "Le recours à l'avortement est-il autorisé ?",
         "options": [
-          "Oui, pour toutes les femmes, sans condition d'âge",
-          "Oui, mais uniquement pour les femmes majeures",
           "Non, c'est interdit par la loi",
+          "Oui, mais uniquement pour les femmes majeures",
+          "Oui, pour toutes les femmes, sans condition d'âge",
           "Oui, mais seulement avec l'accord du conjoint"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "L'IVG (Interruption Volontaire de Grossesse) est autorisée en France pour toutes les femmes, y compris les mineures (qui n'ont pas besoin de l'autorisation des parents mais doivent être accompagnées d'un majeur)."
       },
       {
         "question": "Que contient la Constitution ?",
         "options": [
-          "L'organisation de l'État et les droits fondamentaux",
-          "Le code de la route et les règles de circulation",
           "La liste de tous les impôts à payer",
+          "Le code de la route et les règles de circulation",
+          "L'organisation de l'État et les droits fondamentaux",
           "Le règlement intérieur des entreprises"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La Constitution est le texte fondateur qui détermine l'organisation de l'État, le régime politique et garantit les droits et libertés fondamentaux des citoyens."
       },
       {
         "question": "Que garantit la liberté de la presse ?",
         "options": [
-          "Le droit de diffuser des informations et des opinions librement",
-          "Le droit de publier des fausses informations sans conséquence",
           "L'obligation pour les journalistes de toujours être d'accord avec le gouvernement",
+          "Le droit de publier des fausses informations sans conséquence",
+          "Le droit de diffuser des informations et des opinions librement",
           "L'interdiction de critiquer les personnalités politiques"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La liberté de la presse découle de la liberté d'expression (article 11 de la DDHC). Elle permet de parler, écrire et imprimer librement, sauf abus définis par la loi (comme la diffamation)."
       },
       {
         "question": "Que prévoit la Charte de l'environnement ?",
         "options": [
-          "Le droit de vivre dans un environnement équilibré et respectueux de la santé",
-          "L'interdiction totale de construire des usines",
           "La gratuité de l'eau pour tous les citoyens",
+          "L'interdiction totale de construire des usines",
+          "Le droit de vivre dans un environnement équilibré et respectueux de la santé",
           "L'obligation de devenir végétarien"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La Charte de l'environnement de 2004, intégrée à la Constitution, stipule que chacun a le droit de vivre dans un environnement sain et le devoir de prendre part à sa préservation."
       },
       {
         "question": "Que signifie la dignité humaine ?",
         "options": [
-          "Chaque personne mérite le respect simplement parce qu'elle est un être humain",
           "Le respect est réservé aux personnes qui travaillent",
-          "C'est le fait d'être toujours poli avec ses voisins",
-          "C'est un droit réservé aux citoyens français uniquement"
+          "Chaque personne mérite le respect simplement parce qu'elle est un être humain",
+          "C'est un droit réservé aux citoyens français uniquement",
+          "C'est le fait d'être toujours poli avec ses voisins"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La dignité humaine signifie qu'un être humain ne doit jamais être traité comme un objet. Il mérite un respect inconditionnel, peu importe son âge, son sexe, sa santé ou son origine."
       },
       {
         "question": "Que signifie le droit de manifester ?",
         "options": [
-          "Le droit d'exprimer collectivement une opinion sur la voie publique",
-          "Le droit de casser des vitrines si on est en colère",
+          "Le droit de bloquer les routes sans autorisation",
           "L'obligation de défiler dans la rue tous les dimanches",
-          "Le droit de bloquer les routes sans autorisation"
+          "Le droit de casser des vitrines si on est en colère",
+          "Le droit d'exprimer collectivement une opinion sur la voie publique"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le droit de manifester est une liberté fondamentale liée à la liberté d'expression. Il permet aux citoyens de se rassembler pour exprimer leurs opinions, à condition de respecter l'ordre public."
       },
       {
         "question": "Qui veille au maintien de l’ordre public ?",
         "options": [
-          "L'État, par l'intermédiaire de la force publique (police et gendarmerie)",
-          "Les citoyens eux-mêmes, en organisant des milices privées",
           "Les entreprises de sécurité privée uniquement",
-          "Les associations de quartier"
+          "Les associations de quartier",
+          "L'État, par l'intermédiaire de la force publique (police et gendarmerie)",
+          "Les citoyens eux-mêmes, en organisant des milices privées"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "Selon l'article 12 de la Déclaration des droits de l'homme et du citoyen, la garantie des droits nécessite une \"force publique\". Cette force (l'État) est instituée pour l'avantage de tous afin d'assurer la sécurité et l'ordre."
       },
       {
         "question": "S'agissant des déchets, quelle proposition est correcte ?",
         "options": [
+          "Seules les usines et les entreprises sont concernées par la gestion des déchets",
           "Je dois trier mes déchets et ne pas les jeter sur la voie publique",
           "Je peux jeter mes déchets n'importe où car des services de nettoyage existent",
-          "Seules les usines et les entreprises sont concernées par la gestion des déchets",
           "Il est interdit de trier ses déchets en France"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La Charte de l'environnement de 2004 stipule que \"toute personne a le devoir de prendre part à la préservation et à l'amélioration de l'environnement\". Ne pas jeter ses déchets par terre et respecter le tri sélectif fait partie de ce devoir citoyen."
       },
       {
@@ -1205,8 +1205,8 @@
         "options": [
           "Procréation Médicalement Assistée",
           "Protection Médicale des Adultes",
-          "Programme de Maintien de l'Autonomie",
-          "Prestation Mensuelle d'Allocation"
+          "Prestation Mensuelle d'Allocation",
+          "Programme de Maintien de l'Autonomie"
         ],
         "correctAnswer": 0,
         "explanation": "La PMA signifie Procréation Médicalement Assistée. C'est un droit ouvert à toutes les femmes (en couple ou seules) depuis la loi bioéthique du 2 août 2021."
@@ -1214,42 +1214,42 @@
       {
         "question": "Quel texte est le plus difficile à modifier ?",
         "options": [
-          "La Constitution",
-          "Une loi ordinaire",
           "Un arrêté municipal",
-          "Le règlement intérieur d'une entreprise"
+          "Le règlement intérieur d'une entreprise",
+          "La Constitution",
+          "Une loi ordinaire"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La Constitution est le texte fondateur de la Vème République. Elle est très difficile à modifier, contrairement aux lois ordinaires, car elle organise le fonctionnement de l'État et garantit les droits fondamentaux."
       },
       {
         "question": "Quelle liberté permet à une personne de croire en la religion de son choix ?",
         "options": [
+          "Le droit de propriété",
           "La liberté de culte",
           "La liberté de circulation",
-          "Le droit de grève",
-          "Le droit de propriété"
+          "Le droit de grève"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "La liberté de culte (ou de religion) découle du principe de liberté. Elle permet à chacun de choisir sa religion ou de ne pas en avoir."
       },
       {
         "question": "Qu'est-ce que le droit de grève ?",
         "options": [
-          "Le droit de cesser le travail pour exprimer un désaccord",
-          "Le droit de démissionner sans préavis",
           "Le droit de refuser de payer ses impôts",
-          "Le droit de détruire son outil de travail"
+          "Le droit de cesser le travail pour exprimer un désaccord",
+          "Le droit de détruire son outil de travail",
+          "Le droit de démissionner sans préavis"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 1,
         "explanation": "Le droit de grève est une liberté fondamentale qui permet à une personne employée d'arrêter de travailler pour exprimer une revendication ou un désaccord."
       },
       {
         "question": "Qu'est-ce que la Constitution ?",
         "options": [
           "Le texte fondateur qui organise l'État et définit les droits fondamentaux",
-          "Un livre d'histoire sur la Révolution française",
           "Le règlement intérieur de l'Assemblée nationale",
+          "Un livre d'histoire sur la Révolution française",
           "Un contrat de travail signé par tous les citoyens"
         ],
         "correctAnswer": 0,
@@ -1258,34 +1258,34 @@
       {
         "question": "Qui peut demander à avorter ?",
         "options": [
-          "Toutes les femmes, sans condition d'âge",
-          "Uniquement les femmes majeures (plus de 18 ans)",
           "Uniquement les femmes mariées",
-          "Uniquement les femmes ayant l'accord de leurs parents"
+          "Uniquement les femmes ayant l'accord de leurs parents",
+          "Uniquement les femmes majeures (plus de 18 ans)",
+          "Toutes les femmes, sans condition d'âge"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "L'IVG (Interruption Volontaire de Grossesse) est possible pour toutes les femmes, sans condition d'âge. Les mineures n'ont pas besoin de l'autorisation de leurs parents mais doivent être accompagnées d'un majeur de leur choix."
       },
       {
         "question": "Une femme majeure de nationalité française a-t-elle le droit de voter aux élections ?",
         "options": [
-          "Oui, c'est un droit acquis pour toutes les citoyennes majeures",
-          "Non, le vote est réservé aux hommes",
           "Oui, mais seulement avec l'autorisation de son mari",
-          "Non, sauf si elle travaille"
+          "Non, le vote est réservé aux hommes",
+          "Non, sauf si elle travaille",
+          "Oui, c'est un droit acquis pour toutes les citoyennes majeures"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 3,
         "explanation": "Le suffrage universel garantit le droit de vote à chaque citoyen majeur, et l'égalité des sexes assure que les femmes ont les mêmes droits politiques que les hommes."
       },
       {
         "question": "Concernant l'utilisation des réseaux sociaux, quelle proposition est correcte ?",
         "options": [
-          "Je peux dire tout ce que je veux, même des insultes, car je suis libre",
           "La liberté d'expression s'arrête là où elle nuit à autrui (insultes, diffamation)",
+          "Je peux dire tout ce que je veux, même des insultes, car je suis libre",
           "La loi française ne s'applique pas sur Internet",
           "Je suis obligé de donner ma véritable identité à tout le monde"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "La liberté d'expression est un droit fondamental, mais elle est limitée par le respect des autres. La loi punit les abus comme les injures ou l'incitation à la haine, même sur Internet."
       },
       {
@@ -1302,32 +1302,32 @@
       {
         "question": "L'État peut-il limiter les droits et libertés ?",
         "options": [
-          "Non, jamais, les libertés sont absolues",
           "Oui, pour protéger l'ordre public, la santé ou l'intérêt général",
           "Oui, mais uniquement pour les personnes étrangères",
-          "Non, sauf en cas de guerre uniquement"
+          "Non, sauf en cas de guerre uniquement",
+          "Non, jamais, les libertés sont absolues"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "Les droits et libertés ne sont pas illimités. Ils peuvent être restreints par l'État pour garantir la sécurité, la santé publique (comme lors du Covid-19) et les droits des autres."
       },
       {
         "question": "Parmi ces actions, laquelle permet d'adopter une attitude respectueuse de l’environnement ?",
         "options": [
-          "Laisser les lumières allumées inutilement",
           "Trier ses déchets",
+          "Utiliser sa voiture pour de très courts trajets",
           "Jeter des piles dans la poubelle normale",
-          "Utiliser sa voiture pour de très courts trajets"
+          "Laisser les lumières allumées inutilement"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 0,
         "explanation": "La Charte de l'environnement indique que toute personne a le devoir de prendre part à la préservation de l'environnement. Le tri des déchets est une action concrète en ce sens."
       },
       {
         "question": "Quelle proposition constitue une obligation ?",
         "options": [
-          "Voter à chaque élection",
-          "Payer ses impôts",
           "Adhérer à un parti politique",
-          "Lire le journal tous les jours"
+          "Payer ses impôts",
+          "Lire le journal tous les jours",
+          "Voter à chaque élection"
         ],
         "correctAnswer": 1,
         "explanation": "Le citoyen a des droits mais aussi des devoirs. Payer l'impôt est une obligation (une contribution commune) pour permettre le fonctionnement de l'État et des services publics."
@@ -1335,32 +1335,32 @@
       {
         "question": "Pour quel motif peut-on limiter la liberté d'expression ?",
         "options": [
+          "Si l'opinion est exprimée dans une langue étrangère",
           "Si l'opinion exprimée ne plaît pas au gouvernement",
-          "Si elle trouble l'ordre public ou nuit à autrui",
           "On ne peut jamais limiter la liberté d'expression",
-          "Si l'opinion est exprimée dans une langue étrangère"
+          "Si elle trouble l'ordre public ou nuit à autrui"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 3,
         "explanation": "Selon les articles 10 et 11 de la Déclaration des droits de l'homme et du citoyen, la liberté d'expression s'arrête là où elle trouble l'ordre public établi par la loi ou lorsqu'elle nuit à autrui (injures, diffamation, incitation à la haine)."
       },
       {
         "question": "Pourquoi doit-on trier ses déchets ?",
         "options": [
-          "Pour préserver l'environnement et la santé",
+          "C'est une tradition française sans but précis",
           "Uniquement pour éviter de payer une amende",
-          "Pour donner du travail aux éboueurs",
-          "C'est une tradition française sans but précis"
+          "Pour préserver l'environnement et la santé",
+          "Pour donner du travail aux éboueurs"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "La Charte de l'environnement (intégrée à la Constitution) stipule que toute personne a le devoir de prendre part à la préservation et à l'amélioration de l'environnement, pour assurer un développement durable aux générations futures."
       },
       {
         "question": "Que doit faire une victime de violences ?",
         "options": [
-          "Se faire justice elle-même par la violence",
           "Garder le silence pour ne pas déranger",
+          "Attendre que la situation s'améliore toute seule",
           "Porter plainte auprès des forces de l'ordre",
-          "Attendre que la situation s'améliore toute seule"
+          "Se faire justice elle-même par la violence"
         ],
         "correctAnswer": 2,
         "explanation": "L'État garantit le droit à la sûreté et à l'intégrité de la personne. Une victime doit signaler les faits à la police ou à la gendarmerie pour que la justice puisse intervenir et la protéger."
@@ -1368,34 +1368,34 @@
       {
         "question": "Que doit-on faire face aux ordres des policiers ou gendarmes ?",
         "options": [
-          "Obéir immédiatement",
           "Négocier si on n'est pas d'accord",
           "S'enfuir pour éviter le contrôle",
+          "Obéir immédiatement",
           "Appeler un ami pour demander son avis"
         ],
-        "correctAnswer": 0,
+        "correctAnswer": 2,
         "explanation": "L'article 7 de la Déclaration des droits de l'homme et du citoyen précise que tout citoyen appelé ou saisi en vertu de la loi doit obéir à l'instant ; il se rend coupable par la résistance."
       },
       {
         "question": "Quel est le rôle de la police ?",
         "options": [
           "Décider des lois à la place du gouvernement",
+          "Servir les intérêts particuliers de ceux qui la dirigent",
           "Garantir la sécurité et les droits des citoyens",
-          "Punir les citoyens sans passer par un juge",
-          "Servir les intérêts particuliers de ceux qui la dirigent"
+          "Punir les citoyens sans passer par un juge"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Selon l'article 12 de la Déclaration de 1789, la force publique (police, gendarmerie) est instituée pour l'avantage de tous afin de garantir les droits de l'Homme et du Citoyen, et non pour l'utilité particulière de ceux à qui elle est confiée."
       },
       {
         "question": "Quel est un exemple d’assistance à personne en danger ?",
         "options": [
+          "Regarder ailleurs pour ne pas être impliqué",
           "Filmer une agression pour la mettre sur internet",
           "Appeler les secours (15, 18 ou 112) face à un accident",
-          "Regarder ailleurs pour ne pas être impliqué",
           "Donner de l'argent à une association caritative"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "explanation": "Porter assistance à une personne en danger est un devoir civique et une obligation légale. Alerter les secours d'urgence est le premier geste de solidarité pour protéger la vie d'autrui."
       }
     ]

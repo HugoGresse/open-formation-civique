@@ -7,81 +7,81 @@
       "id": "csp-pv-q1",
       "question": "Une personne a-t-elle le droit de ne pas croire en une religion ?",
       "options": [
-        "Oui, la liberté de conscience permet de croire ou de ne pas croire.",
         "Non, il est obligatoire d'avoir une religion pour vivre en France.",
+        "Non, car la France est un pays de tradition catholique.",
         "Oui, mais seulement si elle reste discrète et ne le dit à personne.",
-        "Non, car la France est un pays de tradition catholique."
+        "Oui, la liberté de conscience permet de croire ou de ne pas croire."
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "En France, la liberté de conscience est un droit fondamental garanti par la laïcité. Chacun est libre d'avoir une religion, d'en changer ou de ne pas en avoir."
     },
     {
       "id": "csp-pv-q2",
       "question": "De quand date la Constitution de la Ve République ?",
       "options": [
-        "1789",
         "1848",
-        "1905",
-        "1958"
+        "1789",
+        "1958",
+        "1905"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "La Constitution actuelle de la France, qui régit la Ve République, date de 1958. Elle intègre notamment la devise 'Liberté, Égalité, Fraternité'."
     },
     {
       "id": "csp-pv-q3",
       "question": "Le régime de la France est :",
       "options": [
-        "Une monarchie",
         "Une république",
-        "Un empire"
+        "Un empire",
+        "Une monarchie"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "La France est une République. C'est un régime politique où le pouvoir est exercé par des représentants élus par le peuple, comme l'indique la devise et les symboles nationaux."
     },
     {
       "id": "csp-pv-q4",
       "question": "Lequel de ces symboles représente officiellement la République française ?",
       "options": [
+        "L'aigle impérial",
         "Le coq",
-        "Marianne",
         "La fleur de lys",
-        "L'aigle impérial"
+        "Marianne"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Marianne est un symbole officiel de la République. Le coq est un symbole populaire mais non officiel, tandis que la fleur de lys et l'aigle sont liés à la monarchie et à l'empire."
     },
     {
       "id": "csp-pv-q5",
       "question": "Où peut-on voir la devise de la République ?",
       "options": [
+        "Sur les maillots de l'équipe de France de football",
         "Uniquement dans les musées",
         "Sur les bâtiments publics comme les mairies et les écoles",
-        "Sur les maillots de l'équipe de France de football",
         "Sur les panneaux de signalisation routière"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "La devise 'Liberté, Égalité, Fraternité' est visible sur les frontons des bâtiments publics (mairies, écoles, tribunaux), ainsi que sur les pièces de monnaie et les timbres."
     },
     {
       "id": "csp-pv-q6",
       "question": "Quels sont des symboles officiels de la République française ?",
       "options": [
-        "Le drapeau tricolore et l'hymne national",
-        "Le croissant et l'étoile",
+        "Le béret et la marinière",
         "La baguette de pain et le vin",
-        "Le béret et la marinière"
+        "Le croissant et l'étoile",
+        "Le drapeau tricolore et l'hymne national"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Le drapeau bleu, blanc, rouge et l'hymne national (La Marseillaise) sont des symboles officiels de la République, tout comme Marianne et la devise."
     },
     {
       "id": "csp-pv-q7",
       "question": "Qu’est-ce que l’égalité ?",
       "options": [
-        "C'est avoir exactement le même salaire pour tout le monde",
+        "C'est l'interdiction d'avoir des différences de goût",
         "C'est le fait que la loi est la même pour tous, sans distinction",
-        "C'est l'obligation de penser la même chose que les autres",
-        "C'est l'interdiction d'avoir des différences de goût"
+        "C'est avoir exactement le même salaire pour tout le monde",
+        "C'est l'obligation de penser la même chose que les autres"
       ],
       "correctAnswer": 1,
       "explanation": "L'égalité est un principe fondamental qui signifie que tous les citoyens ont les mêmes droits et devoirs, et que la loi s'applique de la même manière pour tous."
@@ -90,36 +90,36 @@
       "id": "csp-pv-q8",
       "question": "À quoi correspond la date du 14 juillet ?",
       "options": [
+        "À la fin de la Première Guerre mondiale",
         "À la fête nationale française",
         "À la date de l'élection du Président de la République",
-        "À la fin de la Première Guerre mondiale",
         "À la fête de la musique"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le 14 juillet est la fête nationale depuis 1880. Elle commémore la prise de la Bastille (1789) et la Fête de la Fédération (1790)."
     },
     {
       "id": "csp-pv-q9",
       "question": "Quel est l’un des symboles de la République française ?",
       "options": [
-        "La Tour Eiffel",
-        "Le drapeau tricolore",
         "Le croissant",
-        "La fleur de lys"
+        "La fleur de lys",
+        "Le drapeau tricolore",
+        "La Tour Eiffel"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Le drapeau bleu, blanc, rouge est l'emblème national officiel de la République française, tout comme l'hymne national (La Marseillaise) ou Marianne."
     },
     {
       "id": "csp-pv-q10",
       "question": "Le principe d’égalité signifie que :",
       "options": [
-        "Tout le monde doit avoir le même salaire",
         "Tous les citoyens ont les mêmes droits et les mêmes devoirs",
-        "Tout le monde doit penser la même chose",
-        "Il n'y a plus de chef au travail"
+        "Tout le monde doit avoir le même salaire",
+        "Il n'y a plus de chef au travail",
+        "Tout le monde doit penser la même chose"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "L'égalité est un principe fondamental qui assure que la loi est la même pour tous, sans distinction d'origine, de religion ou de sexe."
     },
     {
@@ -139,35 +139,35 @@
       "question": "A-t-on le droit d'insulter publiquement quelqu’un parce qu’il est différent (handicap, apparence physique, sexe…) ?",
       "options": [
         "Oui, c'est la liberté d'expression",
-        "Non, c'est interdit et puni par la loi",
         "Oui, si c'est sous le coup de la colère",
-        "Seulement sur internet"
+        "Seulement sur internet",
+        "Non, c'est interdit et puni par la loi"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "La liberté d'expression a des limites : les injures, la discrimination, le racisme ou l'incitation à la haine sont des délits punis par la loi."
     },
     {
       "id": "csp-pv-q13",
       "question": "Certains métiers peuvent-ils être réservés aux hommes ?",
       "options": [
-        "Oui, les métiers très physiques",
-        "Non, tous les métiers sont ouverts aux femmes comme aux hommes",
         "Oui, les métiers de la politique",
-        "Oui, les métiers de l'armée"
+        "Oui, les métiers de l'armée",
+        "Oui, les métiers très physiques",
+        "Non, tous les métiers sont ouverts aux femmes comme aux hommes"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Au nom de l'égalité et de la non-discrimination, les femmes ont le droit d'exercer n'importe quelle profession, au même titre que les hommes."
     },
     {
       "id": "csp-pv-q14",
       "question": "Que signifie la liberté ?",
       "options": [
-        "C'est le droit de tout faire, même si cela gêne les autres",
-        "C'est le droit de penser, de s'exprimer et de vivre comme on le souhaite, sans nuire aux autres",
+        "C'est un droit réservé uniquement aux personnes de nationalité française",
         "C'est l'obligation de penser comme la majorité des citoyens",
-        "C'est un droit réservé uniquement aux personnes de nationalité française"
+        "C'est le droit de penser, de s'exprimer et de vivre comme on le souhaite, sans nuire aux autres",
+        "C'est le droit de tout faire, même si cela gêne les autres"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "La liberté permet à chacun de penser et d'agir selon sa volonté, avec pour seule limite de ne pas empêcher les autres d'en faire autant."
     },
     {
@@ -176,8 +176,8 @@
       "options": [
         "La solidarité entre les citoyens",
         "L'obligation d'avoir des frères et sœurs",
-        "L'égalité des salaires pour tous",
-        "Le fait de vivre tous dans la même maison"
+        "Le fait de vivre tous dans la même maison",
+        "L'égalité des salaires pour tous"
       ],
       "correctAnswer": 0,
       "explanation": "Dans la devise républicaine, la fraternité désigne la solidarité et l'entraide qui doivent unir les citoyens."
@@ -187,33 +187,33 @@
       "question": "Quel animal est un symbole de la France ?",
       "options": [
         "L'aigle",
-        "Le lion",
         "Le coq",
-        "L'ours"
+        "L'ours",
+        "Le lion"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Le coq est un symbole national fort, issu d'un jeu de mots latin (Gallus) signifiant à la fois Gaulois et coq. Il représente la fierté et le courage."
     },
     {
       "id": "csp-pv-q17",
       "question": "Quel est l’un des rôles des associations ?",
       "options": [
+        "Délivrer les cartes d'identité",
         "Remplacer le gouvernement pour voter les lois",
         "Défendre des intérêts communs ou aider les autres",
-        "Obliger les gens à avoir une religion",
-        "Délivrer les cartes d'identité"
+        "Obliger les gens à avoir une religion"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "La liberté d'association permet aux citoyens de se regrouper pour défendre des intérêts communs (comme les syndicats) ou agir par solidarité."
     },
     {
       "id": "csp-pv-q18",
       "question": "Quel est le nom de l'hymne national ?",
       "options": [
-        "La Parisienne",
+        "L'Hymne à la Joie",
         "Le Chant du Départ",
         "La Marseillaise",
-        "L'Hymne à la Joie"
+        "La Parisienne"
       ],
       "correctAnswer": 2,
       "explanation": "La Marseillaise est l'hymne national de la France. Composé en 1792, ce chant représente les valeurs de liberté et d'unité."
@@ -222,24 +222,24 @@
       "id": "csp-pv-q19",
       "question": "Quel symbole de la République française est tricolore ?",
       "options": [
-        "Le drapeau",
+        "La devise",
         "La Marianne",
-        "Le coq",
-        "La devise"
+        "Le drapeau",
+        "Le coq"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Le drapeau français est tricolore. Il est composé de trois bandes verticales : bleu, blanc et rouge."
     },
     {
       "id": "csp-pv-q20",
       "question": "Quelle est la date de la fête nationale française ?",
       "options": [
-        "Le 1er mai",
-        "Le 8 mai",
         "Le 14 juillet",
-        "Le 11 novembre"
+        "Le 11 novembre",
+        "Le 1er mai",
+        "Le 8 mai"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "La fête nationale a lieu le 14 juillet. Elle commémore la prise de la Bastille (1789) et la Fête de la Fédération (1790)."
     },
     {
@@ -247,11 +247,11 @@
       "question": "Quelle est la devise de la République française ?",
       "options": [
         "Travail, Famille, Patrie",
-        "Liberté, Égalité, Fraternité",
         "Unité, Indivisibilité, Solidarité",
-        "Honneur et Patrie"
+        "Honneur et Patrie",
+        "Liberté, Égalité, Fraternité"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "La devise officielle de la République est « Liberté, Égalité, Fraternité ». Elle est inscrite dans la Constitution."
     },
     {
@@ -259,9 +259,9 @@
       "question": "Quelle est la langue officielle de la République française ?",
       "options": [
         "Le français",
-        "Le français et l'anglais",
         "Le français et les langues régionales",
-        "Il n'y a pas de langue officielle"
+        "Il n'y a pas de langue officielle",
+        "Le français et l'anglais"
       ],
       "correctAnswer": 0,
       "explanation": "Selon la Constitution, la langue de la République est le français. C'est la seule langue officielle utilisée dans l'administration et les services publics."
@@ -270,10 +270,10 @@
       "id": "csp-pv-q23",
       "question": "Quelle est la place de la langue française dans la République ?",
       "options": [
-        "C'est une langue optionnelle dans l'administration",
-        "C'est la langue de la République inscrite dans la Constitution",
         "Elle partage son statut officiel avec les langues régionales",
-        "Elle est uniquement utilisée à l'école"
+        "C'est la langue de la République inscrite dans la Constitution",
+        "Elle est uniquement utilisée à l'école",
+        "C'est une langue optionnelle dans l'administration"
       ],
       "correctAnswer": 1,
       "explanation": "La langue française est inscrite dans la Constitution depuis 1992 comme étant « la langue de la République ». Elle garantit l'égalité d'accès aux droits et la cohésion nationale."
@@ -294,12 +294,12 @@
       "id": "csp-pv-q25",
       "question": "Quelle proposition est correcte ? La liberté d'expression :",
       "options": [
+        "Est réservée uniquement aux journalistes",
         "Permet de tout dire, même d'inciter à la haine raciale",
         "Est un droit fondamental limité par le respect de l'ordre public et de la loi",
-        "Est réservée uniquement aux journalistes",
         "Interdit de critiquer les religions"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "La liberté d'expression est un droit fondamental, mais elle a des limites fixées par la loi (interdiction des propos haineux, racistes ou appelant à la violence)."
     },
     {
@@ -307,56 +307,56 @@
       "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
       "options": [
         "En 1789",
-        "En 1882",
         "En 1905",
-        "En 1958"
+        "En 1958",
+        "En 1882"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "La loi de séparation des Églises et de l'État a été votée en 1905. Elle garantit que l'État est indépendant des religions et ne finance aucun culte."
     },
     {
       "id": "csp-pv-q27",
       "question": "Que permet le principe de laïcité ?",
       "options": [
-        "Il oblige tout le monde à être athée",
         "Il permet à chacun de croire ou de ne pas croire, et garantit la neutralité de l'État",
-        "Il interdit toute pratique religieuse en France",
-        "Il autorise l'État à financer les religions"
+        "Il oblige tout le monde à être athée",
+        "Il autorise l'État à financer les religions",
+        "Il interdit toute pratique religieuse en France"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "La laïcité garantit la liberté de conscience (croire ou ne pas croire) et impose la neutralité à l'État, qui ne privilégie aucune religion."
     },
     {
       "id": "csp-pv-q28",
       "question": "Quel droit est garanti par la laïcité ?",
       "options": [
+        "Le droit d'imposer sa religion aux autres",
         "Le droit de refuser d'obéir à la loi pour motif religieux",
         "Le droit de manifester sa religion partout, même au travail dans les services publics",
-        "La liberté de conscience et de religion",
-        "Le droit d'imposer sa religion aux autres"
+        "La liberté de conscience et de religion"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "La laïcité garantit la liberté de conscience, c'est-à-dire la liberté d'avoir une religion, d'en changer ou de ne pas en avoir."
     },
     {
       "id": "csp-pv-q29",
       "question": "Pourquoi le principe de laïcité doit-il être respecté à l'école ?",
       "options": [
-        "Pour empêcher les élèves d'avoir des opinions personnelles",
         "Pour protéger la liberté de conscience des élèves et garantir un enseignement neutre",
-        "Pour obliger tous les élèves à avoir la même religion",
-        "Pour interdire aux élèves de parler entre eux"
+        "Pour empêcher les élèves d'avoir des opinions personnelles",
+        "Pour interdire aux élèves de parler entre eux",
+        "Pour obliger tous les élèves à avoir la même religion"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "À l'école publique, la laïcité protège les élèves de tout prosélytisme et garantit un espace neutre propice à l'apprentissage et à la formation de leur propre jugement."
     },
     {
       "id": "csp-pv-q30",
       "question": "Qu'est-ce que la laïcité ?",
       "options": [
-        "C'est l'interdiction de toutes les religions en France",
-        "C'est un principe qui sépare l'État des religions et garantit l'égalité de tous devant la loi",
         "C'est une loi qui oblige à être chrétien",
+        "C'est un principe qui sépare l'État des religions et garantit l'égalité de tous devant la loi",
+        "C'est l'interdiction de toutes les religions en France",
         "C'est le fait que l'État contrôle et dirige les cultes"
       ],
       "correctAnswer": 1,
@@ -366,84 +366,84 @@
       "id": "csp-pv-q31",
       "question": "Un enfant peut-il refuser d’aller à l’école pour une raison religieuse ?",
       "options": [
-        "Oui, si ses parents sont d'accord",
+        "Oui, s'il rattrape les cours plus tard",
         "Oui, mais seulement pour les fêtes religieuses majeures",
-        "Non, l'instruction est obligatoire et les croyances ne justifient pas l'absence scolaire",
-        "Oui, s'il rattrape les cours plus tard"
+        "Oui, si ses parents sont d'accord",
+        "Non, l'instruction est obligatoire et les croyances ne justifient pas l'absence scolaire"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "En France, l'école est obligatoire (ou l'instruction). On ne peut pas refuser d'aller à l'école ou de suivre certains enseignements (comme le sport ou la biologie) au nom de sa religion."
     },
     {
       "id": "csp-pv-q32",
       "question": "Quelles sont les couleurs du drapeau français ?",
       "options": [
-        "Bleu, blanc, rouge",
+        "Bleu, jaune, rouge",
         "Vert, blanc, rouge",
-        "Rouge, blanc, bleu",
-        "Bleu, jaune, rouge"
+        "Bleu, blanc, rouge",
+        "Rouge, blanc, bleu"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Le drapeau français est tricolore. Le bleu et le rouge sont les couleurs de la ville de Paris, et le blanc est la couleur du roi, symbolisant l'alliance du peuple et du roi lors de la Révolution."
     },
     {
       "id": "csp-pv-q33",
       "question": "Qu'est-ce que la Marseillaise ?",
       "options": [
+        "Le nom du drapeau français",
         "L'hymne national de la France",
         "La devise de la République",
-        "Une danse traditionnelle",
-        "Le nom du drapeau français"
+        "Une danse traditionnelle"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "La Marseillaise est l'hymne national. C'est un chant patriotique composé en 1792 pendant la Révolution française."
     },
     {
       "id": "csp-pv-q34",
       "question": "Qu'est ce qui est traditionnellement organisé sur les Champs Élysées le 14 juillet pour célébrer la fête nationale ?",
       "options": [
+        "Une course cycliste",
         "Un défilé militaire",
-        "Un grand concert de musique",
         "Un marché de Noël",
-        "Une course cycliste"
+        "Un grand concert de musique"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le 14 juillet, un défilé militaire a lieu sur les Champs-Élysées à Paris, en présence du président de la République, pour célébrer la fête nationale."
     },
     {
       "id": "csp-pv-q35",
       "question": "Qui est Marianne ?",
       "options": [
-        "Un symbole de la République française",
-        "La femme du président de la République",
         "Une sainte patronne de la France",
-        "Une célèbre chanteuse française"
+        "Une célèbre chanteuse française",
+        "La femme du président de la République",
+        "Un symbole de la République française"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Marianne est une figure symbolique qui représente la République. Son buste est présent dans toutes les mairies de France."
     },
     {
       "id": "csp-pv-q36",
       "question": "Une personne peut-elle changer librement de religion ?",
       "options": [
-        "Oui, la liberté de conscience est un droit fondamental",
-        "Non, on doit garder la religion de ses parents",
         "Oui, mais seulement avec l'autorisation de la mairie",
-        "Non, il est interdit d'avoir une religion en France"
+        "Oui, la liberté de conscience est un droit fondamental",
+        "Non, il est interdit d'avoir une religion en France",
+        "Non, on doit garder la religion de ses parents"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "En France, la liberté de conscience permet à chacun de croire, de ne pas croire, ou de changer de religion librement."
     },
     {
       "id": "csp-pv-q37",
       "question": "\"La France est une République indivisible, ..., démocratique et sociale\". Complétez cette phrase extraite de l'article 1er de la Constitution :",
       "options": [
-        "laïque",
         "catholique",
+        "royale",
         "libérale",
-        "royale"
+        "laïque"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "La France est une République laïque. Cela signifie que l'État est neutre et séparé des religions depuis la loi de 1905."
     }
   ]
