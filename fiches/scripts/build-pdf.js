@@ -45,7 +45,8 @@ function startPreviewServer() {
 }
 
 function buildPrecedingPage() {
-  const template = readFileSync(join(ROOT_DIR, 'preceding-page.html'), 'utf-8');
+  const pdfPrecedingPagePath = join(import.meta.dirname, 'preceding-page.html');
+  const template = readFileSync(pdfPrecedingPagePath, 'utf-8');
   const date = new Intl.DateTimeFormat('fr-FR', {
     dateStyle: 'full',
     timeStyle: 'short',
@@ -58,6 +59,7 @@ function buildPrecedingPage() {
 
 function generatePdf() {
   const precedingHtmlPath = buildPrecedingPage();
+  const pdfStylesPath = join(import.meta.dirname, 'pdf-styles.css');
   console.log(`Preceding page generated at ${precedingHtmlPath}`);
 
   return new Promise((resolve, reject) => {
@@ -69,8 +71,10 @@ function generatePdf() {
       '--pdf-outline',
       '--print-bg',
       '--format=A4',
+      '--margins=0.6cm 0.6cm 0.6cm 1cm',
       '--contents-links=internal',
       `--preceding-html=${precedingHtmlPath}`,
+      `--styles=${pdfStylesPath}`,
       '-e', `${BASE}/formation-civique.pdf`,
     ];
 
