@@ -173,13 +173,11 @@ const { quizData } = Astro.props;
 
         if (!validated[currentIndex]) {
           input.addEventListener('change', () => {
-            if (input.checked) {
-              answers[currentIndex] = i;
-              // Update visual state of all options
-              fieldset.querySelectorAll('.q-option').forEach((opt, idx) => {
-                opt.classList.toggle('q-selected', idx === i);
-              });
-            }
+            answers[currentIndex] = i;
+            // Update visual state of all options
+            fieldset.querySelectorAll('.q-option').forEach((opt, idx) => {
+              opt.classList.toggle('q-selected', idx === i);
+            });
           });
         }
       });
