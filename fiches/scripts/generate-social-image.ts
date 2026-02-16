@@ -49,7 +49,7 @@ const svgBackground = `
   <text x="535" y="428" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="#93c5fd" text-anchor="middle">5 thématiques</text>
 
   <rect x="620" y="400" width="160" height="44" rx="22" fill="#002395" opacity="0.25" />
-  <text x="700" y="428" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="#93c5fd" text-anchor="middle">841 questions</text>
+  <text x="700" y="428" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="#93c5fd" text-anchor="middle">936 questions</text>
 
   <rect x="800" y="400" width="130" height="44" rx="22" fill="#002395" opacity="0.25" />
   <text x="865" y="428" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="#93c5fd" text-anchor="middle">Open Source</text>

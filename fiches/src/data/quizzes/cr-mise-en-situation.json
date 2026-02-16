@@ -1,0 +1,547 @@
+{
+  "id": "cr-mise-en-situation",
+  "title": "CR - Mise en situation",
+  "description": "Questions pratiques de la Carte de Résident : mises en situation concrètes de la vie quotidienne en France",
+  "questions": [
+    {
+      "id": "cr-mes-q1",
+      "question": "Vous habitez en France depuis 5 ans et souhaitez demander la nationalité française. Quelle est la première condition à remplir ?",
+      "options": [
+        "Avoir un salaire supérieur à 3 000 € par mois",
+        "Justifier d'une résidence habituelle en France et d'une connaissance suffisante de la langue française (niveau B1 minimum)",
+        "Être marié avec un citoyen français",
+        "Avoir un diplôme français"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La naturalisation nécessite notamment une résidence habituelle et régulière en France, une connaissance suffisante de la langue française (niveau B1 oral et écrit) et une connaissance des droits et devoirs du citoyen ainsi que de l'histoire et de la culture françaises."
+    },
+    {
+      "id": "cr-mes-q2",
+      "question": "Votre voisin organise une fête bruyante tous les week-ends jusqu'à 3h du matin. Vous avez déjà essayé de lui parler sans succès. Que pouvez-vous faire ?",
+      "options": [
+        "Organiser vous aussi des fêtes bruyantes",
+        "Faire constater les nuisances sonores par la police municipale et engager une procédure pour tapage nocturne",
+        "Couper son électricité",
+        "Rien, chacun fait ce qu'il veut chez soi"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le tapage nocturne (entre 22h et 7h) est une contravention passible d'une amende de 68 €. Après tentative de médiation, vous pouvez appeler la police municipale ou nationale pour faire constater les nuisances. Vous pouvez aussi saisir un conciliateur de justice."
+    },
+    {
+      "id": "cr-mes-q3",
+      "question": "Vous êtes témoin de violences conjugales chez vos voisins. Que devez-vous faire ?",
+      "options": [
+        "Ne pas intervenir, c'est leur vie privée",
+        "Appeler le 17 (police) ou le 3919 (numéro d'aide aux victimes de violences conjugales)",
+        "En parler aux autres voisins et attendre",
+        "Glisser un mot sous la porte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les violences conjugales sont un délit grave en France. Le 17 (police) permet une intervention rapide. Le 3919 est le numéro national d'aide aux victimes de violences conjugales. La non-dénonciation de mauvais traitements peut être punie par la loi."
+    },
+    {
+      "id": "cr-mes-q4",
+      "question": "Vous avez un litige avec un artisan qui a mal réalisé des travaux chez vous. Avant d'aller en justice, quelle démarche est recommandée ?",
+      "options": [
+        "Publier un avis négatif sur internet",
+        "Envoyer une mise en demeure par lettre recommandée, puis tenter une médiation ou conciliation",
+        "Refuser de le payer sans le prévenir",
+        "Appeler la police"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas de litige avec un professionnel, la première étape est la mise en demeure par lettre recommandée avec accusé de réception. Ensuite, vous pouvez recourir à un médiateur de la consommation (gratuit) ou un conciliateur de justice avant de saisir le tribunal."
+    },
+    {
+      "id": "cr-mes-q5",
+      "question": "Votre entreprise prévoit des élections pour les représentants du personnel. Pouvez-vous voter en tant que salarié étranger ?",
+      "options": [
+        "Non, seuls les Français peuvent voter",
+        "Oui, tous les salariés de l'entreprise peuvent voter aux élections professionnelles, quelle que soit leur nationalité",
+        "Oui, mais uniquement si vous avez un CDI",
+        "Non, il faut être syndiqué"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tous les salariés ayant au moins 3 mois d'ancienneté dans l'entreprise peuvent voter aux élections professionnelles (CSE), sans condition de nationalité. Le droit de participer à la vie de l'entreprise est garanti à tous les salariés."
+    },
+    {
+      "id": "cr-mes-q6",
+      "question": "Vous souhaitez scolariser votre enfant handicapé. L'école du quartier refuse de l'inscrire. Est-ce légal ?",
+      "options": [
+        "Oui, si l'école n'a pas les moyens de l'accueillir",
+        "Non, tout enfant handicapé a le droit d'être inscrit dans l'école de son quartier (loi du 11 février 2005)",
+        "Oui, les enfants handicapés doivent aller dans des écoles spécialisées",
+        "Cela dépend du type de handicap"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi du 11 février 2005 garantit le droit à la scolarisation de tout enfant handicapé dans l'école la plus proche de son domicile. L'école doit mettre en place les aménagements nécessaires. Un Projet Personnalisé de Scolarisation (PPS) est établi avec la MDPH."
+    },
+    {
+      "id": "cr-mes-q7",
+      "question": "Vous recevez une lettre de la CAF vous informant d'un trop-perçu d'allocations. Que devez-vous faire ?",
+      "options": [
+        "Ignorer le courrier",
+        "Contester systématiquement, la CAF se trompe toujours",
+        "Vérifier le calcul, et si c'est justifié, rembourser ou demander un échéancier. Si vous contestez, faire un recours dans les délais",
+        "Changer d'adresse pour ne plus recevoir de courrier"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En cas de trop-perçu notifié par la CAF, vérifiez d'abord le calcul. Si la demande est justifiée, vous pouvez rembourser ou demander un échéancier de remboursement. Si vous contestez, vous disposez de 2 mois pour faire un recours auprès de la commission de recours amiable."
+    },
+    {
+      "id": "cr-mes-q8",
+      "question": "Vous êtes propriétaire de votre logement et vous souhaitez le louer. Quelles obligations avez-vous ?",
+      "options": [
+        "Aucune, vous êtes libre de faire ce que vous voulez",
+        "Fournir un logement décent, réaliser les diagnostics obligatoires (DPE, plomb, etc.) et rédiger un bail conforme à la loi",
+        "Juste mettre une annonce et encaisser le loyer",
+        "Uniquement déclarer les revenus locatifs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, un propriétaire bailleur doit fournir un logement décent (surface minimale, installations conformes), réaliser les diagnostics obligatoires (DPE, plomb, amiante, etc.), rédiger un bail conforme à la loi et respecter l'encadrement des loyers dans les zones concernées."
+    },
+    {
+      "id": "cr-mes-q9",
+      "question": "Vous souhaitez créer votre entreprise en France. Quelle structure est la plus simple pour débuter une activité seul ?",
+      "options": [
+        "Une société anonyme (SA)",
+        "Le statut de micro-entrepreneur (auto-entrepreneur)",
+        "Une association loi 1901",
+        "Un groupement d'intérêt économique"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le statut de micro-entrepreneur (anciennement auto-entrepreneur) est la forme la plus simple et rapide pour créer une activité en France. L'inscription se fait en ligne, la comptabilité est simplifiée et les charges sociales sont calculées sur le chiffre d'affaires réel."
+    },
+    {
+      "id": "cr-mes-q10",
+      "question": "Votre enfant de 14 ans souhaite travailler pendant les vacances d'été. Est-ce possible ?",
+      "options": [
+        "Oui, sans aucune restriction",
+        "Oui, à partir de 14 ans avec l'autorisation des parents, pour des travaux légers, pendant les vacances scolaires uniquement",
+        "Non, le travail est interdit avant 18 ans",
+        "Oui, à condition qu'il travaille moins de 2 heures par jour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, le travail est possible à partir de 14 ans pendant les vacances scolaires (d'au moins 14 jours), avec l'accord des parents et de l'inspection du travail. Il est limité à des travaux légers, 7 heures par jour maximum, et interdit de nuit."
+    },
+    {
+      "id": "cr-mes-q11",
+      "question": "Vous êtes convoqué comme témoin dans un procès au tribunal. Pouvez-vous refuser d'y aller ?",
+      "options": [
+        "Oui, témoigner est un choix personnel",
+        "Non, le témoignage est une obligation civique. Un refus peut être sanctionné d'une amende",
+        "Oui, si vous ne connaissez pas la personne accusée",
+        "Oui, si vous avez peur de représailles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lorsque vous êtes convoqué comme témoin par un tribunal, vous êtes tenu de vous présenter et de prêter serment de dire la vérité. Un refus de témoigner est passible d'une amende de 3 750 €. Le faux témoignage est un délit pénal."
+    },
+    {
+      "id": "cr-mes-q12",
+      "question": "Votre commune organise une consultation citoyenne sur un projet d'aménagement. En tant que résident étranger, pouvez-vous y participer ?",
+      "options": [
+        "Non, seuls les citoyens français peuvent participer",
+        "Oui, les consultations citoyennes sont ouvertes à tous les habitants de la commune",
+        "Oui, mais votre avis ne sera pas pris en compte",
+        "Non, il faut être inscrit sur les listes électorales"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les consultations citoyennes locales (conseils de quartier, enquêtes publiques, budgets participatifs) sont généralement ouvertes à tous les habitants, quelle que soit leur nationalité. C'est une forme de participation à la vie locale accessible à tous."
+    },
+    {
+      "id": "cr-mes-q13",
+      "question": "Vous souhaitez acheter un appartement en France. Pouvez-vous le faire en tant qu'étranger résident ?",
+      "options": [
+        "Non, seuls les Français peuvent acheter un bien immobilier",
+        "Oui, toute personne, française ou étrangère, peut acheter un bien immobilier en France",
+        "Oui, mais uniquement avec un prêt bancaire français",
+        "Oui, mais seulement après 10 ans de résidence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il n'y a aucune restriction de nationalité pour l'achat immobilier en France. Toute personne, résidente ou non, peut acquérir un bien. L'achat doit être formalisé par un acte notarié. Vous pouvez également contracter un prêt immobilier auprès d'une banque française."
+    },
+    {
+      "id": "cr-mes-q14",
+      "question": "Votre médecin traitant vous prescrit un médicament mais vous préférez un traitement alternatif. Que pouvez-vous faire ?",
+      "options": [
+        "Vous devez obligatoirement suivre la prescription du médecin",
+        "Vous êtes libre de refuser un traitement, mais le médecin doit vous informer des risques. Le consentement éclairé est un droit fondamental",
+        "Vous changez de médecin sans rien dire",
+        "Vous prenez les deux traitements en même temps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le consentement libre et éclairé du patient est un principe fondamental du droit de la santé en France (article L1111-4 du Code de la santé publique). Vous avez le droit de refuser un traitement après avoir été informé des conséquences. Discutez-en avec votre médecin."
+    },
+    {
+      "id": "cr-mes-q15",
+      "question": "Vous constatez qu'un produit alimentaire acheté en supermarché est périmé. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, c'est votre faute de ne pas avoir vérifié",
+        "Rapporter le produit au magasin pour un échange ou un remboursement, et signaler le problème à la DGCCRF si nécessaire",
+        "Jeter le produit et ne plus retourner dans ce magasin",
+        "Appeler la police"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La vente de produits périmés est interdite en France. Vous pouvez rapporter le produit au magasin qui doit vous échanger ou rembourser. En cas de problème récurrent, signalez-le à la DGCCRF (Direction Générale de la Concurrence, Consommation et Répression des Fraudes) via SignalConso."
+    },
+    {
+      "id": "cr-mes-q16",
+      "question": "Vous recevez un avis d'imposition avec un montant que vous estimez trop élevé. Que pouvez-vous faire ?",
+      "options": [
+        "Ne pas payer en attendant que ça se résolve",
+        "Faire une réclamation auprès de votre centre des finances publiques dans le délai légal",
+        "Ignorer l'avis et ne rien faire",
+        "Payer et ne jamais contester"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Si vous contestez votre imposition, vous pouvez faire une réclamation auprès de votre centre des finances publiques. Le délai est généralement jusqu'au 31 décembre de la 2e année suivant la mise en recouvrement. Vous devez payer l'impôt contesté, mais pouvez demander un sursis de paiement."
+    },
+    {
+      "id": "cr-mes-q17",
+      "question": "Vous êtes victime d'une erreur médicale à l'hôpital. Quels sont vos recours ?",
+      "options": [
+        "Vous n'avez aucun recours contre un hôpital public",
+        "Vous pouvez demander votre dossier médical, saisir la Commission de Conciliation et d'Indemnisation (CCI) ou engager une procédure judiciaire",
+        "Vous pouvez uniquement écrire au directeur de l'hôpital",
+        "Vous devez attendre 5 ans avant de pouvoir agir"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas d'erreur médicale, vous avez le droit d'accéder à votre dossier médical. Vous pouvez saisir la CCI (procédure gratuite) pour obtenir une indemnisation, ou engager une procédure judiciaire. Le délai de prescription est de 10 ans à compter de la consolidation du dommage."
+    },
+    {
+      "id": "cr-mes-q18",
+      "question": "Votre enfant majeur (19 ans) vit encore chez vous et ne travaille pas. Êtes-vous obligé de continuer à le nourrir et l'héberger ?",
+      "options": [
+        "Non, à 18 ans il est autonome",
+        "Oui, l'obligation alimentaire des parents envers leurs enfants persiste tant que l'enfant ne peut pas subvenir à ses besoins, même après sa majorité",
+        "Oui, mais uniquement jusqu'à 21 ans",
+        "Non, sauf s'il est étudiant"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'obligation alimentaire des parents envers leurs enfants ne s'arrête pas à la majorité (article 371-2 du Code civil). Elle persiste tant que l'enfant ne peut pas subvenir seul à ses besoins (études, recherche d'emploi, maladie). Cette obligation peut être réduite en justice si elle est disproportionnée."
+    },
+    {
+      "id": "cr-mes-q19",
+      "question": "Vous souhaitez parrainer un membre de votre famille pour qu'il vienne en France dans le cadre du regroupement familial. Quelles conditions devez-vous remplir ?",
+      "options": [
+        "Aucune condition particulière",
+        "Résider en France depuis au moins 18 mois, disposer de ressources stables et suffisantes et d'un logement adapté",
+        "Être de nationalité française uniquement",
+        "Avoir un emploi en CDI obligatoirement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pour le regroupement familial, le demandeur doit résider régulièrement en France depuis au moins 18 mois, disposer de ressources stables et suffisantes (au moins le SMIC) et d'un logement considéré comme normal pour la famille. La demande se fait auprès de l'OFII."
+    },
+    {
+      "id": "cr-mes-q20",
+      "question": "Votre propriétaire augmente votre loyer de 20% sans justification. Est-ce légal ?",
+      "options": [
+        "Oui, le propriétaire fixe librement le loyer",
+        "Non, l'augmentation du loyer est encadrée par la loi : elle ne peut dépasser l'indice de référence des loyers (IRL) sauf travaux importants",
+        "Oui, une fois par an",
+        "Oui, si le loyer était bas au départ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, la révision annuelle du loyer est encadrée par l'Indice de Référence des Loyers (IRL) publié par l'INSEE. Le propriétaire ne peut pas augmenter le loyer librement. Dans les zones tendues, un encadrement des loyers supplémentaire peut s'appliquer."
+    },
+    {
+      "id": "cr-mes-q21",
+      "question": "Vous souhaitez faire reconnaître votre diplôme étranger en France. Quelle est la démarche ?",
+      "options": [
+        "Votre diplôme est automatiquement reconnu",
+        "Demander une attestation de comparabilité auprès de France Éducation International (ENIC-NARIC)",
+        "Repasser tous les examens en France",
+        "Traduire votre diplôme et le faire signer par un notaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pour faire reconnaître un diplôme étranger en France, vous devez demander une attestation de comparabilité auprès du centre ENIC-NARIC France (France Éducation International). Cette attestation indique le niveau français équivalent. Pour certaines professions réglementées, des démarches supplémentaires sont nécessaires."
+    },
+    {
+      "id": "cr-mes-q22",
+      "question": "Un couple marié se sépare. Le père veut emmener les enfants vivre dans un autre pays sans l'accord de la mère. Est-ce légal ?",
+      "options": [
+        "Oui, le père a le droit de décider où vivent ses enfants",
+        "Non, l'un des parents ne peut pas déplacer les enfants à l'étranger sans l'accord de l'autre parent ou une décision de justice. C'est un enlèvement parental",
+        "Oui, si les enfants sont d'accord",
+        "Oui, pendant les vacances scolaires"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Déplacer un enfant à l'étranger sans l'accord de l'autre parent titulaire de l'autorité parentale constitue un enlèvement parental, puni de 1 an d'emprisonnement (article 227-7 du Code pénal). L'autorité parentale est exercée conjointement par les deux parents."
+    },
+    {
+      "id": "cr-mes-q23",
+      "question": "Vous souhaitez aider votre communauté en devenant bénévole. Où pouvez-vous vous renseigner ?",
+      "options": [
+        "Il faut être invité par une association",
+        "Contacter des associations locales, la mairie, ou utiliser des plateformes comme JeVeuxAider.gouv.fr",
+        "Le bénévolat n'existe pas en France",
+        "Seuls les retraités peuvent être bénévoles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La France compte plus d'un million d'associations. Toute personne peut devenir bénévole, quelle que soit sa nationalité. Vous pouvez vous renseigner auprès de la mairie, des maisons des associations, ou sur JeVeuxAider.gouv.fr, la plateforme nationale du bénévolat."
+    },
+    {
+      "id": "cr-mes-q24",
+      "question": "Votre employeur vous interdit de parler votre langue maternelle pendant la pause déjeuner avec des collègues. A-t-il le droit ?",
+      "options": [
+        "Oui, le français est obligatoire partout sur le lieu de travail",
+        "Non, l'employeur peut imposer le français pour les communications professionnelles, mais pas pendant les temps de pause",
+        "Oui, c'est dans le règlement intérieur",
+        "Non, il n'a aucun droit sur les langues parlées"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'employeur peut exiger l'usage du français pour les documents de travail et les communications professionnelles (article L1321-6 du Code du travail). En revanche, pendant les temps de pause, les salariés sont libres de parler la langue de leur choix. Interdire une langue en dehors du temps de travail peut constituer une discrimination."
+    },
+    {
+      "id": "cr-mes-q25",
+      "question": "Vous découvrez que votre assurance habitation ne couvre pas les dégâts causés par une inondation. Que devez-vous savoir ?",
+      "options": [
+        "Les catastrophes naturelles ne sont jamais couvertes",
+        "La garantie catastrophes naturelles est obligatoirement incluse dans tous les contrats d'assurance habitation en France, après publication d'un arrêté de catastrophe naturelle",
+        "Vous devez souscrire une assurance spéciale inondation",
+        "Seul l'État indemnise les victimes d'inondation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, la garantie catastrophes naturelles est obligatoirement incluse dans tous les contrats d'assurance habitation (loi du 13 juillet 1982). Elle est activée par un arrêté interministériel reconnaissant l'état de catastrophe naturelle. La franchise est réglementée par l'État."
+    },
+    {
+      "id": "cr-mes-q26",
+      "question": "Vous recevez un appel vous informant que vous avez gagné un voyage gratuit et qu'il faut donner votre numéro de carte bancaire. Que faites-vous ?",
+      "options": [
+        "Vous donnez vos informations pour recevoir le cadeau",
+        "Vous raccrochez car c'est une arnaque, et vous signalez le numéro sur le site 33700.fr ou Bloctel",
+        "Vous demandez des précisions par curiosité",
+        "Vous donnez un faux numéro de carte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il s'agit d'une arnaque courante. Ne communiquez jamais vos coordonnées bancaires par téléphone. Vous pouvez signaler ces numéros sur 33700.fr (lutte contre les spams téléphoniques) et vous inscrire sur Bloctel pour limiter le démarchage téléphonique."
+    },
+    {
+      "id": "cr-mes-q27",
+      "question": "Vous conduisez et commettez un excès de vitesse. Vous recevez un PV avec retrait de points. Comment fonctionne le permis à points ?",
+      "options": [
+        "Le permis a un nombre illimité de points",
+        "Le permis comporte 12 points (6 pour les nouveaux conducteurs). Les infractions entraînent des retraits de points. À 0 point, le permis est annulé",
+        "On ne peut perdre qu'un seul point par infraction",
+        "Les points sont automatiquement réattribués chaque année"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le permis de conduire français est un permis à points (12 points, ou 6 pour les permis probatoires). Les infractions entraînent des retraits de 1 à 6 points selon la gravité. Les points se récupèrent après un délai sans infraction ou en effectuant un stage de sensibilisation."
+    },
+    {
+      "id": "cr-mes-q28",
+      "question": "Vous travaillez depuis 2 ans dans la même entreprise en CDI. Vous souhaitez suivre une formation pour évoluer. Quels dispositifs existent ?",
+      "options": [
+        "Aucun, c'est à vous de payer votre formation",
+        "Le Compte Personnel de Formation (CPF), accessible à tous les salariés, permet de financer des formations certifiantes",
+        "Seul l'employeur décide de vos formations",
+        "Les formations sont réservées aux cadres"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Compte Personnel de Formation (CPF) est un droit individuel ouvert à tous les salariés. Il est alimenté chaque année (500 € par an, plafonné à 5 000 €) et utilisable sur moncompteformation.gouv.fr. Vous pouvez également mobiliser le plan de développement des compétences de votre entreprise."
+    },
+    {
+      "id": "cr-mes-q29",
+      "question": "Votre père âgé vit seul et a du mal à s'occuper de lui-même. Quelles aides existent ?",
+      "options": [
+        "Aucune aide publique n'existe pour les personnes âgées",
+        "L'APA (Allocation Personnalisée d'Autonomie) permet de financer l'aide à domicile ou l'hébergement en EHPAD",
+        "Seuls les enfants doivent s'en occuper",
+        "Il doit aller obligatoirement en maison de retraite"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'APA (Allocation Personnalisée d'Autonomie) est une aide versée par le département aux personnes de 60 ans et plus en perte d'autonomie. Elle finance l'aide à domicile (ménage, repas, aide à la toilette) ou contribue aux frais d'hébergement en établissement. La demande se fait auprès du conseil départemental."
+    },
+    {
+      "id": "cr-mes-q30",
+      "question": "Vous êtes en désaccord avec une décision administrative (refus de titre de séjour, allocation refusée, etc.). Quels recours avez-vous ?",
+      "options": [
+        "Aucun, les décisions administratives sont définitives",
+        "Vous pouvez faire un recours gracieux auprès de l'administration, un recours hiérarchique, puis un recours devant le tribunal administratif",
+        "Vous ne pouvez contester qu'en écrivant au président de la République",
+        "Seul un avocat peut contester une décision administrative"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Toute décision administrative peut être contestée. Vous pouvez d'abord tenter un recours gracieux (auprès de l'auteur de la décision) ou hiérarchique (auprès du supérieur). En cas d'échec, vous pouvez saisir le tribunal administratif dans un délai de 2 mois. L'aide juridictionnelle peut couvrir les frais."
+    },
+    {
+      "id": "cr-mes-q31",
+      "question": "Votre fille de 17 ans veut se marier. Est-ce possible en France ?",
+      "options": [
+        "Oui, si les parents sont d'accord",
+        "Non, le mariage est interdit avant 18 ans en France, sans exception",
+        "Oui, avec une autorisation du juge",
+        "Oui, à partir de 16 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Depuis la loi du 5 mars 2007, renforcée en 2024, le mariage est interdit avant 18 ans en France, sans possibilité de dérogation. Cette loi vise à protéger les mineurs contre les mariages forcés. Toute personne souhaitant se marier doit être majeure."
+    },
+    {
+      "id": "cr-mes-q32",
+      "question": "Vous vivez en couple sans être mariés et vous avez un enfant ensemble. Quels sont vos droits ?",
+      "options": [
+        "Vous n'avez aucun droit sans être mariés",
+        "Les deux parents ont les mêmes droits et devoirs envers l'enfant, que le couple soit marié ou non",
+        "Seule la mère a des droits sur l'enfant",
+        "Il faut se marier pour que le père ait des droits"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, les parents non mariés ont les mêmes droits et obligations envers leurs enfants que les parents mariés, à condition que la filiation soit établie (reconnaissance par le père). L'autorité parentale est exercée conjointement."
+    },
+    {
+      "id": "cr-mes-q33",
+      "question": "Vous organisez un barbecue sur le balcon de votre appartement et vos voisins se plaignent de la fumée. Que dit la loi ?",
+      "options": [
+        "Vous êtes libre de faire un barbecue chez vous",
+        "Le règlement de copropriété peut interdire les barbecues sur les balcons. De plus, les nuisances (fumée, odeurs) peuvent constituer un trouble de voisinage",
+        "Les barbecues sont interdits en France",
+        "Seuls les barbecues électriques sont autorisés partout"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La réglementation des barbecues dépend du règlement de copropriété et des arrêtés municipaux. Les fumées et odeurs excessives peuvent constituer un trouble anormal de voisinage. Vérifiez le règlement de votre copropriété et les règles de votre commune avant d'organiser un barbecue."
+    },
+    {
+      "id": "cr-mes-q34",
+      "question": "Vous souhaitez obtenir un logement social en France. Quelle est la démarche ?",
+      "options": [
+        "Contacter directement le maire",
+        "Faire une demande de logement social en ligne ou en mairie et obtenir un numéro unique d'enregistrement",
+        "Seuls les Français peuvent demander un logement social",
+        "Il faut être inscrit depuis 10 ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Toute personne résidant légalement en France peut demander un logement social, quelle que soit sa nationalité. La demande se fait en ligne (demande-logement-social.gouv.fr) ou en mairie. Vous recevez un numéro unique d'enregistrement. L'attente varie selon les zones."
+    },
+    {
+      "id": "cr-mes-q35",
+      "question": "Votre employeur vous impose de travailler un jour férié. Avez-vous droit à une compensation ?",
+      "options": [
+        "Non, les jours fériés ne sont pas obligatoirement chômés sauf le 1er mai",
+        "Oui, le travail un jour férié donne toujours droit à un salaire double",
+        "Non, les jours fériés n'existent pas pour les étrangers",
+        "Oui, mais uniquement si vous travaillez dans le secteur public"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En France, seul le 1er mai est un jour férié obligatoirement chômé et payé double s'il est travaillé. Les autres jours fériés sont chômés ou non selon la convention collective et les usages de l'entreprise. Vérifiez votre convention collective pour connaître vos droits."
+    },
+    {
+      "id": "cr-mes-q36",
+      "question": "Vous découvrez que votre voisin maltraite son chien. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, un propriétaire fait ce qu'il veut avec son animal",
+        "Signaler les faits à la police, la gendarmerie, la SPA ou la fondation 30 Millions d'Amis. La maltraitance animale est un délit",
+        "En parler au voisin uniquement",
+        "Prendre l'animal sans prévenir"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La maltraitance animale est un délit en France, puni de 3 ans d'emprisonnement et 45 000 € d'amende (article 521-1 du Code pénal, renforcé par la loi du 30 novembre 2021). Vous pouvez signaler les faits à la police, la gendarmerie, la SPA ou appeler le 3677."
+    },
+    {
+      "id": "cr-mes-q37",
+      "question": "Vous avez un accident du travail. Quelle est la première chose à faire ?",
+      "options": [
+        "Attendre de voir si ça s'améliore",
+        "Informer votre employeur dans les 24 heures et consulter un médecin qui établira un certificat médical initial",
+        "Prendre un congé sans rien dire",
+        "Appeler votre assurance personnelle"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas d'accident du travail, vous devez informer votre employeur dans les 24 heures. Celui-ci doit déclarer l'accident à la CPAM dans les 48 heures. Consultez un médecin qui établira un certificat médical initial. Les soins sont pris en charge à 100% par l'Assurance Maladie."
+    },
+    {
+      "id": "cr-mes-q38",
+      "question": "Un démarcheur sonne à votre porte et vous vend un aspirateur 500 €. Vous regrettez cet achat le lendemain. Pouvez-vous annuler ?",
+      "options": [
+        "Non, vous avez signé, c'est définitif",
+        "Oui, vous disposez d'un délai de rétractation de 14 jours pour tout achat lors d'un démarchage à domicile",
+        "Oui, mais uniquement si le produit est défectueux",
+        "Non, sauf si le vendeur accepte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Code de la consommation accorde un délai de rétractation de 14 jours pour les achats effectués lors d'un démarchage à domicile (article L221-18). Vous pouvez retourner le produit sans avoir à justifier votre décision et être intégralement remboursé."
+    },
+    {
+      "id": "cr-mes-q39",
+      "question": "Votre commune organise le tri sélectif. Que risquez-vous si vous ne triez pas vos déchets ?",
+      "options": [
+        "Rien, le tri est facultatif",
+        "Une amende pouvant aller jusqu'à 150 € pour non-respect des règles de collecte, et vos poubelles peuvent ne pas être ramassées",
+        "La coupure de votre eau",
+        "L'expulsion de votre logement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le tri des déchets est obligatoire en France. Le non-respect des règles de collecte peut entraîner une amende de 35 à 150 € (contravention de 2e ou 3e classe). Les collectivités peuvent aussi refuser de ramasser les poubelles non conformes."
+    },
+    {
+      "id": "cr-mes-q40",
+      "question": "Vous êtes titulaire d'une carte de résident et vous souhaitez voyager en Europe. De quoi avez-vous besoin ?",
+      "options": [
+        "Uniquement votre carte de résident",
+        "Votre passeport valide et votre carte de résident. La carte de résident française ne remplace pas le visa pour certains pays",
+        "Uniquement votre passeport",
+        "Un visa Schengen en plus de votre carte de résident"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La carte de résident française permet de résider en France et de circuler librement dans l'espace Schengen pour des séjours de moins de 90 jours (sans travailler). Vous devez avoir votre passeport valide et votre carte de résident. Pour un séjour de plus de 90 jours dans un autre pays, des démarches supplémentaires sont nécessaires."
+    },
+    {
+      "id": "cr-mes-q41",
+      "question": "Vous souhaitez inscrire vos enfants à la cantine scolaire mais il n'y a plus de place. La mairie peut-elle refuser ?",
+      "options": [
+        "Oui, la cantine n'est pas un droit",
+        "Non, depuis 2017, toute commune ayant un service de restauration scolaire doit y inscrire tous les enfants scolarisés qui en font la demande",
+        "Oui, si les parents ne sont pas de la commune",
+        "La cantine est réservée aux familles à faibles revenus"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Depuis la loi du 27 janvier 2017, l'inscription à la cantine scolaire est un droit pour tous les enfants scolarisés dans les communes disposant d'un service de restauration scolaire. La mairie ne peut pas refuser l'inscription d'un enfant, notamment pour des motifs discriminatoires."
+    },
+    {
+      "id": "cr-mes-q42",
+      "question": "Vous organisez un vide-grenier dans votre quartier. Faut-il une autorisation ?",
+      "options": [
+        "Non, c'est libre et sans formalité",
+        "Oui, les vide-greniers sur la voie publique nécessitent une déclaration en mairie. Les particuliers ne peuvent participer qu'à 2 vide-greniers par an",
+        "Oui, il faut un permis de commerce",
+        "Non, si c'est dans un jardin privé"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'organisation d'un vide-grenier sur la voie publique nécessite une déclaration en mairie. Les particuliers sont limités à 2 participations par an (sous peine de requalification en activité commerciale). Au-delà, il faut s'immatriculer comme commerçant."
+    },
+    {
+      "id": "cr-mes-q43",
+      "question": "Votre carte de résident arrive à expiration dans 3 mois. Quand devez-vous entamer les démarches de renouvellement ?",
+      "options": [
+        "Le jour de l'expiration",
+        "Dans les 2 à 4 mois précédant l'expiration, selon les délais de votre préfecture",
+        "6 mois avant",
+        "Après l'expiration, vous avez un an de délai"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il est recommandé de demander le renouvellement de votre carte de résident 2 à 4 mois avant son expiration, selon les délais de traitement de votre préfecture. Un récépissé de demande vous sera délivré, vous permettant de rester en situation régulière pendant l'instruction."
+    },
+    {
+      "id": "cr-mes-q44",
+      "question": "Un site internet vous propose un crédit à la consommation à un taux très avantageux en échange de vos documents d'identité scannés. Que faites-vous ?",
+      "options": [
+        "Vous envoyez vos documents pour profiter de l'offre",
+        "Vous refusez et vérifiez que l'organisme est agréé par l'ACPR (Banque de France). L'envoi de documents d'identité à un site inconnu est risqué (usurpation d'identité)",
+        "Vous envoyez une copie en basse résolution",
+        "Vous demandez l'avis d'un ami"
+      ],
+      "correctAnswer": 1,
+      "explanation": "N'envoyez jamais vos documents d'identité à un site non vérifié. Les arnaques au faux crédit sont courantes et servent à usurper votre identité. Vérifiez que l'organisme est agréé sur le site de l'ACPR (regafi.fr). En cas de doute, consultez le site de la Banque de France."
+    },
+    {
+      "id": "cr-mes-q45",
+      "question": "Vous êtes parent d'un enfant né en France. Votre enfant est-il automatiquement français ?",
+      "options": [
+        "Oui, tout enfant né en France est automatiquement français",
+        "Non, mais un enfant né en France de parents étrangers peut acquérir la nationalité française à ses 18 ans s'il y a résidé au moins 5 ans depuis l'âge de 11 ans",
+        "Non, il faut obligatoirement que les deux parents soient français",
+        "Oui, si au moins un parent a un titre de séjour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un enfant né en France de parents étrangers n'est pas automatiquement français à la naissance. Il peut acquérir la nationalité française de plein droit à 18 ans s'il réside en France et y a résidé pendant au moins 5 ans depuis l'âge de 11 ans (droit du sol différé). Une demande anticipée est possible dès 13 ans."
+    }
+  ]
+}

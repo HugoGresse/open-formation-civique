@@ -48,7 +48,7 @@ const svg = `
   <text x="200" y="741" font-family="system-ui, -apple-system, sans-serif" font-size="19" fill="#93c5fd" text-anchor="middle">5 thématiques</text>
 
   <rect x="310" y="710" width="190" height="48" rx="24" fill="#002395" opacity="0.25" />
-  <text x="405" y="741" font-family="system-ui, -apple-system, sans-serif" font-size="19" fill="#93c5fd" text-anchor="middle">841 questions</text>
+  <text x="405" y="741" font-family="system-ui, -apple-system, sans-serif" font-size="19" fill="#93c5fd" text-anchor="middle">936 questions</text>
 
   <rect x="525" y="710" width="190" height="48" rx="24" fill="#002395" opacity="0.25" />
   <text x="620" y="741" font-family="system-ui, -apple-system, sans-serif" font-size="19" fill="#93c5fd" text-anchor="middle">PDF gratuit</text>

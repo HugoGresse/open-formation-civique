@@ -1,0 +1,607 @@
+{
+  "id": "csp-mise-en-situation",
+  "title": "CSP - Mise en situation",
+  "description": "Questions pratiques du Contrat de Séjour Pluriannuel : mises en situation concrètes de la vie quotidienne en France",
+  "questions": [
+    {
+      "id": "csp-mes-q1",
+      "question": "Vous êtes témoin d'un accident de la route. Que devez-vous faire en premier ?",
+      "options": [
+        "Continuer votre chemin, ce n'est pas votre problème",
+        "Appeler le 15 (SAMU) ou le 112 et sécuriser la zone si possible",
+        "Déplacer les blessés pour les mettre sur le trottoir",
+        "Filmer la scène pour la publier sur les réseaux sociaux"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, toute personne témoin d'un accident a l'obligation de porter assistance (article 223-6 du Code pénal). Il faut appeler les secours (15, 18 ou 112) et sécuriser la zone sans déplacer les blessés sauf danger immédiat."
+    },
+    {
+      "id": "csp-mes-q2",
+      "question": "Votre voisin fait des travaux bruyants un dimanche matin à 8h. Que pouvez-vous faire ?",
+      "options": [
+        "Appeler immédiatement la police",
+        "Lui rappeler poliment que les travaux bruyants sont interdits le dimanche et les jours fériés",
+        "Faire encore plus de bruit pour le déranger en retour",
+        "Déménager sans rien dire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, les travaux bruyants sont généralement interdits le dimanche et les jours fériés (réglementations municipales). La première démarche est d'en parler à son voisin. Si le problème persiste, vous pouvez contacter la mairie ou la police municipale."
+    },
+    {
+      "id": "csp-mes-q3",
+      "question": "Vous recevez un courrier de l'administration fiscale vous demandant de déclarer vos revenus. Vous n'avez eu aucun revenu cette année. Que faites-vous ?",
+      "options": [
+        "Vous ne répondez pas car vous n'avez pas de revenus",
+        "Vous faites votre déclaration en indiquant zéro revenu",
+        "Vous jetez le courrier car il ne vous concerne pas",
+        "Vous attendez que l'administration vous recontacte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, toute personne majeure résidant en France doit faire sa déclaration de revenus chaque année, même si elle n'a perçu aucun revenu. Une déclaration à zéro permet de bénéficier de certains droits sociaux."
+    },
+    {
+      "id": "csp-mes-q4",
+      "question": "Votre enfant de 7 ans ne veut plus aller à l'école. Que devez-vous faire ?",
+      "options": [
+        "Respecter son choix et le garder à la maison",
+        "L'inscrire dans une école privée uniquement",
+        "Assurer son instruction car l'école est obligatoire de 3 à 16 ans",
+        "Attendre qu'il ait 10 ans pour l'obliger à y retourner"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'instruction est obligatoire en France pour tous les enfants de 3 à 16 ans (loi du 28 mars 1882, modifiée). Les parents ont l'obligation légale d'assurer l'instruction de leurs enfants, que ce soit à l'école ou par un autre moyen reconnu."
+    },
+    {
+      "id": "csp-mes-q5",
+      "question": "Vous souhaitez ouvrir un compte bancaire en France. Quel document n'est PAS nécessaire ?",
+      "options": [
+        "Une pièce d'identité en cours de validité",
+        "Un justificatif de domicile",
+        "Un extrait de casier judiciaire",
+        "Votre titre de séjour"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Pour ouvrir un compte bancaire en France, il faut une pièce d'identité, un justificatif de domicile et, pour les étrangers, un titre de séjour. L'extrait de casier judiciaire n'est jamais demandé. Le droit au compte est garanti par la loi."
+    },
+    {
+      "id": "csp-mes-q6",
+      "question": "Un collègue de travail vous fait des remarques déplacées répétées sur votre origine. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, c'est normal au travail",
+        "Signaler la situation à votre employeur ou aux représentants du personnel, car c'est une forme de discrimination",
+        "Démissionner immédiatement",
+        "Répondre par des remarques similaires"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La discrimination fondée sur l'origine est interdite par la loi française (article 225-1 du Code pénal). Vous pouvez signaler ces faits à votre employeur, aux représentants du personnel, au Défenseur des droits ou porter plainte."
+    },
+    {
+      "id": "csp-mes-q7",
+      "question": "Vous emménagez dans un nouveau logement. Dans quel délai devez-vous signaler votre changement d'adresse à la préfecture ?",
+      "options": [
+        "Dans les 3 mois suivant le déménagement",
+        "Uniquement lors du renouvellement de votre titre de séjour",
+        "Dans un délai de 30 jours",
+        "Ce n'est pas obligatoire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les titulaires d'un titre de séjour doivent signaler tout changement d'adresse à la préfecture dans les 3 mois. Cette démarche est souvent réalisable en ligne via le site de l'ANEF (Administration Numérique pour les Étrangers en France)."
+    },
+    {
+      "id": "csp-mes-q8",
+      "question": "Vous trouvez un portefeuille avec de l'argent et des papiers d'identité dans la rue. Que devez-vous faire ?",
+      "options": [
+        "Garder l'argent et jeter les papiers",
+        "Le rapporter au commissariat de police ou à la mairie",
+        "Le laisser sur place, quelqu'un d'autre s'en occupera",
+        "Garder le portefeuille en attendant que quelqu'un le réclame"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, si vous trouvez un objet perdu, vous devez le rapporter au commissariat, à la gendarmerie ou à la mairie. Garder un objet trouvé sans chercher à le restituer peut être considéré comme un vol par appropriation."
+    },
+    {
+      "id": "csp-mes-q9",
+      "question": "Votre propriétaire veut entrer dans votre logement sans votre accord pour vérifier l'état de l'appartement. A-t-il le droit ?",
+      "options": [
+        "Oui, c'est son logement, il peut entrer quand il veut",
+        "Oui, mais seulement le week-end",
+        "Non, le domicile du locataire est inviolable, il doit avoir votre accord",
+        "Oui, s'il prévient 24h à l'avance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le domicile est inviolable en France (article 226-4 du Code pénal). Le propriétaire ne peut pas entrer dans le logement loué sans l'accord du locataire, sauf cas d'urgence (fuite d'eau, incendie). Ce droit est protégé même si le locataire est en retard de loyer."
+    },
+    {
+      "id": "csp-mes-q10",
+      "question": "Vous êtes convoqué pour participer à un jury d'assises. Pouvez-vous refuser ?",
+      "options": [
+        "Oui, c'est un choix personnel",
+        "Non, c'est une obligation civique et un refus sans motif légitime est sanctionné d'une amende",
+        "Oui, si vous n'êtes pas de nationalité française",
+        "Oui, si vous avez un emploi"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La participation à un jury d'assises est un devoir civique obligatoire pour les citoyens français inscrits sur les listes électorales. Un refus sans motif légitime est passible d'une amende de 3 750 €."
+    },
+    {
+      "id": "csp-mes-q11",
+      "question": "Votre fille de 15 ans souhaite porter le voile au collège public. Quelle est la règle ?",
+      "options": [
+        "Elle peut le porter si ses parents l'autorisent",
+        "Le port de signes religieux ostensibles est interdit dans les écoles publiques",
+        "Elle peut le porter uniquement pendant la récréation",
+        "C'est autorisé dans toutes les écoles en France"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La loi du 15 mars 2004 interdit le port de signes ou tenues manifestant ostensiblement une appartenance religieuse dans les écoles, collèges et lycées publics. Cela s'applique à tous les signes religieux (voile, kippa, grande croix, etc.)."
+    },
+    {
+      "id": "csp-mes-q12",
+      "question": "Vous recevez un SMS vous demandant vos coordonnées bancaires pour recevoir un remboursement de la Sécurité sociale. Que faites-vous ?",
+      "options": [
+        "Vous répondez rapidement pour ne pas perdre le remboursement",
+        "Vous cliquez sur le lien pour vérifier",
+        "Vous ne répondez pas car c'est probablement une arnaque : la Sécurité sociale ne demande jamais vos coordonnées par SMS",
+        "Vous transmettez le message à vos amis"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les administrations françaises (Sécurité sociale, impôts, etc.) ne demandent jamais de coordonnées bancaires par SMS ou email. Il s'agit très probablement d'une tentative de phishing (hameçonnage). Vous pouvez signaler ce type de message sur le site signal-spam.fr."
+    },
+    {
+      "id": "csp-mes-q13",
+      "question": "Vous souhaitez vous marier en France. Où devez-vous célébrer le mariage pour qu'il soit reconnu par l'État ?",
+      "options": [
+        "Dans un lieu de culte uniquement",
+        "À la mairie, devant un officier d'état civil",
+        "Chez un notaire",
+        "N'importe où, tant que des témoins sont présents"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, seul le mariage civil célébré à la mairie est reconnu par la loi. Une cérémonie religieuse peut avoir lieu en plus, mais elle n'a aucune valeur juridique si elle n'est pas précédée du mariage civil."
+    },
+    {
+      "id": "csp-mes-q14",
+      "question": "Votre employeur vous demande de travailler 50 heures par semaine sans compensation. Est-ce légal ?",
+      "options": [
+        "Oui, l'employeur décide des horaires",
+        "Non, la durée légale du travail est de 35 heures par semaine, les heures supplémentaires doivent être compensées",
+        "Oui, si vous avez signé le contrat",
+        "Oui, pendant les 6 premiers mois"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La durée légale du travail en France est de 35 heures par semaine. Les heures supplémentaires doivent être rémunérées avec une majoration (25% puis 50%) ou compensées par du repos. La durée maximale ne peut dépasser 48 heures par semaine."
+    },
+    {
+      "id": "csp-mes-q15",
+      "question": "Vous êtes victime d'une agression dans la rue. Quel numéro appelez-vous en priorité ?",
+      "options": [
+        "Le 3939 (service public)",
+        "Le 17 (police secours) ou le 112 (numéro d'urgence européen)",
+        "Le 15 (SAMU)",
+        "Le 01 45 39 40 00 (ambassade)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas d'agression, appelez le 17 (police secours) ou le 112 (numéro d'urgence européen, valide dans toute l'UE). Le 15 est le SAMU (urgences médicales) et le 18 les pompiers. Le 112 redirige vers le service approprié."
+    },
+    {
+      "id": "csp-mes-q16",
+      "question": "Un ami vous propose de travailler dans son restaurant sans être déclaré, pour « gagner plus ». Que risquez-vous ?",
+      "options": [
+        "Rien, c'est une pratique courante",
+        "Vous risquez une amende et la perte de vos droits sociaux (assurance maladie, chômage, retraite)",
+        "Un simple avertissement la première fois",
+        "Uniquement votre ami risque des poursuites"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le travail non déclaré (« au noir ») est illégal en France. Le salarié perd ses droits à la protection sociale (maladie, chômage, retraite, accident du travail). L'employeur comme le salarié s'exposent à des sanctions. De plus, cela peut avoir des conséquences sur votre titre de séjour."
+    },
+    {
+      "id": "csp-mes-q17",
+      "question": "Vous souhaitez inscrire votre enfant à l'école maternelle. À partir de quel âge est-ce obligatoire ?",
+      "options": [
+        "6 ans",
+        "5 ans",
+        "3 ans",
+        "4 ans"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Depuis la loi du 26 juillet 2019, l'instruction est obligatoire dès l'âge de 3 ans en France. L'inscription à l'école maternelle se fait auprès de la mairie de votre commune de résidence."
+    },
+    {
+      "id": "csp-mes-q18",
+      "question": "Vous avez un problème de santé un dimanche soir et votre médecin traitant n'est pas disponible. Que faites-vous ?",
+      "options": [
+        "Vous attendez lundi matin",
+        "Vous appelez le 15 (SAMU) pour être orienté vers un médecin de garde ou les urgences",
+        "Vous allez directement aux urgences pour un simple rhume",
+        "Vous cherchez des conseils médicaux sur internet"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas de besoin médical en dehors des heures d'ouverture, appelez le 15 (SAMU). Un médecin régulateur évaluera votre situation et vous orientera vers un médecin de garde, une pharmacie de garde ou les urgences si nécessaire."
+    },
+    {
+      "id": "csp-mes-q19",
+      "question": "Vous conduisez et un gendarme vous arrête pour un contrôle routier. Que devez-vous présenter ?",
+      "options": [
+        "Uniquement votre passeport",
+        "Votre permis de conduire, la carte grise du véhicule et l'attestation d'assurance",
+        "Uniquement votre permis de conduire",
+        "Votre carte d'identité et une facture d'essence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lors d'un contrôle routier en France, vous devez présenter trois documents : votre permis de conduire, le certificat d'immatriculation (carte grise) et l'attestation d'assurance du véhicule. L'absence de l'un de ces documents est une infraction."
+    },
+    {
+      "id": "csp-mes-q20",
+      "question": "Votre voisin vous menace verbalement et vous insulte régulièrement. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, les paroles ne comptent pas",
+        "Le menacer en retour pour qu'il arrête",
+        "Déposer une main courante ou porter plainte au commissariat",
+        "Déménager, c'est la seule solution"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les menaces et insultes sont des infractions pénales en France. Vous pouvez déposer une main courante (signalement) ou porter plainte au commissariat ou à la gendarmerie. Conservez les preuves (témoignages, enregistrements, messages)."
+    },
+    {
+      "id": "csp-mes-q21",
+      "question": "Vous souhaitez créer une association avec des amis. Quelle est la démarche ?",
+      "options": [
+        "Il faut une autorisation spéciale du préfet",
+        "Il suffit de rédiger des statuts et de les déclarer en préfecture ou en ligne",
+        "Seuls les citoyens français peuvent créer une association",
+        "Il faut un capital minimum de 1 000 €"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La liberté d'association est un droit fondamental en France (loi du 1er juillet 1901). Toute personne, française ou étrangère, peut créer une association. Il suffit de rédiger des statuts et de déclarer l'association en préfecture ou en ligne."
+    },
+    {
+      "id": "csp-mes-q22",
+      "question": "Vous voulez voter aux élections municipales. Quelle condition est nécessaire ?",
+      "options": [
+        "Avoir un emploi en France",
+        "Être inscrit sur les listes électorales de sa commune",
+        "Habiter en France depuis plus de 10 ans",
+        "Avoir un compte bancaire français"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pour voter aux élections en France, il faut être inscrit sur les listes électorales de sa commune. Les citoyens français et les citoyens de l'Union européenne (pour les municipales et européennes) peuvent s'inscrire. L'inscription est possible en mairie ou en ligne."
+    },
+    {
+      "id": "csp-mes-q23",
+      "question": "Vous louez un appartement et constatez un dégât des eaux provenant de l'appartement du dessus. Que faites-vous ?",
+      "options": [
+        "Vous réparez vous-même et envoyez la facture au voisin",
+        "Vous remplissez un constat amiable de dégât des eaux avec votre voisin et contactez votre assurance habitation",
+        "Vous ne faites rien et attendez que ça sèche",
+        "Vous appelez les pompiers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas de dégât des eaux, la première chose à faire est de remplir un constat amiable avec le voisin concerné et de déclarer le sinistre à votre assurance habitation dans les 5 jours ouvrés. L'assurance habitation est obligatoire pour les locataires en France."
+    },
+    {
+      "id": "csp-mes-q24",
+      "question": "Un homme et une femme postulent pour le même emploi avec les mêmes compétences. L'employeur peut-il privilégier l'homme ?",
+      "options": [
+        "Oui, c'est le choix de l'employeur",
+        "Oui, si le poste est physiquement exigeant",
+        "Non, la discrimination à l'embauche fondée sur le sexe est interdite par la loi",
+        "Oui, si les clients préfèrent un homme"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'égalité entre les femmes et les hommes est un principe constitutionnel. La discrimination à l'embauche fondée sur le sexe est interdite et punie par la loi (article L1132-1 du Code du travail). Les victimes peuvent saisir le Défenseur des droits."
+    },
+    {
+      "id": "csp-mes-q25",
+      "question": "Vous souhaitez obtenir votre permis de conduire en France. Votre permis étranger est-il valable ?",
+      "options": [
+        "Oui, il est valable indéfiniment",
+        "Il est valable pendant un an après votre installation, puis vous devez demander son échange ou passer le permis français",
+        "Non, il faut repasser le permis entièrement",
+        "Il est valable seulement si votre pays a un accord avec la France"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un permis de conduire étranger est généralement reconnu pendant la première année de résidence en France. Passé ce délai, vous devez demander son échange (si accord bilatéral avec votre pays) ou passer le permis français."
+    },
+    {
+      "id": "csp-mes-q26",
+      "question": "Vous êtes malade et ne pouvez pas aller travailler. Que devez-vous faire ?",
+      "options": [
+        "Prévenir votre employeur quand vous vous sentez mieux",
+        "Consulter un médecin, obtenir un arrêt de travail et le transmettre à votre employeur et à la Sécurité sociale dans les 48 heures",
+        "Envoyer un simple SMS à votre employeur",
+        "Ne rien faire si c'est moins de 3 jours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas de maladie, vous devez consulter un médecin qui vous délivrera un arrêt de travail. Vous devez transmettre cet arrêt à votre employeur et à votre caisse d'assurance maladie dans les 48 heures pour bénéficier des indemnités journalières."
+    },
+    {
+      "id": "csp-mes-q27",
+      "question": "Votre enfant est harcelé à l'école par d'autres élèves. Que pouvez-vous faire ?",
+      "options": [
+        "Dire à votre enfant de se défendre seul",
+        "Alerter la direction de l'école et, si nécessaire, appeler le 3020 (numéro contre le harcèlement)",
+        "Changer d'école sans rien signaler",
+        "Confronter directement les autres enfants"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le harcèlement scolaire est pris très au sérieux en France. Vous devez alerter le directeur de l'école ou le chef d'établissement. Le numéro 3020 est dédié aux situations de harcèlement scolaire. En cas de faits graves, vous pouvez porter plainte."
+    },
+    {
+      "id": "csp-mes-q28",
+      "question": "Vous recevez une contravention pour stationnement interdit. Vous pensez qu'elle est injuste. Que pouvez-vous faire ?",
+      "options": [
+        "Ne pas la payer et l'ignorer",
+        "La contester dans le délai indiqué en joignant les justificatifs nécessaires",
+        "Aller directement au tribunal",
+        "Payer et ne rien faire d'autre, il n'y a pas de recours"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, vous avez le droit de contester une contravention dans le délai indiqué (généralement 45 jours). La contestation se fait en ligne sur le site de l'ANTAI ou par courrier. Ignorer une contravention entraîne une majoration de l'amende."
+    },
+    {
+      "id": "csp-mes-q29",
+      "question": "Lors d'une réunion de copropriété, un copropriétaire propose d'interdire la location aux personnes d'une certaine nationalité. Est-ce légal ?",
+      "options": [
+        "Oui, la copropriété peut fixer ses propres règles",
+        "Oui, si la majorité des copropriétaires vote pour",
+        "Non, c'est une discrimination fondée sur l'origine nationale, interdite par la loi",
+        "Oui, si c'est inscrit dans le règlement de copropriété"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Toute discrimination fondée sur l'origine nationale est interdite en France, y compris dans le logement (loi du 6 juillet 1989). Une telle décision serait nulle et pourrait entraîner des poursuites pénales."
+    },
+    {
+      "id": "csp-mes-q30",
+      "question": "Vous vous installez en France et souhaitez bénéficier de l'assurance maladie. Quelle est la première démarche ?",
+      "options": [
+        "Souscrire une assurance privée uniquement",
+        "Demander votre affiliation à la Sécurité sociale (Assurance Maladie)",
+        "Aller directement à l'hôpital avec votre passeport",
+        "Attendre d'être malade pour s'inscrire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Toute personne résidant en France de manière stable et régulière a droit à la prise en charge de ses frais de santé par la Sécurité sociale (Protection Universelle Maladie - PUMa). La demande se fait auprès de la CPAM de votre lieu de résidence."
+    },
+    {
+      "id": "csp-mes-q31",
+      "question": "Un commerçant refuse de vous servir en raison de votre couleur de peau. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, le commerçant est libre de servir qui il veut",
+        "Porter plainte pour discrimination et/ou saisir le Défenseur des droits",
+        "Laisser un avis négatif sur internet uniquement",
+        "Appeler la mairie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le refus de vente fondé sur la couleur de peau est un délit de discrimination (article 225-2 du Code pénal), passible de 3 ans d'emprisonnement et 45 000 € d'amende. Vous pouvez porter plainte et/ou saisir le Défenseur des droits."
+    },
+    {
+      "id": "csp-mes-q32",
+      "question": "Vous trouvez un emploi et votre employeur vous demande de signer un contrat de travail. Que devez-vous vérifier ?",
+      "options": [
+        "Uniquement le salaire",
+        "Le type de contrat (CDI/CDD), le salaire, la durée du travail, la période d'essai et la convention collective",
+        "Rien, il faut signer rapidement pour ne pas perdre l'emploi",
+        "Uniquement la date de début"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Avant de signer un contrat de travail, vérifiez le type de contrat (CDI, CDD), le salaire brut et net, la durée hebdomadaire, la période d'essai, le lieu de travail et la convention collective applicable. Vous avez le droit de prendre le temps de le lire."
+    },
+    {
+      "id": "csp-mes-q33",
+      "question": "Vous souhaitez manifester pacifiquement dans la rue pour soutenir une cause. Avez-vous le droit ?",
+      "options": [
+        "Non, seuls les syndicats peuvent manifester",
+        "Oui, la liberté de manifestation est un droit fondamental en France, sous réserve de déclaration préalable en préfecture",
+        "Oui, mais uniquement si vous êtes citoyen français",
+        "Non, les manifestations sont interdites en France"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La liberté de manifestation est un droit fondamental en France, garanti par la Constitution. Une manifestation sur la voie publique doit faire l'objet d'une déclaration préalable en préfecture. Ce droit s'applique à toute personne, quelle que soit sa nationalité."
+    },
+    {
+      "id": "csp-mes-q34",
+      "question": "Votre bailleur refuse de vous rendre votre dépôt de garantie après votre départ, sans justification. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, le propriétaire peut garder le dépôt de garantie",
+        "Envoyer une lettre recommandée de mise en demeure, puis saisir la commission de conciliation ou le tribunal si nécessaire",
+        "Appeler la police",
+        "Retourner dans l'appartement en attendant"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire doit restituer le dépôt de garantie dans un délai d'1 mois (si état des lieux conforme) ou 2 mois. En cas de non-restitution injustifiée, envoyez une mise en demeure par lettre recommandée, puis saisissez la commission de conciliation ou le tribunal."
+    },
+    {
+      "id": "csp-mes-q35",
+      "question": "Vous êtes invité à un repas chez des collègues français. On vous sert du porc mais vous n'en mangez pas pour des raisons religieuses. Que faites-vous ?",
+      "options": [
+        "Vous quittez la table en vous offensant",
+        "Vous mangez pour ne pas vexer vos hôtes",
+        "Vous déclinez poliment en expliquant vos préférences alimentaires",
+        "Vous critiquez le choix du menu"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En France, la liberté de conscience inclut le respect des choix alimentaires de chacun. Il est tout à fait normal et accepté de décliner poliment un plat en expliquant ses préférences. La convivialité repose sur le respect mutuel."
+    },
+    {
+      "id": "csp-mes-q36",
+      "question": "Vous constatez que votre salaire est inférieur au SMIC. Que pouvez-vous faire ?",
+      "options": [
+        "Rien, c'est ce qui a été convenu",
+        "Demander à votre employeur de régulariser la situation et, si refus, saisir le conseil de prud'hommes",
+        "Démissionner immédiatement",
+        "Travailler moins d'heures pour compenser"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le SMIC (Salaire Minimum Interprofessionnel de Croissance) est le salaire horaire minimum légal en France. Aucun salarié ne peut être payé en dessous. Si c'est le cas, demandez une régularisation à votre employeur. En cas de refus, saisissez le conseil de prud'hommes."
+    },
+    {
+      "id": "csp-mes-q37",
+      "question": "Vous souhaitez divorcer. Où devez-vous vous adresser ?",
+      "options": [
+        "À la mairie où vous vous êtes marié",
+        "À un avocat, car le divorce passe par une procédure judiciaire ou un accord notarié",
+        "À la préfecture",
+        "Il suffit d'envoyer une lettre à votre conjoint"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le divorce en France nécessite l'intervention d'un avocat. Il peut être prononcé par un juge (divorce contentieux) ou formalisé par un acte notarié (divorce par consentement mutuel). La seule volonté d'un des époux ne suffit pas."
+    },
+    {
+      "id": "csp-mes-q38",
+      "question": "Votre fils de 16 ans a commis un vol dans un magasin. Quelle est votre responsabilité en tant que parent ?",
+      "options": [
+        "Aucune, il est assez grand pour assumer",
+        "Vous êtes civilement responsable des actes de votre enfant mineur et pouvez devoir indemniser la victime",
+        "Seul votre fils sera puni",
+        "Vous risquez d'aller en prison à sa place"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, les parents sont civilement responsables des dommages causés par leurs enfants mineurs (article 1242 du Code civil). Ils peuvent être tenus d'indemniser les victimes. L'enfant mineur peut également faire l'objet de mesures éducatives."
+    },
+    {
+      "id": "csp-mes-q39",
+      "question": "Vous voulez envoyer votre enfant dans une école privée religieuse. Est-ce autorisé ?",
+      "options": [
+        "Non, toutes les écoles doivent être laïques en France",
+        "Oui, la liberté d'enseignement permet le choix entre école publique et privée",
+        "Oui, mais uniquement les écoles catholiques",
+        "Non, les écoles religieuses sont interdites depuis 1905"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La liberté d'enseignement est un principe constitutionnel en France. Les parents sont libres de choisir entre l'enseignement public (laïque et gratuit) et l'enseignement privé (qui peut être confessionnel). La laïcité stricte s'applique aux écoles publiques."
+    },
+    {
+      "id": "csp-mes-q40",
+      "question": "Vous êtes locataire et votre chauffage ne fonctionne plus en plein hiver. Votre propriétaire ne réagit pas. Que pouvez-vous faire ?",
+      "options": [
+        "Arrêter de payer le loyer",
+        "Mettre en demeure le propriétaire par lettre recommandée, puis saisir le tribunal si nécessaire",
+        "Réparer vous-même et déduire le coût du loyer sans prévenir",
+        "Rien, c'est au locataire de s'en occuper"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le propriétaire a l'obligation de fournir un logement décent avec un chauffage fonctionnel. En cas de défaillance, envoyez une mise en demeure par lettre recommandée. Si rien ne change, vous pouvez saisir la commission de conciliation ou le tribunal. Ne cessez jamais de payer le loyer sans décision de justice."
+    },
+    {
+      "id": "csp-mes-q41",
+      "question": "Vous êtes dans le métro et vous voyez une personne agresser une autre personne. Que devez-vous faire ?",
+      "options": [
+        "Intervenir physiquement dans tous les cas",
+        "Alerter les secours (17 ou 112) et, si possible, les agents de la station, sans vous mettre en danger",
+        "Filmer la scène sans intervenir",
+        "Changer de wagon et ignorer la situation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La non-assistance à personne en danger est un délit en France (article 223-6 du Code pénal). Vous devez alerter les secours (17 ou 112) ou les agents de sécurité. Vous n'êtes pas obligé d'intervenir physiquement si cela vous met en danger, mais vous devez appeler de l'aide."
+    },
+    {
+      "id": "csp-mes-q42",
+      "question": "Votre employeur vous licencie du jour au lendemain sans motif ni procédure. Est-ce légal ?",
+      "options": [
+        "Oui, l'employeur peut licencier quand il veut",
+        "Non, un licenciement doit respecter une procédure (convocation, entretien, notification) et être justifié par un motif réel et sérieux",
+        "Oui, pendant la première année de contrat",
+        "Oui, si l'entreprise a moins de 10 salariés"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, tout licenciement doit être justifié par un motif réel et sérieux et respecter une procédure légale (convocation à un entretien préalable, entretien, notification par lettre recommandée avec préavis). Un licenciement abusif peut être contesté devant le conseil de prud'hommes."
+    },
+    {
+      "id": "csp-mes-q43",
+      "question": "Vous souhaitez pratiquer votre religion librement en France. Quelles sont les limites ?",
+      "options": [
+        "Vous devez pratiquer uniquement chez vous",
+        "La pratique religieuse est libre tant qu'elle respecte l'ordre public et les lois de la République",
+        "Seules certaines religions sont autorisées en France",
+        "La pratique religieuse est interdite dans l'espace public"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La liberté de culte est garantie par la loi de 1905 sur la séparation des Églises et de l'État. Chacun est libre de pratiquer la religion de son choix, tant que cela ne trouble pas l'ordre public et respecte les lois de la République."
+    },
+    {
+      "id": "csp-mes-q44",
+      "question": "Votre enfant a besoin de soins dentaires mais vous n'avez pas les moyens de payer. Que pouvez-vous faire ?",
+      "options": [
+        "Attendre d'avoir l'argent",
+        "Demander la Complémentaire Santé Solidaire (C2S) qui prend en charge les frais de santé pour les personnes aux revenus modestes",
+        "Aller aux urgences de l'hôpital pour des soins dentaires",
+        "Chercher un dentiste gratuit sur internet"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Complémentaire Santé Solidaire (C2S) est une aide de l'État qui permet aux personnes aux revenus modestes de bénéficier d'une couverture complémentaire santé gratuite ou à faible coût. Elle couvre les soins dentaires, optiques et auditifs. La demande se fait auprès de la CPAM."
+    },
+    {
+      "id": "csp-mes-q45",
+      "question": "Lors d'un contrôle d'identité, un policier vous demande vos papiers. Êtes-vous obligé de les présenter ?",
+      "options": [
+        "Non, c'est une atteinte à votre liberté",
+        "Oui, en France, toute personne doit pouvoir justifier de son identité lors d'un contrôle de police",
+        "Seulement si vous avez commis une infraction",
+        "Non, si vous êtes à pied"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En France, lors d'un contrôle d'identité (article 78-1 du Code de procédure pénale), toute personne doit pouvoir justifier de son identité. Si vous ne pouvez pas, vous pouvez être retenu pour vérification pendant 4 heures maximum. Les étrangers doivent également pouvoir présenter leur titre de séjour."
+    },
+    {
+      "id": "csp-mes-q46",
+      "question": "Vous venez d'avoir un bébé en France. Quelle démarche devez-vous effectuer rapidement ?",
+      "options": [
+        "Déclarer la naissance à la mairie dans les 5 jours suivant l'accouchement",
+        "Inscrire le bébé à la crèche",
+        "Demander un passeport pour le bébé",
+        "Ouvrir un compte bancaire au nom du bébé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La déclaration de naissance doit être faite à la mairie du lieu de naissance dans les 5 jours suivant l'accouchement. C'est une obligation légale qui permet l'établissement de l'acte de naissance et l'inscription à l'état civil."
+    },
+    {
+      "id": "csp-mes-q47",
+      "question": "Vous constatez une fuite d'eau dans votre immeuble au milieu de la nuit. Que faites-vous en premier ?",
+      "options": [
+        "Vous attendez le lendemain pour appeler un plombier",
+        "Vous coupez l'arrivée d'eau si possible et appelez le gardien ou un plombier d'urgence",
+        "Vous appelez les pompiers immédiatement",
+        "Vous mettez une bassine et vous vous recouchez"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En cas de fuite d'eau, la priorité est de couper l'arrivée d'eau pour limiter les dégâts. Contactez ensuite le gardien de l'immeuble ou un plombier d'urgence. Les pompiers n'interviennent qu'en cas de danger grave (inondation importante menaçant la sécurité)."
+    },
+    {
+      "id": "csp-mes-q48",
+      "question": "Un ami vous demande d'héberger un proche qui n'a pas de titre de séjour valide. Que risquez-vous ?",
+      "options": [
+        "Rien, l'hébergement est un acte de solidarité toujours protégé",
+        "L'aide au séjour irrégulier est un délit, mais l'hébergement désintéressé d'une personne en danger bénéficie d'une immunité",
+        "Vous risquez l'expulsion de France",
+        "Vous perdez automatiquement votre titre de séjour"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'aide au séjour irrégulier est un délit en France. Cependant, la loi prévoit une immunité pour les actes d'aide humanitaire désintéressée (hébergement, nourriture, soins). Cette « exemption humanitaire » a été renforcée par le Conseil constitutionnel en 2018."
+    },
+    {
+      "id": "csp-mes-q49",
+      "question": "Vous perdez votre emploi. Quelles sont les premières démarches à effectuer ?",
+      "options": [
+        "Attendre de trouver un nouvel emploi avant toute démarche",
+        "S'inscrire à France Travail (ex-Pôle emploi) pour bénéficier de l'allocation chômage et d'un accompagnement",
+        "Demander directement le RSA à la CAF",
+        "Contacter votre ancien employeur pour être réembauché"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Après un licenciement ou une fin de contrat, vous devez vous inscrire à France Travail (anciennement Pôle emploi) dans les meilleurs délais. Vous pourrez ainsi bénéficier de l'allocation chômage (ARE) si vous remplissez les conditions, et d'un accompagnement pour retrouver un emploi."
+    },
+    {
+      "id": "csp-mes-q50",
+      "question": "Un parent d'élève refuse que son fils participe aux cours de natation mixtes à l'école publique. L'école peut-elle l'en dispenser ?",
+      "options": [
+        "Oui, les convictions religieuses doivent être respectées dans tous les cas",
+        "Non, les activités scolaires obligatoires s'imposent à tous les élèves, sauf certificat médical",
+        "Oui, si les deux parents en font la demande",
+        "Oui, si l'enfant est en primaire"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dans les écoles publiques, les programmes et activités scolaires sont obligatoires pour tous les élèves. Seul un certificat médical peut justifier une dispense d'éducation physique. Les convictions religieuses ne constituent pas un motif de dispense des enseignements obligatoires."
+    }
+  ]
+}
