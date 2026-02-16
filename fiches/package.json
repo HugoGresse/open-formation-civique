@@ -9,7 +9,7 @@
     "build:no-pdf": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate": "node scripts/generate-pages.js",
+    "generate": "npx tsx scripts/generate-pages.ts",
     "generate:quizzes": "node --env-file=.env scripts/generate-quizzes.js"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
-    "starlight-to-pdf": "^1.4.0"
+    "starlight-to-pdf": "^1.4.0",
+    "tsx": "^4.19.0"
   }
 }
