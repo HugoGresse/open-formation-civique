@@ -66,6 +66,9 @@ export default defineConfig({
 					},
 				},
 			],
+			components: {
+				Footer: './src/components/Footer.astro',
+			},
 			customCss: ['./src/styles/quiz.css', './src/styles/content.css'],
 			defaultLocale: 'root',
 			locales: {
