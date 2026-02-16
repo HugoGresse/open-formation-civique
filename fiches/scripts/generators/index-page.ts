@@ -33,14 +33,27 @@ hero:
       variant: minimal
       attrs:
         download: true
+next: false
+prev: false
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
 
 ## Les 5 thématiques
 
 <CardGrid>
   ${thematicCards}
+</CardGrid>
+
+## À propos
+
+<CardGrid>
+  <Card title="Open Source et gratuit" icon="github">
+    Ce projet est entièrement open source et gratuit. Le code source est disponible sur [GitHub](https://github.com/HugoGresse/open-formation-civique). Les contributions sont les bienvenues !
+  </Card>
+  <Card title="RGPD et sans cookie" icon="approve-check">
+    Ce site respecte votre vie privée. Aucun cookie n'est utilisé et aucune donnée personnelle n'est collectée. Les analytics sont anonymes et conformes au RGPD.
+  </Card>
 </CardGrid>
 `;
 
