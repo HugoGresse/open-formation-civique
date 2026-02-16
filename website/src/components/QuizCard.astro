@@ -62,7 +62,12 @@ const { quizId, title, description, questionCount, href } = Astro.props;
     });
   }
 
-  updateCards();
+  // Ensure DOM is ready before updating cards
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateCards);
+  } else {
+    updateCards();
+  }
 </script>
 
 <style>
