@@ -1,127 +1,691 @@
 {
   "id": "systeme-institutionnel",
   "title": "Système institutionnel et politique",
-  "description": "Testez vos connaissances sur l'État de droit, la démocratie, les institutions françaises et européennes.",
+  "description": "Testez vos connaissances : Démocratie et droit de vote • Organisation de la République française",
   "questions": [
     {
       "id": "si-q1",
-      "question": "Quels sont les trois pouvoirs séparés dans un État de droit ?",
+      "question": "Quelle est la caractéristique principale d’un État de droit ?",
       "options": [
-        "Militaire, religieux, civil",
-        "Législatif, exécutif, judiciaire",
-        "Présidentiel, parlementaire, municipal",
-        "National, régional, local"
+        "La loi s’applique de la même façon à tous, y compris à l’État",
+        "L’État peut déroger à la loi lorsqu’il le juge nécessaire",
+        "Seuls les juges peuvent créer les lois",
+        "Les droits fondamentaux ne sont pas garantis"
       ],
-      "correctAnswer": 1,
-      "explanation": "Les trois pouvoirs sont le pouvoir législatif (Parlement), le pouvoir exécutif (Gouvernement) et le pouvoir judiciaire (tribunaux). Ils ne doivent pas être concentrés dans les mêmes mains."
+      "correctAnswer": 0,
+      "explanation": "Dans un État de droit, la loi est supérieure aux pouvoirs et s’impose à tous, y compris aux autorités publiques."
     },
     {
       "id": "si-q2",
-      "question": "À partir de quel âge un citoyen français peut-il voter ?",
+      "question": "Parmi les principes suivants, lequel ne fait pas partie des six principes de l’État de droit présentés dans la fiche ?",
       "options": [
-        "16 ans",
-        "18 ans",
-        "20 ans",
-        "21 ans"
+        "Primauté du droit",
+        "Séparation des pouvoirs",
+        "Souveraineté populaire",
+        "Sécurité juridique"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le droit de vote est accordé à tous les citoyens français âgés de 18 ans et plus. C'est le suffrage universel."
+      "correctAnswer": 2,
+      "explanation": "Les six principes cités sont la primauté du droit, l’égalité devant la loi, la séparation des pouvoirs, la légalité, la sécurité juridique et la protection juridictionnelle ; la souveraineté populaire n’est pas mentionnée."
     },
     {
       "id": "si-q3",
-      "question": "Comment s'appelle le texte juridique suprême de la France ?",
+      "question": "Quel principe garantit que les lois sont élaborées selon un processus transparent, responsable et démocratique ?",
       "options": [
-        "Le Code civil",
-        "La Déclaration des droits de l'homme et du citoyen",
-        "La Constitution",
-        "Le traité de Maastricht"
+        "Légalité",
+        "Primauté du droit",
+        "Sécurité juridique",
+        "Égalité devant la loi"
       ],
-      "correctAnswer": 2,
-      "explanation": "La Constitution (de 1958 pour la Ve République) est la loi suprême. La Déclaration des droits de l'homme de 1789 en fait partie via le préambule."
+      "correctAnswer": 0,
+      "explanation": "Le principe de légalité assure que les lois sont votées dans un cadre transparent et démocratique, avec la participation des partis politiques."
     },
     {
       "id": "si-q4",
-      "question": "Quel traité a créé l'Union européenne ?",
+      "question": "Dans le système français, quel pouvoir est chargé d’appliquer et de faire respecter les lois ?",
       "options": [
-        "Le traité de Rome (1957)",
-        "Le traité de Maastricht (1992)",
-        "Le traité de Lisbonne (2007)",
-        "Le traité de Versailles (1919)"
+        "Pouvoir législatif",
+        "Pouvoir exécutif",
+        "Pouvoir judiciaire",
+        "Pouvoir municipal"
       ],
       "correctAnswer": 1,
-      "explanation": "Le traité de Maastricht, signé en 1992, a créé l'Union européenne. Le traité de Rome (1957) avait fondé la Communauté économique européenne (CEE)."
+      "explanation": "Le pouvoir exécutif, incarné par le Gouvernement, a la mission d’appliquer les lois votées par le Parlement."
     },
     {
       "id": "si-q5",
-      "question": "Qui représente l'État dans chaque département français ?",
+      "question": "Quel texte fondamental l’État de droit doit-il toujours respecter selon la fiche ?",
       "options": [
-        "Le maire",
-        "Le député",
-        "Le préfet",
-        "Le sénateur"
+        "La Constitution française",
+        "Le Code civil",
+        "La Charte européenne des droits de l’homme",
+        "Le Code du travail"
       ],
-      "correctAnswer": 2,
-      "explanation": "Le préfet est le représentant de l'État dans chaque département. Cette fonction a été créée en 1800 sous Napoléon."
+      "correctAnswer": 0,
+      "explanation": "L’État de droit doit respecter la Constitution française ainsi que la Déclaration des droits de l’homme et du citoyen de 1789, qui y est intégrée."
     },
     {
       "id": "si-q6",
-      "question": "Quelle institution a été créée en 1951 comme première étape de la construction européenne ?",
+      "question": "Quel principe fondamental de la démocratie française est assuré par la pluralité des partis politiques ?",
       "options": [
-        "L'Union européenne",
-        "La Communauté économique européenne (CEE)",
-        "La Communauté européenne du charbon et de l'acier (CECA)",
-        "Le Parlement européen"
+        "Le respect du pluralisme",
+        "Le contrôle des médias",
+        "L'unicité du parti au pouvoir",
+        "La centralisation du pouvoir exécutif"
       ],
-      "correctAnswer": 2,
-      "explanation": "La CECA (Communauté européenne du charbon et de l'acier), créée en 1951, est la première étape de la construction européenne."
+      "correctAnswer": 0,
+      "explanation": "Le Conseil constitutionnel précise que le respect du pluralisme constitue le fondement de la démocratie."
     },
     {
       "id": "si-q7",
-      "question": "Qui peut proposer une loi en France ?",
+      "question": "Quel article de la Constitution française garantit le droit de chaque citoyen de rejoindre un parti politique ?",
       "options": [
-        "Uniquement le Président de la République",
-        "Uniquement les députés",
-        "Le Gouvernement et les membres du Parlement",
-        "Les citoyens directement"
+        "Article 4",
+        "Article 1",
+        "Article 12",
+        "Article 24"
       ],
-      "correctAnswer": 2,
-      "explanation": "Les lois peuvent être proposées par le Gouvernement (projets de loi) ou par les membres du Parlement, c'est-à-dire les députés et sénateurs (propositions de loi)."
+      "correctAnswer": 0,
+      "explanation": "L'article 4 dispose que les partis et groupements politiques concourent à l’expression du suffrage."
     },
     {
       "id": "si-q8",
-      "question": "Tous les combien ont lieu les élections européennes ?",
+      "question": "Selon la loi du 30 septembre 1986 sur la liberté de communication, quelle obligation les médias ont-ils pendant les campagnes électorales ?",
       "options": [
-        "Tous les 3 ans",
-        "Tous les 4 ans",
-        "Tous les 5 ans",
-        "Tous les 7 ans"
+        "Accorder le même temps de parole à tous les partis",
+        "Favoriser le parti majoritaire",
+        "Limiter la diffusion des messages politiques à 30 secondes",
+        "Interdire toute publicité politique"
       ],
-      "correctAnswer": 2,
-      "explanation": "Les élections européennes ont lieu tous les 5 ans. Les citoyens élisent les députés qui siègent au Parlement européen."
+      "correctAnswer": 0,
+      "explanation": "La loi impose aux médias d’être équitables, garantissant ainsi le pluralisme politique."
     },
     {
       "id": "si-q9",
-      "question": "Quel pays a quitté l'Union européenne en 2020 ?",
+      "question": "Quelle est l'une des deux fonctions principales des partis politiques décrites dans la fiche ?",
       "options": [
-        "La Suisse",
-        "La Norvège",
-        "Le Royaume-Uni",
-        "L'Islande"
+        "Proposer des programmes politiques à mettre en œuvre",
+        "Déterminer le budget de l'État",
+        "Nommer les juges de la Cour de cassation",
+        "Gérer les collectivités locales"
       ],
-      "correctAnswer": 2,
-      "explanation": "Le Royaume-Uni a quitté l'Union européenne en 2020. Cet événement est connu sous le nom de « Brexit »."
+      "correctAnswer": 0,
+      "explanation": "Les partis élaborent des programmes qui traduisent leurs convictions et servent d’intermédiaires entre citoyens et gouvernement."
     },
     {
       "id": "si-q10",
-      "question": "Quels sont les trois niveaux de collectivités territoriales en France ?",
+      "question": "Comment les partis politiques participent-ils à la direction du pays selon le texte ?",
       "options": [
-        "Cantons, arrondissements, quartiers",
-        "Régions, départements, communes",
-        "Provinces, districts, villages",
-        "États, comtés, villes"
+        "En sélectionnant les candidats qui peuvent être élus aux fonctions exécutives et législatives",
+        "En rédigeant les lois sans passer par le Parlement",
+        "En contrôlant directement les décisions du Conseil constitutionnel",
+        "En imposant leurs idées via les médias publics"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les partis choisissent les candidats qui, une fois élus, occupent des postes législatifs ou exécutifs, influençant ainsi la gouvernance."
+    },
+    {
+      "id": "si-q11",
+      "question": "Quel traité a créé la CECA (Communauté européenne du charbon et de l’acier) en 1951 ?",
+      "options": [
+        "Traité de Rome",
+        "Traité de Paris",
+        "Traité de Maastricht",
+        "Traité de Lisbonne"
       ],
       "correctAnswer": 1,
-      "explanation": "La France est organisée en trois niveaux de collectivités territoriales : les régions, les départements et les communes, dans le cadre de la décentralisation."
+      "explanation": "Le traité de Paris, signé en 1951, a instauré la CECA, première organisation communautaire européenne."
+    },
+    {
+      "id": "si-q12",
+      "question": "En quelle année le traité de Maastricht a-t-il institué l’Union européenne et la libre circulation des marchandises, des personnes et des capitaux ?",
+      "options": [
+        "1992",
+        "1986",
+        "2004",
+        "1973"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité de Maastricht, signé en 1992, crée l’UE et introduit les quatre libertés du marché intérieur."
+    },
+    {
+      "id": "si-q13",
+      "question": "Quel pays a été le premier à quitter l’Union européenne ?",
+      "options": [
+        "France",
+        "Royaume-Uni",
+        "Grèce",
+        "Bulgarie"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Royaume-Uni a quitté l’UE le 31 janvier 2020, marquant le premier Brexit."
+    },
+    {
+      "id": "si-q14",
+      "question": "Combien d’États membres ont intégré l’UE lors de l’élargissement de 2004 ?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "En 2004, dix nouveaux pays (Chypre, Estonie, Hongrie, Lettonie, Lituanie, Malte, Pologne, République tchèque, Slovaquie, Slovénie) ont rejoint l’UE."
+    },
+    {
+      "id": "si-q15",
+      "question": "Quel traité a introduit la lutte contre le changement climatique parmi les objectifs de l’UE ?",
+      "options": [
+        "Traité de Lisbonne",
+        "Traité de Maastricht",
+        "Traité de Rome",
+        "Traité de Paris"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le traité de Lisbonne, signé en 2007, a ajouté la lutte contre le changement climatique aux priorités de l’Union."
+    },
+    {
+      "id": "si-q16",
+      "question": "À quelle fréquence ont lieu les élections européennes ?",
+      "options": [
+        "Tous les trois ans",
+        "Tous les cinq ans",
+        "Tous les sept ans",
+        "Tous les dix ans"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les élections européennes sont organisées tous les cinq ans."
+    },
+    {
+      "id": "si-q17",
+      "question": "Combien d'eurodéputés la France élit‑elle depuis les élections de 2024 ?",
+      "options": [
+        "74",
+        "81",
+        "96",
+        "108"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Depuis 2024, la France compte 81 eurodéputés au Parlement européen."
+    },
+    {
+      "id": "si-q18",
+      "question": "Quel critère n'est PAS requis pour pouvoir voter aux élections européennes depuis la France ?",
+      "options": [
+        "Être inscrit sur les listes électorales françaises",
+        "Avoir au moins 18 ans la veille du premier tour",
+        "Être de nationalité française uniquement",
+        "Habiter en France"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Il suffit d'avoir la nationalité d'un pays membre de l'UE, pas nécessairement la nationalité française."
+    },
+    {
+      "id": "si-q19",
+      "question": "Lors des élections européennes, les électeurs votent :",
+      "options": [
+        "Pour des candidats individuels",
+        "Pour des listes de partis politiques",
+        "Pour des référendums régionaux",
+        "Pour des projets de loi"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les électeurs choisissent des listes de partis, pas des candidats uniques."
+    },
+    {
+      "id": "si-q20",
+      "question": "Quel condition empêche une personne d'être candidate aux élections européennes en France ?",
+      "options": [
+        "Ne pas être inscrit sur les listes électorales",
+        "Être privé de ses droits civils et politiques",
+        "Avoir moins de 25 ans",
+        "Ne pas résider dans l'Union européenne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un candidat ne doit pas être privé de ses droits civils et politiques."
+    },
+    {
+      "id": "si-q21",
+      "question": "Combien de députés siègent à l'Assemblée nationale ?",
+      "options": [
+        "577",
+        "348",
+        "500",
+        "600"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Assemblée nationale compte 577 députés élus par les citoyens."
+    },
+    {
+      "id": "si-q22",
+      "question": "Quel est le rôle principal du pouvoir exécutif en France ?",
+      "options": [
+        "Voter la loi",
+        "Appliquer et faire respecter les lois",
+        "Juger les litiges entre citoyens",
+        "Élaborer le budget de l'État"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le pouvoir exécutif, exercé par le président et le gouvernement, applique et fait respecter les lois votées par le Parlement."
+    },
+    {
+      "id": "si-q23",
+      "question": "Qui nomme le Premier ministre en France ?",
+      "options": [
+        "Le Sénat",
+        "L'Assemblée nationale",
+        "Le président de la République",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le président de la République nomme le Premier ministre, qui dirige le gouvernement."
+    },
+    {
+      "id": "si-q24",
+      "question": "Quel ordre de justice traite les litiges entre un citoyen et une administration publique ?",
+      "options": [
+        "Justice civile",
+        "Justice pénale",
+        "Justice administrative",
+        "Justice internationale"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La justice administrative juge les conflits entre les individus et l'État (administrations, collectivités)."
+    },
+    {
+      "id": "si-q25",
+      "question": "Quelle est la plus haute juridiction de la justice judiciaire en France ?",
+      "options": [
+        "Le Conseil d'État",
+        "La Cour de cassation",
+        "Le Tribunal de grande instance",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La Cour de cassation est la juridiction suprême de l'ordre judiciaire, tandis que le Conseil d'État est le sommet de la justice administrative."
+    },
+    {
+      "id": "si-q26",
+      "question": "L’expression « démocratie » vient du grec « Dêmos Krátos ». Que signifie cette locution ?",
+      "options": [
+        "Peuple Pouvoir",
+        "Pouvoir du Roi",
+        "Loi du Peuple",
+        "Force du Pays"
+      ],
+      "correctAnswer": 0,
+      "explanation": "« Dêmos Krátos » se traduit littéralement par « pouvoir du peuple »."
+    },
+    {
+      "id": "si-q27",
+      "question": "Quel principe n’est pas caractéristique d’une démocratie ?",
+      "options": [
+        "Séparation des pouvoirs",
+        "Pluralité des partis politiques",
+        "Pouvoir héréditaire",
+        "Consultation régulière du peuple"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le pouvoir héréditaire appartient à la monarchie, pas à la démocratie."
+    },
+    {
+      "id": "si-q28",
+      "question": "Comment la Constitution de 1958 définit‑elle la démocratie ?",
+      "options": [
+        "Le gouvernement du peuple, par le peuple et pour le peuple",
+        "Le gouvernement du roi, par le peuple",
+        "Le gouvernement des élites, par les élites",
+        "Le gouvernement des régions, par les régions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’article 1er de la Constitution affirme que la démocratie est « le gouvernement du peuple, par le peuple et pour le peuple »."
+    },
+    {
+      "id": "si-q29",
+      "question": "Qui élit le président de la République en France ?",
+      "options": [
+        "Les députés de l’Assemblée nationale",
+        "Les grands électeurs du Sénat",
+        "Les citoyens français au suffrage universel direct",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le président est élu directement par l’ensemble des citoyens inscrits sur les listes électorales."
+    },
+    {
+      "id": "si-q30",
+      "question": "Quelle affirmation est exacte concernant le Sénat français ?",
+      "options": [
+        "Ses membres sont élus au suffrage direct par les citoyens",
+        "Ils sont élus pour un mandat de 5 ans",
+        "Ils sont élus au suffrage indirect par des grands électeurs",
+        "Le Sénat n’existe plus depuis la Ve République"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les sénateurs sont choisis par un collège de grands électeurs, donc au suffrage indirect."
+    },
+    {
+      "id": "si-q31",
+      "question": "Quelle différence fondamentale sépare la République de la monarchie ?",
+      "options": [
+        "Le pouvoir est héréditaire en République",
+        "Le pouvoir appartient au peuple et n’est pas transmis par hérédité",
+        "La République possède un roi élu",
+        "La monarchie désigne le chef d’État par suffrage universel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dans une République, le pouvoir n’est pas héréditaire mais appartient au peuple, contrairement à la monarchie."
+    },
+    {
+      "id": "si-q32",
+      "question": "Quelles sont les conditions requises pour qu’un citoyen français puisse voter au suffrage universel ?",
+      "options": [
+        "Être majeur et inscrit sur les listes électorales",
+        "Avoir la nationalité française et ne pas être privé de ses droits civiques",
+        "Résider en France depuis plus de 6 mois",
+        "Toutes les réponses précédentes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le suffrage universel exige la nationalité française, la majorité (plus de 18 ans), l’inscription sur les listes électorales et l'absence de privation de droits civiques."
+    },
+    {
+      "id": "si-q33",
+      "question": "Quel droit de vote possède un ressortissant d’un pays membre de l’Union européenne résidant en France ?",
+      "options": [
+        "Il ne peut voter à aucune élection française",
+        "Il ne peut voter qu’aux élections européennes",
+        "Il peut voter aux élections européennes et municipales s’il est inscrit depuis plus de 6 mois",
+        "Il peut voter à toutes les élections françaises"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les citoyens de l’UE résidant en France peuvent voter aux élections européennes et municipales, à condition d’être inscrits sur les listes depuis plus de 6 mois."
+    },
+    {
+      "id": "si-q34",
+      "question": "Le vote en France repose sur trois principes fondamentaux. Lesquels ?",
+      "options": [
+        "Personnel, libre, secret",
+        "Public, obligatoire, transparent",
+        "Secret, obligatoire, payant",
+        "Personnel, obligatoire, public"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le vote est garanti comme étant personnel, libre et secret, conformément à la Constitution française."
+    },
+    {
+      "id": "si-q35",
+      "question": "Parmi les élections suivantes, laquelle se déroule au suffrage universel indirect ?",
+      "options": [
+        "Élection présidentielle",
+        "Élection législative",
+        "Élection sénatoriale",
+        "Élection européenne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les sénateurs sont élus par un collège de grands électeurs (maires, conseillers municipaux, députés), donc au suffrage universel indirect."
+    },
+    {
+      "id": "si-q36",
+      "question": "Quel(s) droit(s) peut (peuvent) être retiré(s) à un citoyen condamné à une peine d’emprisonnement ?",
+      "options": [
+        "Le droit de vote uniquement",
+        "Le droit de servir dans l’armée uniquement",
+        "Le droit de se présenter à une élection uniquement",
+        "Tous les droits civiques et politiques (vote, éligibilité, service militaire, fonction juridictionnelle)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Une condamnation peut entraîner la privation des droits civiques et politiques, incluant le vote, l’éligibilité, le service militaire et la fonction juridictionnelle."
+    },
+    {
+      "id": "si-q37",
+      "question": "Quel organe peut déposer un projet de loi au Parlement ?",
+      "options": [
+        "Le Gouvernement",
+        "Le Conseil constitutionnel",
+        "Le Conseil d'État",
+        "La Cour de cassation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Gouvernement, via les ministres, dépose un projet de loi après son adoption en Conseil des ministres."
+    },
+    {
+      "id": "si-q38",
+      "question": "Quelle est la fonction principale d’une commission parlementaire dans le processus législatif ?",
+      "options": [
+        "Voter le texte final",
+        "Examiner le texte et proposer des amendements",
+        "Promulguer la loi",
+        "Publier le texte au Journal Officiel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "La commission examine le texte, désigne un rapporteur et propose des amendements avant le vote en séance publique."
+    },
+    {
+      "id": "si-q39",
+      "question": "Que se passe-t-il en cas de désaccord entre l'Assemblée nationale et le Sénat ?",
+      "options": [
+        "Le texte est abandonné",
+        "Une commission mixte paritaire est constituée",
+        "Le Conseil d'État tranche",
+        "Le Président de la République décide directement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Une commission mixte paritaire, composée de 7 députés et 7 sénateurs, est mise en place pour trouver un texte de compromis."
+    },
+    {
+      "id": "si-q40",
+      "question": "Qui a le dernier mot si la commission mixte ne parvient pas à un accord ?",
+      "options": [
+        "Le Sénat",
+        "Le Président de la République",
+        "L'Assemblée nationale",
+        "Le Conseil constitutionnel"
+      ],
+      "correctAnswer": 2,
+      "explanation": "En l'absence d'accord, c'est l'Assemblée nationale qui décide du texte final."
+    },
+    {
+      "id": "si-q41",
+      "question": "Quelle procédure peut être engagée avant la promulgation de la loi ?",
+      "options": [
+        "Le Conseil constitutionnel peut être saisi",
+        "Le texte est envoyé au Conseil d'Europe",
+        "Le texte est soumis à référendum",
+        "Le texte est jugé par la Cour suprême"
+      ],
+      "correctAnswer": 0,
+      "explanation": "60 députés ou 60 sénateurs peuvent saisir le Conseil constitutionnel pour vérifier la conformité du texte à la Constitution."
+    },
+    {
+      "id": "si-q42",
+      "question": "Qu’est‑ce que la décentralisation en France ?",
+      "options": [
+        "Le transfert de compétences et de moyens de l’État aux collectivités territoriales",
+        "La suppression des régions au profit des départements",
+        "Le contrôle direct de l’État sur toutes les décisions locales",
+        "La création de nouvelles communes pour réduire la taille des départements"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La décentralisation consiste à déléguer à des collectivités territoriales (communes, départements, régions, etc.) des compétences et des moyens auparavant exercés par l’État."
+    },
+    {
+      "id": "si-q43",
+      "question": "Quelle collectivité territoriale est responsable de la gestion des écoles maternelles et primaires ?",
+      "options": [
+        "La région",
+        "Le département",
+        "La commune",
+        "La collectivité d’outre‑mer"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les communes gèrent les écoles maternelles et primaires, tandis que les départements s’occupent des collèges et les régions des lycées."
+    },
+    {
+      "id": "si-q44",
+      "question": "Parmi les missions suivantes, laquelle n’est pas du ressort du Préfet ?",
+      "options": [
+        "Organiser la sécurité des personnes et des biens avec la police et la gendarmerie",
+        "Délivrer les titres et autorisations administratives",
+        "Diriger les services de l’État dans le département",
+        "Gérer les collèges et les lycées"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La gestion des collèges et lycées relève des départements et des régions, pas du Préfet qui représente l’État et coordonne les services de l’État."
+    },
+    {
+      "id": "si-q45",
+      "question": "Quelle collectivité à statut particulier possède à la fois les compétences d’une commune et d’un département ?",
+      "options": [
+        "La métropole de Lyon",
+        "La collectivité européenne d’Alsace",
+        "Paris",
+        "La Nouvelle-Calédonie"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Paris combine les compétences d’une commune et d’un département, contrairement à Lyon (commune + département) ou à l’Alsace (département + spécificités)."
+    },
+    {
+      "id": "si-q46",
+      "question": "Combien de régions métropolitaines et d’outre‑mer existent‑t‑il en France ?",
+      "options": [
+        "13 régions métropolitaines et 5 d’outre‑mer, soit 18 au total",
+        "14 régions métropolitaines et 4 d’outre‑mer, soit 18 au total",
+        "12 régions métropolitaines et 6 d’outre‑mer, soit 18 au total",
+        "15 régions métropolitaines et 3 d’outre‑mer, soit 18 au total"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La France compte 13 régions métropolitaines et 5 régions d’outre‑mer, ce qui fait 18 régions au total."
+    },
+    {
+      "id": "si-q47",
+      "question": "Que symbolisent les douze étoiles jaunes disposées en cercle sur le drapeau européen ?",
+      "options": [
+        "L’unité, la solidarité et l’harmonie entre les peuples d’Europe",
+        "Les douze États membres fondateurs de l’UE",
+        "Les douze mois de l’année",
+        "Les douze colonies européennes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le cercle d’étoiles représente l’unité, la solidarité et l’harmonie entre les peuples européens."
+    },
+    {
+      "id": "si-q48",
+      "question": "En quelle année le drapeau devient-il l’emblème officiel du Conseil de l’Europe ?",
+      "options": [
+        "1955",
+        "1972",
+        "1985",
+        "1992"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le drapeau a été adopté comme emblème officiel du Conseil de l’Europe en 1955."
+    },
+    {
+      "id": "si-q49",
+      "question": "Quel morceau musical constitue l’hymne officiel de l’Union européenne ?",
+      "options": [
+        "« Ode à la joie » de Ludwig van Beethoven",
+        "« La Marseillaise »",
+        "« God Save the Queen »",
+        "« The Star‑Spangled Banner »"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’hymne européen est la mélodie de l’« Ode à la joie », composée par Beethoven."
+    },
+    {
+      "id": "si-q50",
+      "question": "Quelle est la devise officielle de l’Union européenne depuis l’an 2000 ?",
+      "options": [
+        "« Unie dans la diversité »",
+        "« Liberté, égalité, fraternité »",
+        "« In varietate concordia »",
+        "« E pluribus unum »"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Depuis 2000, la devise de l’UE est « Unie dans la diversité », traduite dans toutes les langues officielles."
+    },
+    {
+      "id": "si-q51",
+      "question": "Quel événement historique est commémoré le 9 mai, jour de la Journée de l’Europe ?",
+      "options": [
+        "La Déclaration Schuman de 1950",
+        "Le Traité de Rome de 1957",
+        "La chute du mur de Berlin en 1989",
+        "Le Traité de Maastricht de 1992"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le 9 mai marque l’anniversaire de la Déclaration Schuman, texte fondateur de la construction européenne."
+    },
+    {
+      "id": "si-q52",
+      "question": "Quelle institution a été créée en 1951 dans le cadre de la CECA ?",
+      "options": [
+        "Haute Autorité",
+        "Commission européenne",
+        "Cour des comptes européenne",
+        "Banque centrale européenne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "En 1951, la CECA comporte la Haute Autorité, qui représente l’intérêt général de la communauté."
+    },
+    {
+      "id": "si-q53",
+      "question": "En quelle année l'Assemblée européenne consultative devient‑elle le Parlement européen ?",
+      "options": [
+        "1957",
+        "1962",
+        "1975",
+        "2009"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L’Assemblée européenne consultative est renommée Parlement européen en 1962, avec un élargissement de ses pouvoirs."
+    },
+    {
+      "id": "si-q54",
+      "question": "Quelle institution propose les lois et le budget de l'Union européenne ?",
+      "options": [
+        "Commission européenne",
+        "Parlement européen",
+        "Conseil de l'Union européenne",
+        "Cour de justice de l'UE"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Commission européenne élabore les projets de lois et le budget, puis les soumet au Parlement et au Conseil."
+    },
+    {
+      "id": "si-q55",
+      "question": "Quel est le rôle principal du Conseil européen ?",
+      "options": [
+        "Coordonner les politiques communes des États membres",
+        "Donner les grandes orientations politiques et budgétaires de l'UE",
+        "Voter le budget de l'UE",
+        "Assurer le respect du droit européen"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le Conseil européen fixe les grandes lignes politiques et budgétaires, réunissant les chefs d’État ou de gouvernement."
+    },
+    {
+      "id": "si-q56",
+      "question": "Dans quelle ville se trouve la Cour de justice de l'Union européenne ?",
+      "options": [
+        "Bruxelles",
+        "Strasbourg",
+        "Luxembourg",
+        "Frankfurt"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La Cour de justice de l'UE a son siège à Luxembourg, où elle tranche les litiges juridiques."
+    },
+    {
+      "id": "si-q57",
+      "question": "Quelle institution a été créée en 1998, au moment de l'introduction de l'euro ?",
+      "options": [
+        "Banque centrale européenne",
+        "Cour des comptes européenne",
+        "Conseil européen",
+        "Parlement européen"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Banque centrale européenne a été instituée en 1998 pour gérer la monnaie unique, l'euro."
     }
   ]
 }

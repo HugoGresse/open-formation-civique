@@ -6,120 +6,166 @@ interface Props {
 const { quizData } = Astro.props;
 ---
 
-<div class="quiz-container" id="quiz-root">
-  <script type="application/json" id="quiz-data">{quizData}</script>
-
-  <div class="quiz-progress" id="quiz-progress">
-    <div class="quiz-progress-text" id="quiz-progress-text"></div>
+<div class="quiz-container" id="quiz-root" data-quiz={quizData}>
+  <div class="quiz-header" id="quiz-header">
+    <div class="quiz-header-info">
+      <span class="quiz-counter" id="quiz-counter"></span>
+      <span class="quiz-score-live" id="quiz-score-live"></span>
+    </div>
     <div class="quiz-progress-bar">
       <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
     </div>
   </div>
 
-  <div class="quiz-question-area" id="quiz-question-area">
+  <div class="quiz-card" id="quiz-card">
     <h2 class="quiz-question-text" id="quiz-question-text"></h2>
-    <fieldset class="quiz-options" id="quiz-options">
-      <legend class="sr-only">Choisissez une réponse</legend>
-    </fieldset>
+    <div class="quiz-options" id="quiz-options"></div>
     <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
     <div class="quiz-nav">
-      <button class="quiz-btn quiz-btn-secondary" id="quiz-prev" type="button">Précédent</button>
+      <button class="quiz-btn quiz-btn-ghost" id="quiz-prev" type="button">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Précédent
+      </button>
       <button class="quiz-btn quiz-btn-primary" id="quiz-validate" type="button">Valider</button>
-      <button class="quiz-btn quiz-btn-primary" id="quiz-next" type="button" style="display:none">Suivant</button>
+      <button class="quiz-btn quiz-btn-primary" id="quiz-next" type="button" style="display:none">
+        Suivant
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
   </div>
 
-  <div class="quiz-score" id="quiz-score" style="display:none">
-    <h2 id="quiz-score-title"></h2>
-    <p id="quiz-score-detail"></p>
-    <div class="quiz-score-bar-container">
-      <div class="quiz-score-bar" id="quiz-score-bar"></div>
-    </div>
-    <div class="quiz-score-actions">
-      <button class="quiz-btn quiz-btn-primary" id="quiz-retry" type="button">Recommencer le quiz</button>
-      <a class="quiz-btn quiz-btn-secondary" href="/quiz/">Retour aux quiz</a>
+  <div class="quiz-result" id="quiz-result" style="display:none">
+    <div class="quiz-result-card">
+      <div class="quiz-result-circle">
+        <svg viewBox="0 0 120 120" class="quiz-result-svg">
+          <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+          <circle cx="60" cy="60" r="54" fill="none" stroke-width="8" stroke-linecap="round" id="quiz-result-arc"
+            stroke-dasharray="339.29" stroke-dashoffset="339.29" transform="rotate(-90 60 60)"/>
+        </svg>
+        <div class="quiz-result-percent" id="quiz-result-percent"></div>
+      </div>
+      <h2 class="quiz-result-title" id="quiz-result-title"></h2>
+      <p class="quiz-result-detail" id="quiz-result-detail"></p>
+      <div class="quiz-result-actions">
+        <button class="quiz-btn quiz-btn-primary" id="quiz-retry" type="button">Recommencer</button>
+        <a class="quiz-btn quiz-btn-ghost" href="/quiz/">Tous les quiz</a>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
-  import { saveQuizResult } from '../utils/quizStorage';
+  import { saveQuizResult, saveQuizProgress, getQuizProgress } from '../utils/quizStorage';
 
   function initQuiz() {
-    const dataEl = document.getElementById('quiz-data');
-    if (!dataEl?.textContent) return;
+    const rootEl = document.getElementById('quiz-root');
+    if (!rootEl?.dataset.quiz) return;
 
-    const quiz = JSON.parse(dataEl.textContent);
+    const quiz = JSON.parse(rootEl.dataset.quiz);
     const questions = quiz.questions;
     const totalQuestions = questions.length;
 
-    let currentIndex = 0;
-    let answers: (number | null)[] = new Array(totalQuestions).fill(null);
-    let validated: boolean[] = new Array(totalQuestions).fill(false);
+    const savedProgress = getQuizProgress(quiz.id);
+    let currentIndex = savedProgress?.currentIndex ?? 0;
+    let answers: (number | null)[] = savedProgress?.answers ?? new Array(totalQuestions).fill(null);
+    let validated: boolean[] = savedProgress?.validated ?? new Array(totalQuestions).fill(false);
 
-    const progressText = document.getElementById('quiz-progress-text')!;
+    if (answers.length !== totalQuestions) {
+      currentIndex = 0;
+      answers = new Array(totalQuestions).fill(null);
+      validated = new Array(totalQuestions).fill(false);
+    }
+
+    const counter = document.getElementById('quiz-counter')!;
+    const scoreLive = document.getElementById('quiz-score-live')!;
     const progressFill = document.getElementById('quiz-progress-fill')!;
     const questionText = document.getElementById('quiz-question-text')!;
-    const optionsFieldset = document.getElementById('quiz-options')!;
+    const optionsContainer = document.getElementById('quiz-options')!;
     const feedback = document.getElementById('quiz-feedback')!;
     const prevBtn = document.getElementById('quiz-prev') as HTMLButtonElement;
     const validateBtn = document.getElementById('quiz-validate') as HTMLButtonElement;
     const nextBtn = document.getElementById('quiz-next') as HTMLButtonElement;
-    const questionArea = document.getElementById('quiz-question-area')!;
-    const scoreArea = document.getElementById('quiz-score')!;
-    const scoreTitle = document.getElementById('quiz-score-title')!;
-    const scoreDetail = document.getElementById('quiz-score-detail')!;
-    const scoreBar = document.getElementById('quiz-score-bar')!;
+    const quizCard = document.getElementById('quiz-card')!;
+    const resultArea = document.getElementById('quiz-result')!;
+    const headerEl = document.getElementById('quiz-header')!;
     const retryBtn = document.getElementById('quiz-retry') as HTMLButtonElement;
+
+    function persistProgress() {
+      saveQuizProgress(quiz.id, currentIndex, answers, validated);
+    }
+
+    function getLiveScore(): { correct: number; answered: number } {
+      let correct = 0;
+      let answered = 0;
+      for (let i = 0; i < totalQuestions; i++) {
+        if (validated[i]) {
+          answered++;
+          if (answers[i] === questions[i].correctAnswer) correct++;
+        }
+      }
+      return { correct, answered };
+    }
 
     function renderQuestion() {
       const q = questions[currentIndex];
-      progressText.textContent = `Question ${currentIndex + 1} / ${totalQuestions}`;
+      counter.textContent = `Question ${currentIndex + 1} / ${totalQuestions}`;
       progressFill.style.width = `${((currentIndex + 1) / totalQuestions) * 100}%`;
+
+      const { correct, answered } = getLiveScore();
+      scoreLive.textContent = answered > 0 ? `${correct} / ${answered} correct` : '';
+
       questionText.textContent = q.question;
 
-      optionsFieldset.innerHTML = '<legend class="sr-only">Choisissez une réponse</legend>';
+      optionsContainer.innerHTML = '';
       q.options.forEach((option: string, i: number) => {
-        const label = document.createElement('label');
-        label.className = 'quiz-option';
-        const input = document.createElement('input');
-        input.type = 'radio';
-        input.name = `question-${currentIndex}`;
-        input.value = String(i);
-        if (answers[currentIndex] === i) input.checked = true;
-        if (validated[currentIndex]) input.disabled = true;
+        const el = document.createElement('div');
+        el.className = 'q-option';
+        el.setAttribute('role', 'radio');
+        el.setAttribute('aria-checked', String(answers[currentIndex] === i));
 
-        const span = document.createElement('span');
-        span.className = 'quiz-option-text';
-        span.textContent = option;
+        if (validated[currentIndex]) el.classList.add('q-locked');
+        if (answers[currentIndex] === i) el.classList.add('q-selected');
 
-        label.appendChild(input);
-        label.appendChild(span);
+        const indicator = document.createElement('span');
+        indicator.className = 'q-indicator';
 
-        if (validated[currentIndex]) {
-          if (i === q.correctAnswer) {
-            label.classList.add('quiz-option-correct');
-          } else if (i === answers[currentIndex]) {
-            label.classList.add('quiz-option-wrong');
-          }
+        if (validated[currentIndex] && i === q.correctAnswer) {
+          el.classList.add('q-correct');
+          indicator.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+        } else if (validated[currentIndex] && i === answers[currentIndex]) {
+          el.classList.add('q-wrong');
+          indicator.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>';
+        } else {
+          indicator.textContent = String.fromCharCode(65 + i);
         }
 
-        optionsFieldset.appendChild(label);
-      });
+        const text = document.createElement('span');
+        text.className = 'q-text';
+        text.textContent = option;
 
-      if (!validated[currentIndex]) {
-        optionsFieldset.querySelectorAll('input').forEach((input) => {
-          input.addEventListener('change', () => {
-            answers[currentIndex] = parseInt((input as HTMLInputElement).value);
+        el.appendChild(indicator);
+        el.appendChild(text);
+        optionsContainer.appendChild(el);
+
+        if (!validated[currentIndex]) {
+          el.addEventListener('click', () => {
+            answers[currentIndex] = i;
+            optionsContainer.querySelectorAll('.q-option').forEach((opt, idx) => {
+              opt.classList.toggle('q-selected', idx === i);
+              opt.setAttribute('aria-checked', String(idx === i));
+            });
           });
-        });
-      }
+        }
+      });
 
       if (validated[currentIndex]) {
         const isCorrect = answers[currentIndex] === q.correctAnswer;
-        feedback.innerHTML = `<div class="quiz-feedback-box ${isCorrect ? 'quiz-feedback-correct' : 'quiz-feedback-wrong'}">
-          <strong>${isCorrect ? 'Bonne réponse !' : 'Mauvaise réponse'}</strong>
-          <p>${q.explanation}</p>
+        feedback.innerHTML = `<div class="q-feedback ${isCorrect ? 'q-fb-correct' : 'q-fb-wrong'}">
+          <span class="q-fb-icon">${isCorrect ? '\u2713' : '\u2717'}</span>
+          <div>
+            <strong>${isCorrect ? 'Bonne r\u00e9ponse !' : 'Mauvaise r\u00e9ponse'}</strong>
+            <p>${q.explanation}</p>
+          </div>
         </div>`;
         validateBtn.style.display = 'none';
         nextBtn.style.display = '';
@@ -132,24 +178,26 @@ const { quizData } = Astro.props;
       prevBtn.disabled = currentIndex === 0;
 
       if (validated[currentIndex] && currentIndex === totalQuestions - 1) {
-        nextBtn.textContent = 'Voir le résultat';
+        nextBtn.innerHTML = 'Voir le r\u00e9sultat <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       } else {
-        nextBtn.textContent = 'Suivant';
+        nextBtn.innerHTML = 'Suivant <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       }
     }
 
     validateBtn.addEventListener('click', () => {
       if (answers[currentIndex] === null) {
-        feedback.innerHTML = '<div class="quiz-feedback-box quiz-feedback-warning">Veuillez sélectionner une réponse.</div>';
+        feedback.innerHTML = '<div class="q-feedback q-fb-warn"><span class="q-fb-icon">!</span><div>Veuillez s\u00e9lectionner une r\u00e9ponse.</div></div>';
         return;
       }
       validated[currentIndex] = true;
+      persistProgress();
       renderQuestion();
     });
 
     nextBtn.addEventListener('click', () => {
       if (currentIndex < totalQuestions - 1) {
         currentIndex++;
+        persistProgress();
         renderQuestion();
         questionText.focus();
       } else {
@@ -160,47 +208,63 @@ const { quizData } = Astro.props;
     prevBtn.addEventListener('click', () => {
       if (currentIndex > 0) {
         currentIndex--;
+        persistProgress();
         renderQuestion();
         questionText.focus();
       }
     });
 
     function showScore() {
-      const score = answers.reduce((acc: number, answer, i) => {
-        return acc + (answer === questions[i].correctAnswer ? 1 : 0);
-      }, 0);
+      const { correct } = getLiveScore();
+      const percent = Math.round((correct / totalQuestions) * 100);
 
-      const percent = Math.round((score / totalQuestions) * 100);
+      saveQuizResult(quiz.id, correct, totalQuestions);
 
-      saveQuizResult(quiz.id, score, totalQuestions);
+      quizCard.style.display = 'none';
+      headerEl.style.display = 'none';
+      resultArea.style.display = '';
 
-      questionArea.style.display = 'none';
-      document.getElementById('quiz-progress')!.style.display = 'none';
-      scoreArea.style.display = '';
+      const arc = document.getElementById('quiz-result-arc')!;
+      const circumference = 339.29;
+      const offset = circumference - (circumference * percent) / 100;
 
-      let emoji = '';
-      if (percent >= 80) emoji = 'Excellent !';
-      else if (percent >= 60) emoji = 'Bien !';
-      else if (percent >= 40) emoji = 'Peut mieux faire';
-      else emoji = 'Continuez vos efforts';
+      let color: string;
+      if (percent >= 80) color = '#22c55e';
+      else if (percent >= 60) color = '#3b82f6';
+      else if (percent >= 40) color = '#eab308';
+      else color = '#ef4444';
 
-      scoreTitle.textContent = emoji;
-      scoreDetail.textContent = `Vous avez obtenu ${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${totalQuestions} (${percent}%)`;
-      scoreBar.style.width = `${percent}%`;
+      arc.style.stroke = color;
+      requestAnimationFrame(() => {
+        arc.style.transition = 'stroke-dashoffset 1s ease';
+        arc.style.strokeDashoffset = String(offset);
+      });
 
-      if (percent >= 80) scoreBar.className = 'quiz-score-bar quiz-score-excellent';
-      else if (percent >= 60) scoreBar.className = 'quiz-score-bar quiz-score-good';
-      else if (percent >= 40) scoreBar.className = 'quiz-score-bar quiz-score-average';
-      else scoreBar.className = 'quiz-score-bar quiz-score-low';
+      const percentEl = document.getElementById('quiz-result-percent')!;
+      percentEl.textContent = `${percent}%`;
+      percentEl.style.color = color;
+
+      const titleEl = document.getElementById('quiz-result-title')!;
+      if (percent >= 80) titleEl.textContent = 'Excellent !';
+      else if (percent >= 60) titleEl.textContent = 'Bien !';
+      else if (percent >= 40) titleEl.textContent = 'Peut mieux faire';
+      else titleEl.textContent = 'Continuez vos efforts';
+
+      document.getElementById('quiz-result-detail')!.textContent =
+        `${correct} bonne${correct > 1 ? 's' : ''} r\u00e9ponse${correct > 1 ? 's' : ''} sur ${totalQuestions}`;
     }
 
     retryBtn.addEventListener('click', () => {
       currentIndex = 0;
       answers = new Array(totalQuestions).fill(null);
       validated = new Array(totalQuestions).fill(false);
-      questionArea.style.display = '';
-      document.getElementById('quiz-progress')!.style.display = '';
-      scoreArea.style.display = 'none';
+      persistProgress();
+      quizCard.style.display = '';
+      headerEl.style.display = '';
+      resultArea.style.display = 'none';
+      const arc = document.getElementById('quiz-result-arc')!;
+      arc.style.transition = 'none';
+      arc.style.strokeDashoffset = '339.29';
       renderQuestion();
     });
 
@@ -210,39 +274,45 @@ const { quizData } = Astro.props;
   initQuiz();
 </script>
 
-<style>
+<style is:global>
   .quiz-container {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
   }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  /* Header */
+  .quiz-header {
+    margin-bottom: 1.25rem;
   }
 
-  .quiz-progress {
-    margin-bottom: 1.5rem;
-  }
-
-  .quiz-progress-text {
-    font-size: 0.9rem;
-    color: var(--sl-color-gray-3);
+  .quiz-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 0.5rem;
   }
 
+  .quiz-counter {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+
+  .quiz-score-live {
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  /* Progress bar */
   .quiz-progress-bar {
     height: 6px;
-    background: var(--sl-color-gray-6);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
     overflow: hidden;
+  }
+
+  [data-theme='light'] .quiz-progress-bar {
+    background: rgba(0, 0, 0, 0.08);
   }
 
   .quiz-progress-fill {
@@ -252,123 +322,200 @@ const { quizData } = Astro.props;
     transition: width 0.3s ease;
   }
 
-  .quiz-question-text {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
+  /* Card */
+  .quiz-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
   }
 
+  [data-theme='light'] .quiz-card {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .quiz-question-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+  }
+
+  /* Options — using global classes for dynamic elements */
   .quiz-options {
-    border: none;
-    padding: 0;
-    margin: 0 0 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
   }
 
-  .quiz-option {
+  .q-option {
     display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.8rem 1rem;
-    border: 2px solid var(--sl-color-gray-5);
-    border-radius: 8px;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.15s, background 0.15s;
+    background: transparent;
+    user-select: none;
   }
 
-  .quiz-option:hover {
+  [data-theme='light'] .q-option {
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .q-option:hover:not(.q-locked) {
     border-color: var(--sl-color-accent);
-    background: var(--sl-color-gray-7, rgba(0, 0, 0, 0.03));
+    background: rgba(99, 102, 241, 0.06);
   }
 
-  .quiz-option:has(input:checked) {
+  .q-option.q-selected:not(.q-locked) {
     border-color: var(--sl-color-accent);
-    background: var(--sl-color-accent-low, rgba(0, 100, 200, 0.08));
+    background: rgba(99, 102, 241, 0.1);
   }
 
-  .quiz-option:has(input:disabled) {
+  .q-option.q-locked {
     cursor: default;
   }
 
-  .quiz-option:has(input:disabled):hover {
-    border-color: var(--sl-color-gray-5);
-    background: transparent;
+  .q-option.q-correct {
+    border-color: #22c55e !important;
+    background: rgba(34, 197, 94, 0.1) !important;
   }
 
-  .quiz-option-correct {
-    border-color: #16a34a !important;
-    background: rgba(22, 163, 74, 0.1) !important;
+  .q-option.q-wrong {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.08) !important;
   }
 
-  .quiz-option-wrong {
-    border-color: #dc2626 !important;
-    background: rgba(220, 38, 38, 0.1) !important;
-  }
-
-  .quiz-option input[type="radio"] {
-    margin-top: 0.2rem;
+  .q-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
     flex-shrink: 0;
-    accent-color: var(--sl-color-accent);
+    transition: background 0.15s, color 0.15s;
   }
 
-  .quiz-option-text {
+  [data-theme='light'] .q-indicator {
+    background: rgba(0, 0, 0, 0.07);
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .q-option.q-selected:not(.q-locked) .q-indicator {
+    background: var(--sl-color-accent);
+    color: #fff;
+  }
+
+  .q-option.q-correct .q-indicator {
+    background: #22c55e !important;
+    color: #fff !important;
+  }
+
+  .q-option.q-wrong .q-indicator {
+    background: #ef4444 !important;
+    color: #fff !important;
+  }
+
+  .q-text {
     line-height: 1.4;
+    font-size: 0.95rem;
   }
 
+  /* Feedback */
   .quiz-feedback {
     min-height: 1rem;
     margin-bottom: 1rem;
   }
 
-  .quiz-feedback-box {
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 4px solid;
+  .q-feedback {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
   }
 
-  .quiz-feedback-box p {
-    margin: 0.5rem 0 0;
-    font-size: 0.95rem;
+  .q-feedback p {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
   }
 
-  .quiz-feedback-correct {
-    border-color: #16a34a;
-    background: rgba(22, 163, 74, 0.08);
+  .q-fb-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
   }
 
-  .quiz-feedback-wrong {
-    border-color: #dc2626;
-    background: rgba(220, 38, 38, 0.08);
+  .q-fb-correct {
+    background: rgba(34, 197, 94, 0.12);
   }
 
-  .quiz-feedback-warning {
-    border-color: #d97706;
-    background: rgba(217, 119, 6, 0.08);
+  .q-fb-correct .q-fb-icon {
+    background: #22c55e;
+    color: #fff;
   }
 
+  .q-fb-wrong {
+    background: rgba(239, 68, 68, 0.1);
+  }
+
+  .q-fb-wrong .q-fb-icon {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  .q-fb-warn {
+    background: rgba(234, 179, 8, 0.1);
+  }
+
+  .q-fb-warn .q-fb-icon {
+    background: #eab308;
+    color: #fff;
+  }
+
+  /* Nav */
   .quiz-nav {
     display: flex;
     gap: 0.75rem;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .quiz-btn {
-    padding: 0.6rem 1.4rem;
-    border-radius: 6px;
-    border: 2px solid transparent;
-    font-size: 0.95rem;
-    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.25rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    transition: opacity 0.2s;
+    transition: all 0.15s ease;
   }
 
   .quiz-btn:disabled {
-    opacity: 0.4;
+    opacity: 0.35;
     cursor: not-allowed;
   }
 
@@ -378,61 +525,91 @@ const { quizData } = Astro.props;
   }
 
   .quiz-btn-primary:hover:not(:disabled) {
-    opacity: 0.85;
+    filter: brightness(1.1);
   }
 
-  .quiz-btn-secondary {
+  .quiz-btn-ghost {
     background: transparent;
-    border-color: var(--sl-color-gray-5);
-    color: var(--sl-color-text);
+    color: var(--sl-color-white);
   }
 
-  .quiz-btn-secondary:hover:not(:disabled) {
-    border-color: var(--sl-color-accent);
+  .quiz-btn-ghost:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.08);
   }
 
-  .quiz-score {
+  [data-theme='light'] .quiz-btn-ghost {
+    color: var(--sl-color-black);
+  }
+
+  [data-theme='light'] .quiz-btn-ghost:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  /* Result */
+  .quiz-result {
+    padding: 1rem 0;
+  }
+
+  .quiz-result-card {
     text-align: center;
-    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
   }
 
-  .quiz-score h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+  [data-theme='light'] .quiz-result-card {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
   }
 
-  .quiz-score p {
-    font-size: 1.1rem;
-    color: var(--sl-color-gray-2);
-    margin-bottom: 1.5rem;
+  .quiz-result-circle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 1.5rem;
   }
 
-  .quiz-score-bar-container {
-    height: 12px;
-    background: var(--sl-color-gray-6);
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .quiz-score-bar {
+  .quiz-result-svg {
+    width: 100%;
     height: 100%;
-    border-radius: 6px;
-    transition: width 0.5s ease;
   }
 
-  .quiz-score-excellent { background: #16a34a; }
-  .quiz-score-good { background: #2563eb; }
-  .quiz-score-average { background: #d97706; }
-  .quiz-score-low { background: #dc2626; }
-
-  .quiz-score-actions {
+  .quiz-result-percent {
+    position: absolute;
+    inset: 0;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .quiz-result-title {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .quiz-result-detail {
+    font-size: 1rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 2rem;
+  }
+
+  .quiz-result-actions {
+    display: flex;
+    gap: 0.75rem;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 480px) {
+    .quiz-card {
+      padding: 1.25rem;
+    }
+
+    .quiz-question-text {
+      font-size: 1.05rem;
+    }
   }
 </style>

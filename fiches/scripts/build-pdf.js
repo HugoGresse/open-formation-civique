@@ -5,12 +5,13 @@ import { join } from 'path';
 const PORT = 4322;
 const BASE = '/';
 const PDF_FILENAME = 'formation-civique';
+const ROOT_DIR = join(import.meta.dirname, '..');
 
 function startPreviewServer() {
   return new Promise((resolve, reject) => {
     const server = spawn('npx', ['astro', 'preview', '--port', String(PORT)], {
       stdio: ['ignore', 'pipe', 'pipe'],
-      cwd: import.meta.dirname,
+      cwd: ROOT_DIR,
     });
 
     let started = false;
@@ -44,13 +45,13 @@ function startPreviewServer() {
 }
 
 function buildPrecedingPage() {
-  const template = readFileSync(join(import.meta.dirname, 'preceding-page.html'), 'utf-8');
+  const template = readFileSync(join(ROOT_DIR, 'preceding-page.html'), 'utf-8');
   const date = new Intl.DateTimeFormat('fr-FR', {
     dateStyle: 'full',
     timeStyle: 'short',
   }).format(new Date());
   const output = template.replace('{{DATE}}', date);
-  const outPath = join(import.meta.dirname, 'dist', 'preceding-page.html');
+  const outPath = join(ROOT_DIR, 'dist', 'preceding-page.html');
   writeFileSync(outPath, output, 'utf-8');
   return outPath;
 }
@@ -84,7 +85,7 @@ function generatePdf() {
 
     const proc = spawn('npx', args, {
       stdio: 'inherit',
-      cwd: import.meta.dirname,
+      cwd: ROOT_DIR,
     });
 
     proc.on('close', (code) => {

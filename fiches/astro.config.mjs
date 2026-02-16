@@ -20,6 +20,10 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
+					label: 'Quiz',
+					autogenerate: { directory: 'quiz' },
+				},
+				{
 					label: 'Accueil',
 					link: '/',
 				},
