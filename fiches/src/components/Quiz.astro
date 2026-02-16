@@ -18,9 +18,9 @@ const { quizData } = Astro.props;
   </div>
 
   <div class="quiz-card" id="quiz-card">
-    <h2 class="quiz-question-text" id="quiz-question-text"></h2>
+    <h2 class="quiz-question-text" id="quiz-question-text" tabindex="-1"></h2>
     <div class="quiz-options" id="quiz-options"></div>
-    <div class="quiz-feedback" id="quiz-feedback" aria-live="polite"></div>
+    <div class="quiz-feedback" id="quiz-feedback" aria-live="polite" aria-atomic="true"></div>
     <div class="quiz-nav">
       <button class="quiz-btn quiz-btn-ghost" id="quiz-prev" type="button">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -340,6 +340,10 @@ const { quizData } = Astro.props;
     font-weight: 600;
     line-height: 1.6;
     margin: 0 0 1.5rem;
+  }
+
+  .quiz-question-text:focus:not(:focus-visible) {
+    outline: none;
   }
 
   /* Options — using global classes for dynamic elements */
