@@ -4,6 +4,9 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: [ main ]
+  # Run on pull requests for preview builds
+  pull_request:
+    branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -12,6 +15,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  pull-requests: write
 
 jobs:
   build:
@@ -45,12 +49,22 @@ jobs:
           CHROMIUM_PATH: /usr/bin/chromium-browser
 
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: fiches/dist
 
+      - name: Upload PR preview artifact
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-preview-${{ github.event.pull_request.number }}
+          path: fiches/dist
+          retention-days: 7
+
   deploy:
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -59,3 +73,53 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  comment-preview:
+    needs: build
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Comment PR with preview info
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const runId = context.runId;
+            const repo = context.repo;
+            
+            const comment = `## 🚀 PR Preview Built Successfully!
+            
+            The site has been built and is available as an artifact.
+            
+            ### 📦 Download Preview
+            
+            You can download the built site artifact from the [Actions run](https://github.com/${repo.owner}/${repo.repo}/actions/runs/${runId}).
+            
+            Look for the artifact named \`pr-preview-${prNumber}\` in the artifacts section at the bottom of the workflow run page.
+            
+            ### 🧪 Test Locally
+            
+            After downloading and extracting the artifact, you can test it locally:
+            
+            \`\`\`bash
+            # Using Python
+            cd pr-preview-${prNumber}
+            python3 -m http.server 8000
+            
+            # Or using Node.js
+            npx serve .
+            \`\`\`
+            
+            Then open http://localhost:8000 in your browser.
+            
+            ---
+            *This preview artifact will be available for 7 days.*`;
+            
+            github.rest.issues.createComment({
+              owner: repo.owner,
+              repo: repo.repo,
+              issue_number: prNumber,
+              body: comment
+            });
