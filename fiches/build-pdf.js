@@ -60,6 +60,7 @@ function generatePdf() {
   console.log(`Preceding page generated at ${precedingHtmlPath}`);
 
   return new Promise((resolve, reject) => {
+    const pdfStylesPath = join(import.meta.dirname, 'pdf-styles.css');
     const args = [
       'starlight-to-pdf',
       `http://localhost:${PORT}${BASE}/`,
@@ -70,6 +71,7 @@ function generatePdf() {
       '--format=A4',
       '--contents-links=internal',
       `--preceding-html=${precedingHtmlPath}`,
+      `--styles=${pdfStylesPath}`,
       '-e', `${BASE}/formation-civique.pdf`,
     ];
 

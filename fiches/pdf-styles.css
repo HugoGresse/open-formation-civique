@@ -1,0 +1,78 @@
+/**
+ * Custom PDF styles to reduce font sizes
+ * Applied during PDF generation via starlight-to-pdf
+ */
+
+/* Reduce base font size for the entire document */
+body {
+  font-size: 11px !important;
+}
+
+/* Reduce heading sizes */
+h1 {
+  font-size: 20px !important;
+}
+
+h2 {
+  font-size: 17px !important;
+}
+
+h3 {
+  font-size: 15px !important;
+}
+
+h4 {
+  font-size: 13px !important;
+}
+
+h5 {
+  font-size: 12px !important;
+}
+
+h6 {
+  font-size: 11px !important;
+}
+
+/* Reduce paragraph and list text */
+p, li, td, th {
+  font-size: 11px !important;
+}
+
+/* Reduce code block font size */
+code, pre {
+  font-size: 10px !important;
+}
+
+/* Reduce navigation and sidebar fonts */
+nav, aside, .sidebar {
+  font-size: 10px !important;
+}
+
+/* Reduce table of contents font size */
+.table-of-contents, .toc {
+  font-size: 10px !important;
+}
+
+/* Compact line heights for better space usage */
+body {
+  line-height: 1.4 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3 !important;
+}
+
+/* Reduce padding and margins slightly for more compact layout */
+.content-panel {
+  padding: 0.75rem !important;
+}
+
+/* Ensure quizzes have readable but smaller fonts */
+.quiz-card, .quiz-summary {
+  font-size: 10px !important;
+}
+
+/* Button and link sizes */
+button, a {
+  font-size: 11px !important;
+}
