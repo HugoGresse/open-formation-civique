@@ -2,9 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+const site = process.argv.includes('dev')
+	? `http://localhost:${process.env.PORT || 4321}`
+	: 'https://open-formation-civique.fr';
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'http://open-formation-civique.fr',
+	site,
 	base: '/',
 	trailingSlash: 'always',
 	integrations: [
@@ -49,9 +53,9 @@ export default defineConfig({
 				},
 				{
 					label: 'Télécharger en PDF',
-					link: '/formation-civique.pdf',
+					link: `${site}/formation-civique.pdf`,
 					badge: { text: 'PDF', variant: 'tip' },
-					attrs: { download: true },
+					attrs: { href: `${site}/formation-civique.pdf`, download: true },
 				},
 			],
 		}),
