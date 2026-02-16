@@ -57,6 +57,9 @@ import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
   <Card title="Quiz générés par IA" icon="puzzle">
     Les questions des quiz sont générées automatiquement par à partir du contenu des fiches. Elles peuvent contenir quelques erreurs ou imprécisions.
   </Card>
+  <Card title="Source officielle" icon="open-book">
+    Les fiches sont issues du site officiel du [Ministère de l'Intérieur](https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/).
+  </Card>
 </CardGrid>
 `;
 
