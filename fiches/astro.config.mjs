@@ -29,6 +29,42 @@ export default defineConfig({
 						src: 'https://plausible.gresse.io/js/script.js',
 					},
 				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image',
+						content: `${site}/social-image.png`,
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image:width',
+						content: '1200',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image:height',
+						content: '630',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image:alt',
+						content:
+							'Open Formation Civique - Fiches thématiques et quiz gratuits pour la formation civique',
+					},
+				},
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'twitter:image',
+						content: `${site}/social-image.png`,
+					},
+				},
 			],
 			customCss: ['./src/styles/quiz.css', './src/styles/content.css'],
 			defaultLocale: 'root',
