@@ -117,23 +117,44 @@ const { quizData } = Astro.props;
       questionText.textContent = q.question;
 
       optionsContainer.innerHTML = '';
+      
+      // Create fieldset for radio group
+      const fieldset = document.createElement('fieldset');
+      fieldset.className = 'q-fieldset';
+      
+      const legend = document.createElement('legend');
+      legend.className = 'q-legend';
+      legend.textContent = 'Choisissez une réponse';
+      fieldset.appendChild(legend);
+      
       q.options.forEach((option: string, i: number) => {
-        const el = document.createElement('div');
-        el.className = 'q-option';
-        el.setAttribute('role', 'radio');
-        el.setAttribute('aria-checked', String(answers[currentIndex] === i));
-
-        if (validated[currentIndex]) el.classList.add('q-locked');
-        if (answers[currentIndex] === i) el.classList.add('q-selected');
+        const wrapper = document.createElement('div');
+        wrapper.className = 'q-option-wrapper';
+        
+        const input = document.createElement('input');
+        input.type = 'radio';
+        input.name = `quiz-q${currentIndex}`;
+        input.id = `quiz-q${currentIndex}-opt${i}`;
+        input.value = String(i);
+        input.className = 'q-radio';
+        input.checked = answers[currentIndex] === i;
+        input.disabled = validated[currentIndex];
+        
+        const label = document.createElement('label');
+        label.htmlFor = input.id;
+        label.className = 'q-option';
+        
+        if (validated[currentIndex]) label.classList.add('q-locked');
+        if (answers[currentIndex] === i) label.classList.add('q-selected');
 
         const indicator = document.createElement('span');
         indicator.className = 'q-indicator';
 
         if (validated[currentIndex] && i === q.correctAnswer) {
-          el.classList.add('q-correct');
+          label.classList.add('q-correct');
           indicator.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         } else if (validated[currentIndex] && i === answers[currentIndex]) {
-          el.classList.add('q-wrong');
+          label.classList.add('q-wrong');
           indicator.innerHTML = '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>';
         } else {
           indicator.textContent = String.fromCharCode(65 + i);
@@ -143,20 +164,25 @@ const { quizData } = Astro.props;
         text.className = 'q-text';
         text.textContent = option;
 
-        el.appendChild(indicator);
-        el.appendChild(text);
-        optionsContainer.appendChild(el);
+        label.appendChild(indicator);
+        label.appendChild(text);
+        
+        wrapper.appendChild(input);
+        wrapper.appendChild(label);
+        fieldset.appendChild(wrapper);
 
         if (!validated[currentIndex]) {
-          el.addEventListener('click', () => {
+          input.addEventListener('change', () => {
             answers[currentIndex] = i;
-            optionsContainer.querySelectorAll('.q-option').forEach((opt, idx) => {
+            // Update visual state of all options
+            fieldset.querySelectorAll('.q-option').forEach((opt, idx) => {
               opt.classList.toggle('q-selected', idx === i);
-              opt.setAttribute('aria-checked', String(idx === i));
             });
           });
         }
       });
+      
+      optionsContainer.appendChild(fieldset);
 
       if (validated[currentIndex]) {
         const isCorrect = answers[currentIndex] === q.correctAnswer;
@@ -352,6 +378,42 @@ const { quizData } = Astro.props;
     flex-direction: column;
     gap: 0.5rem;
     margin: 0 0 1rem;
+  }
+  
+  .q-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .q-legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .q-option-wrapper {
+    position: relative;
+  }
+  
+  .q-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .q-radio:focus + .q-option {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
   }
 
   .q-option {
