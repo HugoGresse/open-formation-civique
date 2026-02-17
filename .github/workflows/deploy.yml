@@ -92,10 +92,8 @@ jobs:
           name: built-site
           path: website/dist
 
-      - name: Debug Cloudflare secrets
-        run: |
-          echo "CLOUDFLARE_API_TOKEN first 4 chars: $(echo '${{ secrets.CLOUDFLARE_API_TOKEN }}' | cut -c1-4)"
-          echo "CLOUDFLARE_ACCOUNT_ID first 4 chars: $(echo '${{ secrets.CLOUDFLARE_ACCOUNT_ID }}' | cut -c1-4)"
+      - name: Remove large files unsupported by Cloudflare Pages
+        run: rm -f website/dist/formation-civique.pdf
 
       - name: Deploy to Cloudflare Pages
         id: cloudflare
@@ -106,6 +104,7 @@ jobs:
           projectName: open-formation-civique-preview
           directory: website/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
 
       - name: Comment PR with preview URL
         uses: actions/github-script@v7
