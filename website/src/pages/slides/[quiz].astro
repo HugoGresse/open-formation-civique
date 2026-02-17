@@ -188,6 +188,17 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
       if (current < totalSlides - 1) {
         // Prevent skipping ahead if current slide is an unanswered question
         if (isQuestionSlide(current) && !isQuestionAnswered(current)) {
+          // Provide visual feedback that the question must be answered first
+          const currentSlide = slides[current];
+          const options = currentSlide.querySelectorAll('.q-opt');
+          options.forEach((opt) => {
+            opt.classList.add('q-opt-shake');
+          });
+          setTimeout(() => {
+            options.forEach((opt) => {
+              opt.classList.remove('q-opt-shake');
+            });
+          }, 500);
           return;
         }
         showSlide(current + 1);
@@ -613,6 +624,18 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
   .q-opt-wrong .q-opt-letter {
     background: #ef4444 !important;
     color: #fff !important;
+  }
+
+  /* Shake animation for unanswered questions */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+  }
+
+  .q-opt-shake {
+    animation: shake 0.3s ease-in-out;
+    border-color: #f59e0b !important;
   }
 
   /* Explanation */
