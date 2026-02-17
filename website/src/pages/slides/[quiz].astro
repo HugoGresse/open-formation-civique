@@ -172,7 +172,7 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
         counter.textContent = 'Titre';
       } else if (index === totalSlides - 1) {
         counter.textContent = 'Fin';
-        endScore.textContent = `${score} bonne${score > 1 ? 's' : ''} reponse${score > 1 ? 's' : ''} sur ${questionCount}`;
+        endScore.textContent = `${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questionCount}`;
       } else {
         counter.textContent = `${index} / ${questionCount}`;
       }
