@@ -113,18 +113,9 @@ jobs:
             const prNumber = context.payload.pull_request.number;
             const previewUrl = '${{ steps.cloudflare.outputs.url }}';
             
-            const comment = `## 🚀 Preview Deployed Successfully!
-            
-            Your PR preview is live and ready to view:
-            
-            ### 🌐 Preview URL
-            **${previewUrl}**
-            
-            The preview will update automatically with each new commit to this PR.
-            
-            ---
-            
-            github.rest.issues.createComment({
+            const comment = `## Preview Deployed Successfully!\n\nYour PR preview is live and ready to view:\n\n**${previewUrl}**\n\nThe preview will update automatically with each new commit to this PR.`;
+
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
