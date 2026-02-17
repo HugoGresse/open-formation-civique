@@ -131,7 +131,7 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
 <script>
   function initSlides() {
     const deck = document.getElementById('slide-deck')!;
-    const totalSlides = parseInt(deck.dataset.total!);
+    const totalSlides = parseInt(deck.dataset.total!, 10);
     const slides = deck.querySelectorAll<HTMLElement>('.slide');
     const progressFill = document.getElementById('progress-fill')!;
     const counter = document.getElementById('slide-counter')!;
