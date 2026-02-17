@@ -14,12 +14,18 @@ const quizzes: QuizData[] = Object.values(quizModules).map(
   (mod: any) => mod.default ?? mod
 );
 
-// Group quizzes
-const thematic = quizzes.filter(
+// Ensure deterministic ordering of quizzes (by id, then title)
+const sortedQuizzes: QuizData[] = [...quizzes].sort((a, b) => {
+  const byId = a.id.localeCompare(b.id);
+  return byId !== 0 ? byId : a.title.localeCompare(b.title);
+});
+
+// Group quizzes from the sorted list
+const thematic = sortedQuizzes.filter(
   (q) => !q.id.startsWith('csp-') && !q.id.startsWith('cr-')
 );
-const csp = quizzes.filter((q) => q.id.startsWith('csp-'));
-const cr = quizzes.filter((q) => q.id.startsWith('cr-'));
+const csp = sortedQuizzes.filter((q) => q.id.startsWith('csp-'));
+const cr = sortedQuizzes.filter((q) => q.id.startsWith('cr-'));
 ---
 
 <SlideLayout title="Quiz Slides" description="Présentations des quiz de formation civique">
