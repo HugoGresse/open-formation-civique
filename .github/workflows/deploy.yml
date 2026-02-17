@@ -92,6 +92,11 @@ jobs:
           name: built-site
           path: website/dist
 
+      - name: Debug Cloudflare secrets
+        run: |
+          echo "CLOUDFLARE_API_TOKEN first 4 chars: $(echo '${{ secrets.CLOUDFLARE_API_TOKEN }}' | cut -c1-4)"
+          echo "CLOUDFLARE_ACCOUNT_ID first 4 chars: $(echo '${{ secrets.CLOUDFLARE_ACCOUNT_ID }}' | cut -c1-4)"
+
       - name: Deploy to Cloudflare Pages
         id: cloudflare
         uses: cloudflare/pages-action@v1
