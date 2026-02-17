@@ -103,7 +103,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: open-formation-civique
+          projectName: open-formation-civique-preview
           directory: website/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
