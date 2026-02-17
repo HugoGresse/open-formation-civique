@@ -131,17 +131,26 @@ const total = allQuizzes.length;
     }
   }
 
-  const resetBtn = document.getElementById('summary-reset');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      if (confirm('Voulez-vous vraiment réinitialiser tous vos résultats de quiz ?')) {
-        resetAllQuizzes();
-        window.location.reload();
-      }
-    });
+  function init() {
+    const resetBtn = document.getElementById('summary-reset');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (confirm('Voulez-vous vraiment réinitialiser tous vos résultats de quiz ?')) {
+          resetAllQuizzes();
+          window.location.reload();
+        }
+      });
+    }
+
+    updateProgress();
   }
 
-  updateProgress();
+  // Ensure DOM is ready before updating progress
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 </script>
 
 <style>

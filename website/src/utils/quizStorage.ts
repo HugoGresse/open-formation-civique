@@ -58,6 +58,24 @@ export function getAllQuizResults(): QuizResult[] {
   return results;
 }
 
+export function getAllQuizProgress(): QuizProgress[] {
+  const progress: QuizProgress[] = [];
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key?.startsWith(PROGRESS_PREFIX)) {
+        const raw = localStorage.getItem(key);
+        if (raw) {
+          progress.push(JSON.parse(raw) as QuizProgress);
+        }
+      }
+    }
+  } catch {
+    // localStorage unavailable
+  }
+  return progress;
+}
+
 export function saveQuizProgress(quizId: string, currentIndex: number, answers: (number | null)[], validated: boolean[]): void {
   try {
     const progress: QuizProgress = { quizId, currentIndex, answers, validated };

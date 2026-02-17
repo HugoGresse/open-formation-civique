@@ -22,43 +22,51 @@ const { quizId, title, description, questionCount, href } = Astro.props;
 </a>
 
 <script>
-  import { getQuizResult } from '../utils/quizStorage';
+  import { getQuizResult, getQuizProgress } from '../utils/quizStorage';
+
+  function renderRing(el: HTMLElement, percent: number, color: string, detail: string, sub?: string) {
+    const circumference = 2 * Math.PI * 18;
+    const offset = circumference - (percent / 100) * circumference;
+    el.innerHTML = `
+      <div class="quiz-card-score-ring">
+        <svg width="48" height="48" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="18" fill="none" stroke="var(--sl-color-gray-6)" stroke-width="4"/>
+          <circle cx="24" cy="24" r="18" fill="none" stroke="${color}" stroke-width="4"
+            stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"
+            stroke-linecap="round" transform="rotate(-90 24 24)"/>
+        </svg>
+        <span class="quiz-card-score-percent" style="color: ${color}">${percent}%</span>
+      </div>
+      <span class="quiz-card-score-detail">${detail}</span>
+      ${sub ? `<span class="quiz-card-date">${sub}</span>` : ''}
+    `;
+  }
 
   function updateCards() {
     document.querySelectorAll<HTMLElement>('[data-status-id]').forEach((el) => {
       const quizId = el.dataset.statusId;
       if (!quizId) return;
+
       const result = getQuizResult(quizId);
-      if (!result) return;
-
-      const percent = Math.round((result.score / result.total) * 100);
-      const date = new Date(result.date).toLocaleDateString('fr-FR');
-      const pass = percent >= 60;
-
-      // Color the card border
-      const card = el.closest<HTMLElement>('.quiz-card');
-      if (card) {
-        card.classList.add(pass ? 'quiz-card-done-pass' : 'quiz-card-done-fail');
+      if (result) {
+        const percent = Math.round((result.score / result.total) * 100);
+        const date = new Date(result.date).toLocaleDateString('fr-FR');
+        const pass = percent >= 60;
+        const card = el.closest<HTMLElement>('.quiz-card');
+        if (card) {
+          card.classList.add(pass ? 'quiz-card-done-pass' : 'quiz-card-done-fail');
+        }
+        renderRing(el, percent, pass ? '#16a34a' : '#f59e0b', `${result.score}/${result.total}`, date);
+        return;
       }
 
-      // Render circular score + date
-      const circumference = 2 * Math.PI * 18;
-      const offset = circumference - (percent / 100) * circumference;
-      const color = pass ? '#16a34a' : '#f59e0b';
-
-      el.innerHTML = `
-        <div class="quiz-card-score-ring">
-          <svg width="48" height="48" viewBox="0 0 48 48">
-            <circle cx="24" cy="24" r="18" fill="none" stroke="var(--sl-color-gray-6)" stroke-width="4"/>
-            <circle cx="24" cy="24" r="18" fill="none" stroke="${color}" stroke-width="4"
-              stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"
-              stroke-linecap="round" transform="rotate(-90 24 24)"/>
-          </svg>
-          <span class="quiz-card-score-percent" style="color: ${color}">${percent}%</span>
-        </div>
-        <span class="quiz-card-score-detail">${result.score}/${result.total}</span>
-        <span class="quiz-card-date">${date}</span>
-      `;
+      const progress = getQuizProgress(quizId);
+      if (progress) {
+        const answered = progress.validated.filter(Boolean).length;
+        const total = progress.answers.length;
+        const percent = Math.round((answered / total) * 100);
+        renderRing(el, percent, '#3b82f6', `${answered}/${total}`);
+      }
     });
   }
 
@@ -149,17 +157,19 @@ const { quizId, title, description, questionCount, href } = Astro.props;
     color: var(--sl-color-gray-2);
   }
 
-  .quiz-card-score-ring {
+  .quiz-card-status :global(.quiz-card-score-ring) {
     position: relative;
     width: 48px;
     height: 48px;
+    display: flex;
+    flex-direction: column;
   }
 
-  .quiz-card-score-ring :global(svg) {
+  .quiz-card-status :global(.quiz-card-score-ring svg) {
     display: block;
   }
 
-  .quiz-card-score-percent {
+  .quiz-card-status :global(.quiz-card-score-percent) {
     position: absolute;
     inset: 0;
     display: flex;
@@ -169,13 +179,13 @@ const { quizId, title, description, questionCount, href } = Astro.props;
     font-weight: 700;
   }
 
-  .quiz-card-score-detail {
+  .quiz-card-status :global(.quiz-card-score-detail) {
     font-size: 0.8rem;
     font-weight: 600;
     color: var(--sl-color-text);
   }
 
-  .quiz-card-date {
+  .quiz-card-status :global(.quiz-card-date) {
     font-size: 0.7rem;
     color: var(--sl-color-gray-4);
   }
