@@ -22,17 +22,17 @@ const csp = quizzes.filter((q) => q.id.startsWith('csp-'));
 const cr = quizzes.filter((q) => q.id.startsWith('cr-'));
 ---
 
-<SlideLayout title="Quiz Slides" description="Presentations des quiz de formation civique">
+<SlideLayout title="Quiz Slides" description="Présentations des quiz de formation civique">
   <div class="slides-index">
     <header class="slides-hero">
       <a href="/" class="back-link">&larr; Retour au site</a>
       <h1>Quiz Slides</h1>
-      <p>Choisissez un quiz pour lancer la presentation en mode diaporama</p>
+      <p>Choisissez un quiz pour lancer la présentation en mode diaporama</p>
     </header>
 
     <main class="slides-grid-container">
       <section>
-        <h2 class="section-title">Quiz thematiques</h2>
+        <h2 class="section-title">Quiz thématiques</h2>
         <div class="slides-grid">
           {thematic.map((quiz) => (
             <a href={`/slides/${quiz.id}/`} class="slide-card">
