@@ -1,0 +1,774 @@
+---
+import SlideLayout from '../../layouts/SlideLayout.astro';
+
+export async function getStaticPaths() {
+  const quizModules = import.meta.glob('../../data/quizzes/*.json', { eager: true });
+
+  return Object.entries(quizModules).map(([path, mod]: [string, any]) => {
+    const quiz = mod.default ?? mod;
+    return {
+      params: { quiz: quiz.id },
+      props: { quiz },
+    };
+  });
+}
+
+interface Question {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+interface QuizData {
+  id: string;
+  title: string;
+  description: string;
+  questions: Question[];
+}
+
+const { quiz } = Astro.props as { quiz: QuizData };
+const totalSlides = quiz.questions.length + 2; // title + questions + end
+---
+
+<SlideLayout title={quiz.title} description={quiz.description}>
+  <div class="slide-deck" id="slide-deck" data-total={totalSlides}>
+    <!-- Progress bar -->
+    <div class="slide-progress">
+      <div class="slide-progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Top bar -->
+    <div class="slide-topbar" id="slide-topbar">
+      <a href="/slides/" class="topbar-back" title="Retour aux slides">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <span class="topbar-counter" id="slide-counter"></span>
+      <div class="topbar-controls">
+        <button class="topbar-btn" id="btn-fullscreen" title="Plein ecran (F)" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- TITLE SLIDE -->
+    <div class="slide slide-title" data-slide="0">
+      <div class="slide-content">
+        <div class="title-badge">Quiz Slides</div>
+        <h1>{quiz.title}</h1>
+        <p class="title-desc">{quiz.description}</p>
+        <div class="title-meta">
+          <span>{quiz.questions.length} questions</span>
+        </div>
+        <div class="title-start">
+          <button class="start-btn" id="btn-start" type="button">
+            Commencer
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p class="title-hint">Utilisez les flèches du clavier ou cliquez pour naviguer</p>
+      </div>
+    </div>
+
+    <!-- QUESTION SLIDES -->
+    {quiz.questions.map((q, i) => (
+      <div class="slide slide-question" data-slide={i + 1} style="display:none">
+        <div class="slide-content">
+          <div class="q-number">Question {i + 1} / {quiz.questions.length}</div>
+          <h2 class="q-text">{q.question}</h2>
+          <div class="q-options" data-correct={q.correctAnswer}>
+            {q.options.map((opt, j) => (
+              <button
+                class="q-opt"
+                data-index={j}
+                type="button"
+              >
+                <span class="q-opt-letter">{String.fromCharCode(65 + j)}</span>
+                <span class="q-opt-text">{opt}</span>
+              </button>
+            ))}
+          </div>
+          <div class="q-explanation" data-explanation style="display:none">
+            <div class="q-explanation-inner">
+              <svg class="q-explanation-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <p>{q.explanation}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+
+    <!-- END SLIDE -->
+    <div class="slide slide-end" data-slide={quiz.questions.length + 1} style="display:none">
+      <div class="slide-content">
+        <div class="end-icon">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        </div>
+        <h2>Fin du quiz</h2>
+        <p class="end-score" id="end-score"></p>
+        <div class="end-actions">
+          <button class="end-btn end-btn-primary" id="btn-restart" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg>
+            Recommencer
+          </button>
+          <a href="/slides/" class="end-btn end-btn-ghost">Tous les quiz</a>
+          <a href={`/quiz/${quiz.id}/`} class="end-btn end-btn-ghost">Mode quiz interactif</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav arrows -->
+    <button class="nav-arrow nav-prev" id="nav-prev" type="button" title="Précédent (flèche gauche)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="nav-arrow nav-next" id="nav-next" type="button" title="Suivant (flèche droite)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</SlideLayout>
+
+<script>
+  function initSlides() {
+    const deck = document.getElementById('slide-deck')!;
+    const totalSlides = parseInt(deck.dataset.total!, 10);
+    const slides = deck.querySelectorAll<HTMLElement>('.slide');
+    const progressFill = document.getElementById('progress-fill')!;
+    const counter = document.getElementById('slide-counter')!;
+    const prevBtn = document.getElementById('nav-prev') as HTMLButtonElement;
+    const nextBtn = document.getElementById('nav-next') as HTMLButtonElement;
+    const startBtn = document.getElementById('btn-start') as HTMLButtonElement;
+    const restartBtn = document.getElementById('btn-restart') as HTMLButtonElement;
+    const fullscreenBtn = document.getElementById('btn-fullscreen') as HTMLButtonElement;
+    const endScore = document.getElementById('end-score')!;
+
+    let current = 0;
+    let score = 0;
+    let answered = 0;
+    const questionCount = totalSlides - 2;
+
+    function showSlide(index: number) {
+      slides.forEach((s) => (s.style.display = 'none'));
+      slides[index].style.display = '';
+
+      // Animate entrance
+      const content = slides[index].querySelector('.slide-content') as HTMLElement;
+      if (content) {
+        content.style.opacity = '0';
+        content.style.transform = 'translateY(20px)';
+        requestAnimationFrame(() => {
+          content.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0)';
+        });
+      }
+
+      // Update progress
+      const progress = ((index + 1) / totalSlides) * 100;
+      progressFill.style.width = `${progress}%`;
+
+      // Update counter
+      if (index === 0) {
+        counter.textContent = 'Titre';
+      } else if (index === totalSlides - 1) {
+        counter.textContent = 'Fin';
+        endScore.textContent = `${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questionCount}`;
+      } else {
+        counter.textContent = `${index} / ${questionCount}`;
+      }
+
+      // Update nav visibility
+      prevBtn.style.display = index === 0 ? 'none' : '';
+      nextBtn.style.display = index === totalSlides - 1 ? 'none' : '';
+
+      current = index;
+    }
+
+    function goNext() {
+      if (current < totalSlides - 1) {
+        showSlide(current + 1);
+      }
+    }
+
+    function goPrev() {
+      if (current > 0) {
+        showSlide(current - 1);
+      }
+    }
+
+    function revealAnswer(slide: HTMLElement, chosenIndex: number) {
+      const optionsContainer = slide.querySelector('.q-options') as HTMLElement;
+      const correctIndex = parseInt(optionsContainer.dataset.correct!);
+      const options = slide.querySelectorAll<HTMLButtonElement>('.q-opt');
+      const explanation = slide.querySelector('[data-explanation]') as HTMLElement;
+
+      // Disable all options
+      options.forEach((opt) => {
+        opt.disabled = true;
+        const idx = parseInt(opt.dataset.index!);
+        if (idx === correctIndex) {
+          opt.classList.add('q-opt-correct');
+        }
+        if (idx === chosenIndex && chosenIndex !== correctIndex) {
+          opt.classList.add('q-opt-wrong');
+        }
+      });
+
+      // Track score
+      answered++;
+      if (chosenIndex === correctIndex) {
+        score++;
+      }
+
+      // Show explanation
+      explanation.style.display = '';
+      explanation.style.opacity = '0';
+      requestAnimationFrame(() => {
+        explanation.style.transition = 'opacity 0.3s ease';
+        explanation.style.opacity = '1';
+      });
+    }
+
+    // Option click handlers
+    deck.querySelectorAll('.q-opt').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLButtonElement;
+        if (target.disabled) return;
+        const slide = target.closest('.slide') as HTMLElement;
+        const chosenIndex = parseInt(target.dataset.index!);
+        revealAnswer(slide, chosenIndex);
+      });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        case 'ArrowRight':
+        case ' ':
+          e.preventDefault();
+          goNext();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          goPrev();
+          break;
+        case 'f':
+        case 'F':
+          e.preventDefault();
+          toggleFullscreen();
+          break;
+        case 'Escape':
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          }
+          break;
+        case 'Home':
+          e.preventDefault();
+          showSlide(0);
+          break;
+        case 'End':
+          e.preventDefault();
+          showSlide(totalSlides - 1);
+          break;
+      }
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    deck.addEventListener('touchstart', (e: TouchEvent) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    deck.addEventListener('touchend', (e: TouchEvent) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = e.changedTouches[0].clientY - touchStartY;
+
+      // Only handle horizontal swipes that are larger than vertical
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) goNext();
+        else goPrev();
+      }
+    }, { passive: true });
+
+    // Button handlers
+    prevBtn.addEventListener('click', goPrev);
+    nextBtn.addEventListener('click', goNext);
+    startBtn.addEventListener('click', goNext);
+
+    restartBtn.addEventListener('click', () => {
+      score = 0;
+      answered = 0;
+      // Reset all question slides
+      deck.querySelectorAll('.slide-question').forEach((slide) => {
+        const options = slide.querySelectorAll<HTMLButtonElement>('.q-opt');
+        options.forEach((opt) => {
+          opt.disabled = false;
+          opt.classList.remove('q-opt-correct', 'q-opt-wrong');
+        });
+        const explanation = slide.querySelector('[data-explanation]') as HTMLElement;
+        if (explanation) {
+          explanation.style.display = 'none';
+        }
+      });
+      showSlide(0);
+    });
+
+    // Fullscreen
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    fullscreenBtn.addEventListener('click', toggleFullscreen);
+
+    // Initialize
+    showSlide(0);
+  }
+
+  initSlides();
+</script>
+
+<style>
+  /* ============ DECK CONTAINER ============ */
+  .slide-deck {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ============ PROGRESS BAR ============ */
+  .slide-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 100;
+  }
+
+  .slide-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #818cf8, #c084fc);
+    transition: width 0.4s ease;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* ============ TOP BAR ============ */
+  .slide-topbar {
+    position: fixed;
+    top: 3px;
+    left: 0;
+    right: 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 90;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+  }
+
+  .topbar-back {
+    display: flex;
+    align-items: center;
+    color: #94a3b8;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+
+  .topbar-back:hover {
+    color: #e2e8f0;
+  }
+
+  .topbar-counter {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  .topbar-controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .topbar-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .topbar-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+  }
+
+  /* ============ SLIDES ============ */
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 2rem;
+  }
+
+  .slide-content {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  /* ============ TITLE SLIDE ============ */
+  .slide-title .slide-content {
+    text-align: center;
+  }
+
+  .title-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 999px;
+    background: rgba(129, 140, 248, 0.15);
+    color: #818cf8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide-title h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .title-meta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .title-start {
+    margin-bottom: 2rem;
+  }
+
+  .start-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .start-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+  }
+
+  .title-hint {
+    color: #475569;
+    font-size: 0.8rem;
+  }
+
+  /* ============ QUESTION SLIDE ============ */
+  .q-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #818cf8;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .q-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    color: #f1f5f9;
+  }
+
+  .q-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .q-opt {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #e2e8f0;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .q-opt:hover:not(:disabled) {
+    border-color: #818cf8;
+    background: rgba(129, 140, 248, 0.08);
+    transform: translateX(4px);
+  }
+
+  .q-opt:disabled {
+    cursor: default;
+  }
+
+  .q-opt-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+
+  .q-opt:hover:not(:disabled) .q-opt-letter {
+    background: #818cf8;
+    color: #fff;
+  }
+
+  .q-opt-text {
+    line-height: 1.4;
+  }
+
+  /* Correct answer */
+  .q-opt-correct {
+    border-color: #22c55e !important;
+    background: rgba(34, 197, 94, 0.1) !important;
+  }
+
+  .q-opt-correct .q-opt-letter {
+    background: #22c55e !important;
+    color: #fff !important;
+  }
+
+  /* Wrong answer */
+  .q-opt-wrong {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.08) !important;
+  }
+
+  .q-opt-wrong .q-opt-letter {
+    background: #ef4444 !important;
+    color: #fff !important;
+  }
+
+  /* Explanation */
+  .q-explanation {
+    margin-top: 1.5rem;
+  }
+
+  .q-explanation-inner {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(129, 140, 248, 0.08);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    border-radius: 12px;
+  }
+
+  .q-explanation-icon {
+    flex-shrink: 0;
+    color: #818cf8;
+    margin-top: 0.1rem;
+  }
+
+  .q-explanation p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+  }
+
+  /* ============ END SLIDE ============ */
+  .slide-end .slide-content {
+    text-align: center;
+  }
+
+  .end-icon {
+    color: #22c55e;
+    margin-bottom: 1.5rem;
+  }
+
+  .slide-end h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+
+  .end-score {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .end-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .end-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .end-btn-primary {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    color: #fff;
+  }
+
+  .end-btn-primary:hover {
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+  }
+
+  .end-btn-ghost {
+    background: rgba(255, 255, 255, 0.06);
+    color: #cbd5e1;
+  }
+
+  .end-btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* ============ NAV ARROWS ============ */
+  .nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #94a3b8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    z-index: 80;
+  }
+
+  .nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+  }
+
+  .nav-prev {
+    left: 1rem;
+  }
+
+  .nav-next {
+    right: 1rem;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 768px) {
+    .slide {
+      padding: 4rem 1.25rem 1.5rem;
+    }
+
+    .nav-arrow {
+      width: 40px;
+      height: 40px;
+      bottom: 1rem;
+      top: auto;
+      transform: none;
+    }
+
+    .nav-prev {
+      left: 1rem;
+    }
+
+    .nav-next {
+      right: 1rem;
+    }
+
+    .q-opt {
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .q-opt-letter {
+      min-width: 30px;
+      height: 30px;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .slide-title h1 {
+      font-size: 1.5rem;
+    }
+
+    .q-text {
+      font-size: 1.1rem;
+    }
+
+    .end-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

@@ -57,7 +57,13 @@ const total = allQuizzes.length;
         <div class="quiz-summary-progress-fill" id="summary-progress-fill"></div>
       </div>
     </div>
-    <button class="quiz-summary-reset" id="summary-reset" type="button">Réinitialiser</button>
+    <div class="quiz-summary-actions">
+      <a class="quiz-summary-slides-link" href="/slides/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Mode slides
+      </a>
+      <button class="quiz-summary-reset" id="summary-reset" type="button">Réinitialiser</button>
+    </div>
   </div>
 
   <div class="quiz-card-list">
@@ -191,6 +197,32 @@ const total = allQuizzes.length;
     background: var(--sl-color-accent);
     border-radius: 4px;
     transition: width 0.3s ease;
+  }
+
+  .quiz-summary-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .quiz-summary-slides-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 1rem;
+    border: 2px solid var(--sl-color-gray-5);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--sl-color-text);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .quiz-summary-slides-link:hover {
+    border-color: var(--sl-color-accent);
+    color: var(--sl-color-accent);
   }
 
   .quiz-summary-reset {

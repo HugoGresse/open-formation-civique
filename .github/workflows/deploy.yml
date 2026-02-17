@@ -92,15 +92,19 @@ jobs:
           name: built-site
           path: website/dist
 
+      - name: Remove large files unsupported by Cloudflare Pages
+        run: rm -f website/dist/formation-civique.pdf
+
       - name: Deploy to Cloudflare Pages
         id: cloudflare
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: open-formation-civique
+          projectName: open-formation-civique-preview
           directory: website/dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
 
       - name: Comment PR with preview URL
         uses: actions/github-script@v7
@@ -109,18 +113,9 @@ jobs:
             const prNumber = context.payload.pull_request.number;
             const previewUrl = '${{ steps.cloudflare.outputs.url }}';
             
-            const comment = `## 🚀 Preview Deployed Successfully!
-            
-            Your PR preview is live and ready to view:
-            
-            ### 🌐 Preview URL
-            **${previewUrl}**
-            
-            The preview will update automatically with each new commit to this PR.
-            
-            ---
-            
-            github.rest.issues.createComment({
+            const comment = `## Preview Deployed Successfully!\n\nYour PR preview is live and ready to view:\n\n**${previewUrl}**\n\nThe preview will update automatically with each new commit to this PR.`;
+
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: prNumber,
