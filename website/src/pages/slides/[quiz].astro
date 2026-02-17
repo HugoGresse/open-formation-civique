@@ -144,7 +144,7 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
 
     let current = 0;
     let score = 0;
-    let answered = 0;
+    const answeredQuestions = new Set<number>();
     const questionCount = totalSlides - 2;
 
     function showSlide(index: number) {
@@ -186,6 +186,10 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
 
     function goNext() {
       if (current < totalSlides - 1) {
+        // Prevent skipping ahead if current slide is an unanswered question
+        if (isQuestionSlide(current) && !isQuestionAnswered(current)) {
+          return;
+        }
         showSlide(current + 1);
       }
     }
@@ -194,6 +198,14 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
       if (current > 0) {
         showSlide(current - 1);
       }
+    }
+
+    function isQuestionSlide(index: number): boolean {
+      return index > 0 && index < totalSlides - 1;
+    }
+
+    function isQuestionAnswered(index: number): boolean {
+      return answeredQuestions.has(index);
     }
 
     function revealAnswer(slide: HTMLElement, chosenIndex: number) {
@@ -214,8 +226,8 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
         }
       });
 
-      // Track score
-      answered++;
+      // Track score and answered status
+      answeredQuestions.add(current);
       if (chosenIndex === correctIndex) {
         score++;
       }
@@ -300,7 +312,7 @@ const totalSlides = quiz.questions.length + 2; // title + questions + end
 
     restartBtn.addEventListener('click', () => {
       score = 0;
-      answered = 0;
+      answeredQuestions.clear();
       // Reset all question slides
       deck.querySelectorAll('.slide-question').forEach((slide) => {
         const options = slide.querySelectorAll<HTMLButtonElement>('.q-opt');
