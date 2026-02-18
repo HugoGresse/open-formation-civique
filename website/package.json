@@ -14,6 +14,7 @@
     "generate:official-quizzes": "npx tsx --env-file=.env scripts/generate-official-quizzes.ts"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.3.0",
     "@astrojs/starlight": "^0.37.6",
     "@openrouter/sdk": "^0.5.1",
     "astro": "^5.12.2",

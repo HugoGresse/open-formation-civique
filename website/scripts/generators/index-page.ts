@@ -33,6 +33,7 @@ function countQuestions(): { thematic: number; csp: number; cr: number } {
 
 export function generateIndexPage(data: CrawlerData, contentDir: string): void {
   const counts = countQuestions();
+  const totalQuestions = counts.thematic + counts.csp + counts.cr;
 
   const thematicCards = data.mainPage.thematics
     .map(
@@ -42,12 +43,12 @@ export function generateIndexPage(data: CrawlerData, contentDir: string): void {
     .join('\n  ');
 
   const indexContent = `---
-title: Quizz et fiches complètes et gratuits.
-description: Bienvenue sur le site de la formation civique
+title: "Formation Civique 2026 – Fiches thématiques et Quiz gratuits"
+description: "Préparez votre formation civique avec ${totalQuestions > 0 ? totalQuestions + ' questions de quiz,' : ''} des fiches thématiques gratuites et les quiz officiels CSP et Carte de Résident. Valeurs de la République, institutions, droits et devoirs."
 template: splash
 hero:
-  title: Open-Formation-Civique.fr
-  tagline: Fiches thématiques et quiz, gratuits et open source, pour comprendre les principes et les valeurs de la République française.
+  title: Formation Civique Gratuite
+  tagline: "Fiches thématiques et quiz gratuits pour comprendre les valeurs de la République française et préparer votre formation civique (CSP, Carte de Résident)."
   actions:
     - text: Découvrir les fiches
       link: principes-et-valeurs/
@@ -69,7 +70,9 @@ prev: false
 
 import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
 
-## Quiz
+## Quiz de formation civique
+
+${totalQuestions > 0 ? `Plus de **${totalQuestions} questions** pour tester vos connaissances sur la formation civique.` : ''}
 
 <CardGrid>
   <LinkCard title="Quiz thématiques" description="${counts.thematic} questions générées à partir du contenu des fiches" href="/quiz/" />
@@ -77,7 +80,7 @@ import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
   <LinkCard title="Quiz officiels CR" description="${counts.cr} questions officielles de la Carte de Résident" href="/quiz/cr-principes-et-valeurs/" />
 </CardGrid>
 
-## Les 5 thématiques
+## Les 5 thématiques de la formation civique
 
 <CardGrid>
   ${thematicCards}
@@ -94,12 +97,30 @@ import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
     Ce site respecte votre vie privée. Aucun cookie n'est utilisé et aucune donnée personnelle n'est collectée. Les analytics sont anonymes et conformes au RGPD.
   </Card>
   <Card title="Quiz générés par IA" icon="puzzle">
-    Les questions des quiz sont générées automatiquement par à partir du contenu des fiches. Elles peuvent contenir quelques erreurs ou imprécisions.
+    Les questions des quiz thématiques sont générées automatiquement à partir du contenu des fiches. Elles peuvent contenir quelques erreurs ou imprécisions.
   </Card>
   <Card title="Source officielle" icon="open-book">
     Les fiches sont issues du site officiel du [Ministère de l'Intérieur](https://formation-civique.interieur.gouv.fr/fiches-par-thematiques/).
   </Card>
 </CardGrid>
+
+## Questions fréquentes sur la formation civique
+
+**Qu'est-ce que la formation civique ?**
+
+La formation civique est une obligation pour les étrangers qui signent un Contrat d'Intégration Républicaine (CIR) en France. Elle vise à faire connaître les valeurs de la République française, les institutions, les droits et les devoirs des citoyens.
+
+**Qui doit suivre la formation civique ?**
+
+Tout étranger primo-arrivant signataire d'un Contrat d'Intégration Républicaine (CIR) doit suivre la formation civique. Elle est également utile pour les candidats à la naturalisation française ou à la Carte de Résident (10 ans).
+
+**Comment préparer le quiz de la formation civique ?**
+
+Utilisez nos fiches thématiques pour réviser les 5 grands thèmes : principes et valeurs de la République, système institutionnel, droits et devoirs, histoire et géographie, et vivre dans la société française. Entraînez-vous ensuite avec nos quiz gratuits, dont les quiz officiels CSP et CR.
+
+**Les ressources sont-elles gratuites ?**
+
+Oui, toutes les ressources de ce site sont entièrement gratuites. Vous pouvez également télécharger l'intégralité des fiches en [format PDF](/formation-civique.pdf).
 `;
 
   writeFileSync(join(contentDir, 'index.mdx'), indexContent);
