@@ -10,9 +10,9 @@ const thematicSeoDescriptions: Record<string, string> = {
   'Système institutionnel et politique':
     'Comprenez le système institutionnel et politique français : le Président de la République, le Parlement, le gouvernement et les collectivités territoriales. Fiches et quiz gratuits.',
   'Droits et devoirs':
-    'Connaissez vos droits et devoirs en France : droit de vote, liberté d'expression, obligation scolaire, respect des lois. Fiches et quiz pour la formation civique.',
+    "Connaissez vos droits et devoirs en France : droit de vote, liberté d'expression, obligation scolaire, respect des lois. Fiches et quiz pour la formation civique.",
   'Histoire, géographie et culture':
-    'Explorez l'histoire, la géographie et la culture françaises : repères historiques, régions, patrimoine culturel et artistique. Fiches et quiz gratuits pour la formation civique.',
+    "Explorez l'histoire, la géographie et la culture françaises : repères historiques, régions, patrimoine culturel et artistique. Fiches et quiz gratuits pour la formation civique.",
   'Vivre dans la société française':
     'Tout savoir sur la vie en France : santé, éducation, travail, logement et intégration. Fiches thématiques et quiz gratuits pour la formation civique.',
 };
