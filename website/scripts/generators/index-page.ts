@@ -112,11 +112,11 @@ La formation civique est un parcours de formation obligatoire organisé par l'OF
 
 **Quelle différence entre formation civique et examen de connaissance ?**
 
-La **formation civique** est le parcours éducatif (cours dispensés par l'OFII). L'**examen de connaissance** est un test distinct, requis pour obtenir le Contrat de Séjour Pluriannuel (CSP) ou la Carte de Résident (CR). Les deux portent sur les mêmes thèmes (valeurs de la République, institutions, droits et devoirs, etc.) mais ce sont deux démarches séparées.
+La **formation civique** est le parcours éducatif (cours dispensés par l'OFII) dans le cadre du CIR. L'**examen de connaissance** est un test distinct. Les deux portent sur les mêmes thèmes (valeurs de la République, institutions, droits et devoirs, etc.) mais ce sont deux démarches séparées.
 
 **Qui doit passer l'examen de connaissance ?**
 
-L'examen de connaissance concerne les étrangers souhaitant obtenir un Contrat de Séjour Pluriannuel (CSP) ou une Carte de Résident (CR, 10 ans). La formation civique, quant à elle, concerne tout étranger primo-arrivant signataire d'un CIR.
+L'examen de connaissance CSP est requis pour obtenir une carte de séjour pluriannuelle, en complément du niveau A2 de français. Il ne concerne pas les réfugiés, qui obtiennent directement une carte de résident de 10 ans. L'examen de connaissance CR concerne les personnes demandant une carte de résident (10 ans). La formation civique, quant à elle, concerne tout étranger primo-arrivant signataire d'un CIR.
 
 **Comment préparer l'examen de connaissance ?**
 
