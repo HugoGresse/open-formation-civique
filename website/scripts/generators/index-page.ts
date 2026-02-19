@@ -48,7 +48,7 @@ description: "Préparez votre formation civique avec ${totalQuestions > 0 ? tota
 template: splash
 hero:
   title: Formation Civique Gratuite
-  tagline: "Fiches thématiques et quiz gratuits pour comprendre les valeurs de la République française et préparer votre formation civique (CSP, Carte de Résident)."
+  tagline: "Fiches thématiques et quiz gratuits pour comprendre les valeurs de la République française et préparer vos examens de connaissance (CSP, Carte de Résident)."
   actions:
     - text: Découvrir les fiches
       link: principes-et-valeurs/
@@ -70,9 +70,9 @@ prev: false
 
 import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';
 
-## Quiz de formation civique
+## Quiz et examens de connaissance
 
-${totalQuestions > 0 ? `Plus de **${totalQuestions} questions** pour tester vos connaissances sur la formation civique.` : ''}
+${totalQuestions > 0 ? `Plus de **${totalQuestions} questions** pour tester vos connaissances sur les thèmes de la formation civique et préparer les examens officiels.` : ''}
 
 <CardGrid>
   <LinkCard title="Quiz thématiques" description="${counts.thematic} questions générées à partir du contenu des fiches" href="/quiz/" />
@@ -104,19 +104,23 @@ ${totalQuestions > 0 ? `Plus de **${totalQuestions} questions** pour tester vos 
   </Card>
 </CardGrid>
 
-## Questions fréquentes sur la formation civique
+## Questions fréquentes
 
 **Qu'est-ce que la formation civique ?**
 
-La formation civique est une obligation pour les étrangers qui signent un Contrat d'Intégration Républicaine (CIR) en France. Elle vise à faire connaître les valeurs de la République française, les institutions, les droits et les devoirs des citoyens.
+La formation civique est un parcours de formation obligatoire organisé par l'OFII pour les étrangers qui signent un Contrat d'Intégration Républicaine (CIR) en France. Elle se déroule sur plusieurs journées et vise à faire connaître les valeurs de la République française, les institutions, les droits et les devoirs des citoyens.
 
-**Qui doit suivre la formation civique ?**
+**Quelle différence entre formation civique et examen de connaissance ?**
 
-Tout étranger primo-arrivant signataire d'un Contrat d'Intégration Républicaine (CIR) doit suivre la formation civique. Elle est également utile pour les candidats à la naturalisation française ou à la Carte de Résident (10 ans).
+La **formation civique** est le parcours éducatif (cours dispensés par l'OFII) dans le cadre du CIR. L'**examen de connaissance** est un test distinct. Les deux portent sur les mêmes thèmes (valeurs de la République, institutions, droits et devoirs, etc.) mais ce sont deux démarches séparées.
 
-**Comment préparer le quiz de la formation civique ?**
+**Qui doit passer l'examen de connaissance ?**
 
-Utilisez nos fiches thématiques pour réviser les 5 grands thèmes : principes et valeurs de la République, système institutionnel, droits et devoirs, histoire et géographie, et vivre dans la société française. Entraînez-vous ensuite avec nos quiz gratuits, dont les quiz officiels CSP et CR.
+L'examen de connaissance CSP est requis pour obtenir une carte de séjour pluriannuelle, en complément du niveau A2 de français. Il ne concerne pas les réfugiés, qui obtiennent directement une carte de résident de 10 ans. L'examen de connaissance CR concerne les personnes demandant une carte de résident (10 ans). La formation civique, quant à elle, concerne tout étranger primo-arrivant signataire d'un CIR.
+
+**Comment préparer l'examen de connaissance ?**
+
+Utilisez nos fiches thématiques pour réviser les 5 grands thèmes : principes et valeurs de la République, système institutionnel, droits et devoirs, histoire et géographie, et vivre dans la société française. Entraînez-vous ensuite avec nos quiz gratuits, notamment les quiz officiels CSP et CR qui reprennent les questions des examens de connaissance.
 
 **Les ressources sont-elles gratuites ?**
 
