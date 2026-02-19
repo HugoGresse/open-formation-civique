@@ -9,7 +9,7 @@ const site = process.argv.includes('dev')
 
 const siteTitle = 'Open Formation Civique – Fiches et Quiz gratuits 2026';
 const siteDescription =
-	'Préparez votre formation civique avec des fiches thématiques et des quiz gratuits. Valeurs de la République, institutions, droits et devoirs – tout pour réussir votre examen civique.';
+	'Préparez votre formation civique et vos examens de connaissance (CSP, Carte de Résident) avec des fiches thématiques et des quiz gratuits. Valeurs de la République, institutions, droits et devoirs.';
 
 // https://astro.build/config
 export default defineConfig({
@@ -145,7 +145,7 @@ export default defineConfig({
 						url: 'https://open-formation-civique.fr/',
 						logo: 'https://open-formation-civique.fr/favicon.png',
 						description:
-							'Ressources gratuites et open source pour la formation civique en France : fiches thématiques, quiz officiels (CSP, Carte de Résident) et quiz thématiques.',
+							'Ressources gratuites et open source pour la formation civique et les examens de connaissance en France : fiches thématiques, quiz officiels (CSP, Carte de Résident) et quiz thématiques.',
 						sameAs: ['https://github.com/HugoGresse/open-formation-civique'],
 					}),
 				},

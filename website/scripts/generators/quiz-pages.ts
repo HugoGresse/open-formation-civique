@@ -57,7 +57,7 @@ export function generateQuizPages(
       const quizJson = {
         id: thematicDir,
         title,
-        description: `Quiz formation civique – ${description}. Testez vos connaissances avec des questions générées à partir des fiches officielles.`,
+        description: `Quiz – ${description}. Testez vos connaissances avec des questions générées à partir des fiches thématiques officielles.`,
         questions: questions!.map((q, i) => ({
           id: `${prefix}-q${i + 1}`,
           question: q.question,
@@ -89,8 +89,8 @@ export function generateQuizPages(
 
   // Quiz index page with QuizSummary component
   const quizIndexContent = `---
-title: "Quiz de formation civique – Questions officielles CSP et Carte de Résident"
-description: "Entraînez-vous avec nos quiz de formation civique gratuits : questions officielles du Contrat de Séjour Pluriannuel (CSP), de la Carte de Résident (CR) et quiz thématiques sur les valeurs de la République."
+title: "Quiz – Examens de connaissance CSP et Carte de Résident"
+description: "Entraînez-vous avec nos quiz gratuits : questions officielles des examens de connaissance du Contrat de Séjour Pluriannuel (CSP), de la Carte de Résident (CR) et quiz thématiques sur les valeurs de la République."
 tableOfContents: false
 ---
 
@@ -162,7 +162,7 @@ function generateOfficialQuizFiles(
     const quizJson = {
       id: quizDir,
       title: displayTitle,
-      description: `Quiz officiel ${sourceLabel} (${sourceLabel === 'CSP' ? 'Contrat de Séjour Pluriannuel' : 'Carte de Résident'}) – ${thematicTitle}. Questions officielles de la formation civique.`,
+      description: `Quiz officiel ${sourceLabel} (${sourceLabel === 'CSP' ? 'Contrat de Séjour Pluriannuel' : 'Carte de Résident'}) – ${thematicTitle}. Questions officielles de l'examen de connaissance.`,
       questions: questions.map((q, i) => ({
         id: `${prefix}-q${i + 1}`,
         question: q.question,
