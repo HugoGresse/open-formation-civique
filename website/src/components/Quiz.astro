@@ -57,6 +57,18 @@ const { quizData } = Astro.props;
 <script>
   import { saveQuizResult, saveQuizProgress, getQuizProgress } from '../utils/quizStorage';
 
+  declare global {
+    interface Window {
+      plausible?: (event: string, options?: { props: Record<string, string | number | boolean> }) => void;
+    }
+  }
+
+  function trackEvent(event: string, props: Record<string, string | number | boolean>) {
+    if (window.plausible) {
+      window.plausible(event, { props });
+    }
+  }
+
   function initQuiz() {
     const rootEl = document.getElementById('quiz-root');
     if (!rootEl?.dataset.quiz) return;
@@ -216,6 +228,12 @@ const { quizData } = Astro.props;
         return;
       }
       validated[currentIndex] = true;
+      const isCorrect = answers[currentIndex] === questions[currentIndex].correctAnswer;
+      trackEvent('Question Completed', {
+        quizId: quiz.id,
+        question: currentIndex + 1,
+        isCorrect,
+      });
       persistProgress();
       renderQuestion();
     });
@@ -243,6 +261,13 @@ const { quizData } = Astro.props;
     function showScore() {
       const { correct } = getLiveScore();
       const percent = Math.round((correct / totalQuestions) * 100);
+
+      trackEvent('Quiz Completed', {
+        quizId: quiz.id,
+        score: correct,
+        total: totalQuestions,
+        percent,
+      });
 
       saveQuizResult(quiz.id, correct, totalQuestions);
 
