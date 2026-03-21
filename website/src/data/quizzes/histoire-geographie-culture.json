@@ -1,7 +1,7 @@
 {
   "id": "histoire-geographie-culture",
   "title": "Histoire, géographie et culture",
-  "description": "Testez vos connaissances : Histoire • Géographie • Culture",
+  "description": "Quiz – Histoire • Géographie • Culture. Testez vos connaissances avec des questions générées à partir des fiches thématiques officielles.",
   "questions": [
     {
       "id": "hgc-q1",

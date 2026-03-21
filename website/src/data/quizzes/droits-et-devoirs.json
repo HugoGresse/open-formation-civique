@@ -1,7 +1,7 @@
 {
   "id": "droits-et-devoirs",
   "title": "Droits et devoirs",
-  "description": "Testez vos connaissances : Droits fondamentaux • Obligations et devoirs des personnes résidant en France",
+  "description": "Quiz – Droits fondamentaux • Obligations et devoirs des personnes résidant en France. Testez vos connaissances avec des questions générées à partir des fiches thématiques officielles.",
   "questions": [
     {
       "id": "dd-q1",
