@@ -21,6 +21,7 @@ export default defineConfig({
 			changefreq: 'weekly',
 			priority: 0.7,
 			lastmod: new Date(),
+			filter: (page) => !page.includes('/slides/'),
 		}),
 		starlight({
 			title: 'Open Formation Civique',
@@ -90,6 +91,13 @@ export default defineConfig({
 						content: siteTitle,
 					},
 				},
+				{
+					tag: 'meta',
+					attrs: {
+						property: 'og:image:type',
+						content: 'image/png',
+					},
+				},
 				// Twitter Card tags
 				{
 					tag: 'meta',
@@ -152,6 +160,7 @@ export default defineConfig({
 			],
 			components: {
 				Footer: './src/components/Footer.astro',
+				Head: './src/components/Head.astro',
 			},
 			customCss: ['./src/styles/quiz.css', './src/styles/content.css'],
 			defaultLocale: 'root',

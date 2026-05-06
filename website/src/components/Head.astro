@@ -1,0 +1,12 @@
+---
+// Custom Head override: renders all default Starlight head tags and adds
+// per-page twitter:title and twitter:description for better social sharing.
+const { head, entry } = Astro.locals.starlightRoute;
+
+const pageTitle = entry.data.title;
+const pageDescription = entry.data.description;
+---
+
+{head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
+{pageTitle && <meta name="twitter:title" content={pageTitle} />}
+{pageDescription && <meta name="twitter:description" content={pageDescription} />}

@@ -80,9 +80,34 @@ ${ficheLinks}
       const ficheShortDesc = pages[0]?.subPageTitle || ficheTitle;
       const ficheDescription = `${ficheTitle} – ${ficheShortDesc}. Fiche thématique de formation civique sur ${thematicTitle}.`;
 
+      const learningResourceSchema = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        name: ficheTitle,
+        description: ficheDescription,
+        inLanguage: 'fr-FR',
+        educationalLevel: 'beginner',
+        learningResourceType: 'LessonPlan',
+        about: {
+          '@type': 'Thing',
+          name: thematicTitle,
+        },
+        provider: {
+          '@type': 'Organization',
+          name: 'Open Formation Civique',
+          url: 'https://open-formation-civique.fr/',
+        },
+        isAccessibleForFree: true,
+      });
+
       const content = `---
 title: ${yamlValue(ficheTitle)}
 description: ${yamlValue(ficheDescription)}
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: ${JSON.stringify(learningResourceSchema)}
 ---
 
 ${combinedMarkdown}

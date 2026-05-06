@@ -42,6 +42,53 @@ export function generateIndexPage(data: CrawlerData, contentDir: string): void {
     )
     .join('\n  ');
 
+  const faqSchema = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: "Qu'est-ce que la formation civique ?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "La formation civique est un parcours de formation obligatoire organisé par l'OFII pour les étrangers qui signent un Contrat d'Intégration Républicaine (CIR) en France. Elle se déroule sur plusieurs journées et vise à faire connaître les valeurs de la République française, les institutions, les droits et les devoirs des citoyens.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Quelle différence entre formation civique et examen de connaissance ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "La formation civique est le parcours éducatif (cours dispensés par l'OFII) dans le cadre du CIR. L'examen de connaissance est un test distinct. Les deux portent sur les mêmes thèmes (valeurs de la République, institutions, droits et devoirs, etc.) mais ce sont deux démarches séparées.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: "Qui doit passer l'examen de connaissance ?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "L'examen de connaissance CSP est requis pour obtenir une carte de séjour pluriannuelle, en complément du niveau A2 de français. Il ne concerne pas les réfugiés, qui obtiennent directement une carte de résident de 10 ans. L'examen de connaissance CR concerne les personnes demandant une carte de résident (10 ans). La formation civique, quant à elle, concerne tout étranger primo-arrivant signataire d'un CIR.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: "Comment préparer l'examen de connaissance ?",
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Utilisez nos fiches thématiques pour réviser les 5 grands thèmes : principes et valeurs de la République, système institutionnel, droits et devoirs, histoire et géographie, et vivre dans la société française. Entraînez-vous ensuite avec nos quiz gratuits, notamment les quiz officiels CSP et CR qui reprennent les questions des examens de connaissance.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Les ressources sont-elles gratuites ?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Oui, toutes les ressources de ce site sont entièrement gratuites. Vous pouvez également télécharger l'intégralité des fiches en format PDF depuis le site.",
+        },
+      },
+    ],
+  });
+
   const indexContent = `---
 title: "Formation Civique 2026 – Fiches thématiques et Quiz gratuits"
 description: "Préparez votre formation civique avec ${totalQuestions > 0 ? totalQuestions + ' questions de quiz,' : ''} des fiches thématiques gratuites et les quiz officiels CSP et Carte de Résident. Valeurs de la République, institutions, droits et devoirs."
@@ -66,6 +113,11 @@ hero:
         download: true
 next: false
 prev: false
+head:
+  - tag: script
+    attrs:
+      type: application/ld+json
+    content: ${JSON.stringify(faqSchema)}
 ---
 
 import { LinkCard, CardGrid, Card } from '@astrojs/starlight/components';

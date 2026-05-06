@@ -1,7 +1,7 @@
 {
   "id": "vivre-en-france",
   "title": "Vivre dans la société française",
-  "description": "Testez vos connaissances : Démarches Administratives • Santé • Emploi • Parentalité",
+  "description": "Quiz – Démarches Administratives • Santé • Emploi • Parentalité. Testez vos connaissances avec des questions générées à partir des fiches thématiques officielles.",
   "questions": [
     {
       "id": "vf-q1",
