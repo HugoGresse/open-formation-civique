@@ -73,8 +73,9 @@ jobs:
           wranglerVersion: '4'
           command: >-
             pages deploy website/dist
-            --project-name=open-formation-civique
+            --project-name=open-formation-civique-preview
             --branch=${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
+            --commit-dirty=true
 
       - name: Comment preview URL on PR
         if: github.event_name == 'pull_request'

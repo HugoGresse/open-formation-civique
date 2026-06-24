@@ -14,7 +14,7 @@ request (preview).
 
 1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/)
 2. Go to **Workers & Pages** → **Create** → **Pages** → **Direct Upload**
-3. Name the project exactly: `open-formation-civique`
+3. Name the project exactly: `open-formation-civique-preview`
 4. Create the project (an initial empty deployment is fine)
 5. In **Settings → Builds & deployments**, set the **production branch** to `main`
    (so `--branch=main` deploys are treated as production)
@@ -62,7 +62,7 @@ to the Release asset.
 ## Troubleshooting
 
 - **Deploy fails:** confirm both secrets are set and the API token has
-  `Cloudflare Pages → Edit`. Confirm the project name is `open-formation-civique`.
+  `Cloudflare Pages → Edit`. Confirm the project name is `open-formation-civique-preview`.
 - **Production not on the custom domain:** ensure the project's production branch
   is `main` and the domain is attached in Cloudflare (not GitHub Pages).
 - **PDF link 404s:** the `pdf-latest` release is only created/updated by a
