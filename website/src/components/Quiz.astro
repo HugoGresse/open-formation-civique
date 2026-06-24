@@ -50,9 +50,15 @@ const quizSchema = {
       .map(({ opt }) => ({ '@type': 'Answer', text: opt })),
   })),
 };
+
+// Escape `<`, `>`, `&` so quiz text containing `</script>` can't break out of the tag.
+const quizSchemaJson = JSON.stringify(quizSchema)
+  .replace(/</g, '\\u003c')
+  .replace(/>/g, '\\u003e')
+  .replace(/&/g, '\\u0026');
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(quizSchema)} />
+<script type="application/ld+json" set:html={quizSchemaJson} />
 
 <div class="quiz-container" id="quiz-root" data-quiz={quizData}>
   <div class="quiz-header" id="quiz-header">
