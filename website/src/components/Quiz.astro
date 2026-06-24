@@ -4,7 +4,61 @@ interface Props {
 }
 
 const { quizData } = Astro.props;
+
+interface QuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation: string;
+}
+
+interface QuizContent {
+  id: string;
+  title: string;
+  description: string;
+  questions: QuizQuestion[];
+}
+
+const quiz: QuizContent = JSON.parse(quizData);
+
+// schema.org Quiz structured data — makes the questions/answers machine-readable
+// for search engines and AI features (content is otherwise rendered client-side).
+const quizSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Quiz',
+  name: quiz.title,
+  description: quiz.description,
+  inLanguage: 'fr-FR',
+  educationalUse: 'Self-assessment',
+  learningResourceType: 'Quiz',
+  about: { '@type': 'Thing', name: quiz.title },
+  hasPart: quiz.questions.map((q) => ({
+    '@type': 'Question',
+    eduQuestionType: 'Multiple choice',
+    name: q.question,
+    text: q.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: q.explanation
+        ? `${q.options[q.correctAnswer]} — ${q.explanation}`
+        : q.options[q.correctAnswer],
+    },
+    suggestedAnswer: q.options
+      .map((opt, i) => ({ opt, i }))
+      .filter(({ i }) => i !== q.correctAnswer)
+      .map(({ opt }) => ({ '@type': 'Answer', text: opt })),
+  })),
+};
+
+// Escape `<`, `>`, `&` so quiz text containing `</script>` can't break out of the tag.
+const quizSchemaJson = JSON.stringify(quizSchema)
+  .replace(/</g, '\\u003c')
+  .replace(/>/g, '\\u003e')
+  .replace(/&/g, '\\u0026');
 ---
+
+<script type="application/ld+json" set:html={quizSchemaJson} />
 
 <div class="quiz-container" id="quiz-root" data-quiz={quizData}>
   <div class="quiz-header" id="quiz-header">
@@ -53,6 +107,34 @@ const { quizData } = Astro.props;
     </div>
   </div>
 </div>
+
+<section class="quiz-revision" aria-label="Toutes les questions et réponses du quiz">
+  <h2 class="quiz-revision-title">Toutes les questions et réponses</h2>
+  <p class="quiz-revision-intro">
+    Révisez l'ensemble des {quiz.questions.length} questions de ce quiz «&nbsp;{quiz.title}&nbsp;» :
+    chaque question est accompagnée de la bonne réponse et de son explication.
+  </p>
+  <ol class="quiz-revision-list">
+    {
+      quiz.questions.map((q, qi) => (
+        <li class="quiz-revision-item">
+          <h3 class="quiz-revision-q">
+            <span class="quiz-revision-num">{qi + 1}.</span> {q.question}
+          </h3>
+          <ul class="quiz-revision-options">
+            {q.options.map((opt, i) => (
+              <li class={i === q.correctAnswer ? 'quiz-revision-opt is-correct' : 'quiz-revision-opt'}>
+                {opt}
+                {i === q.correctAnswer && <span class="quiz-revision-tag">Bonne réponse</span>}
+              </li>
+            ))}
+          </ul>
+          {q.explanation && <p class="quiz-revision-exp">{q.explanation}</p>}
+        </li>
+      ))
+    }
+  </ol>
+</section>
 
 <script>
   import { saveQuizResult, saveQuizProgress, getQuizProgress } from '../utils/quizStorage';
@@ -694,6 +776,96 @@ const { quizData } = Astro.props;
     flex-wrap: wrap;
   }
 
+  /* Revision section — server-rendered, crawlable list of every Q&A */
+  .quiz-revision {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sl-color-gray-6);
+  }
+
+  .quiz-revision-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .quiz-revision-intro {
+    color: var(--sl-color-gray-3);
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+
+  .quiz-revision-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .quiz-revision-item {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--sl-color-gray-6);
+    border-radius: 12px;
+  }
+
+  .quiz-revision-q {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 0.85rem;
+  }
+
+  .quiz-revision-num {
+    color: var(--sl-color-gray-4);
+  }
+
+  .quiz-revision-options {
+    list-style: none;
+    margin: 0 0 0.85rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .quiz-revision-opt {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  [data-theme='light'] .quiz-revision-opt {
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .quiz-revision-opt.is-correct {
+    background: rgba(34, 197, 94, 0.12);
+    font-weight: 600;
+  }
+
+  .quiz-revision-tag {
+    margin-left: auto;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #16a34a;
+    white-space: nowrap;
+  }
+
+  .quiz-revision-exp {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--sl-color-gray-2);
+  }
+
   @media (max-width: 480px) {
     .quiz-card {
       padding: 1.25rem;
@@ -701,6 +873,10 @@ const { quizData } = Astro.props;
 
     .quiz-question-text {
       font-size: 1.05rem;
+    }
+
+    .quiz-revision-item {
+      padding: 1rem;
     }
   }
 </style>

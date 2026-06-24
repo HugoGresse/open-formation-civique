@@ -1,12 +1,110 @@
 ---
-// Custom Head override: renders all default Starlight head tags and adds
-// per-page twitter:title and twitter:description for better social sharing.
+// Custom Head override: renders all default Starlight head tags, adds per-page
+// twitter:title/description, and emits per-page structured data
+// (BreadcrumbList + LearningResource) for richer search / AI results.
 const { head, entry } = Astro.locals.starlightRoute;
 
 const pageTitle = entry.data.title;
 const pageDescription = entry.data.description;
+
+// Use the configured site (localhost in dev) so canonical/breadcrumb links stay
+// correct across dev/preview/prod instead of being pinned to the prod domain.
+const origin = (Astro.site ?? new URL('https://open-formation-civique.fr')).origin;
+
+// Serialize JSON-LD safely: escape `<`, `>`, `&` so content containing
+// `</script>` (titles/descriptions come from data) can't break out of the tag.
+const jsonLd = (data: unknown): string =>
+	JSON.stringify(data).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026');
+
+// Human-readable label for each top-level section (used for breadcrumbs).
+const SECTION_LABELS: Record<string, string> = {
+	quiz: 'Quiz',
+	'principes-et-valeurs': 'Principes et valeurs de la République',
+	'systeme-institutionnel': 'Système institutionnel et politique',
+	'droits-et-devoirs': 'Droits et devoirs',
+	'histoire-geographie-culture': 'Histoire, géographie et culture',
+	'vivre-en-france': 'Vivre dans la société française',
+};
+
+const canonical = new URL(Astro.url.pathname, origin).href;
+// entry.id may be e.g. "index", "principes-et-valeurs/index" or
+// "principes-et-valeurs/la-laicite" — drop a trailing "index" segment so a
+// section landing page is detected whatever shape the loader produces.
+const rawSegments = entry.id.split('/').filter(Boolean);
+const segments =
+	rawSegments[rawSegments.length - 1] === 'index' ? rawSegments.slice(0, -1) : rawSegments;
+const section = segments[0];
+const isRoot = segments.length === 0;
+const isQuiz = section === 'quiz';
+// A section landing page (e.g. /principes-et-valeurs/) is its own section crumb.
+const isSectionIndex = segments.length === 1;
+// Avoid emitting a duplicate LearningResource if the page already injects one.
+const hasLearningResourceInHead = head.some(
+	(t) => typeof t.content === 'string' && t.content.includes('"LearningResource"'),
+);
+
+// BreadcrumbList: Accueil → Section → Page (skipped on the home page).
+const breadcrumbItems = [
+	{ '@type': 'ListItem', position: 1, name: 'Accueil', item: `${origin}/` },
+];
+if (!isRoot && section && SECTION_LABELS[section]) {
+	breadcrumbItems.push({
+		'@type': 'ListItem',
+		position: breadcrumbItems.length + 1,
+		name: SECTION_LABELS[section],
+		item: `${origin}/${section}/`,
+	});
+}
+if (!isRoot && !isSectionIndex && pageTitle) {
+	breadcrumbItems.push({
+		'@type': 'ListItem',
+		position: breadcrumbItems.length + 1,
+		name: pageTitle,
+		item: canonical,
+	});
+}
+
+const breadcrumbSchema =
+	breadcrumbItems.length > 1
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: breadcrumbItems,
+			}
+		: null;
+
+const publisher = {
+	'@type': 'Organization',
+	name: 'Open Formation Civique',
+	url: `${origin}/`,
+	logo: `${origin}/favicon.png`,
+};
+
+// LearningResource for the thematic fiches only — skip the home page, quizzes
+// (they emit Quiz schema), section landing pages (link indexes, not lessons),
+// and any page that already injects its own LearningResource.
+const learningResourceSchema =
+	!isRoot && !isQuiz && !isSectionIndex && !hasLearningResourceInHead && section && SECTION_LABELS[section] && pageTitle
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'LearningResource',
+				name: pageTitle,
+				description: pageDescription,
+				url: canonical,
+				inLanguage: 'fr-FR',
+				learningResourceType: 'Fiche de révision',
+				educationalUse: 'Formation civique',
+				about: { '@type': 'Thing', name: SECTION_LABELS[section] },
+				isAccessibleForFree: true,
+				isPartOf: { '@type': 'WebSite', name: 'Open Formation Civique', url: `${origin}/` },
+				publisher,
+				author: publisher,
+			}
+		: null;
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
 {pageTitle && <meta name="twitter:title" content={pageTitle} />}
 {pageDescription && <meta name="twitter:description" content={pageDescription} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={jsonLd(breadcrumbSchema)} />}
+{learningResourceSchema && <script type="application/ld+json" set:html={jsonLd(learningResourceSchema)} />}
