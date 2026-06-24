@@ -14,17 +14,17 @@
     "generate:official-quizzes": "npx tsx --env-file=.env scripts/generate-official-quizzes.ts"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.3.0",
-    "@astrojs/starlight": "^0.37.6",
-    "@openrouter/sdk": "^0.5.1",
-    "astro": "^5.12.2",
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/starlight": "^0.41.0",
+    "@openrouter/sdk": "^0.13.7",
+    "astro": "^7.0.2",
     "cli-progress": "^3.12.0",
     "p-limit": "^7.3.0",
-    "sharp": "^0.34.2"
+    "sharp": "^0.35.2"
   },
   "devDependencies": {
     "@types/cli-progress": "^3.11.6",
     "starlight-to-pdf": "^1.4.0",
-    "tsx": "^4.19.0"
+    "tsx": "^4.22.4"
   }
 }
