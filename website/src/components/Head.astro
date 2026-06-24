@@ -1,12 +1,92 @@
 ---
-// Custom Head override: renders all default Starlight head tags and adds
-// per-page twitter:title and twitter:description for better social sharing.
+// Custom Head override: renders all default Starlight head tags, adds per-page
+// twitter:title/description, and emits per-page structured data
+// (BreadcrumbList + LearningResource) for richer search / AI results.
 const { head, entry } = Astro.locals.starlightRoute;
 
 const pageTitle = entry.data.title;
 const pageDescription = entry.data.description;
+
+const SITE = 'https://open-formation-civique.fr';
+
+// Human-readable label for each top-level section (used for breadcrumbs).
+const SECTION_LABELS: Record<string, string> = {
+	quiz: 'Quiz',
+	'principes-et-valeurs': 'Principes et valeurs de la République',
+	'systeme-institutionnel': 'Système institutionnel et politique',
+	'droits-et-devoirs': 'Droits et devoirs',
+	'histoire-geographie-culture': 'Histoire, géographie et culture',
+	'vivre-en-france': 'Vivre dans la société française',
+};
+
+const canonical = new URL(Astro.url.pathname, SITE).href;
+const segments = entry.id.split('/').filter(Boolean);
+const section = segments[0];
+const isRoot = segments.length === 0 || entry.id === 'index';
+const isQuiz = section === 'quiz';
+// A section landing page (e.g. /principes-et-valeurs/) is its own section crumb.
+const isSectionIndex = segments.length === 1;
+
+// BreadcrumbList: Accueil → Section → Page (skipped on the home page).
+const breadcrumbItems = [
+	{ '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE}/` },
+];
+if (!isRoot && section && SECTION_LABELS[section]) {
+	breadcrumbItems.push({
+		'@type': 'ListItem',
+		position: breadcrumbItems.length + 1,
+		name: SECTION_LABELS[section],
+		item: `${SITE}/${section}/`,
+	});
+}
+if (!isRoot && !isSectionIndex && pageTitle) {
+	breadcrumbItems.push({
+		'@type': 'ListItem',
+		position: breadcrumbItems.length + 1,
+		name: pageTitle,
+		item: canonical,
+	});
+}
+
+const breadcrumbSchema =
+	breadcrumbItems.length > 1
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'BreadcrumbList',
+				itemListElement: breadcrumbItems,
+			}
+		: null;
+
+const publisher = {
+	'@type': 'Organization',
+	name: 'Open Formation Civique',
+	url: `${SITE}/`,
+	logo: `${SITE}/favicon.png`,
+};
+
+// LearningResource for the thematic fiches (not quizzes — those emit Quiz schema).
+const learningResourceSchema =
+	!isRoot && !isQuiz && section && SECTION_LABELS[section] && pageTitle
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'LearningResource',
+				name: pageTitle,
+				description: pageDescription,
+				url: canonical,
+				inLanguage: 'fr-FR',
+				learningResourceType: 'Fiche de révision',
+				educationalUse: 'Formation civique',
+				about: { '@type': 'Thing', name: SECTION_LABELS[section] },
+				isAccessibleForFree: true,
+				isPartOf: { '@type': 'WebSite', name: 'Open Formation Civique', url: `${SITE}/` },
+				publisher,
+				author: publisher,
+			}
+		: null;
 ---
 
 {head.map(({ tag: Tag, attrs, content }) => <Tag {...attrs} set:html={content} />)}
 {pageTitle && <meta name="twitter:title" content={pageTitle} />}
 {pageDescription && <meta name="twitter:description" content={pageDescription} />}
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+{learningResourceSchema && <script type="application/ld+json" set:html={JSON.stringify(learningResourceSchema)} />}

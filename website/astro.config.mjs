@@ -7,6 +7,39 @@ const site = process.argv.includes('dev')
 	? `http://localhost:${process.env.PORT || 4321}`
 	: 'https://open-formation-civique.fr';
 
+// Top-level content sections (used for sitemap priority tuning).
+const CONTENT_SECTIONS = [
+	'principes-et-valeurs',
+	'systeme-institutionnel',
+	'droits-et-devoirs',
+	'histoire-geographie-culture',
+	'vivre-en-france',
+];
+const SECONDARY_PAGES = ['mentions-legales', 'politique-de-confidentialite', 'a-propos'];
+
+// Give crawlers honest priority/changefreq hints per page type instead of a flat
+// value: home > section landings > fiches/quiz > legal & about pages.
+function serializeSitemapEntry(item) {
+	const segments = new URL(item.url).pathname.split('/').filter(Boolean);
+	const section = segments[0];
+	const isLanding = segments.length === 1;
+
+	if (segments.length === 0) {
+		item.priority = 1.0;
+		item.changefreq = 'weekly';
+	} else if (SECONDARY_PAGES.includes(section)) {
+		item.priority = 0.3;
+		item.changefreq = 'yearly';
+	} else if (section === 'quiz') {
+		item.priority = isLanding ? 0.9 : 0.7;
+		item.changefreq = 'monthly';
+	} else if (CONTENT_SECTIONS.includes(section)) {
+		item.priority = isLanding ? 0.8 : 0.7;
+		item.changefreq = 'monthly';
+	}
+	return item;
+}
+
 const siteTitle = 'Open Formation Civique – Fiches et Quiz gratuits 2026';
 const siteDescription =
 	'Préparez votre formation civique et vos examens de connaissance (CSP, Carte de Résident) avec des fiches thématiques et des quiz gratuits. Valeurs de la République, institutions, droits et devoirs.';
@@ -22,6 +55,7 @@ export default defineConfig({
 			priority: 0.7,
 			lastmod: new Date(),
 			filter: (page) => !page.includes('/slides/'),
+			serialize: serializeSitemapEntry,
 		}),
 		starlight({
 			title: 'Open Formation Civique',
@@ -154,6 +188,17 @@ export default defineConfig({
 						logo: 'https://open-formation-civique.fr/favicon.png',
 						description:
 							'Ressources gratuites et open source pour la formation civique et les examens de connaissance en France : fiches thématiques, quiz officiels (CSP, Carte de Résident) et quiz thématiques.',
+						founder: {
+							'@type': 'Person',
+							name: 'Hugo Gresse',
+						},
+						knowsAbout: [
+							'Formation civique',
+							'Valeurs de la République française',
+							'Institutions françaises',
+							'Droits et devoirs en France',
+							'Naturalisation française',
+						],
 						sameAs: ['https://github.com/HugoGresse/open-formation-civique'],
 					}),
 				},
