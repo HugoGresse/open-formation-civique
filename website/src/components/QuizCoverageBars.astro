@@ -1,0 +1,95 @@
+---
+// Scorecard bars showing how many official Carte de Résident (CR) quiz
+// questions this site has per theme, counted from src/data/quizzes/cr-*.json.
+interface QuizStat {
+  label: string;
+  count: number;
+  href: string;
+}
+
+const quizzes: QuizStat[] = [
+  { label: 'Système institutionnel', count: 50, href: '/quiz/cr-systeme-institutionnel/' },
+  { label: 'Principes et valeurs', count: 40, href: '/quiz/cr-principes-et-valeurs/' },
+  { label: 'Mise en situation', count: 45, href: '/quiz/cr-mise-en-situation/' },
+  { label: 'Droits et devoirs', count: 38, href: '/quiz/cr-droits-et-devoirs/' },
+];
+
+const total = quizzes.reduce((sum, q) => sum + q.count, 0);
+const max = Math.max(...quizzes.map((q) => q.count));
+---
+
+<div class="quiz-coverage">
+  <p class="quiz-coverage-total">
+    <strong>{total} questions</strong> officielles Carte de Résident, réparties en 4 quiz gratuits
+  </p>
+  <div class="quiz-coverage-bars">
+    {
+      quizzes.map((q) => (
+        <a class="quiz-coverage-row" href={q.href}>
+          <span class="quiz-coverage-label">{q.label}</span>
+          <span class="quiz-coverage-track">
+            <span class="quiz-coverage-fill" style={`width:${(q.count / max) * 100}%`} />
+          </span>
+          <span class="quiz-coverage-count">{q.count}</span>
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .quiz-coverage {
+    margin: 1.5rem 0;
+    padding: 1.1rem 1.3rem;
+    border: 2px solid var(--sl-color-gray-5);
+    border-radius: 10px;
+  }
+
+  .quiz-coverage-total {
+    margin: 0 0 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .quiz-coverage-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .quiz-coverage-row {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) minmax(80px, 3fr) 2.2rem;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: var(--sl-color-text);
+  }
+
+  .quiz-coverage-label {
+    font-size: 0.85rem;
+  }
+
+  .quiz-coverage-track {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--sl-color-gray-6);
+    overflow: hidden;
+  }
+
+  .quiz-coverage-fill {
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--sl-color-accent);
+  }
+
+  .quiz-coverage-count {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .quiz-coverage-row:hover .quiz-coverage-label {
+    color: var(--sl-color-accent);
+  }
+</style>
