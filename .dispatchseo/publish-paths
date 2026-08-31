@@ -1,0 +1,6 @@
+# Path prefixes a DispatchSEO guide PR may touch for seo-auto-merge to
+# consider it auto-mergeable. One prefix per line, # comments allowed.
+# This repo is a monorepo - the real site lives under website/.
+website/src/content/docs/
+website/src/components/
+website/public/

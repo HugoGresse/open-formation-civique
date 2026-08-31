@@ -1,0 +1,950 @@
+name: SEO daily builder
+
+# Every morning, build the oldest approved suggestion (guide or tool) into a PR,
+# fully autonomously, through the centrally-served DispatchSEO pipeline (get_instructions -> template -> live
+# SERP gate -> humanizer -> PR). If nothing is approved, it exits cleanly. Skips
+# if an SEO PR is already open, so there is never more than one at a time - the
+# steady state is build -> auto-merge -> gone -> repeat, and if a PR gets stuck
+# (failed check, or a tool PR awaiting you) the builder pauses instead of piling
+# more on top. Publishing is handled by seo-auto-merge.yml: guide PRs whose
+# checks all pass are merged hands-off; tool PRs are left for you to merge.
+#
+# WOKEN BY THE BACKEND, not by a cron chain. The dashboard decides when a build
+# is due and fires the seo-guide-build repository_dispatch (see
+# api/cron/seo-dispatch) - it already knows whether anything is approved,
+# whether a PR is still open, and whether today's guide is built, so it can
+# answer all of that without starting a runner.
+#
+# This used to run three times a day (05:13, 12:13, 19:13 UTC): once to work,
+# twice as insurance against GitHub's scheduler dropping a trigger and against
+# a Claude usage-limit deferral. GitHub bills a full minute minimum for every
+# job that claims a runner, so those two extra attempts cost real money on your
+# account to re-discover, in the guard step below, something the dashboard
+# already knew. The backend retries instead - its own scheduler ticks every few
+# hours, and a deferred run simply stays due.
+#
+# The single cron below is a DEAD-MAN'S SWITCH, not the schedule. It covers the
+# one case the backend cannot report on: the backend itself being down or
+# unable to reach this repo, which would otherwise stop every dispatch with
+# nothing left running to notice. It fires LATE in the day on purpose - by
+# 19:13 a healthy backend has long since dispatched, so the guard below finds
+# today's guide already built and exits in seconds.
+#
+# Daily rather than weekly, deliberately. A weekly switch is cheaper (~8 billed
+# minutes a month against ~60) but it lets a dead backend cost up to six days
+# of publishing on a product whose whole promise is a guide a day. One day is
+# an acceptable worst case; six is not. Offset off the top of the hour: GitHub
+# queues/drops on-the-hour triggers more than odd minutes.
+
+on:
+  repository_dispatch:
+    types: [seo-guide-build]
+  schedule:
+    - cron: "13 19 * * *" # 19:13 UTC - dead-man's switch only, see above
+  workflow_dispatch:
+
+concurrency:
+  group: seo-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # continue-on-error at JOB level: a failure still runs the failure() steps
+    # and still reports to the dashboard rails, but the RUN concludes green so
+    # GitHub never emails the repo owner "Run failed". The dashboard Home
+    # banner / get_cron_health are the alerting surface for these runs.
+    continue-on-error: true
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+      actions: read # the outcome report reads which step failed
+    steps:
+      - uses: actions/checkout@v4
+
+      # The agent commits below. Pin an identity that maps to a real GitHub
+      # account - Vercel refuses to deploy commits from unknown author emails,
+      # and an unconfigured runner leaves the agent to improvise one.
+      - name: Pin git identity to github-actions[bot]
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Skip if an SEO PR is already open or guide builds are toggled off
+        id: guard
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+        run: |
+          # Tool PRs carry BOTH `seo` and `seo-tool`, and auto-merge never merges
+          # a tool PR unattended - it waits for tool-validated AND the owner. So
+          # counting them here let one unreviewed tool PR pause the entirely
+          # separate GUIDE builder indefinitely, while every paused attempt
+          # reported ok=1 and kept the dashboard green (2026-08-02). Guides are
+          # blocked only by another guide PR.
+          open=$(gh pr list --repo "$GITHUB_REPOSITORY" --label seo --state open --json number,labels \
+            --jq '[.[] | select([.labels[].name] | index("seo-tool") | not)] | length')
+          if [ "$open" != "0" ]; then
+            echo "A guide PR is already open - skipping this run so only one is ever open at a time."
+            echo "skip_reason=a guide PR is already open and unmerged" >> "$GITHUB_OUTPUT"
+          fi
+          # Automation-flag gate: the DispatchSEO dashboard can pause guide
+          # builds (auto_build_guides off). 404 = backend without the endpoint
+          # yet -> build as before; other failures are loud.
+          if [ "$open" = "0" ]; then
+            code=$(curl -s -o /tmp/mode.json -w "%{http_code}" --max-time 30 \
+              -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode) || code=unreachable
+            if [ "$code" = "200" ] && [ "$(jq -r '.automations.auto_build_guides' /tmp/mode.json)" = "false" ]; then
+              echo "Guide builds are toggled off on the dashboard - skipping."
+              open=paused
+            elif [ "$code" = "unreachable" ] || [ "$code" = "000" ] || [ "$code" = "502" ] || [ "$code" = "503" ] || [ "$code" = "504" ]; then
+              # Self-hosted backends reboot (kernel updates, docker restarts).
+              # Unreachable is a delay, not a failure - the backend re-dispatches
+              # on its next tick (the job stays due until something reports a
+              # real outcome), and the in-stack builder covers this window too.
+              echo "Backend unreachable right now (rebooting?) - deferring; it will re-dispatch when it is back."
+              open=defer
+              echo "skip_reason=the backend was unreachable, so this run was deferred" >> "$GITHUB_OUTPUT"
+            elif [ "$code" != "200" ] && [ "$code" != "404" ]; then
+              echo "::error::project-mode endpoint returned HTTP $code"; exit 1
+            fi
+          fi
+          # Already-built-today gate. The backend also checks cadence before it
+          # dispatches, so this is the second of two gates, not the only one -
+          # it still matters because workflow_dispatch, the daily dead-man's
+          # cron, and a re-dispatch after an unreported run can all arrive on a
+          # day that already has its guide.
+          # Best-effort: missing field, non-200, or a parse failure all read
+          # as "not built yet" so this check can never itself block a build.
+          if [ "$open" = "0" ]; then
+            code=$(curl -s -o /tmp/mode.json -w "%{http_code}" --max-time 30 \
+              -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode) || code=unreachable
+            if [ "$code" = "200" ] && [ "$(jq -r '.built_today.guide // false' /tmp/mode.json 2>/dev/null)" = "true" ]; then
+              echo "Today's guide is already built - skipping this attempt."
+              open=skip
+            fi
+          fi
+          # Empty-queue gate, and it belongs HERE rather than inside the agent
+          # run. The backend never dispatches with an empty queue, so on the
+          # normal path this is already known - but the dead-man's cron below
+          # has no such knowledge, and without this it would start a full
+          # coding-agent session every day on a project with nothing approved,
+          # just to have the agent exit cleanly. That is the expensive shape of
+          # the no-op this whole design removes.
+          # Absent field (older backend) or any non-200 reads as "work is
+          # waiting", so this can only ever cost a run, never suppress one.
+          if [ "$open" = "0" ] && [ "$code" = "200" ]; then
+            if [ "$(jq -r '.approved_waiting.guide // true' /tmp/mode.json 2>/dev/null)" = "false" ]; then
+              echo "No approved guide suggestions are waiting - nothing to build."
+              open=skip
+            fi
+          fi
+          echo "open=$open" >> "$GITHUB_OUTPUT"
+
+      # >>> agent-steps: resolve (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Which coding agent runs this workflow - resolved at RUN time from the
+      # dashboard, never baked in at install time. A decision left to whoever
+      # ran the install is a decision someone eventually forgets, and the
+      # failure mode here is a builder that runs the wrong agent every night.
+      # Asking the backend means switching agent on the dashboard takes effect
+      # on the next scheduled run with nothing to edit in this repo.
+      #
+      # The fallback matters as much as the happy path: a repo installed against
+      # a backend that predates the `agent` field gets no value here, and must
+      # keep behaving exactly as it did - which is claude, because Claude was
+      # the only option that ever existed before the field.
+      - name: Resolve the coding agent
+        id: agent
+        if: steps.guard.outputs.open == '0'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          CLAUDE_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: |
+          agent=""
+          code=$(curl -s -o /tmp/agent.json -w "%{http_code}" --max-time 30 \
+            -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode) || code=unreachable
+          [ "$code" = "200" ] && agent=$(jq -r '.agent // empty' /tmp/agent.json 2>/dev/null)
+          if [ -z "$agent" ] || [ "$agent" = "null" ]; then
+            # No answer from the backend. Infer from which secret exists, and
+            # tie-break to claude - see the note above.
+            if [ -n "$OPENAI_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=codex
+            elif [ -n "$CURSOR_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=cursor
+            else agent=claude
+            fi
+            echo "Backend did not name an agent (HTTP $code) - inferred '$agent' from the secrets on this repo."
+          fi
+          # Fail here, in plain language, rather than letting the agent's own
+          # action die minutes in on a cryptic validation error. The 2026-07-17
+          # dogfood install burned four runs on exactly that.
+          case "$agent" in
+            claude)
+              if [ -z "$CLAUDE_TOKEN" ] && [ -n "$ANTHROPIC_API_KEY" ]; then
+                echo "No CLAUDE_CODE_OAUTH_TOKEN on this repo - running Claude on the ANTHROPIC_API_KEY secret instead (metered API billing on your Anthropic account)."
+              elif [ -z "$CLAUDE_TOKEN" ]; then
+                echo "::error::This project builds with Claude Code, but the CLAUDE_CODE_OAUTH_TOKEN secret is missing or empty on this repo (and there is no ANTHROPIC_API_KEY secret to fall back on). Rerun the setup command from your DispatchSEO dashboard (it mints and VERIFIES a fresh token), or set one by hand: run 'claude setup-token', then pipe the token into 'gh secret set CLAUDE_CODE_OAUTH_TOKEN' without any whitespace. Or run on metered API billing instead: create a key at console.anthropic.com and pipe it into 'gh secret set ANTHROPIC_API_KEY'."
+                exit 1
+              else
+                case "$CLAUDE_TOKEN" in
+                  sk-ant-oat*) : ;;
+                  *)
+                    echo "::error::CLAUDE_CODE_OAUTH_TOKEN does not look like a Claude Code OAuth token (expected it to start with sk-ant-oat). It was probably line-wrapped or the wrong text was pasted when it was saved. Rerun the setup command from your DispatchSEO dashboard to mint and verify a replacement."
+                    exit 1 ;;
+                esac
+                if [ -n "$ANTHROPIC_API_KEY" ]; then
+                  echo "Both CLAUDE_CODE_OAUTH_TOKEN and ANTHROPIC_API_KEY are set - the subscription token takes precedence. To run on the API key instead: gh secret delete CLAUDE_CODE_OAUTH_TOKEN."
+                fi
+              fi ;;
+            codex)
+              if [ -z "$OPENAI_API_KEY" ]; then
+                echo "::error::This project builds with Codex, but the OPENAI_API_KEY secret is missing or empty on this repo. Add it with 'gh secret set OPENAI_API_KEY', or rerun the setup command from your DispatchSEO dashboard."
+                exit 1
+              fi
+              case "$OPENAI_API_KEY" in
+                sk-*) : ;;
+                *)
+                  echo "::error::OPENAI_API_KEY does not look like an OpenAI key (expected it to start with sk-). It was probably line-wrapped or the wrong text was pasted when it was saved. Create a fresh key at platform.openai.com/api-keys and set it again."
+                  exit 1 ;;
+              esac ;;
+            cursor)
+              if [ -z "$CURSOR_API_KEY" ]; then
+                echo "::error::This project builds with Cursor, but the CURSOR_API_KEY secret is missing or empty on this repo. A runner has no browser, so the interactive 'cursor-agent login' is not an option here - only an API key works. Mint one at cursor.com/dashboard/api (open the URL directly; any plan can) and add it with 'gh secret set CURSOR_API_KEY', or switch this project to Claude Code or Codex on your DispatchSEO dashboard."
+                exit 1
+              fi
+              case "$CURSOR_API_KEY" in
+                sk-ant-*)
+                  echo "::error::CURSOR_API_KEY holds a Claude credential (it starts with sk-ant-). The wrong secret was pasted. Put the Claude token in CLAUDE_CODE_OAUTH_TOKEN and a Cursor API key here."
+                  exit 1 ;;
+                sk-*)
+                  echo "::error::CURSOR_API_KEY holds an OpenAI key (it starts with sk-). The wrong secret was pasted. Put the OpenAI key in OPENAI_API_KEY and a Cursor API key here."
+                  exit 1 ;;
+                *[[:space:]]*)
+                  # [[:space:]], never a literal tab in the pattern: a tab
+                  # character in generated YAML is invalid indentation, and
+                  # pipeline-pack-lint fails the build on it.
+                  echo "::error::CURSOR_API_KEY contains whitespace, which almost always means it was line-wrapped when it was copied. Re-copy the key and set it again with: printf '%s' \"\$KEY\" | tr -d '[:space:]' | gh secret set CURSOR_API_KEY"
+                  exit 1 ;;
+                *) : ;;
+              esac ;;
+            *)
+              echo "::error::The dashboard reported an unknown agent '$agent'. This repo's workflows are older than that setting - re-run the setup command from your DispatchSEO dashboard to update them."
+              exit 1 ;;
+          esac
+          echo "agent=$agent" >> "$GITHUB_OUTPUT"
+          echo "Building with: $agent"
+      # <<< agent-steps: resolve
+
+
+      # Fail loudly if the seo-manager MCP is unreachable. Without this, a
+      # stale URL in mcp-ci.json makes Claude see an empty toolset and "exit
+      # cleanly" - a green run that built nothing (2026-07-14 domain-move bug).
+      - name: Preflight - seo-manager MCP reachable
+        if: steps.guard.outputs.open == '0'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+        run: |
+          url=$(node -e "console.log(require('./.github/mcp-ci.json').mcpServers['seo-manager'].url)")
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 -X POST "$url" \
+            -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json, text/event-stream" \
+            -d '{"jsonrpc":"2.0","id":0,"method":"tools/list"}')
+          if [ "$code" != "200" ]; then
+            echo "::error::seo-manager MCP at $url returned HTTP $code - fix the URL in .github/mcp-ci.json or the SEO_MCP_API_KEY secret"
+            exit 1
+          fi
+          echo "seo-manager MCP OK ($url)"
+
+      # Deliberately NOT an INSTALL-ADAPT step. Which package manager this
+      # repo uses is resolved at RUN time - packageManager pin first, then
+      # lockfiles - never by an install-time edit, because an edit whose
+      # omission is fatal is banned (scripts/pipeline-pack-lint.mjs; the
+      # 2026-07-30 incident where a missed DELETE-this-line killed every
+      # pinned repo's builder at step 2 is why). Assuming every repo is pnpm
+      # was the same bug one layer up: the zero-touch cloud install commits
+      # this pack verbatim into repos nobody adapted, and the first real
+      # cloud customer's npm+Vite site died 25 seconds into every build
+      # (2026-08-02). pnpm keeps its two blessed shapes (pinned reads the
+      # pin, unpinned pins the action - a version input on a step that also
+      # sees a packageManager pin is what hard-errors); npm/yarn/bun get
+      # their own installs; no package.json at all skips Node setup entirely
+      # and the agent works from the repo's real build story in
+      # .dispatchseo/conventions.md.
+      - name: Detect this repo's package manager
+        id: pkg
+        if: steps.guard.outputs.open == '0'
+        # This repo is a monorepo: the real Astro site (package.json,
+        # package-lock.json) lives in website/, not at repo root. Detection
+        # runs against website/ deliberately - see .dispatchseo/conventions.md.
+        working-directory: website
+        run: |
+          pm=none; pnpm_pinned=0; cache=""
+          if [ -f package.json ]; then
+            field=$(node -e 'process.stdout.write(String(require("./package.json").packageManager || ""))' 2>/dev/null || true)
+            case "$field" in
+              pnpm@*) pm=pnpm; pnpm_pinned=1 ;;
+              yarn@*) pm=yarn ;;
+              npm@*)  pm=npm ;;
+              bun@*)  pm=bun ;;
+            esac
+            if [ "$pm" = "none" ]; then
+              if [ -f pnpm-lock.yaml ]; then pm=pnpm
+              elif [ -f package-lock.json ]; then pm=npm
+              elif [ -f yarn.lock ]; then pm=yarn
+              elif [ -f bun.lock ] || [ -f bun.lockb ]; then pm=bun
+              else pm=npm
+              fi
+            fi
+          fi
+          # setup-node's cache input hard-errors when the matching lockfile is
+          # missing, so only request a cache that provably exists.
+          case "$pm" in
+            pnpm) if [ -f pnpm-lock.yaml ]; then cache=pnpm; fi ;;
+            npm)  if [ -f package-lock.json ]; then cache=npm; fi ;;
+            yarn) if [ -f yarn.lock ]; then cache=yarn; fi ;;
+          esac
+          # Node major, resolved at RUN time - same rule and same reason as the
+          # package manager above. `node-version: 22` was hardcoded here while
+          # the install playbook told the installing agent to hand-edit it if
+          # the repo built on something else, which is the banned shape exactly:
+          # a pack update pushes this file VERBATIM, so that edit self-reverts
+          # on the next sync and the builder then dies on the wrong major in a
+          # repo nobody is watching (2026-08-02).
+          #
+          # .nvmrc first - a repo that ships one has DECLARED the version its
+          # own developers build on, so it is honoured as written. engines.node
+          # is read as a FLOOR rather than a target: ">=18" is a minimum a Node
+          # 22 runner already satisfies, and resolving it downward would move
+          # working installs onto an EOL major - and below pnpm 11's own floor -
+          # to satisfy a constraint that was never violated. 22 when neither
+          # file says anything, which is what every install already runs, so a
+          # repo that declares nothing sees no change at all.
+          node_v=22
+          if [ -f .nvmrc ]; then
+            # Tolerates "v22", "22.11.0" and trailing whitespace; an alias like
+            # "lts/*" names no number, so the default stands.
+            v=$(grep -Eo '[0-9]+(\.[0-9]+){0,2}' .nvmrc 2>/dev/null | head -1)
+            [ -n "$v" ] && node_v="$v"
+          elif [ -f package.json ]; then
+            eng=$(node -e 'process.stdout.write(String((require("./package.json").engines||{}).node||""))' 2>/dev/null || true)
+            major=$(printf '%s' "$eng" | grep -Eo '[0-9]+' | head -1)
+            if [ -n "$major" ] && [ "$major" -gt 22 ]; then node_v="$major"; fi
+          fi
+          { echo "pm=$pm"; echo "pnpm_pinned=$pnpm_pinned"; echo "cache=$cache"; echo "node=$node_v"; } >> "$GITHUB_OUTPUT"
+          echo "package manager: $pm (pnpm pin: $pnpm_pinned, node cache: ${cache:-off}, node: $node_v)"
+
+      # Pinned -> action-setup reads the exact version out of the field.
+      # Passing a version input as well is precisely what hard-errors.
+      - name: Set up pnpm (version from the repo's packageManager pin)
+        if: steps.guard.outputs.open == '0' && steps.pkg.outputs.pm == 'pnpm' && steps.pkg.outputs.pnpm_pinned == '1'
+        uses: pnpm/action-setup@v4
+
+      # No pin -> action-setup has to be told. pnpm 11 matches the Node 22
+      # floor resolved above; a repo whose lockfile was written by an older
+      # major should add a packageManager field rather than edit this, which
+      # routes it to the exact path above.
+      - name: Set up pnpm (no packageManager pin in this repo)
+        if: steps.guard.outputs.open == '0' && steps.pkg.outputs.pm == 'pnpm' && steps.pkg.outputs.pnpm_pinned == '0'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Set up Bun
+        if: steps.guard.outputs.open == '0' && steps.pkg.outputs.pm == 'bun'
+        uses: oven-sh/setup-bun@v2
+
+      - name: Set up Node
+        if: steps.guard.outputs.open == '0' && steps.pkg.outputs.pm != 'none'
+        uses: actions/setup-node@v4
+        with:
+          # Resolved by the detection step above, never hand-edited - see the
+          # comment there for why an install-time edit could not stay applied.
+          node-version: ${{ steps.pkg.outputs.node }}
+          cache: ${{ steps.pkg.outputs.cache }}
+          # The lockfile setup-node's cache would otherwise look for at repo
+          # root - it actually lives in website/ (monorepo layout).
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install deps (so the agent's build/verify step works)
+        if: steps.guard.outputs.open == '0' && steps.pkg.outputs.pm != 'none'
+        working-directory: website
+        env:
+          PM: ${{ steps.pkg.outputs.pm }}
+        run: |
+          case "$PM" in
+            pnpm)
+              pnpm install --frozen-lockfile || {
+                s=$?
+                echo "::error::pnpm install failed (exit $s). Frequent causes: (1) ERR_PNPM_IGNORED_BUILDS - pnpm 11 hard-fails dependencies with unanswered build scripts (strictDepBuilds is on by default): answer each one in pnpm-workspace.yaml (allowBuilds: dep: true/false, plus an onlyBuiltDependencies list for older pnpm) and commit. (2) pnpm/lockfile version mismatch - align the workflow's pnpm with the version that wrote pnpm-lock.yaml (package.json packageManager field). Reproduce locally with a fresh 'pnpm install --frozen-lockfile'."
+                exit $s
+              } ;;
+            npm)
+              { if [ -f package-lock.json ]; then npm ci || npm install; else npm install; fi; } || {
+                s=$?
+                echo "::error::npm install failed (exit $s). Reproduce locally with a fresh 'npm ci' (or 'npm install' if the lockfile is stale) and commit whatever lockfile change it produces."
+                exit $s
+              } ;;
+            yarn)
+              corepack enable 2>/dev/null || true
+              { yarn install --immutable || yarn install; } || {
+                s=$?
+                echo "::error::yarn install failed (exit $s). Reproduce locally with 'yarn install' and commit the lockfile it produces."
+                exit $s
+              } ;;
+            bun)
+              bun install || {
+                s=$?
+                echo "::error::bun install failed (exit $s). Reproduce locally with 'bun install'."
+                exit $s
+              } ;;
+          esac
+
+      # >>> agent-steps: run (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Codex reads its MCP servers from a config.toml inside its own home
+      # directory. Two things here are easy to get wrong and both are silent:
+      #
+      # 1. The action does NOT honour an inbound CODEX_HOME env var - it takes a
+      #    `codex-home` INPUT and sets the env itself. Writing a config to a
+      #    hand-rolled $CODEX_HOME and hoping is a no-op, and the failure looks
+      #    like an agent with no tools rather than an error.
+      # 2. `sandbox: workspace-write` blocks network by default, which kills MCP
+      #    over HTTP. The network_access line below is what makes the sandboxed
+      #    posture usable at all.
+      - name: Write Codex's MCP config
+        if: steps.guard.outputs.open == '0' && steps.agent.outputs.agent == 'codex'
+        env:
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cp .github/mcp-codex.toml "$RUNNER_TEMP/codex-home/config.toml"
+          cat >> "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+
+          [sandbox_workspace_write]
+          network_access = true
+          TOML
+          # Render the DataForSEO credential tokens. Codex's TOML `env` map is
+          # LITERAL - it does not expand ${VAR} the way Claude expands its JSON
+          # config - so left alone the dataforseo server would authenticate as
+          # the literal string "${DATAFORSEO_LOGIN}" and every keyword call
+          # would 401 mid-build. python3 rather than sed so no credential
+          # character can break the substitution; values are TOML-escaped. A
+          # truncated config (free-mode project, no dataforseo section) makes
+          # this a no-op.
+          python3 - "$RUNNER_TEMP/codex-home/config.toml" <<'PY'
+          import os, sys
+          path = sys.argv[1]
+          text = open(path).read()
+          for token, var in (("${DATAFORSEO_LOGIN}", "DATAFORSEO_LOGIN"),
+                             ("${DATAFORSEO_PASSWORD}", "DATAFORSEO_PASSWORD")):
+              val = os.environ.get(var, "").replace("\\", "\\\\").replace('"', '\\"')
+              text = text.replace(token, val)
+          open(path, "w").write(text)
+          PY
+          echo "Codex home prepared. Servers configured:"
+          grep -E '^\[mcp_servers\.' "$RUNNER_TEMP/codex-home/config.toml"
+
+      # Cursor has no GitHub Action, so the CLI is installed here. Pinned to a
+      # known version rather than piping cursor.com/install, which floats.
+      #
+      # Then the MCP config. The pack's mcp-ci.json is ALREADY Cursor's shape,
+      # but its ${VAR} placeholders are rendered to real values here anyway.
+      # Live runs (2026-08-06) showed cursor-agent CAN resolve ${VAR} in an
+      # http server's headers from its own environment - which quietly carried
+      # builds for a day while this render step was a no-op - but that
+      # behaviour is undocumented and unproven for stdio env values, so the
+      # credentials are never left to depend on it.
+      #
+      # `mcp enable` is not optional either. An unapproved server is not merely
+      # unreachable, it is absent - the agent runs happily with zero tools.
+      - name: Install Cursor and write its MCP config
+        if: steps.guard.outputs.open == '0' && steps.agent.outputs.agent == 'cursor'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: |
+          # The WHOLE package, into a directory of its own. cursor-agent is a
+          # bash launcher rather than a static binary and loads ~95 sibling
+          # files from beside itself, so extracting just the executable gives a
+          # command that exists and cannot run. Its own directory keeps those
+          # 95 files out of $RUNNER_TEMP, which this job also uses for the
+          # prompt and the result.
+          mkdir -p "$RUNNER_TEMP/cursor-cli" "$HOME/.local/bin"
+          curl -fsSL "https://downloads.cursor.com/lab/2026.07.23-e383d2b/linux/x64/agent-cli-package.tar.gz" \
+            | tar -xz --strip-components=1 -C "$RUNNER_TEMP/cursor-cli"
+          ln -sf "$RUNNER_TEMP/cursor-cli/cursor-agent" "$HOME/.local/bin/cursor-agent"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.local/bin:$PATH"
+          cursor-agent --version
+
+          # python3, not sed: a credential can contain any character, and this
+          # writes JSON, so the values are JSON-escaped rather than pasted.
+          mkdir -p .cursor
+          python3 - .github/mcp-ci.json .cursor/mcp.json <<'PY'
+          import json, os, sys
+          src, dst = sys.argv[1], sys.argv[2]
+          text = open(src).read()
+          for var in ("SEO_MCP_API_KEY", "DATAFORSEO_LOGIN", "DATAFORSEO_PASSWORD"):
+              # json.dumps then strip the quotes: escapes exactly what JSON
+              # needs escaping and nothing else.
+              val = json.dumps(os.environ.get(var, ""))[1:-1]
+              text = text.replace("${" + var + "}", val)
+          cfg = json.loads(text)
+          json.dump(cfg, open(dst, "w"), indent=2)
+          print("servers configured:", ", ".join(cfg.get("mcpServers", {})))
+          PY
+
+          # Approve every server the config declares. Per-directory state, so a
+          # fresh checkout has none of it and this runs every time.
+          for s in $(python3 -c "import json;print(' '.join(json.load(open('.cursor/mcp.json')).get('mcpServers',{})))"); do
+            cursor-agent mcp enable "$s"
+          done
+          echo "--- mcp list ---"
+          cursor-agent mcp list
+
+      - name: Run the SEO builder
+        if: steps.guard.outputs.open == '0' && steps.agent.outputs.agent == 'claude'
+        id: claude
+        # Never fail the job at this step: the classify step below reads the
+        # outcome and decides what the run MEANS (transient rate limit vs dead
+        # account), which it can only do if it is reachable.
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Cloud fires this as the DispatchSEO GitHub App (a Bot actor), and the App also authored the workflow commits, so scheduled runs are bot-actored too. Every trigger here needs repo write access, so allowing bots is safe; without this claude-code-action aborts with "non-human actor".
+          allowed_bots: "*"
+          # Subscription token first; the metered ANTHROPIC_API_KEY only reaches
+          # the action when no subscription token exists, so adding a key never
+          # silently switches a working subscription install to per-token billing.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN == '' && secrets.ANTHROPIC_API_KEY || '' }}
+          # Pass the standard workflow token as an input so the action uses it
+          # directly instead of exchanging OIDC for a Claude GitHub App token
+          # (which would require installing the app on the repo).
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            FIRST call the seo-manager MCP tool get_instructions with workflow build-guide, then follow the returned markdown exactly - it is the current playbook and overrides any cached knowledge of this pipeline. Also read .dispatchseo/conventions.md for this repo's site facts. In brief: take the oldest approved guide suggestion, mark it in_progress, build the guide MDX through the full pipeline (template, thin-content gate, draft, mandatory visuals, humanizer), cd website and run `npm run build:no-pdf` to verify, open a PR labeled seo via gh, then update_suggestion to done with the PR url and log_page, and state the instructions version in the run report. Never build tool suggestions - those belong to the seo-build-tool workflow. If get_instructions is unavailable, fail loudly and exit without changes; if there are no approved guide suggestions, exit cleanly without any changes.
+          claude_args: |
+            --mcp-config ./.github/mcp-ci.json
+            --permission-mode bypassPermissions
+            --max-turns 150
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN == '' && secrets.ANTHROPIC_API_KEY || '' }}
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MCP_TIMEOUT: "120000"
+
+      # The Codex twin. Same task prompt, generated from the same source -
+      # the agent's behaviour must not depend on which one is holding the
+      # playbook - plus the unattended-environment preamble above it.
+      #
+      # Model: gpt-5 by default, overridable with a repo variable because model
+      # availability is per-account, not universal - `gpt-5-codex` 404s on a
+      # pay-as-you-go project key even though it appears in GET /v1/models. Set
+      # SEO_CODEX_MODEL in the repo's Actions variables to change it without
+      # touching this file.
+      #
+      # There is NO turn budget to set. Codex has no --max-turns equivalent and
+      # OpenAI closed the request for one as not-planned, so the job's
+      # timeout-minutes is the only ceiling on a runaway run.
+      - name: Run the SEO builder (Codex)
+        if: steps.guard.outputs.open == '0' && steps.agent.outputs.agent == 'codex'
+        id: codex
+        # Never fail the job at this step: the classify step below reads the
+        # outcome and decides what the run MEANS (transient rate limit vs dead
+        # account), which it can only do if it is reachable.
+        continue-on-error: true
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          # Same rule as the Claude twin's allowed_bots: this workflow is fired
+          # by a bot actor (the DispatchSEO GitHub App, a schedule, or a
+          # GITHUB_TOKEN dispatch). codex-action's actor gate rejects EVERY bot
+          # by default (a bot 404s the collaborator-permission lookup), so
+          # without this line each unattended Codex run dies before Codex is
+          # even installed - while a manual workflow_dispatch passes, which is
+          # what hides the failure. Every trigger that can reach this step
+          # already required repo write access, so allowing all actors adds
+          # nothing an attacker can use.
+          allow-users: "*"
+          model: ${{ vars.SEO_CODEX_MODEL || 'gpt-5' }}
+          codex-home: ${{ runner.temp }}/codex-home
+          sandbox: workspace-write
+          # Strips sudo from the runner user for the rest of the job. Safe here:
+          # everything after this step is curl. It is also more than the Claude
+          # half of this pipeline does, which runs with bypassPermissions and no
+          # sandbox at all.
+          safety-strategy: drop-sudo
+          output-file: ${{ runner.temp }}/codex-out.txt
+          prompt: |
+            ENVIRONMENT RULE (read first, it overrides habit): you have no apply_patch tool here - only the shell, and you are running UNATTENDED, so there is nobody to answer a question. Write every file with a SINGLE-QUOTED heredoc (cat > path <<'DSEOF' ... DSEOF) or with python3 reading the content from stdin. The quoted delimiter is the whole point: bash expands NOTHING inside it, so the backticks and $ in MDX and TSX survive verbatim. NEVER use an unquoted heredoc, printf or echo to write file content - an unquoted heredoc is what expands backticks and corrupts the file. Pick a delimiter that cannot appear in the content. Verify every write with ls -l and head before moving on, and never let a filename come from an unset shell variable. If you ever find yourself about to ask for approval or a go/no-go, do not: pick the safest option that still completes the task, do it, and say what you chose in the final report. A run that stops to ask a question builds nothing and is a failed run.
+
+            FIRST call the seo-manager MCP tool get_instructions with workflow build-guide, then follow the returned markdown exactly - it is the current playbook and overrides any cached knowledge of this pipeline. Also read .dispatchseo/conventions.md for this repo's site facts. In brief: take the oldest approved guide suggestion, mark it in_progress, build the guide MDX through the full pipeline (template, thin-content gate, draft, mandatory visuals, humanizer), cd website and run `npm run build:no-pdf` to verify, open a PR labeled seo via gh, then update_suggestion to done with the PR url and log_page, and state the instructions version in the run report. Never build tool suggestions - those belong to the seo-build-tool workflow. If get_instructions is unavailable, fail loudly and exit without changes; if there are no approved guide suggestions, exit cleanly without any changes.
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # The Cursor twin. Same task prompt, generated from the same source -
+      # the agent's behaviour must not depend on which one is holding the
+      # playbook - plus the unattended-environment preamble above it.
+      #
+      # A plain run step, because Cursor ships no GitHub Action. The three
+      # flags are each separately required and each was measured: --trust (a
+      # fresh checkout is an untrusted workspace and the run refuses outright),
+      # --force (command approval), --approve-mcps (server approval).
+      #
+      # --output-format json is what makes the classify step below honest: it
+      # returns {is_error, subtype, result, usage}, so a failure is read from a
+      # field rather than guessed at from warning text.
+      #
+      # Model is overridable per repo: availability is per-account, and the
+      # account default ("auto") is the sane fallback. There is NO turn budget
+      # to set - Cursor has no --max-turns equivalent, so the job's
+      # timeout-minutes is the only ceiling on a runaway run, and on Cursor a
+      # runaway also eats the plan's monthly usage pool.
+      - name: Run the SEO builder (Cursor)
+        if: steps.guard.outputs.open == '0' && steps.agent.outputs.agent == 'cursor'
+        id: cursor
+        # Never fail the job at this step: the classify step below reads the
+        # outcome and decides what the run MEANS (transient limit vs dead
+        # account), which it can only do if it is reachable.
+        continue-on-error: true
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          cat > "$RUNNER_TEMP/cursor-prompt.txt" <<'DSEOF'
+          ENVIRONMENT RULE (read first, it overrides habit): you are running UNATTENDED on a CI runner. There is nobody here to answer a question, approve a step, or pick between options. If you ever find yourself about to ask for approval or a go/no-go, do not: choose the safest option that still completes the task, do it, and say what you chose in the final report. A run that stops to ask a question builds nothing and is a failed run. Your final message is read by a script, so end with exactly what you were asked to end with and nothing after it.
+
+          FIRST call the seo-manager MCP tool get_instructions with workflow build-guide, then follow the returned markdown exactly - it is the current playbook and overrides any cached knowledge of this pipeline. Also read .dispatchseo/conventions.md for this repo's site facts. In brief: take the oldest approved guide suggestion, mark it in_progress, build the guide MDX through the full pipeline (template, thin-content gate, draft, mandatory visuals, humanizer), cd website and run `npm run build:no-pdf` to verify, open a PR labeled seo via gh, then update_suggestion to done with the PR url and log_page, and state the instructions version in the run report. Never build tool suggestions - those belong to the seo-build-tool workflow. If get_instructions is unavailable, fail loudly and exit without changes; if there are no approved guide suggestions, exit cleanly without any changes.
+          DSEOF
+          set +e
+          cursor-agent -p "$(cat "$RUNNER_TEMP/cursor-prompt.txt")" \
+            --output-format json --trust --force --approve-mcps \
+            --model "${{ vars.SEO_CURSOR_MODEL || 'auto' }}" \
+            > "$RUNNER_TEMP/cursor-out.json" 2> "$RUNNER_TEMP/cursor-err.txt"
+          code=$?
+          set -e
+          # The final message, for the classify step. jq tolerates a truncated
+          # or absent file, which is what a killed run leaves behind.
+          jq -r '.result // empty' "$RUNNER_TEMP/cursor-out.json" 2>/dev/null > "$RUNNER_TEMP/cursor-msg.txt" || true
+          echo "--- cursor exit $code ---"
+          cat "$RUNNER_TEMP/cursor-msg.txt"
+          [ -s "$RUNNER_TEMP/cursor-err.txt" ] && { echo "--- stderr ---"; cat "$RUNNER_TEMP/cursor-err.txt"; }
+          exit $code
+
+      # Turn-by-turn detail for tuning the pipeline. The dashboard only ever
+      # receives the aggregate outcome, which cannot answer the question that
+      # actually matters for cost - WHICH pipeline steps burn the turns. This
+      # step is what makes that measurable, since the agent run is ~98% of this
+      # job's billed wall clock and wall clock is turns x per-turn latency.
+      #
+      # PRIVATE REPOS ONLY, and that condition is the point rather than
+      # caution. Artifacts on a public repository are downloadable by anyone,
+      # and this file is the agent's execution log - which is exactly why the
+      # classify step below reads it instead of printing it ("these logs can be
+      # public"). Publishing it as an artifact would undo that decision for the
+      # public repos we specifically recommend to people avoiding Actions
+      # charges. Short retention because this is a debugging aid, not a record.
+      - name: Save the agent execution log for turn analysis
+        if: always() && steps.guard.outputs.open == '0' && github.event.repository.private
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-execution-log-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/claude-execution-output.json
+            ${{ runner.temp }}/codex-out.txt
+            ${{ runner.temp }}/cursor-out.json
+          retention-days: 7
+          if-no-files-found: ignore
+
+      # Decide what the run MEANS before anything is reported. The agent steps
+      # run with continue-on-error so this step is reachable either way; it
+      # reads the final result/error message the agent left behind: a genuine
+      # usage-limit hit is not a pipeline failure, it is deferred (the dashboard
+      # keeps the job due and re-dispatches within hours) and reported as a
+      # GREEN run. Anything else is reported red with the real reason. GitHub's
+      # secret masking still applies to whatever prints.
+      - name: Classify the outcome
+        id: classify
+        if: steps.guard.outputs.open == '0'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CODEX_MSG: ${{ steps.codex.outputs.final-message }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AGENT: ${{ steps.agent.outputs.agent }}
+          AGENT_OUTCOME: ${{ steps.agent.outputs.agent == 'codex' && steps.codex.outcome || steps.agent.outputs.agent == 'cursor' && steps.cursor.outcome || steps.claude.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          # Mirror the per-agent step outcome into an output, so the report
+          # step's condition never has to name agent step ids.
+          echo "agent_outcome=${AGENT_OUTCOME:-}" >> "$GITHUB_OUTPUT"
+          # Pull whatever the agent left behind.
+          msg=""
+          if [ "$AGENT" = "codex" ]; then
+            msg="$CODEX_MSG"
+            [ -n "$msg" ] || msg=$(cat "$RUNNER_TEMP/codex-out.txt" 2>/dev/null)
+          elif [ "$AGENT" = "cursor" ]; then
+            msg=$(cat "$RUNNER_TEMP/cursor-msg.txt" 2>/dev/null || true)
+            [ -n "$msg" ] || msg=$(jq -r '.result // empty' "$RUNNER_TEMP/cursor-out.json" 2>/dev/null)
+          else
+            f="$RUNNER_TEMP/claude-execution-output.json"
+            if [ -f "$f" ]; then
+              msg=$(jq -r 'if type=="array" then .[] else . end
+                           | select(.type? == "result")
+                           | (.result // .error // empty)' "$f" 2>/dev/null | tail -1)
+            fi
+          fi
+
+          # A deferral is reported as `deferred`, NOT as ok. The difference
+          # decides whether this job's work happens today at all: the dashboard
+          # works out what is due by reading these reports, and an `ok` row is a
+          # COMPLETED run - it would start the full cadence window over and
+          # suppress the retry, so an evening usage limit would silently cost a
+          # day while the dashboard showed green. `deferred` says "ran, built
+          # nothing", which keeps the job due and gets it re-dispatched within
+          # hours.
+          defer() {
+            echo "::notice::$1"
+            # Marks the outcome as already-reported. The defer exits 0, so
+            # without this flag the report step below sees every outcome green
+            # and posts ok=1 seconds after this deferred row - and the LATEST
+            # row is what the dashboard's due-ness math reads, so the ok would
+            # reset the full cadence window and suppress the very retry this
+            # deferral exists to preserve.
+            echo "reported=1" >> "$GITHUB_OUTPUT"
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-daily" --data-urlencode "deferred=$1" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+            exit 0
+          }
+          fail() {
+            echo "::error::SEO builder failed: $1 - check the run log above for details, or re-run the setup command from your DispatchSEO dashboard if this looks like an auth problem."
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-daily" \
+              --data-urlencode "fail=$1" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+            exit 1
+          }
+
+          # SUCCESS has to be SHOWN, not asserted. The guard above proved there
+          # were zero open SEO PRs when this run started, so a completed build
+          # leaves exactly one behind. Without this, an agent that exits 0
+          # having built nothing reports ok, which resets the 20h cadence
+          # window and costs the day silently - the exact shape seen on
+          # 2026-07-31, when Codex hit a file-writing wall, stopped to ask a
+          # human for a go/no-go, and exited clean. There is no human on a
+          # scheduled runner. The in-stack docker builder has had this check
+          # since the same day; this is its twin, and its absence here is why
+          # the Actions half stayed silent.
+          #
+          # Reported as `deferred`, never `fail`: a clean no-PR exit is also
+          # what the thin-content and sameness gates do when they reject an
+          # idea, and that is correct behaviour rather than breakage. Deferred
+          # keeps the job due so the next dispatch picks up the next
+          # suggestion, and only goes stale and alarms if runs keep producing
+          # nothing.
+          if [ "$AGENT_OUTCOME" = "success" ]; then
+            built=$(gh pr list --repo "$GITHUB_REPOSITORY" --label seo --state open --json number --jq 'length' 2>/dev/null || echo "?")
+            if [ "$built" = "0" ]; then
+              defer "The builder finished but opened no PR, so nothing was built this run. The job stays due and gets retried. If this repeats, read the run log above - an agent that stops to ask a question builds nothing, and an unattended run has nobody to answer it."
+            fi
+            exit 0
+          fi
+
+          if [ "$AGENT" = "claude" ]; then
+            # A subscription usage limit is a deferral, not a failure: the
+            # backend keeps the job due and re-dispatches it within hours.
+            #
+            # Match every wording the subscription actually emits, not just the
+            # one we thought of. "You've hit your session limit · resets 1:50pm
+            # (UTC)" contains none of usage-limit/limit-reached/rate-limit, so
+            # it fell through to fail() - turning "come back in an hour" into a
+            # red banner and an alert email, and leaving the build to sit
+            # in_progress until the stuck-build sweep freed it hours later.
+            # cron-alerts.ts (CUSTOMER_ACTIONABLE) already knew the phrase; this
+            # copy is the one that decides defer-vs-fail, so keep them in step -
+            # pipeline-pack-lint.mjs fails the build if this drifts again.
+            if echo "$msg" | grep -qiE 'session limit|usage limit|limit reached|limit .*resets|rate.?limit'; then
+              defer "Claude hit a usage limit this run - the dashboard keeps this build due and re-dispatches it within a few hours. Not a failure."
+            fi
+            # oauth_org_not_allowed: Anthropic flags the ACCOUNT, not the token,
+            # so the generic "re-run setup" advice below would send the owner to
+            # re-mint a token that comes back just as blocked. Name the real
+            # ways out instead.
+            if echo "$msg" | grep -qi 'disabled Claude subscription access'; then
+              fail "$msg. A fresh token will NOT fix this - Anthropic has flagged the Claude account itself (oauth_org_not_allowed). On a company Claude plan, ask its admin to enable Claude Code; on a personal plan, check claude.ai billing for a lapsed or duplicate subscription or contact Anthropic support. Or switch the builders to metered API billing: create a key at console.anthropic.com, 'gh secret set ANTHROPIC_API_KEY', then 'gh secret delete CLAUDE_CODE_OAUTH_TOKEN'"
+            fi
+            reason="workflow failed (no error detail captured)"
+            [ -n "$msg" ] && reason="$msg"
+            fail "$reason"
+          fi
+
+          if [ "$AGENT" = "codex" ]; then
+            # Never decided from the text: Codex collapses every 429 into one
+            # message, so on anything 429-shaped the step asks OpenAI directly
+            # and branches on error.code - authoritative, and unaffected by
+            # wording changes. One tiny metered call, fractions of a cent.
+            if ! echo "$msg" | grep -qiE '429|too many requests|exceeded retry limit|usage limit|rate.?limit'; then
+              reason="workflow failed (no error detail captured - an empty message usually means the job hit its time limit)"
+              [ -n "$msg" ] && reason=$(printf '%s' "$msg" | tail -c 400)
+              fail "$reason"
+            fi
+            probe=$(curl -s --max-time 30 -o /tmp/probe.json -w "%{http_code}" https://api.openai.com/v1/responses \
+              -H "Authorization: Bearer $OPENAI_API_KEY" -H "Content-Type: application/json" \
+              -d '{"model":"gpt-5-mini","input":"ok","max_output_tokens":16}') || probe=000
+            err=$(jq -r '.error.code // empty' /tmp/probe.json 2>/dev/null)
+            case "$probe:$err" in
+              2*:*)
+                # The key works now, so whatever 429 hit mid-run has cleared.
+                defer "Codex hit a transient rate limit this run - the key tests healthy now, so the dashboard keeps this build due and re-dispatches it within a few hours. Not a failure." ;;
+              429:rate_limit_exceeded)
+                defer "Codex is rate-limited right now - the dashboard keeps this build due and re-dispatches it within a few hours. Not a failure." ;;
+              429:*|402:*)
+                # Every other 429 is a billing state: credit_balance_exhausted,
+                # insufficient_quota, or an org/project spend or usage cap. None
+                # of them clear by waiting, so none of them may report green.
+                fail "your OpenAI account cannot run builds right now (OpenAI said: ${err:-quota exceeded}). This does not fix itself by retrying - add credit or raise the limit at platform.openai.com/settings/organization/billing, then re-run this workflow." ;;
+              401:*|403:*)
+                fail "OpenAI rejected the OPENAI_API_KEY secret on this repo (HTTP $probe). The key was probably revoked or rotated - create a new one at platform.openai.com/api-keys and set it again with 'gh secret set OPENAI_API_KEY'." ;;
+              *)
+                fail "Codex failed and OpenAI could not be reached to find out why (probe HTTP $probe). Last message: $(printf '%s' "$msg" | tail -c 300)" ;;
+            esac
+          fi
+
+          if [ "$AGENT" = "cursor" ]; then
+            # || true on every extraction: this step runs under set -e, and a
+            # truncated cursor-out.json (CLI killed mid-write) would otherwise
+            # kill the classifier itself - silently, before it could report.
+            sub=$(jq -r '.subtype // empty' "$RUNNER_TEMP/cursor-out.json" 2>/dev/null || true)
+            iserr=$(jq -r '.is_error // empty' "$RUNNER_TEMP/cursor-out.json" 2>/dev/null || true)
+            err=$(tail -c 400 "$RUNNER_TEMP/cursor-err.txt" 2>/dev/null || true)
+            case "$sub" in
+              *rate*limit*|*quota*|*usage*limit*|*too*many*)
+                # Clears by itself. The job stays due and is re-dispatched.
+                defer "Cursor hit a usage or rate limit this run (\"$sub\") - the dashboard keeps this build due and re-dispatches it within a few hours. Not a failure." ;;
+              *auth*|*unauthor*|*invalid*key*|*forbidden*)
+                fail "Cursor rejected the CURSOR_API_KEY secret on this repo (\"$sub\"). The key was probably revoked, or the plan's usage pool is exhausted. Mint a fresh key at cursor.com/dashboard/api and set it again with 'gh secret set CURSOR_API_KEY'." ;;
+              "")
+                # No parseable JSON at all: killed, timed out, or died before
+                # it could write a result. Two stderr shapes ARE recognised
+                # first, because both were measured on 2026-08-06: the CLI
+                # exits 1 with an ActionRequiredError on stderr and emits no
+                # JSON at all, so subtype matching never sees them.
+                case "$err" in
+                  *"hit your usage limit"*)
+                    defer "Cursor's plan is out of Agent usage for now (\"You've hit your usage limit\") - the job stays due and is re-dispatched. It clears when the plan's usage resets; a paid Cursor plan carries a bigger pool." ;;
+                  *"Free plans can only use Auto"*|*"Named models unavailable"*)
+                    fail "SEO_CURSOR_MODEL names a specific model, but this Cursor plan only allows Auto - unset the repo variable ('gh variable delete SEO_CURSOR_MODEL') or upgrade the Cursor plan." ;;
+                esac
+                reason="Cursor produced no result (the job most likely hit its time limit)"
+                [ -n "$err" ] && reason="Cursor failed before producing a result: $err"
+                fail "$reason" ;;
+              *)
+                # Recognised as an error but not as one that clears by waiting.
+                reason="Cursor failed (\"$sub\", is_error=${iserr:-unknown})"
+                [ -n "$msg" ] && reason="$reason. Last message: $(printf '%s' "$msg" | tail -c 300)"
+                [ -n "$err" ] && reason="$reason. stderr: $err"
+                fail "$reason" ;;
+            esac
+          fi
+
+          fail "workflow failed - $RUN_URL"
+      # <<< agent-steps: run
+
+
+      # Phone the outcome home: failures land on the DispatchSEO dashboard
+      # banner + alert email (same rails as the crons); successes clear any
+      # earlier red banner row for this job. Guarded to skip whenever Classify
+      # the outcome already reported seo-daily itself (real Claude failure) -
+      # this is the fallback for guard-step/preflight-level failures and for
+      # the ordinary "Claude succeeded, nothing to build" green path, which
+      # Classify deliberately leaves unreported.
+      - name: Report outcome to the dashboard
+        # Owns reporting ONLY for the plain-success path: the classify step
+        # already reports real failures (its own step fails, excluded by
+        # outcome) and deferrals (which exit 0 - the reported flag is the only
+        # trace, and without checking it this step would overwrite the
+        # deferred row with ok=1 and silently cost the day).
+        if: always() && steps.classify.outputs.reported != '1' && steps.classify.outcome != 'failure' && steps.classify.outputs.agent_outcome != 'failure'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          OUTCOME: ${{ job.status }}
+          SKIP_REASON: ${{ steps.guard.outputs.skip_reason }}
+          OPEN: ${{ steps.guard.outputs.open }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # names the failed step in the report
+        run: |
+          # A NO-WORK skip reports NOTHING, and the silence is the fix. The
+          # guard sets open=paused (guide builds toggled off on the dashboard)
+          # or open=skip (today's guide is already built / nothing is approved),
+          # every step after it no-ops, job.status is therefore success, and
+          # this step used to post ok=1. The backend decides what is due by
+          # READING these rows (build-schedule.ts) and an ok row means a
+          # COMPLETED build, so it anchored the full 20h cadence window on a run
+          # that did nothing: the dead-man's cron firing at 19:13 against an
+          # empty queue pushed a guide approved at 09:00 the next morning out to
+          # 15:13 (2026-08-02).
+          #
+          # Silence rather than deferred=, which is what the two BLOCKED cases
+          # below report. A deferral lands as a claim row and a claim is re-fired
+          # after a 3h grace - correct when something was genuinely prevented,
+          # but on the already-built-today path it is a dispatch loop billing a
+          # runner minute every 3h until midnight. Nothing happened here, so the
+          # last REAL outcome should keep owning both the cadence window and the
+          # staleness clock, which is exactly what it does when this step is
+          # quiet. An unset/unexpected OPEN (a guard step that died before
+          # writing its output) deliberately falls through to the failure branch.
+          case "$OPEN" in
+            paused|skip)
+              echo "Guard skipped this run (open=$OPEN) - no build was attempted, so nothing is reported and the last real outcome keeps the cadence window."
+              exit 0 ;;
+          esac
+          if [ -n "$SKIP_REASON" ]; then
+            # A run that was BLOCKED is not a run that succeeded. Reporting ok=1
+            # here anchored the cadence window, so a single unmerged PR or one
+            # backend reboot bought a full day of silence with a green dashboard
+            # to match (2026-08-02). deferred= records the truth: handed out,
+            # nothing produced, still due.
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-daily" --data-urlencode "deferred=$SKIP_REASON" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          elif [ "$OUTCOME" = "success" ]; then
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-daily" --data-urlencode "ok=1" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          else
+            # Name the failing step so the alert email/banner says WHERE the run
+            # died, not just that it did - the operator can't open a customer's
+            # private Actions log, and "workflow failed" alone forced exactly
+            # that dead end (2026-08-02). Best-effort: on any API hiccup the
+            # message falls back to the bare form.
+            step=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/jobs" \
+              --jq '[.jobs[].steps[]? | select(.conclusion=="failure") | .name] | first // empty' 2>/dev/null || true)
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-daily" \
+              --data-urlencode "fail=workflow failed${step:+ at step '$step'} - $RUN_URL" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          fi
