@@ -1,0 +1,254 @@
+name: SEO health check
+
+# Daily pre-flight, before the 05:13 builder: proves this project's coding-agent
+# credential still works, and checks whether the installed pipeline is stale.
+# Both outcomes phone home to the DispatchSEO dashboard (banner + email on
+# failure), so a dead credential is a red alert at 04:18 - not a mystery failed
+# build at 05:13.
+#
+# Cost: one tiny Claude call on the owner's own subscription, or - on Codex -
+# roughly a hundredth of a cent, because that branch asks OpenAI about the key
+# instead of spending a whole agent run to find out.
+
+on:
+  schedule:
+    - cron: "18 4 * * *" # 04:18 UTC daily, before the 05:13 builder (offset off the top of the hour)
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    # continue-on-error at JOB level: a failure still runs the failure() steps
+    # and still reports to the dashboard rails, but the RUN concludes green so
+    # GitHub never emails the repo owner "Run failed". The dashboard Home
+    # banner / get_cron_health are the alerting surface for these runs.
+    continue-on-error: true
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      # >>> agent-steps: resolve (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Which agent's credential to prove. Resolved at RUN time from the
+      # dashboard, same as the builders - a health check that tests the wrong
+      # credential is worse than none, because it reports green while the thing
+      # that actually builds is dead.
+      - name: Resolve the coding agent
+        id: agent
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          CLAUDE_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: |
+          agent=""
+          code=$(curl -s -o /tmp/agent.json -w "%{http_code}" --max-time 30 \
+            -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode) || code=unreachable
+          [ "$code" = "200" ] && agent=$(jq -r '.agent // empty' /tmp/agent.json 2>/dev/null)
+          if [ -z "$agent" ] || [ "$agent" = "null" ]; then
+            if [ -n "$OPENAI_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=codex
+            elif [ -n "$CURSOR_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=cursor
+            else agent=claude
+            fi
+          fi
+          case "$agent" in claude|codex|cursor) : ;; *) agent=claude ;; esac
+          echo "agent=$agent" >> "$GITHUB_OUTPUT"
+          echo "Checking the $agent credential."
+      # <<< agent-steps: resolve
+
+
+      # >>> agent-steps: liveness (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # One minimal model call. If the credential is dead/revoked/limited, this
+      # step fails and the failure handler below reports the real reason.
+      - name: Claude token liveness
+        id: liveness
+        if: steps.agent.outputs.agent == 'claude'
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Cloud fires this as the DispatchSEO GitHub App (a Bot actor), and the App also authored the workflow commits, so scheduled runs are bot-actored too. Every trigger here needs repo write access, so allowing bots is safe; without this claude-code-action aborts with "non-human actor".
+          allowed_bots: "*"
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN == '' && secrets.ANTHROPIC_API_KEY || '' }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: "Reply with exactly: ok"
+          claude_args: |
+            --max-turns 1
+
+      # Codex's liveness is a direct API call rather than a Codex run, and that
+      # is deliberate. A Claude OAuth token can only be proven by using it, so
+      # that branch spends a model call. An OpenAI key's health is a property
+      # OpenAI will state outright - and its answer carries `error.code`, which
+      # distinguishes "rate-limited for a minute" from "this account is out of
+      # credit". Running the whole action here would cost more, take longer, and
+      # tell us LESS, because the CLI collapses every 429 into one message.
+      - name: Codex key liveness
+        id: liveness_codex
+        if: steps.agent.outputs.agent == 'codex'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "This project builds with Codex, but the OPENAI_API_KEY secret is missing or empty on this repo. Add it with 'gh secret set OPENAI_API_KEY', or re-run the setup command from your DispatchSEO dashboard." > "$RUNNER_TEMP/agent-failure.txt"
+            cat "$RUNNER_TEMP/agent-failure.txt"; exit 1
+          fi
+          code=$(curl -s --max-time 30 -o /tmp/live.json -w "%{http_code}" https://api.openai.com/v1/responses \
+            -H "Authorization: Bearer $OPENAI_API_KEY" -H "Content-Type: application/json" \
+            -d '{"model":"gpt-5-mini","input":"ok","max_output_tokens":16}') || code=000
+          err=$(jq -r '.error.code // empty' /tmp/live.json 2>/dev/null)
+          case "$code:$err" in
+            2*:*) echo "OpenAI key is live." ; exit 0 ;;
+            429:rate_limit_exceeded)
+              # Transient by definition. A health check that goes red on a
+              # momentary rate limit trains people to ignore the banner.
+              echo "OpenAI is rate-limiting this key right now - that clears by itself, so treating it as healthy." ; exit 0 ;;
+            429:*|402:*)
+              echo "your OpenAI account cannot run builds (OpenAI said: ${err:-quota exceeded}). Retrying will not fix this - add credit or raise the limit at platform.openai.com/settings/organization/billing." > "$RUNNER_TEMP/agent-failure.txt" ;;
+            401:*|403:*)
+              echo "OpenAI rejected the OPENAI_API_KEY secret on this repo (HTTP $code). The key was probably revoked or rotated - create a new one at platform.openai.com/api-keys and set it again with 'gh secret set OPENAI_API_KEY'." > "$RUNNER_TEMP/agent-failure.txt" ;;
+            *)
+              echo "could not reach OpenAI to check the key (HTTP $code)." > "$RUNNER_TEMP/agent-failure.txt" ;;
+          esac
+          cat "$RUNNER_TEMP/agent-failure.txt"; exit 1
+
+      # Measured trap, and the reason this looks paranoid: `cursor-agent models`
+      # exits 0 even when the API key is invalid, and `cursor-agent status`
+      # ignores CURSOR_API_KEY altogether (it reports the interactive login,
+      # which a runner does not have). Both obvious checks therefore pass for
+      # every broken key that will ever exist. This one reads the text.
+      - name: Cursor key liveness
+        id: liveness_cursor
+        if: steps.agent.outputs.agent == 'cursor'
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: |
+          if [ -z "$CURSOR_API_KEY" ]; then
+            echo "This project builds with Cursor, but the CURSOR_API_KEY secret is missing or empty on this repo. A runner has no browser, so 'cursor-agent login' is not an option - only an API key works. Mint one at cursor.com/dashboard/api (any plan can) and add it with 'gh secret set CURSOR_API_KEY', or switch this project to Claude Code or Codex on your dashboard." > "$RUNNER_TEMP/agent-failure.txt"
+            cat "$RUNNER_TEMP/agent-failure.txt"; exit 1
+          fi
+          # Whole package into its own directory - the launcher needs its
+          # siblings; see the config step for the long version.
+          mkdir -p "$RUNNER_TEMP/cursor-cli"
+          curl -fsSL "https://downloads.cursor.com/lab/2026.07.23-e383d2b/linux/x64/agent-cli-package.tar.gz" \
+            | tar -xz --strip-components=1 -C "$RUNNER_TEMP/cursor-cli"
+          out=$("$RUNNER_TEMP/cursor-cli/cursor-agent" models 2>&1) || true
+          if printf '%s' "$out" | grep -qi "API key is invalid\|Authentication required\|Unauthorized"; then
+            echo "Cursor rejected the CURSOR_API_KEY secret on this repo. The key was probably revoked, or the plan's usage pool is exhausted. Mint a fresh key at cursor.com/dashboard/api and set it again with 'gh secret set CURSOR_API_KEY'." > "$RUNNER_TEMP/agent-failure.txt"
+            cat "$RUNNER_TEMP/agent-failure.txt"; exit 1
+          fi
+          if ! printf '%s' "$out" | grep -q "Available models"; then
+            echo "Could not check the Cursor key - the CLI answered with something unrecognised: $(printf '%s' "$out" | tail -c 300)" > "$RUNNER_TEMP/agent-failure.txt"
+            cat "$RUNNER_TEMP/agent-failure.txt"; exit 1
+          fi
+          echo "Cursor key is live."
+      # <<< agent-steps: liveness
+
+
+      - name: Report token OK
+        if: success()
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+        run: |
+          curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            --data-urlencode "job=seo-token-check" --data-urlencode "ok=1" \
+            "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+
+      # >>> agent-steps: failure-report (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Surface the real API error (revoked? usage limit?) and phone it home.
+      # Full transcripts stay hidden - only the final result line is read.
+      - name: Report token failure with the reason
+        if: failure()
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          AGENT: ${{ steps.agent.outputs.agent }}
+        run: |
+          reason="credential check failed (no error detail captured)"
+          fix="re-run the setup command from your DispatchSEO dashboard"
+          if [ "$AGENT" = "codex" ]; then
+            # The Codex branch already resolved OpenAI's own error code into a
+            # sentence naming the actual fix, so pass that through rather than
+            # flattening it back into a generic message.
+            msg=$(cat "$RUNNER_TEMP/agent-failure.txt" 2>/dev/null)
+            [ -n "$msg" ] && reason="Codex credential check failed: $msg"
+          elif [ "$AGENT" = "cursor" ]; then
+            # The Cursor branch already resolved this into a sentence naming the
+            # actual fix, so pass that through rather than flattening it.
+            msg=$(cat "$RUNNER_TEMP/agent-failure.txt" 2>/dev/null)
+            [ -n "$msg" ] && reason="Cursor credential check failed: $msg"
+          else
+            f="$RUNNER_TEMP/claude-execution-output.json"
+            if [ -f "$f" ]; then
+              msg=$(jq -r 'if type=="array" then .[] else . end
+                           | select(.type? == "result")
+                           | (.result // .error // empty)' "$f" 2>/dev/null | tail -1)
+              [ -n "$msg" ] && reason="Claude token check failed: $msg"
+            fi
+            if echo "$msg" | grep -qiE 'session limit|usage limit|limit reached|limit .*resets|rate.?limit'; then
+              # The credential WORKS - the account is just out of headroom right
+              # now. The builders already treat that as a quiet deferral, so a
+              # red health banner here would only train owners to ignore it.
+              echo "Claude is usage-limited right now, but the credential itself is alive - treating the check as healthy. Builds defer until the limit resets."
+              curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+                --data-urlencode "job=seo-token-check" --data-urlencode "ok=1" \
+                "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+              exit 0
+            fi
+            fix="mint a fresh token (claude setup-token) and re-run the setup command from your DispatchSEO dashboard"
+            if echo "$msg" | grep -qi 'disabled Claude subscription access'; then
+              # oauth_org_not_allowed: a server-side flag on the ACCOUNT, not
+              # the token - re-minting provably does nothing.
+              fix="a fresh token will NOT fix this one - Anthropic has flagged the Claude account itself (oauth_org_not_allowed). On a company Claude plan, ask its admin to enable Claude Code; on a personal plan, check claude.ai billing for a lapsed or duplicate subscription or contact Anthropic support. Or switch the builders to metered API billing: create a key at console.anthropic.com, 'gh secret set ANTHROPIC_API_KEY', then 'gh secret delete CLAUDE_CODE_OAUTH_TOKEN'"
+            fi
+          fi
+          echo "::error::$reason - $fix."
+          curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            --data-urlencode "job=seo-token-check" \
+            --data-urlencode "fail=$reason - $fix" \
+            "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+      # <<< agent-steps: failure-report
+
+
+      # Pipeline staleness: compare this repo's installed pack version stamp
+      # against the backend's current one. Stale is not broken - the report
+      # tells the owner an update is waiting; re-running the setup command
+      # applies it. Repos installed before version stamps skip silently. A
+      # non-200/404 response (401, 5xx, timeout) means the project key itself
+      # is rejected, not that pipeline_version is unsupported - that must be
+      # loud, not folded into the same silent skip.
+      - name: Pipeline update check
+        if: always()
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+        run: |
+          [ -f .dispatchseo/pipeline-version ] || { echo "No version stamp (pre-stamp install) - skipping."; exit 0; }
+          installed=$(tr -d '[:space:]' < .dispatchseo/pipeline-version)
+          code=$(curl -s -o /tmp/mode.json -w "%{http_code}" --max-time 30 \
+            -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode")
+          if [ "$code" = "404" ]; then
+            echo "Backend has no pipeline_version yet - skipping."
+            exit 0
+          elif [ "$code" != "200" ]; then
+            echo "::error::project-mode returned HTTP $code - the project key looks rejected by the backend. Re-run the setup command from your DispatchSEO dashboard to mint a fresh key."
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-token-check" \
+              --data-urlencode "fail=project key rejected by backend (HTTP $code) - re-run the setup command" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+            exit 1
+          fi
+          current=$(jq -r '.pipeline_version // empty' /tmp/mode.json)
+          if [ -z "$current" ]; then echo "Backend has no pipeline_version yet - skipping."; exit 0; fi
+          if [ "$installed" = "$current" ]; then
+            echo "Pipeline up to date ($installed)."
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-pipeline-version" --data-urlencode "ok=1" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          else
+            echo "::warning::Pipeline update available (installed $installed, current $current). Re-run the setup command from your DispatchSEO dashboard to apply it."
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-pipeline-version" \
+              --data-urlencode "fail=pipeline update available (installed $installed, current $current) - re-run the setup command to apply" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          fi

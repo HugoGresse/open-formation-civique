@@ -1,0 +1,5 @@
+# How seo-tool-validate.yml serves this repo's production build.
+# This repo is a monorepo - the real Astro site lives under website/, so the
+# preview server is started with --prefix rather than a plain npm script.
+command=npm run preview --prefix website
+port=4321

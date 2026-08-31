@@ -1,0 +1,52 @@
+# Codex's twin of mcp-ci.json - the MCP servers the scheduled builders use
+# when this project runs on Codex.
+#
+# Two files rather than one because the two agents genuinely disagree on
+# format: Claude Code takes JSON with a `headers` map, Codex takes TOML and has
+# no header option reachable from its config for the bearer case. Which one a
+# run uses is decided at RUN time from the project's `agent` setting, so this
+# file riding along in a Claude project costs nothing and is what makes
+# switching agents on the dashboard take effect without touching the repo.
+#
+# The workflows copy this to $CODEX_HOME/config.toml before invoking Codex;
+# CODEX_HOME is the only scoping Codex offers.
+
+[mcp_servers.seo-manager]
+url = "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/mcp"
+# The NAME of an env var, not the token. Codex resolves it from the step's
+# environment at call time, so the key never lands on the runner's disk - which
+# is strictly better than the JSON twin, where ${SEO_MCP_API_KEY} is expanded
+# into the file.
+bearer_token_env_var = "SEO_MCP_API_KEY"
+# What actually authorises a tool call. Without it every call comes back
+# "user cancelled MCP tool call" - there is nobody on a scheduled runner to
+# approve one - and no amount of sandbox widening changes that, because this is
+# an approval and not a permission. Verified 2026-07-30 on codex-cli 0.146.0:
+# with this line a call completes at sandbox=read-only with approvals=never.
+default_tools_approval_mode = "approve"
+
+# Codex ships with web search off. Claude Code has WebSearch built in, and the
+# playbooks assume it exists - geo-scan outright REQUIRES real searches and
+# forbids answering from memory. Without this line a Codex geo-scan either
+# fabricates its answers or fails every week; with it the two agents hold the
+# same contract. (Key verified against codex-rs config_toml.rs: ToolsToml.web_search.)
+[tools]
+web_search = true
+
+# --- dataforseo ---
+# Keep this section LAST and keep the marker line above exactly as written:
+# getPipelinePack truncates the file there for projects with no DataForSEO
+# account. See the comment beside that strip for why a truncate rather than a
+# TOML round trip.
+#
+# The ${DATAFORSEO_*} tokens are NOT expanded by Codex - its TOML `env` map is
+# literal values (mcp_types.rs), unlike the JSON twin where Claude expands
+# ${VAR} itself, and `env_vars` cannot rename LOGIN -> USERNAME. The workflows'
+# "Write Codex's MCP config" step substitutes real values for these tokens at
+# run time, on the runner, before Codex ever reads the file. Keep the token
+# spelling exactly as written or that substitution misses.
+[mcp_servers.dataforseo]
+command = "npx"
+args = ["-y", "dataforseo-mcp-server@latest"]
+env = { DATAFORSEO_USERNAME = "${DATAFORSEO_LOGIN}", DATAFORSEO_PASSWORD = "${DATAFORSEO_PASSWORD}", ENABLED_MODULES = "SERP,DATAFORSEO_LABS,BACKLINKS" }
+default_tools_approval_mode = "approve"

@@ -1,0 +1,727 @@
+name: SEO tool validation
+
+# The functional reviewer for autonomously-built tool PRs. A tool PR may only
+# auto-merge if this workflow has exercised the LIVE page (real production
+# build, real browser) and proven the widget works. On pass it labels the PR
+# `tool-validated`; the auto-merge gate requires that label for any PR that
+# carries `seo-tool`. On fail it labels `tool-validation-failed` and comments
+# the concrete failures so the next builder run (or the owner) can fix them.
+#
+# Scope: runs ONLY on same-repo PRs labeled seo-tool (the tool builder's PRs).
+# Guide PRs never get the seo-tool label and are never gated by this.
+#
+# Two triggers for the same validation:
+# - pull_request: the normal path. BUT tool PRs are opened by the builder
+#   with the built-in GITHUB_TOKEN, and since GitHub's 2026-06-11 change
+#   those runs are created parked in "action_required" (awaiting manual
+#   approval, with no repo-level opt-out) - left alone the PR stalls forever.
+# - workflow_dispatch (pr_number input): the escape hatch. Dispatch events
+#   created with GITHUB_TOKEN always execute (documented exception), so
+#   seo-auto-merge's self-heal dispatches this workflow for any verdict-less
+#   tool PR. Both paths converge on the resolve step below, which re-verifies
+#   the same-repo + seo-tool gates from live PR state.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Open seo-tool PR number to validate"
+        required: true
+
+concurrency:
+  group: seo-tool-validate-${{ github.event.pull_request.number || inputs.pr_number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    # pull_request mode: same-repo PRs only (fork PRs get no secrets anyway)
+    # + must be a tool PR. Dispatch mode passes here and is gated by the
+    # resolve step instead (its event payload has no PR fields to check).
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+       contains(github.event.pull_request.labels.*.name, 'seo-tool'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # SECURITY: this job builds and RUNS the PR's (LLM-authored) code, so it
+    # must never hold a token that can write to the repo. Labels/comments only;
+    # the squash-merge lives in the separate `merge` job below, which never
+    # checks out or executes PR code.
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write # gh label create
+    steps:
+      # Authoritative gate for BOTH trigger modes: read the PR's live state
+      # and refuse anything that is not an open, same-repo, seo-tool PR. Also
+      # resolves the head SHA the job checks out, so a dispatched run
+      # validates exactly the PR head (not the default branch the dispatch
+      # technically runs against).
+      - name: Resolve and gate the PR
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+        run: |
+          case "$PR_NUMBER" in
+            ''|*[!0-9]*) echo "::error::pr_number must be a plain PR number."; exit 1 ;;
+          esac
+          info=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" \
+            --json state,isCrossRepository,labels,headRefOid \
+            --jq '{state, cross: .isCrossRepository, labels: [.labels[].name], sha: .headRefOid}')
+          echo "$info"
+          if [ "$(echo "$info" | jq -r .state)" != "OPEN" ] \
+             || [ "$(echo "$info" | jq -r .cross)" != "false" ] \
+             || ! echo "$info" | jq -e '.labels | index("seo-tool")' >/dev/null; then
+            echo "::error::PR #$PR_NUMBER is not an open same-repo seo-tool PR - refusing to validate."
+            exit 1
+          fi
+          echo "sha=$(echo "$info" | jq -r .sha)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          # The resolved PR head, so both trigger modes exercise the same code.
+          ref: ${{ steps.pr.outputs.sha }}
+          # Don't leave a git credential on disk for the PR's build scripts to
+          # read - this job's steps talk to GitHub only via the env tokens on
+          # the specific steps that need them.
+          persist-credentials: false
+
+      # >>> agent-steps: resolve (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Which coding agent validates, plus the fail-fast on a broken credential.
+      # Both agents get the same plain-language error rather than dying minutes
+      # in on a cryptic validation failure.
+      #
+      # UNLIKE every other workflow, this one does NOT ask the backend which
+      # agent to use. Asking means holding SEO_MCP_API_KEY, and the one thing
+      # this job must never do is acquire a reason to hold the project key - it
+      # builds and RUNS the PR's (LLM-authored) code. A secret is only visible
+      # to the step that names it, so the leak would not be direct - but the
+      # invariant is worth more than the consistency.
+      #
+      # The SEO_AGENT repo VARIABLE is the primary answer. Variables (unlike
+      # secrets) are readable without holding anything sensitive, and the
+      # backend best-effort writes this one on every agent switch and install,
+      # so this workflow can agree with the dashboard without asking it.
+      # Inference from secret presence remains the fallback for repos whose
+      # backend predates the variable - but on its own it was NOT just
+      # cosmetic: switching agents leaves the old secret behind (the switch is
+      # deliberately a single column write), the tie-break below then picks the
+      # default, and if the owner switched because that agent's account lapsed,
+      # validation goes red and every tool PR on the project strands unmerged.
+      - name: Resolve the coding agent
+        id: agent
+        env:
+          CLAUDE_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          AGENT_VAR: ${{ vars.SEO_AGENT }}
+        run: |
+          case "$AGENT_VAR" in
+            claude|codex|cursor) agent="$AGENT_VAR" ;;
+            *)
+              if [ -n "$OPENAI_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=codex
+              elif [ -n "$CURSOR_API_KEY" ] && [ -z "$CLAUDE_TOKEN" ] && [ -z "$ANTHROPIC_API_KEY" ]; then agent=cursor
+              else agent=claude
+              fi
+              ;;
+          esac
+          case "$agent" in
+            claude)
+              if [ -z "$CLAUDE_TOKEN" ] && [ -n "$ANTHROPIC_API_KEY" ]; then
+                echo "No CLAUDE_CODE_OAUTH_TOKEN on this repo - running Claude on the ANTHROPIC_API_KEY secret instead (metered API billing on your Anthropic account)."
+              elif [ -z "$CLAUDE_TOKEN" ]; then
+                echo "::error::This project validates with Claude Code, but the CLAUDE_CODE_OAUTH_TOKEN secret is missing or empty on this repo (and there is no ANTHROPIC_API_KEY secret to fall back on). Rerun the setup command from your DispatchSEO dashboard (it mints and VERIFIES a fresh token), or set one by hand: run 'claude setup-token', then pipe the token into 'gh secret set CLAUDE_CODE_OAUTH_TOKEN' without any whitespace. Or run on metered API billing instead: create a key at console.anthropic.com and pipe it into 'gh secret set ANTHROPIC_API_KEY'."
+                exit 1
+              else
+                case "$CLAUDE_TOKEN" in
+                  sk-ant-oat*) : ;;
+                  *)
+                    echo "::error::CLAUDE_CODE_OAUTH_TOKEN does not look like a Claude Code OAuth token (expected it to start with sk-ant-oat). It was probably line-wrapped or the wrong text was pasted when it was saved. Rerun the setup command from your DispatchSEO dashboard to mint and verify a replacement."
+                    exit 1 ;;
+                esac
+                if [ -n "$ANTHROPIC_API_KEY" ]; then
+                  echo "Both CLAUDE_CODE_OAUTH_TOKEN and ANTHROPIC_API_KEY are set - the subscription token takes precedence. To run on the API key instead: gh secret delete CLAUDE_CODE_OAUTH_TOKEN."
+                fi
+              fi ;;
+            codex)
+              if [ -z "$OPENAI_API_KEY" ]; then
+                echo "::error::This project validates with Codex, but the OPENAI_API_KEY secret is missing or empty on this repo. Add it with 'gh secret set OPENAI_API_KEY', or rerun the setup command from your DispatchSEO dashboard."
+                exit 1
+              fi
+              case "$OPENAI_API_KEY" in
+                sk-*) : ;;
+                *)
+                  echo "::error::OPENAI_API_KEY does not look like an OpenAI key (expected it to start with sk-). It was probably line-wrapped or the wrong text was pasted when it was saved. Create a fresh key at platform.openai.com/api-keys and set it again."
+                  exit 1 ;;
+              esac ;;
+            cursor)
+              if [ -z "$CURSOR_API_KEY" ]; then
+                echo "::error::This project validates with Cursor, but the CURSOR_API_KEY secret is missing or empty on this repo. A runner has no browser, so the interactive 'cursor-agent login' is not an option here - only an API key works. Mint one at cursor.com/dashboard/api (open the URL directly; any plan can) and add it with 'gh secret set CURSOR_API_KEY', or switch this project to Claude Code or Codex on your DispatchSEO dashboard."
+                exit 1
+              fi
+              case "$CURSOR_API_KEY" in
+                sk-ant-*)
+                  echo "::error::CURSOR_API_KEY holds a Claude credential (it starts with sk-ant-). The wrong secret was pasted. Put the Claude token in CLAUDE_CODE_OAUTH_TOKEN and a Cursor API key here."
+                  exit 1 ;;
+                sk-*)
+                  echo "::error::CURSOR_API_KEY holds an OpenAI key (it starts with sk-). The wrong secret was pasted. Put the OpenAI key in OPENAI_API_KEY and a Cursor API key here."
+                  exit 1 ;;
+                *[[:space:]]*)
+                  # [[:space:]], never a literal tab in the pattern: a tab
+                  # character in generated YAML is invalid indentation, and
+                  # pipeline-pack-lint fails the build on it.
+                  echo "::error::CURSOR_API_KEY contains whitespace, which almost always means it was line-wrapped when it was copied. Re-copy the key and set it again with: printf '%s' \"\$KEY\" | tr -d '[:space:]' | gh secret set CURSOR_API_KEY"
+                  exit 1 ;;
+                *) : ;;
+              esac ;;
+            *)
+              echo "::error::The dashboard reported an unknown agent '$agent'. This repo's workflows are older than that setting - re-run the setup command from your DispatchSEO dashboard to update them."
+              exit 1 ;;
+          esac
+          echo "agent=$agent" >> "$GITHUB_OUTPUT"
+          echo "Validating with: $agent"
+      # <<< agent-steps: resolve
+
+
+      # Deliberately NOT an INSTALL-ADAPT step. Which package manager this
+      # repo uses is resolved at RUN time - packageManager pin first, then
+      # lockfiles - never by an install-time edit, because an edit whose
+      # omission is fatal is banned (scripts/pipeline-pack-lint.mjs; the
+      # 2026-07-30 incident where a missed DELETE-this-line killed every
+      # pinned repo's builder at step 2 is why). Assuming every repo is pnpm
+      # was the same bug one layer up: the zero-touch cloud install commits
+      # this pack verbatim into repos nobody adapted, and the first real
+      # cloud customer's npm+Vite site died 25 seconds into every build
+      # (2026-08-02). pnpm keeps its two blessed shapes (pinned reads the
+      # pin, unpinned pins the action - a version input on a step that also
+      # sees a packageManager pin is what hard-errors); npm/yarn/bun get
+      # their own installs; no package.json at all skips Node setup entirely
+      # and the agent works from the repo's real build story in
+      # .dispatchseo/conventions.md.
+      - name: Detect this repo's package manager
+        id: pkg
+        # This repo is a monorepo: the real Astro site (package.json,
+        # package-lock.json) lives in website/, not at repo root. Detection
+        # runs against website/ deliberately - see .dispatchseo/conventions.md.
+        working-directory: website
+        run: |
+          pm=none; pnpm_pinned=0; cache=""
+          if [ -f package.json ]; then
+            field=$(node -e 'process.stdout.write(String(require("./package.json").packageManager || ""))' 2>/dev/null || true)
+            case "$field" in
+              pnpm@*) pm=pnpm; pnpm_pinned=1 ;;
+              yarn@*) pm=yarn ;;
+              npm@*)  pm=npm ;;
+              bun@*)  pm=bun ;;
+            esac
+            if [ "$pm" = "none" ]; then
+              if [ -f pnpm-lock.yaml ]; then pm=pnpm
+              elif [ -f package-lock.json ]; then pm=npm
+              elif [ -f yarn.lock ]; then pm=yarn
+              elif [ -f bun.lock ] || [ -f bun.lockb ]; then pm=bun
+              else pm=npm
+              fi
+            fi
+          fi
+          # setup-node's cache input hard-errors when the matching lockfile is
+          # missing, so only request a cache that provably exists.
+          case "$pm" in
+            pnpm) if [ -f pnpm-lock.yaml ]; then cache=pnpm; fi ;;
+            npm)  if [ -f package-lock.json ]; then cache=npm; fi ;;
+            yarn) if [ -f yarn.lock ]; then cache=yarn; fi ;;
+          esac
+          # Node major, resolved at RUN time - same rule and same reason as the
+          # package manager above. `node-version: 22` was hardcoded here while
+          # the install playbook told the installing agent to hand-edit it if
+          # the repo built on something else, which is the banned shape exactly:
+          # a pack update pushes this file VERBATIM, so that edit self-reverts
+          # on the next sync and the builder then dies on the wrong major in a
+          # repo nobody is watching (2026-08-02).
+          #
+          # .nvmrc first - a repo that ships one has DECLARED the version its
+          # own developers build on, so it is honoured as written. engines.node
+          # is read as a FLOOR rather than a target: ">=18" is a minimum a Node
+          # 22 runner already satisfies, and resolving it downward would move
+          # working installs onto an EOL major - and below pnpm 11's own floor -
+          # to satisfy a constraint that was never violated. 22 when neither
+          # file says anything, which is what every install already runs, so a
+          # repo that declares nothing sees no change at all.
+          node_v=22
+          if [ -f .nvmrc ]; then
+            # Tolerates "v22", "22.11.0" and trailing whitespace; an alias like
+            # "lts/*" names no number, so the default stands.
+            v=$(grep -Eo '[0-9]+(\.[0-9]+){0,2}' .nvmrc 2>/dev/null | head -1)
+            [ -n "$v" ] && node_v="$v"
+          elif [ -f package.json ]; then
+            eng=$(node -e 'process.stdout.write(String((require("./package.json").engines||{}).node||""))' 2>/dev/null || true)
+            major=$(printf '%s' "$eng" | grep -Eo '[0-9]+' | head -1)
+            if [ -n "$major" ] && [ "$major" -gt 22 ]; then node_v="$major"; fi
+          fi
+          { echo "pm=$pm"; echo "pnpm_pinned=$pnpm_pinned"; echo "cache=$cache"; echo "node=$node_v"; } >> "$GITHUB_OUTPUT"
+          echo "package manager: $pm (pnpm pin: $pnpm_pinned, node cache: ${cache:-off}, node: $node_v)"
+
+      # Pinned -> action-setup reads the exact version out of the field.
+      # Passing a version input as well is precisely what hard-errors.
+      - name: Set up pnpm (version from the repo's packageManager pin)
+        if: steps.pkg.outputs.pm == 'pnpm' && steps.pkg.outputs.pnpm_pinned == '1'
+        uses: pnpm/action-setup@v4
+
+      # No pin -> action-setup has to be told. pnpm 11 matches the Node 22
+      # floor resolved above; a repo whose lockfile was written by an older
+      # major should add a packageManager field rather than edit this, which
+      # routes it to the exact path above.
+      - name: Set up pnpm (no packageManager pin in this repo)
+        if: steps.pkg.outputs.pm == 'pnpm' && steps.pkg.outputs.pnpm_pinned == '0'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Set up Bun
+        if: steps.pkg.outputs.pm == 'bun'
+        uses: oven-sh/setup-bun@v2
+
+      - name: Set up Node
+        if: steps.pkg.outputs.pm != 'none'
+        uses: actions/setup-node@v4
+        with:
+          # Resolved by the detection step above, never hand-edited - see the
+          # comment there for why an install-time edit could not stay applied.
+          node-version: ${{ steps.pkg.outputs.node }}
+          cache: ${{ steps.pkg.outputs.cache }}
+          # The lockfile setup-node's cache would otherwise look for at repo
+          # root - it actually lives in website/ (monorepo layout).
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install deps
+        if: steps.pkg.outputs.pm != 'none'
+        working-directory: website
+        env:
+          PM: ${{ steps.pkg.outputs.pm }}
+        run: |
+          case "$PM" in
+            pnpm)
+              pnpm install --frozen-lockfile || {
+                s=$?
+                echo "::error::pnpm install failed (exit $s). Frequent causes: (1) ERR_PNPM_IGNORED_BUILDS - pnpm 11 hard-fails dependencies with unanswered build scripts (strictDepBuilds is on by default): answer each one in pnpm-workspace.yaml (allowBuilds: dep: true/false, plus an onlyBuiltDependencies list for older pnpm) and commit. (2) pnpm/lockfile version mismatch - align the workflow's pnpm with the version that wrote pnpm-lock.yaml (package.json packageManager field). Reproduce locally with a fresh 'pnpm install --frozen-lockfile'."
+                exit $s
+              } ;;
+            npm)
+              { if [ -f package-lock.json ]; then npm ci || npm install; else npm install; fi; } || {
+                s=$?
+                echo "::error::npm install failed (exit $s). Reproduce locally with a fresh 'npm ci' (or 'npm install' if the lockfile is stale) and commit whatever lockfile change it produces."
+                exit $s
+              } ;;
+            yarn)
+              corepack enable 2>/dev/null || true
+              { yarn install --immutable || yarn install; } || {
+                s=$?
+                echo "::error::yarn install failed (exit $s). Reproduce locally with 'yarn install' and commit the lockfile it produces."
+                exit $s
+              } ;;
+            bun)
+              bun install || {
+                s=$?
+                echo "::error::bun install failed (exit $s). Reproduce locally with 'bun install'."
+                exit $s
+              } ;;
+          esac
+
+      - name: Production build
+        if: steps.pkg.outputs.pm != 'none'
+        # This repo's real app lives in website/ - see the detect step above.
+        # npm uses build:no-pdf (skips the slow, Chromium-dependent PDF export
+        # step) rather than the default build script.
+        working-directory: website
+        run: |
+          case "${{ steps.pkg.outputs.pm }}" in
+            pnpm) pnpm build ;;
+            npm)  npm run build:no-pdf ;;
+            yarn) yarn build ;;
+            bun)  bun run build ;;
+          esac
+
+      # How a repo serves a production build is repo-specific: Next's `start`
+      # on 3000, Vite's `preview` on 4173, Hugo's `server` on 1313, a static
+      # `python3 -m http.server`. Resolve it at RUN TIME from a repo-owned
+      # file - never by hand-editing this workflow at install. Two incidents
+      # are why: 2026-07-30 a missed install-time edit killed the builder in
+      # every repo with a `packageManager` pin, and the fix for it left THIS
+      # step still hardcoded to `run start` on :3000, so any non-Next stack
+      # failed every tool PR with "server never answered on :3000" while the
+      # only remedy lived in a prose line of the install playbook. Like
+      # .dispatchseo/publish-paths, this file is deliberately outside the
+      # pack, so a pack update can never revert the adaptation.
+      #
+      # .dispatchseo/serve - one KEY=VALUE per line, # comments allowed:
+      #   command=npm run preview -- --port 4173
+      #   port=4173
+      - name: Resolve how this repo serves a production build
+        id: serve
+        run: |
+          cmd=""; port=""
+          if [ -f .dispatchseo/serve ]; then
+            cmd=$(sed -n 's/^[[:space:]]*command=//p' .dispatchseo/serve | head -1)
+            port=$(sed -n 's/^[[:space:]]*port=//p' .dispatchseo/serve | head -1)
+          fi
+          # Default only where there IS a package.json to run a script from.
+          if [ -z "$cmd" ] && [ "$PM" != "none" ]; then cmd="$PM run start"; fi
+          port="${port:-3000}"
+          if [ -z "$cmd" ]; then
+            echo "::error::This repo has no package.json, so there is no default way to serve its built site for tool validation. Create .dispatchseo/serve on the default branch with two lines - command=<what serves the production build> and port=<the port it listens on> - and commit it. That file is repo-owned: pipeline updates never overwrite it."
+            exit 1
+          fi
+          { echo "command=$cmd"; echo "port=$port"; echo "base=http://localhost:$port"; } >> "$GITHUB_OUTPUT"
+          echo "serving with: $cmd (expecting :$port)"
+        env:
+          PM: ${{ steps.pkg.outputs.pm }}
+
+      # Readiness, not correctness: ANY HTTP answer proves the server is
+      # listening, so the only thing this waits out is curl's 000 (nothing on
+      # the port yet). Demanding 200 from `/` strands every site whose home
+      # page does not serve one - an app behind a login, a locale bounce, a
+      # marketing root that 30x's - and it fails in the most misleading way
+      # available: the log says the server is ready, then says it never
+      # started. It stranded DispatchSEO's own PR #25 for three runs on
+      # 2026-08-02. Whether the app actually works is the agent's call, made
+      # against the tool's own page further down - never this probe's.
+      - name: Start server and wait for it
+        env:
+          SERVE_CMD: ${{ steps.serve.outputs.command }}
+          SERVE_PORT: ${{ steps.serve.outputs.port }}
+        run: |
+          nohup sh -c "$SERVE_CMD" >/tmp/serve.log 2>&1 &
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost:$SERVE_PORT/" || true)
+            case "$code" in
+              ""|000) : ;;
+              *) echo "server up (HTTP $code from /)"; exit 0 ;;
+            esac
+            sleep 2
+          done
+          echo "::error::'$SERVE_CMD' never answered on :$SERVE_PORT. If this repo serves differently, put the right command and port in .dispatchseo/serve on the default branch."
+          cat /tmp/serve.log; exit 1
+
+      - name: Install Playwright browser for the MCP
+        run: npx -y playwright install --with-deps chromium
+
+      # >>> agent-steps: run (GENERATED - edit scripts/agent-ci/ and regenerate; never edit between these markers)
+      # Codex's twin of mcp-validate.json. Written here rather than shipped as a
+      # file because this job's MCP surface is one stdio server with no secrets
+      # in it - there is nothing to personalize per project, so a file would be
+      # a second thing to keep in sync for no benefit.
+      - name: Write Codex's MCP config
+        if: steps.agent.outputs.agent == 'codex'
+        run: |
+          mkdir -p "$RUNNER_TEMP/codex-home"
+          cat > "$RUNNER_TEMP/codex-home/config.toml" <<'TOML'
+          [mcp_servers.playwright]
+          command = "npx"
+          args = ["-y", "@playwright/mcp@latest", "--headless", "--isolated"]
+          # Nobody is here to approve a tool call on a scheduled runner, and
+          # without this every call comes back "user cancelled MCP tool call".
+          default_tools_approval_mode = "approve"
+
+          [sandbox_workspace_write]
+          # The validator drives a real browser against the repo's own local
+          # server, whose port came from .dispatchseo/serve.
+          network_access = true
+          TOML
+
+      # Cursor has no GitHub Action, so the CLI is installed here. Pinned to a
+      # known version rather than piping cursor.com/install, which floats.
+      #
+      # Then the MCP config. The pack's mcp-ci.json is ALREADY Cursor's shape,
+      # but its ${VAR} placeholders are rendered to real values here anyway.
+      # Live runs (2026-08-06) showed cursor-agent CAN resolve ${VAR} in an
+      # http server's headers from its own environment - which quietly carried
+      # builds for a day while this render step was a no-op - but that
+      # behaviour is undocumented and unproven for stdio env values, so the
+      # credentials are never left to depend on it.
+      #
+      # `mcp enable` is not optional either. An unapproved server is not merely
+      # unreachable, it is absent - the agent runs happily with zero tools.
+      - name: Install Cursor and write its MCP config
+        if: steps.agent.outputs.agent == 'cursor'
+        run: |
+          # The WHOLE package, into a directory of its own. cursor-agent is a
+          # bash launcher rather than a static binary and loads ~95 sibling
+          # files from beside itself, so extracting just the executable gives a
+          # command that exists and cannot run. Its own directory keeps those
+          # 95 files out of $RUNNER_TEMP, which this job also uses for the
+          # prompt and the result.
+          mkdir -p "$RUNNER_TEMP/cursor-cli" "$HOME/.local/bin"
+          curl -fsSL "https://downloads.cursor.com/lab/2026.07.23-e383d2b/linux/x64/agent-cli-package.tar.gz" \
+            | tar -xz --strip-components=1 -C "$RUNNER_TEMP/cursor-cli"
+          ln -sf "$RUNNER_TEMP/cursor-cli/cursor-agent" "$HOME/.local/bin/cursor-agent"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/.local/bin:$PATH"
+          cursor-agent --version
+
+          # python3, not sed: a credential can contain any character, and this
+          # writes JSON, so the values are JSON-escaped rather than pasted.
+          mkdir -p .cursor
+          python3 - .github/mcp-validate.json .cursor/mcp.json <<'PY'
+          import json, os, sys
+          src, dst = sys.argv[1], sys.argv[2]
+          text = open(src).read()
+          for var in ("SEO_MCP_API_KEY", "DATAFORSEO_LOGIN", "DATAFORSEO_PASSWORD"):
+              # json.dumps then strip the quotes: escapes exactly what JSON
+              # needs escaping and nothing else.
+              val = json.dumps(os.environ.get(var, ""))[1:-1]
+              text = text.replace("${" + var + "}", val)
+          cfg = json.loads(text)
+          json.dump(cfg, open(dst, "w"), indent=2)
+          print("servers configured:", ", ".join(cfg.get("mcpServers", {})))
+          PY
+
+          # Approve every server the config declares. Per-directory state, so a
+          # fresh checkout has none of it and this runs every time.
+          for s in $(python3 -c "import json;print(' '.join(json.load(open('.cursor/mcp.json')).get('mcpServers',{})))"); do
+            cursor-agent mcp enable "$s"
+          done
+          echo "--- mcp list ---"
+          cursor-agent mcp list
+
+      - name: Validate the tool live
+        if: steps.agent.outputs.agent == 'claude'
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          # Tool PRs are opened and pushed by the builder workflow, so the
+          # triggering actor is github-actions[bot]; without this the action
+          # refuses to start ("non-human actor") and the PR never gets a
+          # verdict. Same-repo + seo-tool label gates above still apply.
+          allowed_bots: "github-actions"
+          # Subscription token first; the metered ANTHROPIC_API_KEY only reaches
+          # the action when no subscription token exists, so adding a key never
+          # silently switches a working subscription install to per-token billing.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN == '' && secrets.ANTHROPIC_API_KEY || '' }}
+          # Pass the standard workflow token as an input so the action uses it
+          # directly instead of exchanging OIDC for a Claude GitHub App token
+          # (which would require installing the app on the repo).
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Full transcript in the step log - post-hoc debuggability.
+          show_full_output: true
+          prompt: |
+            You are the functional validator for an autonomously-built open-formation-civique.fr tool PR. 1) Find the tool under review: run `git diff origin/main...HEAD --name-only` and read the diff of the tools registry (its path is listed in .dispatchseo/conventions.md) to get the NEW tool's slug (the entry added in this PR). 2) Work out the tool's PUBLIC path - never assume /tools/<slug>: take it from the route/page files the PR added, the registry entry's own path field, or the Tools section of .dispatchseo/conventions.md, and cross-check it against the sitemap. (Sites whose /tools route belongs to a logged-in app publish elsewhere, e.g. /free-tools/<slug>; a login redirect or 404 here means you have the wrong path, not a broken tool - re-derive it before judging.) Using the playwright MCP, open ${{ steps.serve.outputs.base }}<path> and validate: the page returns 200 and renders the landing funnel (hero h1, the interactive widget, FAQ section); every primary widget interaction works (fill each input with realistic values, click every action button, verify output actually updates, test the copy action); edge cases do not break it (empty input, nonsense input - the widget must never throw); zero console errors during the whole session (check browser console messages). 3) Verdict: if EVERYTHING passes, run `gh pr edit <pr-number> --add-label tool-validated --remove-label tool-validation-failed || gh pr edit <pr-number> --add-label tool-validated` and post a short PR comment via `gh pr comment` summarizing what you exercised. If ANYTHING fails, run `gh pr edit <pr-number> --add-label tool-validation-failed --remove-label tool-validated || gh pr edit <pr-number> --add-label tool-validation-failed` (removing tool-validated matters: a stale pass from an earlier commit must not authorize a merge) and comment the concrete failures (what you did, what happened, console output). Create missing labels with `gh label create` if needed. The PR number is in the PR_NUMBER environment variable. Never modify code in this run - you are a reviewer only.
+          claude_args: |
+            --mcp-config ./.github/mcp-validate.json
+            --permission-mode bypassPermissions
+            --max-turns 140
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN == '' && secrets.ANTHROPIC_API_KEY || '' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+
+      # The Codex twin. Same task prompt, generated from the same source -
+      # the agent's behaviour must not depend on which one is holding the
+      # playbook - plus the unattended-environment preamble above it.
+      #
+      # Model: gpt-5 by default, overridable with a repo variable because model
+      # availability is per-account, not universal - `gpt-5-codex` 404s on a
+      # pay-as-you-go project key even though it appears in GET /v1/models. Set
+      # SEO_CODEX_MODEL in the repo's Actions variables to change it without
+      # touching this file.
+      #
+      # There is NO turn budget to set. Codex has no --max-turns equivalent and
+      # OpenAI closed the request for one as not-planned, so the job's
+      # timeout-minutes is the only ceiling on a runaway run.
+      - name: Validate the tool live (Codex)
+        if: steps.agent.outputs.agent == 'codex'
+        id: codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          # Same rule as the Claude twin's allowed_bots: this workflow is fired
+          # by a bot actor (the DispatchSEO GitHub App, a schedule, or a
+          # GITHUB_TOKEN dispatch). codex-action's actor gate rejects EVERY bot
+          # by default (a bot 404s the collaborator-permission lookup), so
+          # without this line each unattended Codex run dies before Codex is
+          # even installed - while a manual workflow_dispatch passes, which is
+          # what hides the failure. Every trigger that can reach this step
+          # already required repo write access, so allowing all actors adds
+          # nothing an attacker can use.
+          allow-users: "*"
+          model: ${{ vars.SEO_CODEX_MODEL || 'gpt-5' }}
+          codex-home: ${{ runner.temp }}/codex-home
+          sandbox: workspace-write
+          # Strips sudo from the runner user for the rest of the job. Safe here:
+          # everything after this step is curl. It is also more than the Claude
+          # half of this pipeline does, which runs with bypassPermissions and no
+          # sandbox at all.
+          safety-strategy: drop-sudo
+          output-file: ${{ runner.temp }}/codex-out.txt
+          prompt: |
+            ENVIRONMENT RULE (read first, it overrides habit): you have no apply_patch tool here - only the shell, and you are running UNATTENDED, so there is nobody to answer a question. Write every file with a SINGLE-QUOTED heredoc (cat > path <<'DSEOF' ... DSEOF) or with python3 reading the content from stdin. The quoted delimiter is the whole point: bash expands NOTHING inside it, so the backticks and $ in MDX and TSX survive verbatim. NEVER use an unquoted heredoc, printf or echo to write file content - an unquoted heredoc is what expands backticks and corrupts the file. Pick a delimiter that cannot appear in the content. Verify every write with ls -l and head before moving on, and never let a filename come from an unset shell variable. If you ever find yourself about to ask for approval or a go/no-go, do not: pick the safest option that still completes the task, do it, and say what you chose in the final report. A run that stops to ask a question builds nothing and is a failed run.
+
+            You are the functional validator for an autonomously-built open-formation-civique.fr tool PR. 1) Find the tool under review: run `git diff origin/main...HEAD --name-only` and read the diff of the tools registry (its path is listed in .dispatchseo/conventions.md) to get the NEW tool's slug (the entry added in this PR). 2) Work out the tool's PUBLIC path - never assume /tools/<slug>: take it from the route/page files the PR added, the registry entry's own path field, or the Tools section of .dispatchseo/conventions.md, and cross-check it against the sitemap. (Sites whose /tools route belongs to a logged-in app publish elsewhere, e.g. /free-tools/<slug>; a login redirect or 404 here means you have the wrong path, not a broken tool - re-derive it before judging.) Using the playwright MCP, open ${{ steps.serve.outputs.base }}<path> and validate: the page returns 200 and renders the landing funnel (hero h1, the interactive widget, FAQ section); every primary widget interaction works (fill each input with realistic values, click every action button, verify output actually updates, test the copy action); edge cases do not break it (empty input, nonsense input - the widget must never throw); zero console errors during the whole session (check browser console messages). 3) Verdict: if EVERYTHING passes, run `gh pr edit <pr-number> --add-label tool-validated --remove-label tool-validation-failed || gh pr edit <pr-number> --add-label tool-validated` and post a short PR comment via `gh pr comment` summarizing what you exercised. If ANYTHING fails, run `gh pr edit <pr-number> --add-label tool-validation-failed --remove-label tool-validated || gh pr edit <pr-number> --add-label tool-validation-failed` (removing tool-validated matters: a stale pass from an earlier commit must not authorize a merge) and comment the concrete failures (what you did, what happened, console output). Create missing labels with `gh label create` if needed. The PR number is in the PR_NUMBER environment variable. Never modify code in this run - you are a reviewer only.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+
+      # The Cursor twin. Same task prompt, generated from the same source -
+      # the agent's behaviour must not depend on which one is holding the
+      # playbook - plus the unattended-environment preamble above it.
+      #
+      # A plain run step, because Cursor ships no GitHub Action. The three
+      # flags are each separately required and each was measured: --trust (a
+      # fresh checkout is an untrusted workspace and the run refuses outright),
+      # --force (command approval), --approve-mcps (server approval).
+      #
+      # --output-format json is what makes the classify step below honest: it
+      # returns {is_error, subtype, result, usage}, so a failure is read from a
+      # field rather than guessed at from warning text.
+      #
+      # Model is overridable per repo: availability is per-account, and the
+      # account default ("auto") is the sane fallback. There is NO turn budget
+      # to set - Cursor has no --max-turns equivalent, so the job's
+      # timeout-minutes is the only ceiling on a runaway run, and on Cursor a
+      # runaway also eats the plan's monthly usage pool.
+      - name: Validate the tool live (Cursor)
+        if: steps.agent.outputs.agent == 'cursor'
+        id: cursor
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          cat > "$RUNNER_TEMP/cursor-prompt.txt" <<'DSEOF'
+          ENVIRONMENT RULE (read first, it overrides habit): you are running UNATTENDED on a CI runner. There is nobody here to answer a question, approve a step, or pick between options. If you ever find yourself about to ask for approval or a go/no-go, do not: choose the safest option that still completes the task, do it, and say what you chose in the final report. A run that stops to ask a question builds nothing and is a failed run. Your final message is read by a script, so end with exactly what you were asked to end with and nothing after it.
+
+          You are the functional validator for an autonomously-built open-formation-civique.fr tool PR. 1) Find the tool under review: run `git diff origin/main...HEAD --name-only` and read the diff of the tools registry (its path is listed in .dispatchseo/conventions.md) to get the NEW tool's slug (the entry added in this PR). 2) Work out the tool's PUBLIC path - never assume /tools/<slug>: take it from the route/page files the PR added, the registry entry's own path field, or the Tools section of .dispatchseo/conventions.md, and cross-check it against the sitemap. (Sites whose /tools route belongs to a logged-in app publish elsewhere, e.g. /free-tools/<slug>; a login redirect or 404 here means you have the wrong path, not a broken tool - re-derive it before judging.) Using the playwright MCP, open ${{ steps.serve.outputs.base }}<path> and validate: the page returns 200 and renders the landing funnel (hero h1, the interactive widget, FAQ section); every primary widget interaction works (fill each input with realistic values, click every action button, verify output actually updates, test the copy action); edge cases do not break it (empty input, nonsense input - the widget must never throw); zero console errors during the whole session (check browser console messages). 3) Verdict: if EVERYTHING passes, run `gh pr edit <pr-number> --add-label tool-validated --remove-label tool-validation-failed || gh pr edit <pr-number> --add-label tool-validated` and post a short PR comment via `gh pr comment` summarizing what you exercised. If ANYTHING fails, run `gh pr edit <pr-number> --add-label tool-validation-failed --remove-label tool-validated || gh pr edit <pr-number> --add-label tool-validation-failed` (removing tool-validated matters: a stale pass from an earlier commit must not authorize a merge) and comment the concrete failures (what you did, what happened, console output). Create missing labels with `gh label create` if needed. The PR number is in the PR_NUMBER environment variable. Never modify code in this run - you are a reviewer only.
+          DSEOF
+          set +e
+          cursor-agent -p "$(cat "$RUNNER_TEMP/cursor-prompt.txt")" \
+            --output-format json --trust --force --approve-mcps \
+            --model "${{ vars.SEO_CURSOR_MODEL || 'auto' }}" \
+            > "$RUNNER_TEMP/cursor-out.json" 2> "$RUNNER_TEMP/cursor-err.txt"
+          code=$?
+          set -e
+          # The final message, for the classify step. jq tolerates a truncated
+          # or absent file, which is what a killed run leaves behind.
+          jq -r '.result // empty' "$RUNNER_TEMP/cursor-out.json" 2>/dev/null > "$RUNNER_TEMP/cursor-msg.txt" || true
+          echo "--- cursor exit $code ---"
+          cat "$RUNNER_TEMP/cursor-msg.txt"
+          [ -s "$RUNNER_TEMP/cursor-err.txt" ] && { echo "--- stderr ---"; cat "$RUNNER_TEMP/cursor-err.txt"; }
+          exit $code
+      # <<< agent-steps: run
+
+
+      # NO report step here, on purpose: this job builds and RUNS the PR's
+      # (LLM-authored) code, so it must hold no secrets at all - not even the
+      # project MCP key. Outcome reporting lives in the merge job below,
+      # which runs on a fresh runner with no checkout and no untrusted code.
+
+  # The hands-off publish for tools: a PASS verdict from the live validation
+  # above IS the merge authorization (the tool was built in prod mode and
+  # exercised in a real browser - a stronger gate than any preview check).
+  # FAIL or no verdict leaves the PR open for the owner.
+  #
+  # SECURITY: this is a separate job on a fresh runner precisely so the
+  # contents:write token never coexists with the PR's executed code (the
+  # validate job above builds and runs the branch). No checkout here - it only
+  # reads labels and merges via gh.
+  merge:
+    needs: validate
+    # Dispatch mode passes here by design: the validate job's resolve step
+    # already enforced the same-repo + seo-tool gates, and this job re-reads
+    # the labels via gh before acting anyway. always() so a FAILED validate
+    # still reaches the report step below instead of silently skipping this
+    # job - a red validation must land on the dashboard banner.
+    if: >
+      always() &&
+      (github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.head.repo.full_name == github.repository &&
+       contains(github.event.pull_request.labels.*.name, 'seo-tool')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write # squash-merge + branch delete
+      pull-requests: write
+    steps:
+      # Phone the validation outcome home from THIS job - never from the
+      # validate job, which executes the PR's (LLM-authored) code and must
+      # hold no secrets. Failures land on the DispatchSEO dashboard banner +
+      # alert email (same rails as the crons); successes clear any earlier
+      # red banner row. A skipped validate (non-tool PR) reports nothing.
+      - name: Report validation outcome to the dashboard
+        if: needs.validate.result == 'success' || needs.validate.result == 'failure'
+        env:
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          VALIDATE_RESULT: ${{ needs.validate.result }}
+        run: |
+          if [ "$VALIDATE_RESULT" = "success" ]; then
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-tool-validate" --data-urlencode "ok=1" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          else
+            curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+              --data-urlencode "job=seo-tool-validate" \
+              --data-urlencode "fail=validation workflow failed - $RUN_URL" \
+              "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+          fi
+
+      - name: Merge on PASS verdict
+        if: needs.validate.result == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+          SEO_MCP_API_KEY: ${{ secrets.SEO_MCP_API_KEY }}
+        run: |
+          # Publish-mode gate: same rule as seo-auto-merge - when the owner
+          # turned auto_merge off (semi mode or a custom toggle), a PASS still
+          # labels the PR but the merge waits for the dashboard's Merge click.
+          code=$(curl -s -o /tmp/mode.json -w "%{http_code}" --max-time 30 \
+            -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+            http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/project-mode) || code=unreachable
+          if [ "$code" = "200" ] && [ "$(jq -r '.automations.auto_merge' /tmp/mode.json)" = "false" ]; then
+            echo "auto_merge is off on the dashboard - leaving the validated PR for the owner."
+            exit 0
+          elif [ "$code" = "unreachable" ] || [ "$code" = "000" ] || [ "$code" = "502" ] || [ "$code" = "503" ] || [ "$code" = "504" ]; then
+            # Local-backend self-host: a GitHub-hosted runner cannot reach a
+            # localhost dashboard to read auto_merge. install.ts keeps this
+            # workflow ENABLED on local backends, so don't crash - the tool is
+            # already built and browser-validated; leave the labeled PR for the
+            # dashboard / in-stack builder to merge (matches seo-daily.yml).
+            echo "Backend unreachable (local self-host?) - leaving the validated PR for the dashboard to merge."
+            exit 0
+          elif [ "$code" != "200" ] && [ "$code" != "404" ]; then
+            echo "::error::project-mode endpoint returned HTTP $code"; exit 1
+          fi
+
+          labels=$(gh pr view "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json labels -q '.labels[].name')
+          # Both conditions: tool-validated present AND no failure flag. A stale
+          # tool-validated from an earlier commit must never merge a newer,
+          # failing state of the branch.
+          if echo "$labels" | grep -qx "tool-validated" && ! echo "$labels" | grep -qx "tool-validation-failed"; then
+            echo "Validated - squash-merging PR #$PR_NUMBER."
+            gh pr merge "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --squash --delete-branch || {
+              gh pr comment "$PR_NUMBER" --repo "$GITHUB_REPOSITORY" --body "Validation passed but auto-merge failed (likely a conflict with main). Manual merge needed."
+              # A merge failure used to die invisibly in this job - report it
+              # so the banner + email say the PR is waiting on a human.
+              curl -sG --max-time 30 -H "Authorization: Bearer $SEO_MCP_API_KEY" \
+                --data-urlencode "job=seo-tool-validate" \
+                --data-urlencode "fail=validation passed but auto-merge failed (likely a conflict with main) - PR left open for manual merge" \
+                "http://app-2g6hlkpwvp0knuof6ixl8z9s.79.137.14.222.sslip.io/api/cron/deploy-check" || true
+              exit 1
+            }
+            # The squash push above is made with GITHUB_TOKEN, which never
+            # triggers push-event workflows - dispatch IndexNow explicitly so
+            # the new tool URL gets pinged (no blog slugs; the ping reads the
+            # live sitemap).
+            gh workflow run indexnow.yml --repo "$GITHUB_REPOSITORY" \
+              || echo "IndexNow dispatch failed - the sitemap still covers the URL on the next crawl."
+          else
+            echo "No tool-validated label - leaving the PR open for review."
+          fi
