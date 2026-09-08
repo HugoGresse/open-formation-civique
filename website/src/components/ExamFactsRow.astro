@@ -1,0 +1,76 @@
+---
+// Stat row for the official naturalisation civic exam (examen civique) format:
+// question count, passing threshold, official domains and max duration.
+// Source: service-public.gouv.fr/particuliers/vosdroits/F39426 (fetched at build time).
+interface Fact {
+  value: string;
+  label: string;
+  icon: 'list' | 'target' | 'layers' | 'clock';
+}
+
+const facts: Fact[] = [
+  { value: '40', label: 'questions au questionnaire', icon: 'list' },
+  { value: '32/40', label: 'bonnes réponses requises (80 %)', icon: 'target' },
+  { value: '4', label: 'domaines officiels', icon: 'layers' },
+  { value: '45 min', label: 'durée maximale', icon: 'clock' },
+];
+
+const icons: Record<Fact['icon'], string> = {
+  list: '<path d="M9 6h11M9 12h11M9 18h11" stroke-linecap="round"/><path d="M4.5 6l1 1 2-2M4.5 12l1 1 2-2M4.5 18l1 1 2-2" stroke-linecap="round" stroke-linejoin="round"/>',
+  target:
+    '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>',
+  layers:
+    '<path d="M12 4l9 5-9 5-9-5 9-5z" stroke-linejoin="round"/><path d="M3 14l9 5 9-5" stroke-linecap="round" stroke-linejoin="round"/>',
+  clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2" stroke-linecap="round" stroke-linejoin="round"/>',
+};
+---
+
+<div class="exam-facts-row">
+  {
+    facts.map((fact) => (
+      <div class="exam-facts-tile">
+        <svg class="exam-facts-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--sl-color-accent)" stroke-width="1.6">
+          <Fragment set:html={icons[fact.icon]} />
+        </svg>
+        <span class="exam-facts-value">{fact.value}</span>
+        <span class="exam-facts-label">{fact.label}</span>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .exam-facts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .exam-facts-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border: 2px solid var(--sl-color-gray-5);
+    border-radius: 10px;
+  }
+
+  .exam-facts-icon {
+    margin-bottom: 0.1rem;
+  }
+
+  .exam-facts-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    line-height: 1.1;
+  }
+
+  .exam-facts-label {
+    font-size: 0.82rem;
+    color: var(--sl-color-gray-3);
+    line-height: 1.3;
+  }
+</style>

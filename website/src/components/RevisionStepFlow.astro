@@ -1,0 +1,129 @@
+---
+// Ordered step flow for the free revision path this guide recommends:
+// understand the program, review by theme, drill the official CR quiz, register.
+interface Step {
+  title: string;
+  detail: string;
+  icon: 'book-open' | 'check-square' | 'edit' | 'flag';
+}
+
+const steps: Step[] = [
+  {
+    title: 'Comprendre le programme',
+    detail: 'Les 4 domaines et le seuil de réussite (32/40).',
+    icon: 'book-open',
+  },
+  {
+    title: 'Réviser les fiches par thème',
+    detail: '23 fiches gratuites classées par domaine.',
+    icon: 'check-square',
+  },
+  {
+    title: "S'entraîner avec le quiz officiel",
+    detail: '173 questions officielles Carte de Résident.',
+    icon: 'edit',
+  },
+  {
+    title: "S'inscrire et passer l'examen",
+    detail: 'Auprès d’un centre agréé, le jour J.',
+    icon: 'flag',
+  },
+];
+
+const icons: Record<Step['icon'], string> = {
+  'book-open':
+    '<path d="M12 6.5c-2-1.3-4.3-1.8-7-1.8v12.6c2.7 0 5 .5 7 1.8 2-1.3 4.3-1.8 7-1.8V4.7c-2.7 0-5 .5-7 1.8z" stroke-linejoin="round"/><path d="M12 6.5v12.6" />',
+  'check-square':
+    '<rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke-linecap="round" stroke-linejoin="round"/>',
+  edit: '<path d="M15.5 4.5l4 4L8 20H4v-4z" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke-linecap="round"/>',
+  flag: '<path d="M6 4v16" stroke-linecap="round"/><path d="M6 5h11l-3 4 3 4H6" stroke-linejoin="round"/>',
+};
+---
+
+<ol class="revision-flow">
+  {
+    steps.map((step, index) => (
+      <li class="revision-flow-step">
+        <div class="revision-flow-marker">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sl-color-accent)" stroke-width="1.6">
+            <Fragment set:html={icons[step.icon]} />
+          </svg>
+          <span class="revision-flow-number">{index + 1}</span>
+        </div>
+        <div class="revision-flow-body">
+          <p class="revision-flow-title">{step.title}</p>
+          <p class="revision-flow-detail">{step.detail}</p>
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .revision-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .revision-flow-step {
+    display: flex;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--sl-color-gray-6);
+  }
+
+  .revision-flow-step:last-child {
+    border-bottom: none;
+  }
+
+  .revision-flow-marker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 2px solid var(--sl-color-gray-5);
+    border-radius: 50%;
+  }
+
+  .revision-flow-number {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--sl-color-accent);
+    color: var(--sl-color-black, #fff);
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .revision-flow-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+  }
+
+  .revision-flow-title {
+    margin: 0;
+    font-weight: 600;
+    color: var(--sl-color-text);
+  }
+
+  .revision-flow-detail {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+  }
+</style>
