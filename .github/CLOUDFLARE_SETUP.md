@@ -1,91 +1,69 @@
-# Cloudflare Pages Setup for PR Previews
+# Deployment — Cloudflare Pages
 
-This repository uses Cloudflare Pages to provide public preview URLs for pull requests.
+The site is deployed entirely on **Cloudflare Pages** (production + PR previews).
+A single GitHub Actions workflow ([`deploy.yml`](workflows/deploy.yml)) builds the
+Astro site and deploys it on every push to `main` (production) and every pull
+request (preview).
 
 ## Prerequisites
 
-- A Cloudflare account (free tier works perfectly)
+- A Cloudflare account (free tier is enough)
 - Repository admin access to configure secrets
 
-## Setup Instructions
+## 1. Create the Cloudflare Pages project
 
-### 1. Create a Cloudflare Pages Project
+1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Go to **Workers & Pages** → **Create** → **Pages** → **Direct Upload**
+3. Name the project exactly: `open-formation-civique-preview`
+4. Create the project (an initial empty deployment is fine)
+5. In **Settings → Builds & deployments**, set the **production branch** to `main`
+   (so `--branch=main` deploys are treated as production)
 
-1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Go to **Workers & Pages** > **Pages**
-3. Click **Create a project**
-4. Choose **Direct Upload** (we'll use GitHub Actions to deploy)
-5. Name your project: `open-formation-civique`
-6. Click **Create project**
+## 2. Attach the custom domain
 
-### 2. Get Your Cloudflare API Token
+1. In the project, go to **Custom domains** → **Set up a domain**
+2. Add `open-formation-civique.fr` (and `www` if desired) and follow the DNS steps
+3. Remove the domain from the old **GitHub Pages** settings first to avoid a
+   conflict, then point DNS at Cloudflare
 
-1. Go to [API Tokens](https://dash.cloudflare.com/profile/api-tokens)
-2. Click **Create Token**
-3. Use the **Edit Cloudflare Workers** template or create a custom token with:
-   - **Permissions:**
-     - Account > Cloudflare Pages > Edit
-   - **Account Resources:**
-     - Include > Your Account
-4. Click **Continue to summary** then **Create Token**
-5. **Copy the token** (you won't be able to see it again!)
+> GitHub Pages is no longer used. You can disable it in
+> **Repo → Settings → Pages** once the Cloudflare domain is live.
 
-### 3. Get Your Cloudflare Account ID
+## 3. Create the API token + account ID secrets
 
-1. Go to **Workers & Pages** > **Overview**
-2. On the right sidebar, you'll see **Account ID**
-3. Click to copy it
+1. [API Tokens](https://dash.cloudflare.com/profile/api-tokens) → **Create Token**
+2. Custom token with **Account → Cloudflare Pages → Edit**, scoped to your account
+3. Copy the token
+4. **Workers & Pages → Overview** → copy the **Account ID**
+5. In GitHub: **Settings → Secrets and variables → Actions** → add:
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID`
 
-### 4. Add Secrets to GitHub Repository
+## How it works
 
-1. Go to your GitHub repository
-2. Navigate to **Settings** > **Secrets and variables** > **Actions**
-3. Click **New repository secret** and add:
-   - **Name:** `CLOUDFLARE_API_TOKEN`
-   - **Value:** The API token from step 2
-4. Click **Add secret**
-5. Click **New repository secret** again and add:
-   - **Name:** `CLOUDFLARE_ACCOUNT_ID`
-   - **Value:** The Account ID from step 3
-6. Click **Add secret**
+| Event | Build | Deploy |
+| --- | --- | --- |
+| Push to `main` | `npm run build` (incl. PDF) | Cloudflare production (`--branch=main`) |
+| Pull request | `npm run build:no-pdf` (faster) | Cloudflare preview (`--branch=<pr-branch>`), URL commented on the PR |
 
-## How It Works
+### The PDF
 
-When you open or update a pull request:
+`formation-civique.pdf` is ~42 MB, above Cloudflare Pages' 25 MiB per-file
+limit. On production builds the workflow:
 
-1. GitHub Actions builds the Astro site
-2. The built site is deployed to Cloudflare Pages
-3. A comment is automatically added to the PR with the preview URL
-4. Each new commit updates the preview automatically
+1. generates the PDF,
+2. publishes it as a **GitHub Release** asset under the `pdf-latest` tag,
+3. removes it from the Cloudflare upload.
 
-## Benefits
-
-- ✅ **Free** - Cloudflare Pages free tier is generous
-- ✅ **Fast** - European CDN with global edge network
-- ✅ **Automatic** - No manual steps needed
-- ✅ **Secure** - Each PR gets its own isolated preview
-- ✅ **Public** - Preview URLs can be shared with anyone
+The on-site link `/formation-civique.pdf` keeps working via
+[`website/public/_redirects`](../website/public/_redirects), which 302-redirects
+to the Release asset.
 
 ## Troubleshooting
 
-### Preview deployment fails
-
-- Check that both secrets are correctly set in GitHub
-- Verify the Cloudflare API token has the right permissions
-- Check the project name matches: `open-formation-civique`
-
-### Preview URL doesn't work
-
-- Wait a few moments after deployment (usually < 1 minute)
-- Check the Cloudflare Pages dashboard for deployment status
-- Verify the build completed successfully in GitHub Actions
-
-## Alternative: Vercel
-
-If you prefer to use Vercel instead of Cloudflare Pages, you can:
-
-1. Replace the `cloudflare/pages-action@v1` with `amondnet/vercel-action@v25`
-2. Update the secrets to use `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID`
-3. Follow [Vercel's documentation](https://vercel.com/docs/rest-api) for setup
-
-Vercel is US-based but has excellent Astro support and a generous free tier.
+- **Deploy fails:** confirm both secrets are set and the API token has
+  `Cloudflare Pages → Edit`. Confirm the project name is `open-formation-civique-preview`.
+- **Production not on the custom domain:** ensure the project's production branch
+  is `main` and the domain is attached in Cloudflare (not GitHub Pages).
+- **PDF link 404s:** the `pdf-latest` release is only created/updated by a
+  push to `main`; trigger a production deploy at least once.

@@ -218,7 +218,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Quiz',
-					autogenerate: { directory: 'quiz' },
+					items: [{ autogenerate: { directory: 'quiz' } }],
 				},
 				{
 					label: 'Accueil',
@@ -226,23 +226,23 @@ export default defineConfig({
 				},
 				{
 					label: 'Principes et valeurs de la République',
-					autogenerate: { directory: 'principes-et-valeurs' },
+					items: [{ autogenerate: { directory: 'principes-et-valeurs' } }],
 				},
 				{
 					label: 'Système institutionnel et politique',
-					autogenerate: { directory: 'systeme-institutionnel' },
+					items: [{ autogenerate: { directory: 'systeme-institutionnel' } }],
 				},
 				{
 					label: 'Droits et devoirs',
-					autogenerate: { directory: 'droits-et-devoirs' },
+					items: [{ autogenerate: { directory: 'droits-et-devoirs' } }],
 				},
 				{
 					label: 'Histoire, géographie et culture',
-					autogenerate: { directory: 'histoire-geographie-culture' },
+					items: [{ autogenerate: { directory: 'histoire-geographie-culture' } }],
 				},
 				{
 					label: 'Vivre dans la société française',
-					autogenerate: { directory: 'vivre-en-france' },
+					items: [{ autogenerate: { directory: 'vivre-en-france' } }],
 				},
 				{
 					label: 'Télécharger en PDF',
